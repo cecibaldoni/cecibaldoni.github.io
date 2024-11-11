@@ -4,7 +4,7 @@ project:
   
 website:
   title: "Cecilia Baldoni"
-  favicon: favicon.ico
+  favicon: shrew.png
   navbar:
     left:
       - text: "About"

@@ -1,0 +1,42 @@
+---
+title: ""
+format: html
+class: page-research
+---
+
+## The challenge of being small {#shrew}
+
+### Alternative wintering strategies in high-metabolic non-hibernating terrestrial mammals
+
+<br>
+<img src="img/shrew.jpg" alt="Your Image Alt Text" style="width: 100%; margin-right: 20px;"/>
+<span style="font-size: 0.8em;">*Picture by [Christian Ziegler](https://christianziegler.photography/)*</span>
+<br><br>
+Organisms living in temperate climate must deal with seasonal changes in their environment, affecting food availability, plant cover and predation risk. Variable environments promote the expression of cognitive abilities such as exploration, memory and learning, resulting in larger and more complex brains. Additionally, animals have evolved a wide range of strategies (e.g. food caching, migration, torpor, hibernation) to cope with unfavourable seasons, where food scarcity and low temperature can threaten their survival.
+
+The common shrew, Sorex araneus, defies all rules. It does not migrate, and is unable to hibernate or use torpor, and due to the highest known mammalian metabolism has extremely fast fat turnover year-round. Instead, in autumn, this small mammal shrinks its skull, bones and major organs (including the brain) up to 20%, and subsequentially regrows them up to 16% in spring. While this helps them to deal with a decreased resource availability in winter the changes, especially in brain size, are likely to cause compromise.
+
+In my PhD research, I explored the dynamics of brain plasticity in the common shrew through advanced imaging techniques and behavioral analysis.
+<br>
+I conducted this research supervised by [Dr. Dina Dechmann](https://www.ab.mpg.de/person/98231/2736) at the [Max Planck Institute of Animal Behaviour](https://www.ab.mpg.de/)
+
+#### Project Collaborators
+<br>
+[Prof. Dominik von Elverfeldt](https://www.uniklinik-freiburg.de/mr-en/team/elverfeldt.html), University of Freiburg, Germany
+<br>
+[Prof. Liliana Dávalos](https://www.stonybrook.edu/commcms/ecoevo/_people/_faculty_pages/davalos.php), Stony Brook University, New York
+<br>
+[Prof. John Nieland](https://vbn.aau.dk/en/persons/133797), University of Aalborg, Denmark
+
+## Open Science {#openscience}
+
+Open science is more than a trend: it is a powerful shift in how we share, collaborate and advance scientific discovery. By making data, methods, and findings openly accessible, we strengthen the reliability of our work, accelerate scientific progress, and support a culture of transparency and trust. But starting from scratch in this landscape can feel overwhelming, with so many practices and tools to navigate. To keep myself focused and make open science work for me, I’ve laid out a clear path forward—a set of commitments that feel meaningful to my research. By the end of 2025 I aim to have these practices fully integrated in my worflow.
+<br> 
+
+1. **Learning Open Science Tools** <br> <br> 
+2. **Transparent Data Sharing**<br> <br> 
+3. **Peer Collaboration and Community Building**<br> <br> 
+4. **Pre-registration or Open Preprint Publishing**<br> <br> 
+5. **Open-Access Publishing**<br> <br> 
+6. **Routine Data and Code Sharing**<br> <br> 
+7. **Registered Reports**<br> <br> 

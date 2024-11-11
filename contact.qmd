@@ -1,0 +1,24 @@
+---
+title: ""
+format: html
+---
+
+## Get in Touch
+
+If you'd like to reach out, feel free to contact me via email or through my social media platforms.
+
+### Email
+
+📧 [cbaldoni\@ab.mpg.de](mailto:cbaldoni@ab.mpg.de)
+
+### Social Media
+
+🔗 [LinkedIn](https://www.linkedin.com/in/cecilia-baldoni-93a1102b9/?original_referer=https%3A%2F%2Fwww%2Egoogle%2Ecom%2F&originalSubdomain=de)
+<br>
+📷 [Instagram](https://www.instagram.com/cecirockyaosta/?hl=en)
+<br>
+🐙 [GitHub](https://github.com/cecibaldoni)
+<br>
+
+
+I look forward to hearing from you!

@@ -1,0 +1,99 @@
+/*-- scss:defaults --*/
+
+/* Define your color variables, fonts, and other default settings here */
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-500: #aaa !default;
+$gray-900: #222 !default;
+$black:    #000 !default;
+
+$blue:    #b0cfe5 !default;
+$rose:    #FAD2E1 !default;
+$yellow:  #FFF1E6 !default;
+$green:   #C5DEDD !default;
+$midgreen: #178f80 !default;
+$darkgreen: #114B44 !default;
+
+$primary:       $blue !default;
+$secondary:     $gray-500 !default;
+$success:       $green !default;
+$info:          $blue !default;
+$warning:       $yellow !default;
+$danger:        $rose !default;
+$light:         $gray-100 !default;
+$dark:          $gray-900 !default;
+
+/* Font Settings */
+$headings-font-family:   "News Cycle", "Arial Narrow Bold", sans-serif !default;
+$text-font-family:        "Poppins", sans-serif !default; 
+
+
+/*-- scss:mixins --*/
+
+/* Add any mixins you may need here */
+
+
+/*-- scss:functions --*/
+
+/* Add any SCSS functions here */
+
+
+/*-- scss:uses --*/
+
+/* Import Google Fonts */
+$web-font-path: "https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" !default;
+@if $web-font-path {
+  @import url($web-font-path);
+}
+
+$web-font-path: "https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&display=swap" !default;
+@if $web-font-path {
+  @import url($web-font-path);
+}
+
+
+/*-- scss:rules --*/
+
+/* Main content area: Adjust width and centering across pages */
+.content {
+  width: 95%; /* Occupies 90% of the viewport width */
+  margin: 0 5%; /* Adds equal space on both sides to keep it balanced */
+  padding: 0 10px; /* Minimal padding, just enough to keep text from touching edges */
+}
+
+/* Typography and General Text Styling */
+body {
+  font-family: $text-font-family;
+  font-weight: 400;
+  text-align: justify;
+  color: $darkgreen;
+  background-color: #F6FAFA;
+}
+
+/* Link Styles */
+a {
+  color: #E58D97; 
+  text-decoration: none; 
+}
+
+a:hover {
+  color: #74343B;
+  text-decoration: underline;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #b7d6d5;
+  font-family: $headings-font-family;
+  font-size: 18px;
+  font-weight: bold;
+  border-bottom: 1px solid $gray-500;
+}
+
+.navbar a {
+  color: #34746D;
+}
+
+.navbar a:hover {
+  color: #74343B;
+}

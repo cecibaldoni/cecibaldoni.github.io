@@ -1,0 +1,22 @@
+---
+title: ""
+format: html
+title-block-banner: false
+---
+
+## Cecilia Baldoni
+
+<br>
+
+<img src="img/back.JPG" alt="Your Image Alt Text" style="width: 45%; float: left; margin-right: 40px;"/>
+
+Welcome to my website! <br><br>
+I am a post-doctoral researcher at the [Max Planck Institute of Animal Behaviour](https://www.ab.mpg.de/), in Konstanz, where I investigate how the environment and brain structures shape cognitive flexibility.<br><br>
+
+In my free time I enjoy creating silly illustrations, comics and stickers! 🎨<br><br>
+
+Here you can find more about my research, talks, illustrations and contact details. <br><br> Explore the sections to learn more!
+
+<br><br>
+
+📢 **Note:** This website is currently under construction. Some sections may be incomplete or updated soon.

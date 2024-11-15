@@ -15,10 +15,10 @@ website:
       #   href: illustrations.qmd # or workshops.qmd
       - text: "Contact"
         href: contact.qmd
-    tools:
-      - icon: {{< iconify academicons:google-scholar >}}
+    right:
+      - text: "{{< iconify fa6-brands:google-scholar >}}"
         href: https://scholar.google.com/citations?user=mxM_Py8AAAAJ&hl=en&oi=sra
-      - icon: bluesky
+      - text: "{{< iconify meteor-icons:bluesky >}}"
         href: https://bsky.app/profile/cecibaldoni.bsky.social
       - icon: instagram
         href: https://www.instagram.com/cecirockyaosta/?hl=en

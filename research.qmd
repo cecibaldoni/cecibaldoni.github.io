@@ -34,9 +34,18 @@ Open science is more than a trend: it is a powerful shift in how we share, colla
 <br> 
 
 1. **Learning Open Science Tools** <br> <br> 
-2. **Transparent Data Sharing**<br> <br> 
-3. **Peer Collaboration and Community Building**<br> <br> 
-4. **Pre-registration or Open Preprint Publishing**<br> <br> 
-5. **Open-Access Publishing**<br> <br> 
-6. **Routine Data and Code Sharing**<br> <br> 
-7. **Registered Reports**<br> <br> 
+2. **Community Building** <br><br>
+3. **Transparent Data Sharing**<br> <br> 
+4. **Peer Collaboration**<br><br> 
+5. **Routine Data and Code Sharing**<br> <br> 
+6. **Pre-registration or Open Preprint Publishing**<br> <br>
+7. **Open-Access Publishing**<br> <br> 
+8. **Registered Reports**<br> <br> 
+
+Learning Open Science Tools
+Peer Collaboration and Community Building
+Transparent Data Sharing
+Routine Data and Code Sharing
+Pre-registration or Open Preprint Publishing
+Open-Access Publishing
+Registered Reports

@@ -11,7 +11,7 @@ title-block-banner: false
 <img src="img/back.JPG" alt="Your Image Alt Text" style="width: 45%; float: left; margin-right: 40px;"/>
 
 Welcome to my website! <br><br>
-I am a post-doctoral researcher at the [Max Planck Institute of Animal Behaviour](https://www.ab.mpg.de/), in Konstanz, where I investigate how the environment and brain structures shape cognitive flexibility.<br><br>
+I am an Early Career Researcher at the [Max Planck Institute of Animal Behaviour](https://www.ab.mpg.de/), in Konstanz, where I investigate how the environment and brain structures shape cognitive flexibility.<br><br>
 
 In my free time I enjoy creating silly illustrations, comics and stickers! 🎨<br><br>
 

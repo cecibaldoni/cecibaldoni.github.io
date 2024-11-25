@@ -5,7 +5,7 @@ class: page-research
 ---
 
 ## The challenge of being small {#shrew}
-
+ 
 ### Alternative wintering strategies in high-metabolic non-hibernating terrestrial mammals
 
 <br>

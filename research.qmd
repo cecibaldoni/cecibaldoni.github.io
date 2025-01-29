@@ -30,7 +30,7 @@ I conducted this research supervised by [Dr. Dina Dechmann](https://www.ab.mpg.d
 
 ## Open Science {#openscience}
 
-Open science is more than a trend: it is a powerful shift in how we share, collaborate and advance scientific discovery. By making data, methods, and findings openly accessible, we strengthen the reliability of our work, accelerate scientific progress, and support a culture of transparency and trust. But starting from scratch in this landscape can feel overwhelming, with so many practices and tools to navigate. To keep myself focused and make open science work for me, I’ve laid out a clear path forward—a set of commitments that feel meaningful to my research. By the end of 2025 I aim to have these practices fully integrated in my worflow.
+Open science is more than a trend: it is a powerful shift in how we share, collaborate and advance scientific discovery. By making data, methods, and findings openly accessible, we strengthen the reliability of our work, accelerate scientific progress, and support a culture of transparency and trust. But starting from scratch in this landscape can feel overwhelming, with so many practices and tools to navigate. To keep myself focused and make open science work for me, I’ve laid out a clear path forward—a set of commitments that feel meaningful to my research.
 <br> 
 
 1. **Learning Open Science Tools** <br> <br> 

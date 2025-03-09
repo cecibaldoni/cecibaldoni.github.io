@@ -1,45 +1,116 @@
 ---
 title: ""
-format: html
+css: "closeread.css"
+format: 
+  closeread-html:
+    embed-resources: true
+    remove-header-space: true
 class: page-research
 ---
 
 ## The challenge of being small {#shrew}
- 
-### Alternative wintering strategies in high-metabolic non-hibernating terrestrial mammals
 
+:::{.cr-section layout="overlay-center"}
+
+Shrews are some of the smallest mammals in the world, but they live fast-paced lives.  @cr-shrew
+
+Unlike other small mammals, they don’t hibernate or store food for winter. Instead, they burn through energy at an astonishing rate, requiring constant foraging just to survive. 
+This high metabolism makes them particularly vulnerable to seasonal changes, and it makes it impossible for them to hibernate or use torpor. 
+
+Their solution? They ***shrink.***
+
+Unlike animals that grow steadily over years or those that adapt gradually across generations, shrews undergo a radical transformation within a single lifetime. @cr-shrew-overlay
+
+As winter approaches, their skulls, brains, and even their bones, muscles, and internal organs ***shrink in size***
+
+This process, known as **Dehnel’s Phenomenon**, is an extreme form of biological restructuring that allows them to drastically lower their energy demands when food is scarce. Then, as spring arrives, their bodies begin to regrow, reversing much of the shrinkage in preparation for a season of rapid activity and reproduction.
+
+:::{#cr-shrew}
+![](img/shrew.jpg){alt="Close-up of a shrew"}
+:::
+
+:::{#cr-shrew-overlay}
+![](img/shrew-overlay.png){alt="Close-up of a shrew"}
+:::
+
+:::
+
+:::{.cr-section layout="sidebar-right"}
+
+How does it work? @cr-shrew-cycle
+
+Shrews are born in **summer**, growing rapidly and reaching their lifetime peak in brain size within just a few months. This is the largest their brains will ever be.  [@cr-shrew-cycle]{pan-to="50%,0%" scale-by="2"}
+
+As **winter** sets in, something remarkable happens: their skulls begin to shrink, their brains lose mass, and their bodies become smaller and leaner. These changes reduce their energy consumption at a time when survival depends on making the most of limited resources. [@cr-shrew-cycle]{pan-to="-10%,0%" scale-by="2"}
+
+Then, with the arrival of **spring**, their bodies regrow some (but not all) of what was lost. Their **body mass grows to twice its winter size by spring**. This allows them to take advantage of renewed food availability and prepare for reproduction. [@cr-shrew-cycle]{pan-to="-50%,0%" scale-by="2"}
+
+Shrews **live only about a year**, so this transformation happens just once in their lifetime.  @cr-shrew-cycle
+
+:::{#cr-shrew-cycle}
+![](img/shrew-cycle.svg){alt="Shrew Cycle"}
+:::
+
+:::
+
+:::{.cr-section layout="sidebar-right"}
+
+What does the brain shrinkage and regrowth mean for **how shrews think, learn and behave**? @cr-shrew-cognitionbw
+
+The idea that a brain can physically shrink and then regrow challenges many assumptions about cognition, memory, and plasticity.
+
+My research explores what happens when their brain changes size: @cr-shrew-cognition
+
+How does brain size affect cognitive abilities? @cr-shrew-lightbulb
+
+Does a smaller brain lead to simpler, more instinct-driven decision-making? @cr-shrew-decisionmaking
+
+When the brain changes, does function fully return, or does it reorganize in new ways?
+
+These questions go beyond just shrews. Understanding how an animal maintains function despite physical changes in the brain helps us explore broader ideas in **neurodegeneration** and **energy efficiency**. 
+By studying them, I can ask: What are the true limits of a flexible brain?
+
+:::{#cr-shrew-cognitionbw}
+![](img/shrew-cognitionbw.svg){alt="Shrew cognition"}
+:::
+
+:::{#cr-shrew-cognition}
+![](img/shrew-cognition.svg){alt="Shrew cognition"}
+:::
+
+:::{#cr-shrew-lightbulb}
+![](img/shrew-cognition-lightbulb.svg){alt="Shrew cognition"}
+:::
+
+:::{#cr-shrew-decisionmaking}
+![](img/shrew-cognition-complete.svg){alt="Shrew cognition"}
+:::
+
+:::
+
+### Project Collaborators
+
+I conduct this research supervised by [Dr. Dina Dechmann](https://www.ab.mpg.de/person/98231/2736) at the [Max Planck Institute of Animal Behaviour](https://www.ab.mpg.de/)
+<br> *Collaborators*: <br>
+[Prof. Dominik von Elverfeldt](https://www.uniklinik-freiburg.de/mr-en/team/elverfeldt.html), University of Freiburg, Germany <br>
+[Prof. Liliana Dávalos](https://www.stonybrook.edu/commcms/ecoevo/_people/_faculty_pages/davalos.php), Stony Brook University, New York <br>
+[Prof. John Nieland](https://vbn.aau.dk/en/persons/133797), University of Aalborg, Denmark <br>
+
+
+
+## Open Science {#open-science}
+
+Open science is about making research accessible, reproducible, and collaborative.  
+By sharing data, code, and resources, we enable others to build upon our work and advance science faster.
+
+Here are some of my contributions to open science:
+
+- 📂 **Repositories**:
+  - [My GitHub - My Open Science Repositories](https://github.com/cecibaldoni?tab=repositories)
+  - [OSF - My profile](https://osf.io/jdxn2/)
+  - [Edmond - The Max Planck Society Repository](https://edmond.mpg.de/dataverse/edmond/?q=%22Baldoni%2C+Cecilia%22)
 <br>
-<img src="img/shrew.jpg" alt="Your Image Alt Text" style="width: 100%; margin-right: 20px;"/>
-<span style="font-size: 0.8em;">*Picture by [Christian Ziegler](https://christianziegler.photography/)*</span>
-<br><br>
-Organisms living in temperate climate must deal with seasonal changes in their environment, affecting food availability, plant cover and predation risk. Variable environments promote the expression of cognitive abilities such as exploration, memory and learning, resulting in larger and more complex brains. Additionally, animals have evolved a wide range of strategies (e.g. food caching, migration, torpor, hibernation) to cope with unfavourable seasons, where food scarcity and low temperature can threaten their survival.
-
-The common shrew, Sorex araneus, defies all rules. It does not migrate, and is unable to hibernate or use torpor, and due to the highest known mammalian metabolism has extremely fast fat turnover year-round. Instead, in autumn, this small mammal shrinks its skull, bones and major organs (including the brain) up to 20%, and subsequentially regrows them up to 16% in spring. While this helps them to deal with a decreased resource availability in winter the changes, especially in brain size, are likely to cause compromise.
-
-In my PhD research, I explored the dynamics of brain plasticity in the common shrew through advanced imaging techniques and behavioral analysis.
 <br>
-I conducted this research supervised by [Dr. Dina Dechmann](https://www.ab.mpg.de/person/98231/2736) at the [Max Planck Institute of Animal Behaviour](https://www.ab.mpg.de/)
-
-#### Project Collaborators
-<br>
-[Prof. Dominik von Elverfeldt](https://www.uniklinik-freiburg.de/mr-en/team/elverfeldt.html), University of Freiburg, Germany
-<br>
-[Prof. Liliana Dávalos](https://www.stonybrook.edu/commcms/ecoevo/_people/_faculty_pages/davalos.php), Stony Brook University, New York
-<br>
-[Prof. John Nieland](https://vbn.aau.dk/en/persons/133797), University of Aalborg, Denmark
-
-## Open Science {#openscience}
-
-Open science is more than a trend: it is a powerful shift in how we share, collaborate and advance scientific discovery. By making data, methods, and findings openly accessible, we strengthen the reliability of our work, accelerate scientific progress, and support a culture of transparency and trust. But starting from scratch in this landscape can feel overwhelming, with so many practices and tools to navigate. To keep myself focused and make open science work for me, I’ve laid out a clear path forward—a set of commitments that feel meaningful to my research.
-<br> 
-
-1. **Learning Open Science Tools** <br> <br> 
-2. **Community Building** <br><br>
-3. **Transparent Data Sharing**<br> <br> 
-4. **Peer Collaboration**<br><br> 
-5. **Routine Data and Code Sharing**<br> <br> 
-6. **Pre-registration or Open Preprint Publishing**<br> <br>
-7. **Open-Access Publishing**<br> <br> 
-8. **Registered Reports**<br> <br> 
-
-In 2024, I participated to the **[LMU & MPG Open Science Summer School](https://osip.mpdl.mpg.de/lmu-mpg-open-science-summer-school-2024/)** and to the [Open Science Ambassador](https://osip.mpdl.mpg.de/2024/09/23/open-science-ambassadors-meeting/) meeting.
+- 🎤 **Talks & Workshops**:
+  - **What is Open Science Anyway?** - [🔗link event](https://www.ab.mpg.de/events/40760/345436) and [Open Quarto presentation](https://github.com/cecibaldoni/OpenScience-Rado)
+  - [SORTEE Code Club](https://www.sortee.org/code_club/) - find the list of events I am organising [here](https://docs.google.com/spreadsheets/d/1rOOOE7ghPduwtFftG0DJJf0DXVigAdcmQ0xdEwbKQXo/edit)

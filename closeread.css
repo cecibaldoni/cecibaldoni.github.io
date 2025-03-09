@@ -1,0 +1,56 @@
+/* Import Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Link Styles */
+a {
+  color: #E58D97; 
+  text-decoration: none; 
+}
+
+a:hover {
+  color: #74343B;
+  text-decoration: underline;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #b7d6d5;
+  font-family: $headings-font-family;
+  font-size: 18px;
+  font-weight: bold;
+  border-bottom: 1px solid $gray-500;
+}
+
+.navbar a {
+  color: #34746D;
+}
+
+.navbar a:hover {
+  color: #74343B;
+}
+
+/* Background color for Closeread sections */
+.cr-section {
+  background-color: #e2f2e9 !important;
+}
+
+/* Styling for narrative sections */
+.narrative {
+  font-size: 16px;
+  background-color: rgba(226, 242, 233, 0.6) !important;
+  color: black !important;
+  text-align: justify;
+  border-radius: 15px !important;
+}
+
+
+
+.cr-section .sticky-col .sticky-col-stack .cr-active {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transition: 0.5s ease-in;
+}

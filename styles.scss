@@ -1,6 +1,5 @@
 /*-- scss:defaults --*/
 
-/* Define your color variables, fonts, and other default settings here */
 $white:    #fff !default;
 $gray-100: #f8f9fa !default;
 $gray-500: #aaa !default;
@@ -27,15 +26,26 @@ $dark:          $gray-900 !default;
 $headings-font-family:   "News Cycle", "Arial Narrow Bold", sans-serif !default;
 $text-font-family:        "Poppins", sans-serif !default; 
 
+/* SVG Icons Hover effect */
+.icon-container {
+  position: relative;
+  display: inline-block;
+  width: 150px; /* Adjust size as needed */
+  height: 150px;
+}
 
-/*-- scss:mixins --*/
+.icon {
+  width: 100%;
+  height: auto;
+  filter: grayscale(100%); /* Default to grayscale */
+  transition: filter 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
 
-/* Add any mixins you may need here */
+.icon:hover {
+  filter: grayscale(0%); /* Full color on hover */
+  transform: translateY(5px); /* Moves the icon down slightly */
+}
 
-
-/*-- scss:functions --*/
-
-/* Add any SCSS functions here */
 
 
 /*-- scss:uses --*/

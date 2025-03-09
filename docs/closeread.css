@@ -1,0 +1,35 @@
+/* Import Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+
+/* Custom styles for Closeread document */
+.narrative-col {
+  padding: 20px;
+  background-color: #f8f9fa; /* Using $gray-100 */
+  font-family: 'Poppins', sans-serif; /* Using $text-font-family */
+  color: #114B44; /* Using $darkgreen */
+}
+
+.sticky-col {
+  border-left: 2px solid #aaa; /* Using $gray-500 */
+}
+
+.sticky {
+  margin-bottom: 20px;
+}
+
+/* Container setup */
+.container {
+  display: flex; /* Or 'display: grid;' for CSS Grid */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Box styling */
+.box {
+  width: 300px;
+  height: 200px;
+  background-color: #f0f0f0;
+  margin-left: 20px; /* Adjust as needed */
+}

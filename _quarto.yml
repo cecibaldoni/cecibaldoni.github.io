@@ -26,7 +26,7 @@ website:
         href: https://github.com/cecibaldoni/
   page-footer:
     right: "Built with [Quarto](https://quarto.org/)"
-    left: "&copy; Copyright 2023, Cecilia Baldoni"
+    left: "&copy; Copyright 2024, Cecilia Baldoni"
 
 format:
   html:

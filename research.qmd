@@ -12,7 +12,7 @@ class: page-research
 
 :::{.cr-section layout="overlay-center"}
 
-I study how animals respond to environmental challenges—how their brains, bodies, and cognition adapt in a changing world.
+I study how animals respond to environmental challenges: how their brains, bodies, and cognition adapt in a changing world.
 
 I investigate that in the common shrews (*Sorex araneus*), one of the smallest mammals in the world. @cr-shrew
 
@@ -126,7 +126,7 @@ Each **dot** represents an individual shrew's decision in a trial.  The **x-axis
 ![](img/captive-shrew.jpg){alt="Shrew cognition"}
 :::
 
-:::{#cr-shrew-empty-plot .sticky}
+:::{#cr-shrew-empty-plot}
 ```{r out.width="100%"}
 ggplot(raw_data, aes(x = trial, y = success, color = category)) +
   geom_jitter(width =  0.05, height = 0.05) +

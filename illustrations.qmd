@@ -4,6 +4,10 @@ format: html
 class: page-illustrations
 ---
 
+::: {.page-icon}
+<img src="img/icons/illustrations.svg" alt="Illustrations">
+:::
+
 ## Illustrations
 
 © ceci, 2024. All works in this page are licensed under a [Creative Commons Attribution-NonCommercial 4.0 International License](https://creativecommons.org/licenses/by-nc/4.0/). <br> This means you’re welcome to share and adapt it for non-commercial purposes as long as you credit me as the creator. Commercial use requires additional permission.

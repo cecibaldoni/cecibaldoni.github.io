@@ -26,28 +26,6 @@ $dark:          $gray-900 !default;
 $headings-font-family:   "News Cycle", "Arial Narrow Bold", sans-serif !default;
 $text-font-family:        "Poppins", sans-serif !default; 
 
-/* SVG Icons Hover effect */
-.icon-container {
-  position: relative;
-  display: inline-block;
-  width: 150px; /* Adjust size as needed */
-  height: 150px;
-}
-
-.icon {
-  width: 100%;
-  height: auto;
-  filter: grayscale(100%); /* Default to grayscale */
-  transition: filter 0.3s ease, transform 0.3s ease; /* Smooth transitions */
-}
-
-.icon:hover {
-  filter: grayscale(0%); /* Full color on hover */
-  transform: translateY(5px); /* Moves the icon down slightly */
-}
-
-
-
 /*-- scss:uses --*/
 
 /* Import Google Fonts */
@@ -66,9 +44,9 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;70
 
 /* Main content area: Adjust width and centering across pages */
 .content {
-  width: 95%; /* Occupies 90% of the viewport width */
-  margin: 0 5%; /* Adds equal space on both sides to keep it balanced */
-  padding: 0 10px; /* Minimal padding, just enough to keep text from touching edges */
+  width: 95%;
+  margin: 0 5%;
+  padding: 0 10px;
 }
 
 /* Typography and General Text Styling */
@@ -107,3 +85,146 @@ a:hover {
 .navbar a:hover {
   color: #74343B;
 }
+
+
+/* City styles */
+
+.city-wrapper {
+  position: relative;
+  width: 100vw;
+  max-width: 100vw;
+  height: auto;
+  aspect-ratio: 4714 / 2824;
+  margin-left: calc(-40vw + 50%); /* perfectly centers it on screen */
+}
+
+.city-layer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.city-background,
+.city-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+
+.city-icon {
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.2s ease, filter 0.3s ease;
+  z-index: 10;
+}
+
+.city-icon:hover {
+  opacity: 1;
+}
+
+.city-icon:hover img {
+  /* opacity: 1; */
+  transform: translateY(-3px);
+  filter: brightness(1.2) drop-shadow(0 0 8px rgba(255,255,255,0.6));
+}
+
+.city-icon img {
+  width: 100%;
+  height: auto;
+  display: block;
+  vertical-align: bottom;
+  transition: transform 0.2s ease, filter 0.3s ease;
+}
+
+
+/* css positioning for icons */
+
+.icon-contact {
+  top: 14.6%;
+  left: 24.69%;
+  width: 20.87%;
+}
+
+.icon-home {
+  top: 0%;
+  left: 46.47%;
+  width: 26.77%;
+}
+
+.icon-illustration {
+  top: 36.67%;
+  left: 55.54%;
+  width: 20.73%;
+}
+
+.icon-open-science {
+  top: 40.79%;
+  left: 1.55%;
+  width: 9.74%;
+}
+
+.icon-research {
+  top: 12.71%;
+  left: 6.09%;
+  width: 26.36%;
+}
+
+.icon-talks-workshops {
+  top: 11.80%;
+  left: 35.58%;
+  width: 19.96%;
+}
+
+.city-label {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-10px);
+  background-color: #FFF1E6; // or #FAD2E1
+  color: #114B44; // keep or try #74343B
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 16px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Add the speech bubble tail */
+.city-label::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-top-color: rgba(255, 255, 255, 0.95);
+}
+
+/* Show on hover */
+.city-icon:hover .city-label {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-16px);
+}
+
+/* icons for each page */
+
+.page-icon {
+  position: absolute;
+  top: 6rem;
+  left: 6rem;
+  width: 200px;
+  z-index: 100;
+}
+
+.page-icon img {
+  width: 100%;
+  height: auto;
+}
+

@@ -3,6 +3,9 @@ title: ""
 format: html
 class: page-about
 ---
+::: {.page-icon}
+<img src="img/icons/home.svg" alt="About Icon">
+:::
 
 ## About me
 

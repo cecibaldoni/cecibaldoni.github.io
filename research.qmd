@@ -1,30 +1,37 @@
 ---
 title: ""
 css: "closeread.css"
-format: 
+format:
   closeread-html:
+    #toc: true
     embed-resources: true
     remove-header-space: true
 class: page-research
 ---
 
-## The challenge of being small {#shrew}
+::: {.page-icon}
+<img src="img/icons/research.svg" alt="Research Institute">
+:::
+
+## Research {#current-research}
+
+bla bla bla
+
+### The challenge of being small {#shrew}
 
 :::{.cr-section layout="overlay-center"}
 
-I study how animals respond to environmental challenges: how their brains, bodies, and cognition adapt in a changing world.
+My main research topics all exist around one specific animal, the common shrew (*Sorex araneus*). @cr-shrew
 
-I investigate that in the common shrews (*Sorex araneus*), one of the smallest mammals in the world. @cr-shrew
+Shrews are bound by an incredibly fast-paced life: they **burn through energy so quickly** that they must eat constantly just to stay alive. Their metabolism is so extreme that even a few hours without food can be fatal. 
 
-Unlike most small mammals, shrews don’t hibernate or cache food. Instead, they burn energy so rapidly that they must eat constantly just to stay alive.
-
-This high metabolism makes them particularly vulnerable to seasonal changes, and it makes it impossible for them to hibernate or use torpor.
+This high metabolism makes them particularly vulnerable to seasonal changes, and it makes it **impossible for them to hibernate during winter**.
 
 Their solution? They **shrink**.
 
 Unlike animals that grow steadily over years or those that adapt gradually across generations, shrews undergo a radical transformation within a single lifetime. @cr-shrew-overlay
 
-As winter approaches, their skulls, brains, and even their bones, muscles, and internal organs ***shrink in size***
+As winter approaches, their skulls, brains, bones, muscles, and internal organs ***shrink in size***
 
 This process, known as **Dehnel’s Phenomenon**, is an extreme form of biological restructuring that allows them to drastically lower their energy demands when food is scarce. Then, as spring arrives, their bodies begin to regrow, reversing much of the shrinkage in preparation for a season of rapid activity and reproduction.
 
@@ -42,11 +49,11 @@ This process, known as **Dehnel’s Phenomenon**, is an extreme form of biologic
 
 How does it work? @cr-shrew-cycle
 
-Shrews are born in **summer**, growing rapidly and reaching their lifetime peak in brain size within just a few months. This is the largest their brains will ever be.  [@cr-shrew-cycle]{pan-to="50%,-20%" scale-by="2"}
+Shrews are born in **summer**, growing rapidly and reaching their lifetime peak in brain size within just a few months. This is the largest their brains will ever be.  [@cr-shrew-cycle]{pan-to="50%,-20%" scale-by="1.8"}
 
 As **winter** sets in, something remarkable happens: their skulls begin to shrink, their brains lose mass, and their bodies become smaller and leaner. These changes reduce their energy consumption at a time when survival depends on making the most of limited resources. [@cr-shrew-cycle]{pan-to="-10%,-20%" scale-by="2"}
 
-Then, with the arrival of **spring**, their bodies regrow some (but not all) of what was lost. Their **body mass grows to twice its winter size by spring**. This allows them to take advantage of renewed food availability and prepare for reproduction. [@cr-shrew-cycle]{pan-to="-50%,-20%" scale-by="2"}
+Then, with the arrival of **spring**, their bodies regrow some (but not all) of what was lost. Their **body mass grows to twice its winter size by spring**. This allows them to take advantage of renewed food availability and prepare for reproduction. [@cr-shrew-cycle]{pan-to="-50%,-5%" scale-by="1.7"}
 
 Shrews **live only about a year**, so this transformation happens just once in their lifetime.  @cr-shrew-cycle
 
@@ -66,32 +73,32 @@ My research explores what happens when their brain changes size: @cr-shrew-cogni
 
 How does brain size affect cognitive abilities? @cr-shrew-lightbulb
 
-Does a smaller brain lead to simpler, more instinct-driven decision-making? @cr-shrew-decisionmaking
+Does a smaller brain lead to simpler decision-making? @cr-shrew-decisionmaking
 
 When the brain regrows, does it restore lost functions—or does it reorganize in a new way?
 
-These questions go beyond just shrews. Understanding how an animal maintains function despite physical changes in the brain helps us explore broader ideas in **neurodegeneration** and **energy efficiency**. 
-By studying them, I can ask: What are the true limits of a flexible brain?
+These questions go *beyond just shrews*. Understanding how an animal maintains function despite physical changes in the brain helps us explore broader ideas in **neurodegeneration** and **energy efficiency**.
 
 :::{#cr-shrew-cognitionbw}
-![](img/shrew-cognitionbw.svg){alt="Shrew cognition"}
+![](img/shrew-cognitionbw.svg){alt="Shrew cognition" width="70%"}
+
 :::
 
 :::{#cr-shrew-cognition}
-![](img/shrew-cognition.svg){alt="Shrew cognition"}
+![](img/shrew-cognition.svg){alt="Shrew cognition" width="70%"}
 :::
 
 :::{#cr-shrew-lightbulb}
-![](img/shrew-cognition-lightbulb.svg){alt="Shrew cognition"}
+![](img/shrew-cognition-lightbulb.svg){alt="Shrew cognition" width="70%"}
 :::
 
 :::{#cr-shrew-decisionmaking}
-![](img/shrew-cognition-complete.svg){alt="Shrew cognition"}
+![](img/shrew-cognition-complete.svg){alt="Shrew cognition" width="70%"}
 :::
 
 :::
 
-### Does Captivity Influence Learning? {#shrew-captivity}
+#### Does Captivity Influence Learning? {#shrew-captivity}
 
 ```{r}
 #| echo: false
@@ -226,6 +233,9 @@ I conduct this research supervised by [Dr. Dina Dechmann](https://www.ab.mpg.de/
 [Prof. John Nieland](https://vbn.aau.dk/en/persons/133797), University of Aalborg, Denmark <br>
 
 
+::: {.page-icon}
+<img src="img/icons/open-science.svg" alt="Open Science">
+:::
 
 ## Open Science {#open-science}
 
@@ -243,3 +253,7 @@ Here are some of my contributions to open science:
 - 🎤 **Talks & Workshops**:
   - *What is Open Science Anyway?* - [🔗link event](https://www.ab.mpg.de/events/40760/345436) and [Open Quarto presentation](https://github.com/cecibaldoni/OpenScience-Rado)
   - [SORTEE Code Club](https://www.sortee.org/code_club/) - find the list of events I am organising [here](https://docs.google.com/spreadsheets/d/1rOOOE7ghPduwtFftG0DJJf0DXVigAdcmQ0xdEwbKQXo/edit)
+  
+## Talks and Workshops
+
+*Page under construction!*

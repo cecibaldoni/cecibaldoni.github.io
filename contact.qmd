@@ -1,7 +1,12 @@
 ---
 title: ""
 format: html
+class: page-contact
 ---
+
+::: {.page-icon}
+<img src="img/icons/contact.svg" alt="Contact">
+:::
 
 ## Get in Touch
 

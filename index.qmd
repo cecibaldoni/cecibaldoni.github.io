@@ -20,3 +20,43 @@ Here you can find more about my research, talks, illustrations and contact detai
 <br><br>
 
 📢 **Note:** This website is currently under construction. Some sections may be incomplete or updated soon.
+
+## Explore the City
+
+```{=html}
+<div class="city-wrapper">
+  <div class="city-layer">
+    <img src="img/ceci-city.svg" alt="City background" class="city-background">
+
+    <a href="contact.qmd" class="city-icon icon-contact">
+      <img src="img/icons/contact.svg" alt="Contact">
+      <span class="city-label">Get in Touch!</span>
+    </a>
+
+    <a href="about.qmd" class="city-icon icon-home">
+      <img src="img/icons/home.svg" alt="Home">
+      <span class="city-label">About Me</span>
+    </a>
+
+    <a href="illustrations.qmd" class="city-icon icon-illustration">
+      <img src="img/icons/illustrations.svg" alt="Illustration">
+      <span class="city-label">Illustrations</span>
+    </a>
+
+    <a href="research.qmd#open-science" class="city-icon icon-open-science">
+      <img src="img/icons/open-science.svg" alt="Open Science">
+      <span class="city-label">Open Science</span>
+    </a>
+
+    <a href="research.qmd#current-research" class="city-icon icon-research">
+      <img src="img/icons/research.svg" alt="Research">
+      <span class="city-label">Research Interests</span>
+    </a>
+
+    <a href="research.qmd#talks-workshops" class="city-icon icon-talks-workshops">
+      <img src="img/icons/talks-workshops.svg" alt="Talks & Workshops">
+      <span class="city-label">Talks and Workshops</span>
+    </a>
+  </div>
+</div>
+```

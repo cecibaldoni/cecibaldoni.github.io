@@ -11,6 +11,8 @@ website:
         href: about.qmd
       - text: "Research"
         href: research.qmd
+      - text: "Projects"
+        href: projects.qmd
       - text: "Illustrations"
         href: illustrations.qmd 
       - text: "Contact"

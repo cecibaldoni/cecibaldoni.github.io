@@ -3,8 +3,9 @@ title: ""
 format: html
 class: page-about
 ---
+
 ::: {.page-icon}
-<img src="img/icons/home.svg" alt="About Icon">
+<img src="img/icons/home.svg" alt="" aria-hidden="true">
 :::
 
 ## About me

@@ -1,259 +1,59 @@
 ---
 title: ""
-css: "closeread.css"
-format:
-  closeread-html:
-    #toc: true
-    embed-resources: true
-    remove-header-space: true
+format: html
 class: page-research
 ---
 
 ::: {.page-icon}
-<img src="img/icons/research.svg" alt="Research Institute">
+<img src="img/icons/research.svg" alt="" aria-hidden="true">
 :::
 
 ## Research {#current-research}
 
-bla bla bla
+My work focuses on how small mammals adapt to a fast-changing world — especially how their brains and behavior respond to environmental pressures.
 
-### The challenge of being small {#shrew}
+I’m particularly interested in seasonal brain plasticity, environmental adaptations and their cumulative effects on cognitive flexibility. Much of this work revolves around a unique little animal: the common shrew.
 
-:::{.cr-section layout="overlay-center"}
+**Explore how the common shrew copes with winter by shrinking and regrowing its brain, and what this teaches us about brain plasticity and cognition!**
 
-My main research topics all exist around one specific animal, the common shrew (*Sorex araneus*). @cr-shrew
+<div class="shrew-wrapper">
+  <div class="shrew-caption">Click on the shrew to learn more! 🐾</div>
+  <a href="projects.qmd" class="hover-image-link">
+    <img src="img/shrew.jpg" alt="Shrew teaser" class="hover-image">
+  </a>
+</div>
 
-Shrews are bound by an incredibly fast-paced life: they **burn through energy so quickly** that they must eat constantly just to stay alive. Their metabolism is so extreme that even a few hours without food can be fatal. 
-
-This high metabolism makes them particularly vulnerable to seasonal changes, and it makes it **impossible for them to hibernate during winter**.
-
-Their solution? They **shrink**.
-
-Unlike animals that grow steadily over years or those that adapt gradually across generations, shrews undergo a radical transformation within a single lifetime. @cr-shrew-overlay
-
-As winter approaches, their skulls, brains, bones, muscles, and internal organs ***shrink in size***
-
-This process, known as **Dehnel’s Phenomenon**, is an extreme form of biological restructuring that allows them to drastically lower their energy demands when food is scarce. Then, as spring arrives, their bodies begin to regrow, reversing much of the shrinkage in preparation for a season of rapid activity and reproduction.
-
-:::{#cr-shrew}
-![](img/shrew.jpg){alt="Close-up of a shrew"}
-:::
-
-:::{#cr-shrew-overlay}
-![](img/shrew-overlay.png){alt="Close-up of a shrew"}
-:::
-
-:::
-
-:::{.cr-section layout="sidebar-right"}
-
-How does it work? @cr-shrew-cycle
-
-Shrews are born in **summer**, growing rapidly and reaching their lifetime peak in brain size within just a few months. This is the largest their brains will ever be.  [@cr-shrew-cycle]{pan-to="50%,-20%" scale-by="1.8"}
-
-As **winter** sets in, something remarkable happens: their skulls begin to shrink, their brains lose mass, and their bodies become smaller and leaner. These changes reduce their energy consumption at a time when survival depends on making the most of limited resources. [@cr-shrew-cycle]{pan-to="-10%,-20%" scale-by="2"}
-
-Then, with the arrival of **spring**, their bodies regrow some (but not all) of what was lost. Their **body mass grows to twice its winter size by spring**. This allows them to take advantage of renewed food availability and prepare for reproduction. [@cr-shrew-cycle]{pan-to="-50%,-5%" scale-by="1.7"}
-
-Shrews **live only about a year**, so this transformation happens just once in their lifetime.  @cr-shrew-cycle
-
-:::{#cr-shrew-cycle}
-![](img/shrew-cycle.svg){alt="Shrew Cycle"}
-:::
-
-:::
-
-:::{.cr-section layout="sidebar-right"}
-
-What does the brain shrinkage and regrowth mean for **how shrews think, learn and behave**? @cr-shrew-cognitionbw
-
-The idea that a brain can physically shrink and then regrow challenges many assumptions about cognition, memory, and plasticity.
-
-My research explores what happens when their brain changes size: @cr-shrew-cognition
-
-How does brain size affect cognitive abilities? @cr-shrew-lightbulb
-
-Does a smaller brain lead to simpler decision-making? @cr-shrew-decisionmaking
-
-When the brain regrows, does it restore lost functions—or does it reorganize in a new way?
-
-These questions go *beyond just shrews*. Understanding how an animal maintains function despite physical changes in the brain helps us explore broader ideas in **neurodegeneration** and **energy efficiency**.
-
-:::{#cr-shrew-cognitionbw}
-![](img/shrew-cognitionbw.svg){alt="Shrew cognition" width="70%"}
-
-:::
-
-:::{#cr-shrew-cognition}
-![](img/shrew-cognition.svg){alt="Shrew cognition" width="70%"}
-:::
-
-:::{#cr-shrew-lightbulb}
-![](img/shrew-cognition-lightbulb.svg){alt="Shrew cognition" width="70%"}
-:::
-
-:::{#cr-shrew-decisionmaking}
-![](img/shrew-cognition-complete.svg){alt="Shrew cognition" width="70%"}
-:::
-
-:::
-
-#### Does Captivity Influence Learning? {#shrew-captivity}
-
-```{r}
-#| echo: false
-#| fig-asp: 1.2
-#| message: false
-library(ggplot2)
-library(tidyverse)
-raw_data <- readRDS("data/al_data.rds")
-model_data <- readRDS("data/al_fitted.rds")
-```
-
-
-:::{.cr-section layout="sidebar-right"}
-
-Brain size is of course only part of the story. @cr-captive-shrew
-
-The environment an animal experiences shapes its brain and behavior. In captivity, animals face new challenges—chronic stress, lack of stimulation, and altered social dynamics.  Do shrews kept in captivity learn differently than those in the wild? @cr-captive-shrew
-
-I tested the ability of shrews to associate an odor cue with a reward in a Y-maze **associative learning task**. @cr-shrew-empty-plot  
-
-Each **dot** represents an individual shrew's decision in a trial.  The **x-axis** represents the trial number, from 1 to 10. The **y-axis** shows whether they made the correct choice (**1**) or the wrong one (**0**). @cr-shrew-empty-plot  
-
-**Summer wild (orange)** shrews had the highest and earliest success rates. @cr-shrew-summer-plot
-
-**Winter wild (dark blue)** shrews showed a similar learning curve, but they learned at a slower rate and did not reach the **Summer** success rate. @cr-shrew-wild-plot
-
-**Winter captive (light blue)** shrews showed no learning, never deviating from chance. @cr-shrew-complete-plot
-
-📄 This work is published in *Royal Society Open Science*:<br> [*Captivity alters behaviour but not seasonal brain size change in semi-naturally housed shrews*](https://royalsocietypublishing.org/doi/10.1098/rsos.242138)  
-
-:::{#cr-captive-shrew}
-![](img/captive-shrew.jpg){alt="Shrew cognition"}
-:::
-
-:::{#cr-shrew-empty-plot}
-```{r out.width="100%"}
-ggplot(raw_data, aes(x = trial, y = success, color = category)) +
-  geom_jitter(width =  0.05, height = 0.05) +
-  labs(x = "Trial", y = "Success rate") +
-  labs(color="Status", fill="CI 95%") +
-  scale_color_manual(values = c("#D16103","#0AA9A9", "#0A33A9"), labels = c("Summer Wild","Winter Captive", "Winter Wild")) +
-  theme_bw() +
-  theme(legend.position = "none",
-        axis.title.x = element_text(size=15, vjust=0),
-        axis.title.y = element_text(size=15, vjust=0),
-        axis.text.x = element_text(size=12, vjust=0),
-        legend.text = element_text(size = 10),
-        axis.text.y = element_text(size=12, vjust=0))
-```
-:::
-
-:::{#cr-shrew-summer-plot}
-```{r out.width="100%"}
-ggplot(filter(raw_data, category == "summer wild"), aes(x = trial, y = success, color = category)) +
-  geom_jitter(width =  0.05, height = 0.05) +
-  labs(x = "Trial", y = "Success rate") +
-  labs(color="Status", fill="CI 95%") +
-
-  scale_color_manual(values = c("#D16103","#0AA9A9", "#0A33A9"), labels = c("Summer Wild","Winter Captive", "Winter Wild")) +
-  scale_fill_manual(values = c("#D16103","#0AA9A9", "#0A33A9"), labels = c("Summer Wild","Winter Captive", "Winter Wild")) +
-  scale_x_discrete(breaks = raw_data$trial, labels = raw_data$trial) +
-  geom_line(data = filter(model_data, category == "summer wild"), aes(x = trial, y = AvgEstimate, group = category), linewidth = 2) +
-  geom_ribbon(data = filter(model_data, category == "summer wild"),
-              aes(x = trial, ymin = Lower, ymax = Upper, fill = category, group = category),
-              alpha = 0.2, inherit.aes = FALSE) +
-  theme_bw() +
-  theme(legend.position = "none",
-        axis.title.x = element_text(size=15, vjust=0),
-        axis.title.y = element_text(size=15, vjust=0),
-        axis.text.x = element_text(size=12, vjust=0),
-        legend.text = element_text(size = 10),
-        axis.text.y = element_text(size=12, vjust=0))
-```
-:::
-
-:::{#cr-shrew-wild-plot}
-```{r out.width="100%"}
-ggplot(filter(raw_data, category %in% c("summer wild", "winter wild")), aes(x = trial, y = success, color = category)) +
-  geom_jitter(width =  0.05, height = 0.05) +
-  labs(x = "Trial", y = "Success rate") +
-  labs(color="Status", fill="CI 95%") +
-
-  scale_color_manual(values = c("#D16103", "#0A33A9"), labels = c("Summer Wild", "Winter Wild")) +
-  scale_fill_manual(values = c("#D16103", "#0A33A9"), labels = c("Summer Wild", "Winter Wild")) +
-  scale_x_discrete(breaks = raw_data$trial, labels = raw_data$trial) +
-  geom_line(data = filter(model_data, category %in% c("summer wild", "winter wild")), aes(x = trial, y = AvgEstimate, group = category), linewidth = 2) +
-  geom_ribbon(data = filter(model_data, category %in% c("summer wild", "winter wild")),
-              aes(x = trial, ymin = Lower, ymax = Upper, fill = category, group = category),
-              alpha = 0.2, inherit.aes = FALSE) +
-  theme_bw() +
-  theme(legend.position = "none",
-        axis.title.x = element_text(size=15, vjust=0),
-        axis.title.y = element_text(size=15, vjust=0),
-        axis.text.x = element_text(size=12, vjust=0),
-        legend.text = element_text(size = 10),
-        axis.text.y = element_text(size=12, vjust=0))
-```
-:::
-
-:::{#cr-shrew-complete-plot}
-```{r out.width="100%"}
-ggplot(raw_data, aes(x = trial, y = success, color = category)) +
-  geom_jitter(width =  0.05, height = 0.05) +
-  labs(x = "Trial", y = "Success rate") +
-  labs(color="Status", fill="CI 95%") +
-
-  scale_color_manual(values = c("#D16103","#0AA9A9", "#0A33A9"), labels = c("Summer Wild","Winter Captive", "Winter Wild")) +
-  scale_fill_manual(values = c("#D16103","#0AA9A9", "#0A33A9"), labels = c("Summer Wild","Winter Captive", "Winter Wild")) +
-  scale_x_discrete(breaks = raw_data$trial, labels = raw_data$trial) +
-  geom_line(data = model_data, aes(x = trial, y = AvgEstimate, group = category), linewidth = 2) +
-  geom_ribbon(data = model_data,
-              aes(x = trial, ymin = Lower, ymax = Upper, fill = category, group = category),
-              alpha = 0.2, inherit.aes = FALSE) +
-  theme_bw() +
-  theme(legend.position = "none",
-        axis.title.x = element_text(size=15, vjust=0),
-        axis.title.y = element_text(size=15, vjust=0),
-        axis.text.x = element_text(size=12, vjust=0),
-        legend.text = element_text(size = 10),
-        axis.text.y = element_text(size=12, vjust=0))
-```
-:::
-
-:::
-
-### Project Collaborators
-
-I conduct this research supervised by [Dr. Dina Dechmann](https://www.ab.mpg.de/person/98231/2736) at the [Max Planck Institute of Animal Behaviour](https://www.ab.mpg.de/)
-<br> *Collaborators*: <br>
-[Prof. Dominik von Elverfeldt](https://www.uniklinik-freiburg.de/mr-en/team/elverfeldt.html), University of Freiburg, Germany <br>
-[Prof. Liliana Dávalos](https://www.stonybrook.edu/commcms/ecoevo/_people/_faculty_pages/davalos.php), Stony Brook University, New York <br>
-[Prof. John Nieland](https://vbn.aau.dk/en/persons/133797), University of Aalborg, Denmark <br>
-
-
-::: {.page-icon}
-<img src="img/icons/open-science.svg" alt="Open Science">
-:::
 
 ## Open Science {#open-science}
 
-Open science is about making research accessible, reproducible, and collaborative.  
-By sharing data, code, and resources, we enable others to build upon our work and advance science faster.
+Open science is not just about making research accessible — it’s about building a scientific culture that values transparency, reproducibility, and collaboration.
 
-Here are some of my contributions to open science:
+This is something I care about deeply and try to reflect in my daily work. <br> My contributions to open science span different levels, from personal practices to community involvement and infrastructure.  <br> <br>
 
-- 📂 **Repositories**:
-  - [My GitHub](https://github.com/cecibaldoni?tab=repositories)
-  - [OSF - My profile](https://osf.io/jdxn2/)
-  - [Edmond - The Max Planck Society Repository](https://edmond.mpg.de/dataverse/edmond/?q=%22Baldoni%2C+Cecilia%22)
-<br>
-<br>
+I make my data, analysis scripts, and visualizations publicly available whenever possible. <br><br>Here is a list of resources where you can find my data and code: <br><br>
+
+- [GitHub](https://github.com/cecibaldoni?tab=repositories): my profile and open repositories, it includes some presentations for talks and workshops I organised. See [Talks & Workshop](#talks-workshops) for more! <br>
+- [OSF - Open Science Framework](https://osf.io/jdxn2/): my profile and materials from ongoing or not-yet-published projects. <br>
+- [Edmond – Max Planck Society Repository](https://edmond.mpg.de/dataverse/edmond/?q=%22Baldoni%2C+Cecilia%22): in here you can find my data and scripts associated with peer-reviewed articles. <br>
+
+---
+
+### OS Community & Initiatives
+
+- I am an **Open Science Ambassador** in the [Max Planck Society](https://www.openscience-groups.mpg.de/ambassadors), helping build local awareness and promote transparent research practices across the Max Planck Institutes.
+- I am an active member of [SORTEE](https://www.sortee.org/) — the Society for Open, Reliable, and Transparent Ecology and Evolution — where I serve on the **Member Engagement Committee**.
+- In 2025, I am organising the [SORTEE Code Club](https://www.sortee.org/code_club/), a monthly online meetup exploring practical tools and workflows for open science.  
+  → You can find the list of events I'm currently organising [here](https://docs.google.com/spreadsheets/d/1rOOOE7ghPduwtFftG0DJJf0DXVigAdcmQ0xdEwbKQXo/edit).
+
+- I also work as a **Data Editor** for [PCI Ecology](https://ecology.peercommunityin.org/), where I check the accessibility and reproducibility of data and code associated with recommended preprints.
+
+---
+
+I see open science as a way of working, not just a set of rules. It affects how I design studies, write code, share results, and support others in doing the same.
+
+  
+## Talks and Workshops {#talks-workshops}
+
 - 🎤 **Talks & Workshops**:
   - *What is Open Science Anyway?* - [🔗link event](https://www.ab.mpg.de/events/40760/345436) and [Open Quarto presentation](https://github.com/cecibaldoni/OpenScience-Rado)
   - [SORTEE Code Club](https://www.sortee.org/code_club/) - find the list of events I am organising [here](https://docs.google.com/spreadsheets/d/1rOOOE7ghPduwtFftG0DJJf0DXVigAdcmQ0xdEwbKQXo/edit)
-  
-## Talks and Workshops
-
-*Page under construction!*

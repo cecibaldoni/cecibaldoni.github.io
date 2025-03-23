@@ -5,7 +5,7 @@ class: page-contact
 ---
 
 ::: {.page-icon}
-<img src="img/icons/contact.svg" alt="Contact">
+<img src="img/icons/contact.svg" alt="" aria-hidden="true">
 :::
 
 ## Get in Touch

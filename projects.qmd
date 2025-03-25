@@ -8,8 +8,7 @@ format:
     remove-header-space: true
 class: page-projects
 ---
- 
- 
+
 ## The challenge of being small {#shrew}
 
 :::{.cr-section layout="overlay-center"}

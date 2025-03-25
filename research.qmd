@@ -26,9 +26,10 @@ I’m particularly interested in seasonal brain plasticity, environmental adapta
 
 ## Open Science {#open-science}
 
-Open science is not just about making research accessible — it’s about building a scientific culture that values transparency, reproducibility, and collaboration.
+Open science is about building a scientific culture that values accessibility, transparency, reproducibility, and collaboration.
 
 This is something I care about deeply and try to reflect in my daily work. <br> My contributions to open science span different levels, from personal practices to community involvement and infrastructure.  <br> <br>
+I see open science as a way of working, not just a set of rules. It affects how I design studies, write code, share results, and support others in doing the same. <br> <br>
 
 I make my data, analysis scripts, and visualizations publicly available whenever possible. <br><br>Here is a list of resources where you can find my data and code: <br><br>
 
@@ -49,10 +50,10 @@ I make my data, analysis scripts, and visualizations publicly available whenever
 
 ---
 
-I see open science as a way of working, not just a set of rules. It affects how I design studies, write code, share results, and support others in doing the same.
-
   
 ## Talks and Workshops {#talks-workshops}
+
+**📢 Section under construction**
 
 - 🎤 **Talks & Workshops**:
   - *What is Open Science Anyway?* - [🔗link event](https://www.ab.mpg.de/events/40760/345436) and [Open Quarto presentation](https://github.com/cecibaldoni/OpenScience-Rado)

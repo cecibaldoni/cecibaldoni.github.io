@@ -8,6 +8,9 @@ page-layout: full
 <img src="img/icons/illustrations.svg" alt="" aria-hidden="true">
 :::
 
+*** Page under construction! Come back soon! ***
+<br><br><br><br>
+
 In this page you can find a selection of illustrations, sketches, and visual experiments I've created for different projects.
 <br><br>
 I *love* combining science and design, and helping others visually communicate their work. 

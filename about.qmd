@@ -18,14 +18,6 @@ I have had the opportunity to work with a variety of species, including both bir
 Recently, I became more involved in [open science practices](research.qmd#openscience), and I aim to advance openness, transparency and reproducibility in my daily life as a researcher.<br> I've had the opportunity to participate to the [Open Science Summer School](https://osip.mpdl.mpg.de/2024/09/20/summer-school-materials-available/) organised by the [Max Planck Digital Library](https://www.mpg.de/807277/max-planck-digital-library) and the [LMU Open Science Center](https://www.osc.uni-muenchen.de/index.html), where I learned practical tools and strategies to make research more accessible and collaborative.
 <br><br><br><br>
 
-<div class="icon-container">
-  <a href="https://www.ab.mpg.de/362690/team-dechmann" target="_blank">
-    <img src="img/mpiab-institute.svg" alt="Research Lab" class="icon">
-  </a>
-</div>
-
-<br><br><br><br>
-
 ## Previous Life
 <img src="img/violin.jpg" alt="20 Years of Violin" style="width: 45%; float: right; margin-left: 20px;"/>
 Before becoming a scientist, I was a violinist, a journey that started when I was five. Over the years, I performed with various orchestras, including the United Europe Chamber Orchestra (UECO), and eventually, this work helped pay for my university studies.

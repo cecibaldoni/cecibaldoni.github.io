@@ -8,7 +8,7 @@ format:
     remove-header-space: true
 class: page-projects
 ---
-
+ 
 ## The challenge of being small {#shrew}
 
 :::{.cr-section layout="overlay-center"}
@@ -119,7 +119,7 @@ Each **dot** represents an individual shrew's decision in a trial.  The **x-axis
 
 **Winter captive (light blue)** shrews showed no learning, never deviating from chance. @cr-shrew-complete-plot
 
-📄 This work is published in *Royal Society Open Science*:<br> [*Captivity alters behaviour but not seasonal brain size change in semi-naturally housed shrews*](https://royalsocietypublishing.org/doi/10.1098/rsos.242138)  
+📄 This work is published in *Royal Society Open Science*: [*Captivity alters behaviour but not seasonal brain size change in semi-naturally housed shrews*](https://royalsocietypublishing.org/doi/10.1098/rsos.242138)  
 
 :::{#cr-captive-shrew}
 ![](img/captive-shrew.jpg){alt="Shrew cognition"}
@@ -216,9 +216,11 @@ ggplot(raw_data, aes(x = trial, y = success, color = category)) +
 
 :::
 
+
 ### Project Collaborators {#collaborators}
 
 I conduct this research supervised by [Dr. Dina Dechmann](https://www.ab.mpg.de/person/98231/2736) at the [Max Planck Institute of Animal Behaviour](https://www.ab.mpg.de/)
+
 <br> *Collaborators*: <br>
 [Prof. Dominik von Elverfeldt](https://www.uniklinik-freiburg.de/mr-en/team/elverfeldt.html), University of Freiburg, Germany <br>
 [Prof. Liliana Dávalos](https://www.stonybrook.edu/commcms/ecoevo/_people/_faculty_pages/davalos.php), Stony Brook University, New York <br>

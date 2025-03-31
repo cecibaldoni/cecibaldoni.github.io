@@ -19,7 +19,7 @@ I’m particularly interested in seasonal brain plasticity, environmental adapta
 <div class="shrew-wrapper">
   <div class="shrew-caption">Click on the shrew to learn more! 🐾</div>
   <a href="projects.qmd" class="hover-image-link">
-    <img src="img/shrew.jpg" alt="Shrew teaser" class="hover-image">
+    <img src="img/shrew.png" alt="Shrew teaser" class="hover-image">
   </a>
 </div>
 
@@ -53,8 +53,50 @@ I make my data, analysis scripts, and visualizations publicly available whenever
   
 ## Talks and Workshops {#talks-workshops}
 
-**📢 Section under construction**
+#### **Talks**: 
+**Baldoni C.,** <br>
+*Invited Seminar Talk - Messerli Institute Vienna, Austria*<br>
+Shrinking Shrews: Cognitive Challenges in a Changing Brain<br><br>
+**Baldoni C.**, Farantouri M., Raptis K., Nourani E., Dechmann D. <br>
+*ISBE: Melbourne, Australia, 2024* <br>
+Seasonal Brain Size Variation and Its Impact on Spatial Navigation and Learning in the Common Shrew (*Sorex araneus*) <br><br>
+**Baldoni C.**, von Elverfeldt D., Dechmann D.<br>
+*MPIAB - RADO Seminar: Radolfzell, Germany, 2023*<br>
+News from the Shrews: insight from brain structure during Dehnel’s phenomenon from Neuroimaging<br><br>
+**Baldoni C.**, Farantouri M., Raptis K., Nourani E., Dechmann D.<br>
+*Animal Behaviour: Bielefeld, Germany, 2023*<br>
+Brain size and spatial learning: the case of the common shrew (*Sorex araneus*) <br><br>
+**Baldoni C.**, Nourani E., Dechmann D.<br>
+*IV Convegno Nazionale sui Piccoli Mammiferi: Grosseto, Italy, 2023*<br>
+Seasonal change in brain size affects spatial learning skills in common shrews (*Sorex araneus*)<br><br>
+**Baldoni C.**, Dechmann D.<br>
+Animal Behaviour Society: San Josè, Costa Rica, 2022<br>
+Seasonal change in brain size affects associative learning skills in common shrews (*Sorex araneus*)<br><br>
+**Baldoni C.**, Scaravelli D., Priori P., Carpentari S., Torboli C., Franzoi A., Pedrini P.<br>
+*IV Italian Bat Conference: Padova, Italy, 2019*<br>
+Diversity and consistency of nocturnal migration of bats at the bird ringing station ‘Bocca di Caset’<br><br>
+**Baldoni C.**, Cicero M., Pasini A., Caselli N., Scaravelli D.<br>
+*XX Italian Conference of Ornithology: Naples, Italy, 2019*<br>
+Assessing the distribution of the Ring-necked parakeet (*Psittacula krameri*) in Bologna, Italy: a citizen-science approach<br><br>
+**Baldoni C.**, Brucks D., Krasheninnikova A., Petelle M., von Bayern A.<br>
+*ASAB Summer conference: Konstanz, Germany, 2019*<br>
+Let it go: two macaw species are able to wait for a better reward in a rotating self-control paradigm<br><br>
+**Baldoni C.**, Giglio G., Scaravelli D.<br>
+*II European Meeting of Young Ornithologists: Torino, Italy, 2018*<br>
+An approach to the study of effects of fire on birds in Mediterranean woods.<br><br>
 
-- 🎤 **Talks & Workshops**:
-  - *What is Open Science Anyway?* - [🔗link event](https://www.ab.mpg.de/events/40760/345436) and [Open Quarto presentation](https://github.com/cecibaldoni/OpenScience-Rado)
-  - [SORTEE Code Club](https://www.sortee.org/code_club/) - find the list of events I am organising [here](https://docs.google.com/spreadsheets/d/1rOOOE7ghPduwtFftG0DJJf0DXVigAdcmQ0xdEwbKQXo/edit)
+#### **Workshops**: 
+
+**What is Open Science Anyway?** - [🔗link event](https://www.ab.mpg.de/events/40760/345436) and [Open Quarto presentation](https://github.com/cecibaldoni/OpenScience-Rado) <br>
+**SORTEE Code Club** - find the list of events I am organising [here](https://docs.google.com/spreadsheets/d/1rOOOE7ghPduwtFftG0DJJf0DXVigAdcmQ0xdEwbKQXo/edit) <br>
+**Personal Knowledge Management and Note-Taking Apps** - [Open Resources](https://github.com/cecibaldoni/PKM-workshop)
+
+
+## Publications
+
+This publication list is automatically updated using a custom R script that pulls my latest publications from [Google Scholar](https://scholar.google.com/). <br><br>
+
+
+```{r, results='asis', echo=FALSE}
+cat(readLines("data/publications.html"), sep = "\n")
+```

@@ -1,16 +1,16 @@
 /*-- scss:defaults --*/
 
-$white:    #fff !default;
-$gray-100: #f8f9fa !default;
+$offwhite: rgba(255, 255, 255, 0.95);
 $gray-500: #aaa !default;
 $gray-900: #222 !default;
-$black:    #000 !default;
 
 $blue:    #b0cfe5 !default;
 $rose:    #FAD2E1 !default;
+$midrose: #E58D97 !default;
+$darkrose: #74343B !default;
 $yellow:  #FFF1E6 !default;
 $green:   #C5DEDD !default;
-$midgreen: #178f80 !default;
+$midgreen: #34746D !default;
 $darkgreen: #114B44 !default;
 
 $primary:       $blue !default;
@@ -29,15 +29,8 @@ $text-font-family:        "Poppins", sans-serif !default;
 /*-- scss:uses --*/
 
 /* Import Google Fonts */
-$web-font-path: "https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" !default;
-@if $web-font-path {
-  @import url($web-font-path);
-}
-
-$web-font-path: "https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&display=swap" !default;
-@if $web-font-path {
-  @import url($web-font-path);
-}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&display=swap");
 
 
 /*-- scss:rules --*/
@@ -60,18 +53,18 @@ body {
 
 /* Link Styles */
 a {
-  color: #E58D97; 
+  color: $midrose; 
   text-decoration: none; 
 }
 
 a:hover {
-  color: #74343B;
+  color: $darkrose;
   text-decoration: underline;
 }
 
 /* Navbar Styles */
 .navbar {
-  background-color: #b7d6d5;
+  background-color: $green;
   font-family: $headings-font-family;
   font-size: 18px;
   font-weight: bold;
@@ -79,11 +72,11 @@ a:hover {
 }
 
 .navbar a {
-  color: #34746D;
+  color: $midgreen;
 }
 
 .navbar a:hover {
-  color: #74343B;
+  color: $darkrose;
 }
 
 /* Center wrapper for caption + image */
@@ -127,7 +120,7 @@ a:hover {
 /* Caption styling */
 .shrew-caption {
   font-size: 0.9em;
-  color: #E58D97;
+  color: $midrose;
   margin-bottom: 8px;
   font-style: italic;
 }
@@ -226,8 +219,8 @@ a:hover {
   bottom: 100%;
   left: 50%;
   transform: translateX(-50%) translateY(-10px);
-  background-color: #FFF1E6; // or #FAD2E1
-  color: #114B44; // keep or try #74343B
+  background-color: $yellow; // or #FAD2E1
+  color: $darkgreen; // keep or try $darkrose
   font-size: 1rem;
   font-weight: bold;
   padding: 6px 12px;
@@ -249,7 +242,7 @@ a:hover {
   width: 0;
   height: 0;
   border: 6px solid transparent;
-  border-top-color: rgba(255, 255, 255, 0.95);
+  border-top-color: $offwhite;
 }
 
 /* Show on hover */

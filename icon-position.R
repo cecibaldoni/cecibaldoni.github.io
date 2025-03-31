@@ -1,17 +1,17 @@
 # Calculations for icon positioning ----
 
 # canvas size from Inkscape
-canvas_width <- 4714.964
-canvas_height <- 2824.115
+canvas_width <- 5754.115
+canvas_height <- 3235.690
 
 # icons positions and sizes
 icons <- list(
-  contact = list(x = 1164.046, y = 412.340, w = 983.975),
-  home = list(x = 2190.854, y = 0.00, w = 1262.055),
-  illustration = list(x = 2618.462, y = 1035.615, w = 977.5),
-  open_science = list(x = 73.0, y = 1151.884, w = 459.129),
-  research = list(x = 287.094, y = 358.972, w = 1242.664),
-  talks_workshops = list(x = 1677.528, y = 333.299, w = 941.193)
+  contact = list(x = 2181.909, y = 453.326, w = 983.975),
+  home = list(x = 3230.057, y = 28.726, w = 1262.055),
+  illustration = list(x = 3657.613, y = 1089.041, w = 977.5),
+  open_science = list(x = 1074.053, y = 1183.316, w = 459.129),
+  research = list(x = 1325.287, y = 411.785, w = 1242.664),
+  talks_workshops = list(x = 2716.678, y = 386.725, w = 941,811)
 )
 
 # calculate top, left, and width in percentages
@@ -34,3 +34,26 @@ for (name in names(css_rules)) {
               css_rules[[name]]$left,
               css_rules[[name]]$width))
 }
+
+## Google scholar publication list ----
+library(scholar)
+library(dplyr)
+library(readr)
+library(stringr)
+
+pubs <- get_publications("mxM_Py8AAAAJ&hl")
+
+html_lines <- pubs %>%
+  arrange(desc(year)) %>%
+  mutate(authors_bolded = str_replace_all(author,
+                                          regex("C Baldoni", ignore_case = TRUE),
+                                          paste0("<strong>","C Baldoni", "</strong>")),
+         line = paste0("<div class='pub-item'>",
+                       authors_bolded, ".<br>",
+                       "<em>", title, "</em><br>",
+                       "<span class='journal'>", journal, "</span> (", year, ")",
+                       "</div><br>")) %>%
+  pull(line)
+
+write_lines(html_lines, "data/publications.html")
+

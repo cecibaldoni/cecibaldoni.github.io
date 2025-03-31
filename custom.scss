@@ -1,0 +1,361 @@
+/*-- scss:defaults --*/
+
+$white:    #fff !default;
+$gray-500: #aaa !default;
+$gray-900: #222 !default;
+
+$blue:        #9FB8CC !default;
+$rose:        #EAC4B3 !default;
+$midrose:     #A25B43 !default;
+$coffee:      #6F4E37 !default;
+$cream:       #F3EDE2 !default;
+$brown:       #D8C3A5 !default;
+$green:       #A9CBB7 !default;
+$midgreen:    #6F8B74 !default;
+$darkgreen:   #2D4C29 !default;
+
+/* Font Settings */
+$headings-font-family:   "News Cycle", "Arial Narrow Bold", sans-serif !default;
+$text-font-family:       "Poppins", sans-serif !default; 
+
+/*-- scss:uses --*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&display=swap");
+
+/*-- scss:rules --*/
+
+.content {
+  width: 95%;
+  margin: 0 5%;
+  padding: 0 10px;
+}
+
+body {
+  font-family: $text-font-family;
+  font-weight: 400;
+  text-align: justify;
+  color: $darkgreen;
+  background-color: $cream;
+}
+
+a {
+  color: $midrose; 
+  text-decoration: none; 
+}
+
+a:hover {
+  color: $coffee;
+  text-decoration: underline;
+}
+
+.navbar {
+  background-color: $green;
+  font-family: $headings-font-family;
+  font-size: 20px;
+  font-weight: bold;
+  border-bottom: 1px solid $gray-500;
+}
+
+.navbar a {
+  color: $midgreen;
+}
+
+.navbar a:hover {
+  color: $coffee;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $headings-font-family;
+}
+
+.shrew-wrapper {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.hover-image-link {
+  position: relative;
+  display: inline-block;
+  width: 60%;
+  max-width: 500px;
+}
+
+.hover-image-link img {
+  width: 100%;
+  display: block;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.hover-image-link::after {
+  content: "";
+  background-image: url("img/shrew-overlay.png");
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.hover-image-link:hover::after {
+  opacity: 1;
+}
+
+.shrew-caption {
+  font-size: 0.9em;
+  color: $midrose;
+  margin-bottom: 8px;
+  font-style: italic;
+}
+
+/* City styles */
+
+.city-wrapper {
+  position: relative;
+  width: 100vw;
+  max-width: 100vw;
+  height: auto;
+  aspect-ratio: 5754 / 3235;
+  margin-left: calc(-45vw + 50%); 
+}
+
+.city-layer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.city-background,
+.city-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+
+.city-icon {
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.2s ease, filter 0.3s ease;
+  z-index: 10;
+}
+
+.city-icon:hover {
+  opacity: 1;
+}
+
+.city-icon:hover img {
+  transform: translateY(-3px);
+  filter: brightness(1.2) drop-shadow(0 0 8px rgba(255,255,255,0.6));
+}
+
+.city-icon img {
+  width: 100%;
+  height: auto;
+  display: block;
+  vertical-align: bottom;
+  transition: transform 0.2s ease, filter 0.3s ease;
+}
+
+.icon-contact {
+  top: 14.01%;
+  left: 37.92%;
+  width: 17.10%;
+}
+
+.icon-home {
+  top: 0.89%;
+  left: 56.13%;
+  width: 21.93%;
+}
+
+.icon-illustration {
+  top: 33.66%;
+  left: 63.57%;
+  width: 16.99%;
+}
+
+.icon-open-science {
+  top: 36.57%;
+  left: 18.67%;
+  width: 7.98%;
+}
+
+.icon-research {
+  top: 12.73%;
+  left: 23.03%;
+  width: 21.60%;
+}
+
+.icon-talks-workshops {
+  top: 11.95%;
+  left: 47.21%;
+  width: 16.35%;
+}
+
+.city-label {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-10px);
+  background-color: $brown;
+  color: $darkgreen;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 16px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.city-label::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-top-color: $brown;
+}
+
+.city-icon:hover .city-label {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-16px);
+}
+
+/* icons for each page */
+
+.page-icon {
+  position: absolute;
+  top: 6rem;
+  left: 6rem;
+  width: 200px;
+  z-index: 100;
+}
+
+.page-icon img {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .page-icon {
+    display: none !important;
+  }
+}
+
+.page-research .page-icon {
+  top: 1rem;
+  left: 1rem;
+  width: 60px;
+}
+
+
+/* Illustration Gallery */
+.modular-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: 300px;
+  gap: 16px;
+  margin: 2em auto;
+  justify-items: center;
+  align-items: start;
+}
+
+.tile {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  max-height: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.tile:hover {
+  transform: scale(1.03);
+}
+
+/* Custom tile sizes */
+.tile.micro {
+  grid-column: span 1;
+  grid-row: span 1;
+  width: 100%;
+  max-width: 120px;
+  height: auto;
+  object-fit: contain;
+  padding: 4px;
+}
+ 
+.tile.small {
+  grid-column: span 1;
+  grid-row: span 1;
+  background-color: white;
+}
+
+.tile.big {
+  grid-column: span 2;
+  grid-row: span 2;
+  background-color: white;
+}
+
+.tile.portrait {
+  aspect-ratio: 3 / 4.2;
+  object-fit: contain;
+  background-color: white;
+}
+
+.micro-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 10px;
+  justify-items: center;
+}
+
+/* Popup message */
+
+.img-popup {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: $midrose;
+  color: $cream;
+  border: 2px solid $rose;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  padding: 1em 1.5em;
+  border-radius: 10px;
+  z-index: 9999;
+  max-width: 300px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.img-popup a {
+  color: $rose;
+  text-decoration: underline;
+}
+
+.img-popup .close-popup {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}

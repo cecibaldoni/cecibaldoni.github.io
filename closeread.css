@@ -1,52 +1,56 @@
-/* Import Poppins font from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+/*-- scss:uses --*/
 
-* {
-  font-family: "Poppins", sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&display=swap");
+
+h1, h2, h3, h4, h5, h6 {
+  color: #4F5D48; /* $darkgreen */
+  font-family: "News Cycle", "Arial Narrow Bold", sans-serif;
 }
 
-/* Link Styles */
 a {
-  color: #E58D97; 
+  color: #A25B43; /* $midrose */
   text-decoration: none; 
 }
 
 a:hover {
-  color: #74343B;
+  color: #6F4E37; /* $darkrose */
   text-decoration: underline;
 }
 
 /* Navbar Styles */
 .navbar {
-  background-color: #b7d6d5;
-  font-family: $headings-font-family;
-  font-size: 18px;
+  background-color: #A9CBB7; /* $green */
+  font-family: "News Cycle", "Arial Narrow Bold", sans-serif !important;
+  font-size: 20px;
   font-weight: bold;
-  border-bottom: 1px solid $gray-500;
+  border-bottom: 1px solid #aaa; /* $gray-500 */
 }
 
 .navbar a {
-  color: #34746D;
+  color: #6F8B74; /* $midgreen */
 }
 
 .navbar a:hover {
-  color: #74343B;
+  color: #6F4E37; /* $darkrose */
 }
 
 /* Background color for Closeread sections */
 .cr-section {
-  background-color: #e2f2e9 !important;
+  background-color: #F3EDE2 !important; 
 }
 
 /* Styling for narrative sections */
 .narrative {
-  font-size: 16px;
-  background-color: rgba(226, 242, 233, 0.6) !important;
-  color: black !important;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  background-color: rgba(178, 205, 227, 0.8)!important; /* $yellow with transparency */
+  color: #1D3C1F !important; /* $darkgreen */
   text-align: justify;
   border-radius: 15px !important;
 }
 
+/* Highlight active Closeread block */
 .cr-section .sticky-col .sticky-col-stack .cr-active {
   opacity: 1 !important;
   visibility: visible !important;

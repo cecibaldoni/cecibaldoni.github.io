@@ -53,7 +53,7 @@ Each building represents a different section of my site — and yes, I drew all 
 ```
 
 
-## Icons
+## Icons & Logos
 ```{=html}
 <div class="micro-gallery">
   <img src="img/illustrations/cognition.png" class="tile micro">

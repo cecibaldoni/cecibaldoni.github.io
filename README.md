@@ -12,5 +12,4 @@ for my personal website. This repo contains the code and resources for my site, 
 ## Support My Work
 If you enjoy the content and wish to support my work, consider buying me a coffee on Ko-fi! <br><br>
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/I2I71CEP0Y)<br><br>
-Your support helps me continue creating and sharing content.
 

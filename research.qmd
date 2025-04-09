@@ -98,5 +98,6 @@ This publication list is automatically updated using a custom R script that pull
 
 
 ```{r, results='asis', echo=FALSE}
-cat(readLines("data/publications.html"), sep = "\n")
+cat(readLines("data/publications.md"), sep = "\n")
 ```
+

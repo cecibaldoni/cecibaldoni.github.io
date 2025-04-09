@@ -4,10 +4,6 @@ format: html
 page-layout: full
 ---
 
-::: {.page-icon}
-<img src="img/icons/illustrations.svg" alt="" aria-hidden="true">
-:::
-
 ## Illustrations
 
 ***📢  Page under construction! Come back soon! ***

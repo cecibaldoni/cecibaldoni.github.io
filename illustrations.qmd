@@ -4,6 +4,10 @@ format: html
 page-layout: full
 ---
 
+::: {.page-icon}
+<img src="img/icons/illustrations.svg" alt="" aria-hidden="true">
+:::
+
 ## Illustrations
 
 ***📢  Page under construction! Come back soon! ***
@@ -40,6 +44,8 @@ You can support my work or request a **custom commission** (graphical abstracts,
 <div class="modular-gallery">
   <img src="img/illustrations/animals.png" class="tile small">
   <img src="img/illustrations/hering-shrews.png" class="tile big">
+  <img src="img/illustrations/funkyanimals.png" class="tile small">
+  <img src="img/illustrations/lady.png" class="tile big">
 </div>
 ```
 

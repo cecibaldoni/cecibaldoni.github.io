@@ -4,53 +4,51 @@
 @import url("https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&display=swap");
 
 h1, h2, h3, h4, h5, h6 {
-  color: #4F5D48; /* $darkgreen */
+  color: #4F5D48; 
   font-family: "News Cycle", "Arial Narrow Bold", sans-serif;
 }
 
 a {
-  color: #A25B43; /* $midrose */
+  color: #A25B43; 
   text-decoration: none; 
 }
 
 a:hover {
-  color: #6F4E37; /* $darkrose */
+  color: #6F4E37; 
   text-decoration: underline;
 }
 
 /* Navbar Styles */
 .navbar {
-  background-color: #A9CBB7; /* $green */
+  background-color: #A9CBB7; 
   font-family: "News Cycle", "Arial Narrow Bold", sans-serif !important;
   font-size: 20px;
   font-weight: bold;
-  border-bottom: 1px solid #aaa; /* $gray-500 */
+  border-bottom: 1px solid #aaa; 
 }
 
 .navbar a {
-  color: #6F8B74; /* $midgreen */
+  color: #6F8B74;
 }
 
 .navbar a:hover {
-  color: #6F4E37; /* $darkrose */
+  color: #6F4E37; 
 }
 
-/* Background color for Closeread sections */
+/* background color for Closeread sections */
 .cr-section {
   background-color: #F3EDE2 !important; 
 }
 
-/* Styling for narrative sections */
 .narrative {
   font-family: "Poppins", sans-serif;
   font-size: 18px;
-  background-color: rgba(178, 205, 227, 0.8)!important; /* $yellow with transparency */
+  background-color: rgba(178, 205, 227, 0.8)!important; 
   color: #1D3C1F !important; /* $darkgreen */
   text-align: justify;
   border-radius: 15px !important;
 }
 
-/* Highlight active Closeread block */
 .cr-section .sticky-col .sticky-col-stack .cr-active {
   opacity: 1 !important;
   visibility: visible !important;

@@ -197,6 +197,12 @@ h1, h2, h3, h4, h5, h6 {
   width: 16.35%;
 }
 
+.icon-blog {
+  top: 34.58%;
+  left: 86.30%;
+  width: 7.21%;
+}
+
 .city-label {
   position: absolute;
   bottom: 100%;
@@ -359,3 +365,50 @@ h1, h2, h3, h4, h5, h6 {
 .hidden {
   display: none;
 }
+
+/* Blog post*/
+
+/* Layout each listing item (title + image + description) */
+.quarto-listing-default .listing-item {
+  display: flex;
+  gap: 1.5em;
+  margin-bottom: 2em;
+  align-items: flex-start;
+}
+
+/* Thumbnail image styling */
+/* Force thumbnail container to strict size */
+.quarto-listing-default .thumbnail {
+  width: 250px;
+  height: 250px;
+  min-width: 250px;
+  min-height: 250px;
+  max-width: 250px;
+  max-height: 250px;
+  flex-shrink: 0;
+  overflow: hidden; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Image itself */
+.quarto-listing-default .thumbnail-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+  display: block;
+}
+
+
+/* Blog post title */
+
+
+/* Optional: center thumbnail vertically if needed */
+.quarto-listing-default .thumbnail-container {
+  display: flex;
+  align-items: center;
+}
+

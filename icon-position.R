@@ -11,7 +11,8 @@ icons <- list(
   illustration = list(x = 3657.613, y = 1089.041, w = 977.5),
   open_science = list(x = 1074.053, y = 1183.316, w = 459.129),
   research = list(x = 1325.287, y = 411.785, w = 1242.664),
-  talks_workshops = list(x = 2716.678, y = 386.725, w = 941,811)
+  talks_workshops = list(x = 2716.678, y = 386.725, w = 941,811),
+  blog = list(x=4966,693, y=1119,354, w=415,982)
 )
 
 # calculate top, left, and width in percentages

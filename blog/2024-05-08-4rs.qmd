@@ -12,7 +12,7 @@ image: img/4rs-thumbnail.png
 
 What do we actually mean when we say something is reproducible? Or replicable? Or reliable? These words come up all the time, especially when you are reading about open science or trying to make your research more transparent. They sound straightforward, but we do not always use them the same way, even when we think we do.
 
-A few months ago, while preparing a talk on open science (you can find the presentation here), I ran into a familiar tangle. I had reached the part about the four Rs, and, as usual, things were a bit muddled. I did what I often do when something does not quite make sense: I made a visual. In this case, I wanted to map out *reliable, repeatable, reproducible*, and *replicable*, the way I had learned them. It was not meant to be a final word on anything. I just needed a clearer picture for myself.
+A few months ago, while preparing a talk on open science (you can find the presentation [here](https://cecibaldoni.quarto.pub/open-science---rado-seminar/openscience.html#/title)), I ran into a familiar tangle. I had reached the part about the four Rs, and, as usual, things were a bit muddled. I did what I often do when something does not quite make sense: I made a visual. In this case, I wanted to map out *reliable, repeatable, reproducible*, and *replicable*, the way I had learned them. It was not meant to be a final word on anything. I just needed a clearer picture for myself.
 
 ![](img/4rs.png)
 

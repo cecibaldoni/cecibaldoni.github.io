@@ -42,6 +42,7 @@ You can support my work or request a **custom commission** (graphical abstracts,
   <img src="img/illustrations/hering-shrews.png" class="tile big">
   <img src="img/illustrations/funkyanimals.png" class="tile small">
   <img src="img/illustrations/lady.png" class="tile big">
+  <img src="img/illustrations/funkyanimals.png" class="tile small">
 </div>
 ```
 
@@ -63,6 +64,14 @@ Each building represents a different section of my site — and yes, I drew all 
   <img src="img/illustrations/brain.png" class="tile micro">
   <img src="img/illustrations/microstructure.png" class="tile micro">
   <img src="img/illustrations/cage.png" class="tile micro">
+</div>
+
+<div class="micro-gallery">
+  <img src="img/illustrations/climatechange.png" class="tile micro">
+  <img src="img/illustrations/deforestation.png" class="tile micro">
+  <img src="img/illustrations/eolic.png" class="tile micro">
+  <img src="img/illustrations/hunting.png" class="tile micro">
+  <img src="img/illustrations/virus.png" class="tile micro">
 </div>
 
 <div class="micro-gallery">

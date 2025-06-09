@@ -2,6 +2,9 @@
   {
     "listing": "/blog/index.html",
     "items": [
+      "/blog/drafts/note-taking-analysis.html",
+      "/blog/drafts/awesome-pkm.html",
+      "/blog/2024-05-31-cr.html",
       "/blog/2024-05-08-4rs.html"
     ]
   }

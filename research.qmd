@@ -49,41 +49,70 @@ I make my data, analysis scripts, and visualizations publicly available whenever
 - I also work as a **Data Editor** for [PCI Ecology](https://ecology.peercommunityin.org/), where I check the accessibility and reproducibility of data and code associated with recommended preprints.
 
 ---
+## Selected Publications
+
+```{=html}
+<div class="listing-item">
+  <div class="thumbnail">
+    <img src="img/pub/gene-expression.png"
+         alt="Gene expression"
+         class="thumbnail-image">
+  </div>
+  <div>
+    <p><strong><a href="https://elifesciences.org/articles/100788">
+      Seasonal and comparative evidence of adaptive gene expression in mammalian brain size plasticity (2025)
+    </a></strong></p>
+    <p>Shrews shrink their brains to survive winter... and their hypothalamus helps pull it off! This study reveals seasonal gene shifts tied to energy balance, brain remodeling, and even some genes linked to human neurological disorders.</p>
+  </div>
+</div>
+
+<div class="listing-item">
+  <div class="thumbnail">
+    <img src="img/pub/captivity-cognition.png"
+         alt="Captivity effects on brain size and cognition"
+         class="thumbnail-image">
+  </div>
+  <div>
+    <p><strong><a href="https://royalsocietypublishing.org/doi/full/10.1098/rsos.242138">
+      Captivity alters behaviour but not seasonal brain size change in semi-naturally housed shrews (2025)
+    </a></strong></p>
+    <p>Captive shrews still shrink their brains seasonally... but their behavior tells a different story! Despite semi-natural captive conditions, they showed signs of chronic stress, with higher activity and lower motivation to learn, compared to wild ones. It shows how captivity can quietly reshape research outcomes.</p>
+  </div>
+</div>
+
+<div class="listing-item">
+  <div class="thumbnail">
+    <img src="img/pub/gene-captivity.png"
+         alt="Gene expression wild vs captive"
+         class="thumbnail-image">
+  </div>
+  <div>
+    <p><strong><a href="https://royalsocietypublishing.org/doi/10.1098/rsbl.2024.0478">
+      Gene expression comparisons between captive and wild shrew brains reveal captivity effects (2025)
+    </a></strong></p>
+    <p>Captivity alters how shrew brains work at the molecular level: hundreds of genes changed expression after just two months! These shifts echo patterns seen in human disorders like depression and neurodegeneration, raising caution for interpreting data from captive animals.</p>
+  </div>
+</div>
+
+<div class="listing-item">
+  <div class="thumbnail">
+    <img src="img/pub/atlas.png"
+         alt="Shrew Brain Atlas"
+         class="thumbnail-image">
+  </div>
+  <div>
+    <p><strong><a href="https://www.frontiersin.org/journals/neuroanatomy/articles/10.3389/fnana.2023.1168523/full">
+      Histological and MRI brain atlas of the common shrew, <em>Sorex araneus</em>, with brain region-specific gene expression profiles (2023)
+    </a></strong></p>
+    <p>The common shrew is one of the few mammals that shrinks and regrows its brain... and now it has its own detailed brain atlas! This openly available resource combines histology, MRI, and gene expression to unlock the shrew brain.</p>
+  </div>
+</div>
+```
+
 
   
-## Talks and Workshops {#talks-workshops}
+## Workshops and Talks {#talks-workshops}
 
-#### **Talks**: 
-**Baldoni C.,** <br>
-*Invited Seminar Talk - Messerli Institute Vienna, Austria*<br>
-Shrinking Shrews: Cognitive Challenges in a Changing Brain<br><br>
-**Baldoni C.**, Farantouri M., Raptis K., Nourani E., Dechmann D. <br>
-*ISBE: Melbourne, Australia, 2024* <br>
-Seasonal Brain Size Variation and Its Impact on Spatial Navigation and Learning in the Common Shrew (*Sorex araneus*) <br><br>
-**Baldoni C.**, von Elverfeldt D., Dechmann D.<br>
-*MPIAB - RADO Seminar: Radolfzell, Germany, 2023*<br>
-News from the Shrews: insight from brain structure during Dehnel’s phenomenon from Neuroimaging<br><br>
-**Baldoni C.**, Farantouri M., Raptis K., Nourani E., Dechmann D.<br>
-*Animal Behaviour: Bielefeld, Germany, 2023*<br>
-Brain size and spatial learning: the case of the common shrew (*Sorex araneus*) <br><br>
-**Baldoni C.**, Nourani E., Dechmann D.<br>
-*IV Convegno Nazionale sui Piccoli Mammiferi: Grosseto, Italy, 2023*<br>
-Seasonal change in brain size affects spatial learning skills in common shrews (*Sorex araneus*)<br><br>
-**Baldoni C.**, Dechmann D.<br>
-Animal Behaviour Society: San Josè, Costa Rica, 2022<br>
-Seasonal change in brain size affects associative learning skills in common shrews (*Sorex araneus*)<br><br>
-**Baldoni C.**, Scaravelli D., Priori P., Carpentari S., Torboli C., Franzoi A., Pedrini P.<br>
-*IV Italian Bat Conference: Padova, Italy, 2019*<br>
-Diversity and consistency of nocturnal migration of bats at the bird ringing station ‘Bocca di Caset’<br><br>
-**Baldoni C.**, Cicero M., Pasini A., Caselli N., Scaravelli D.<br>
-*XX Italian Conference of Ornithology: Naples, Italy, 2019*<br>
-Assessing the distribution of the Ring-necked parakeet (*Psittacula krameri*) in Bologna, Italy: a citizen-science approach<br><br>
-**Baldoni C.**, Brucks D., Krasheninnikova A., Petelle M., von Bayern A.<br>
-*ASAB Summer conference: Konstanz, Germany, 2019*<br>
-Let it go: two macaw species are able to wait for a better reward in a rotating self-control paradigm<br><br>
-**Baldoni C.**, Giglio G., Scaravelli D.<br>
-*II European Meeting of Young Ornithologists: Torino, Italy, 2018*<br>
-An approach to the study of effects of fire on birds in Mediterranean woods.<br><br>
 
 #### **Workshops**: 
 
@@ -92,12 +121,35 @@ An approach to the study of effects of fire on birds in Mediterranean woods.<br>
 **Personal Knowledge Management and Note-Taking Apps** - [Open Resources](https://github.com/cecibaldoni/PKM-workshop)
 
 
-## Publications
 
-This publication list is automatically updated using a custom R script that pulls my latest publications from [Google Scholar](https://scholar.google.com/). <br><br>
-
-
-```{r, results='asis', echo=FALSE}
-cat(readLines("data/publications.md"), sep = "\n")
-```
-
+#### **Talks**: 
+**Baldoni C.,** <br>
+*Invited Seminar Talk - Messerli Institute Vienna, Austria*<br>
+Shrinking Shrews: Cognitive Challenges in a Changing Brain<br>
+**Baldoni C.**, Farantouri M., Raptis K., Nourani E., Dechmann D. <br>
+*ISBE: Melbourne, Australia, 2024* <br>
+Seasonal Brain Size Variation and Its Impact on Spatial Navigation and Learning in the Common Shrew (*Sorex araneus*) <br>
+**Baldoni C.**, von Elverfeldt D., Dechmann D.<br>
+*MPIAB - RADO Seminar: Radolfzell, Germany, 2023*<br>
+News from the Shrews: insight from brain structure during Dehnel’s phenomenon from Neuroimaging<br>
+**Baldoni C.**, Farantouri M., Raptis K., Nourani E., Dechmann D.<br>
+*Animal Behaviour: Bielefeld, Germany, 2023*<br>
+Brain size and spatial learning: the case of the common shrew (*Sorex araneus*) <br>
+**Baldoni C.**, Nourani E., Dechmann D.<br>
+*IV Convegno Nazionale sui Piccoli Mammiferi: Grosseto, Italy, 2023*<br>
+Seasonal change in brain size affects spatial learning skills in common shrews (*Sorex araneus*)<br>
+**Baldoni C.**, Dechmann D.<br>
+Animal Behaviour Society: San Josè, Costa Rica, 2022<br>
+Seasonal change in brain size affects associative learning skills in common shrews (*Sorex araneus*)<br>
+**Baldoni C.**, Scaravelli D., Priori P., Carpentari S., Torboli C., Franzoi A., Pedrini P.<br>
+*IV Italian Bat Conference: Padova, Italy, 2019*<br>
+Diversity and consistency of nocturnal migration of bats at the bird ringing station ‘Bocca di Caset’<br>
+**Baldoni C.**, Cicero M., Pasini A., Caselli N., Scaravelli D.<br>
+*XX Italian Conference of Ornithology: Naples, Italy, 2019*<br>
+Assessing the distribution of the Ring-necked parakeet (*Psittacula krameri*) in Bologna, Italy: a citizen-science approach<br>
+**Baldoni C.**, Brucks D., Krasheninnikova A., Petelle M., von Bayern A.<br>
+*ASAB Summer conference: Konstanz, Germany, 2019*<br>
+Let it go: two macaw species are able to wait for a better reward in a rotating self-control paradigm<br>
+**Baldoni C.**, Giglio G., Scaravelli D.<br>
+*II European Meeting of Young Ornithologists: Torino, Italy, 2018*<br>
+An approach to the study of effects of fire on birds in Mediterranean woods.<br>

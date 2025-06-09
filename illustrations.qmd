@@ -42,7 +42,8 @@ You can support my work or request a **custom commission** (graphical abstracts,
   <img src="img/illustrations/hering-shrews.png" class="tile big">
   <img src="img/illustrations/funkyanimals.png" class="tile small">
   <img src="img/illustrations/lady.png" class="tile big">
-  <img src="img/illustrations/funkyanimals.png" class="tile small">
+  <img src="img/illustrations/lady2.png" class="tile small">
+  <img src="img/illustrations/lady3.png" class="tile small">
 </div>
 ```
 

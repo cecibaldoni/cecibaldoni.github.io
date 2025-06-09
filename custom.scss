@@ -367,14 +367,26 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Blog post*/
-
-/* Layout each listing item (title + image + description) */
-.quarto-listing-default .listing-item {
+.listing-item {
   display: flex;
+  flex-wrap: wrap;
   gap: 1.5em;
   margin-bottom: 2em;
   align-items: flex-start;
 }
+
+@media (max-width: 768px) {
+  .listing-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+  }
+
+  .thumbnail {
+    margin-bottom: 1em;
+  }
+}
+
 
 /* Thumbnail image styling */
 .thumbnail {

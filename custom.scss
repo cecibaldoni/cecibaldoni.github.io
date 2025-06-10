@@ -369,10 +369,10 @@ h1, h2, h3, h4, h5, h6 {
 /* Blog post*/
 .listing-item {
   display: flex;
-  flex-wrap: wrap;
   gap: 1.5em;
   margin-bottom: 2em;
   align-items: flex-start;
+  flex-direction: row; /* default desktop layout */
 }
 
 @media (max-width: 768px) {
@@ -386,7 +386,6 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1em;
   }
 }
-
 
 /* Thumbnail image styling */
 .thumbnail {

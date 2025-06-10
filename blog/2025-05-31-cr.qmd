@@ -1,8 +1,8 @@
 ---
-title: "A Cheatsheet for Closeread (or the one when I gave a talk and went the extra mile)"
+title: "A Cheatsheet for Closeread (or the one where I gave a talk and brought more than slides)"
 date: 2025-05-31
 description: "This post started with a talk invitation about Closeread and scrollytelling. It ended with a full demo and a printable cheatsheet, all thanks to aesthetic joy and the refusal to keep checking the same three lines of syntax."
-categories: [Open Science, infographic]
+categories: [quarto, closeread, infographic]
 image: img/cheatsheet-closeread-thumbnail.png
 ---
 

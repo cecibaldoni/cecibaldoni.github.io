@@ -2,7 +2,7 @@
 title: "From “Not Sure How It Works” to “Maybe This Will Help Someone”"
 date: 2025-06-21
 description: "This is the story on how I went from Confused Logseq User to Accidental Curator of an awesome academic PKM  repository"
-categories: [PKM, note-taking]
+categories: [PKM, note-taking, open resources]
 image: img/PKM-thumbnail.png
 ---
 

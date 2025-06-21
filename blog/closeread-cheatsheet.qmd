@@ -2,7 +2,7 @@
 title: "A Cheatsheet for Closeread (or the one where I gave a talk and brought more than slides)"
 date: 2025-05-31
 description: "This post started with a talk invitation about Closeread and scrollytelling. It ended with a full demo and a printable cheatsheet, all thanks to aesthetic joy and the refusal to keep checking the same three lines of syntax."
-categories: [quarto, closeread, infographic]
+categories: [quarto, closeread, infographic, open resources]
 image: img/cheatsheet-closeread-thumbnail.png
 ---
 

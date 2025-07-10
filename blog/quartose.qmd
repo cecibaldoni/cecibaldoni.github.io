@@ -1,0 +1,242 @@
+---
+title: "TidyTuesday and Quartose"
+description: "An experiment in structuring a TidyTuesday exploration using interactive elements from `quartose`"
+date: 2025-07-10
+image: https://i0.wp.com/imgs.xkcd.com/blag/doghouse_color_wheel_altered.png
+categories: [TidyTuesday, quarto, quartose]
+---
+
+## Why I tried Quartose
+
+Full disclosure first: this wasn't the blogpost I planned. I had something else in mind for this week (I guess that's a *future Ceci* problem).
+
+On Tuesday, I saw a [LinkedIn post](https://www.linkedin.com/feed/update/urn:li:activity:7348925452993863680/) about a new R package called [`quartose`](https://quartose.djnavarro.net/), created by [Danielle Navarro](https://djnavarro.net/). Like everything with the word [Quarto](https://quarto.org/) in it, I was hooked, and after reading her [blogpost](https://blog.djnavarro.net/posts/2025-07-05_quarto-syntax-from-r/) I thought: this looks like fun. 
+
+Did I already say it was Tuesday? *wink wink, #TidyTuesday*.
+
+So I took the opportunity to explore the dataset from this week’s challenge using `quartose`. I didn’t start with a specific analysis in mind, I just wanted to see how `quartose` felt in a real document.
+
+## Exploring the colour naming dataset with quartose
+
+This week's [TidyTuesday](https://github.com/rfordatascience/tidytuesday/tree/main) features millions of responses from an online color naming game *slash* survey. It includes *a lot* of responses (*kudos to the curator of this dataset, [Nicola Rennie](https://github.com/nrennie)*), along with metadata about users (e.g. self-reported Y chromosome presence, colorblindness etc.).
+
+Rather than focusing on the full dataset, I used a subset to play with structuring and presenting small summaries. The visualizations are extremely simple, but enough to test how different layout elements from `quartose` could help me guide the narrative.
+
+You’ll see a few of these elements below:
+
+- Summary tables with side content
+- Tabs that organize plots by grouping
+- Notes placed outside the main column
+
+The dataset is available in the [color project repo](https://github.com/rfordatascience/tidytuesday/tree/master/data/2025/2025-07-08), and the TidyTuesday project is a great excuse to learn something new each week (well, that's my excuse!).
+
+## Welcome to the color chaos
+
+```{r setup}
+#| include: false
+library(tidyverse)
+library(quartose)
+library(kableExtra)
+
+answers <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-07-08/answers.csv')
+color_ranks <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-07-08/color_ranks.csv')
+users <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-07-08/users.csv')
+```
+
+Thousands of people participated in a color-naming survey online. This document explores the funny and, sometimes, messy data behind the responses.
+
+### Who responded?
+
+Let’s begin with the basics: who were the users behind these color names?
+
+```{r}
+#| warning: false
+#| echo: false
+
+users_summary <- users |> 
+  summarise(n_users = n_distinct(user_id),
+            n_monitors = n_distinct(monitor),
+            n_y = sum(y_chromosome == 1, na.rm = TRUE),
+            n_no_y = sum(y_chromosome == 0, na.rm = TRUE),
+            n_cb = sum(colorblind == 1, na.rm = TRUE),
+            avg_spam_prob = mean(spam_prob, na.rm = TRUE))
+
+users_summary |> 
+  rename(`Total Users` = n_users,
+         `Monitor Types` = n_monitors,
+         `Users with Y` = n_y,
+         `Users without Y` = n_no_y,
+         `Colorblind Users` = n_cb,
+         `Avg. Spam Probability` = avg_spam_prob) |>
+  knitr::kable(format = "html", digits = 3, align = "c", caption = "User summary") |>
+  kableExtra::kable_styling(full_width = FALSE,
+                            bootstrap_options = c("striped", "hover", "condensed"))
+```
+
+Over **150,000 individuals** took part in the experiment, each using one of a few different types of **monitors**. Of them, **more than 40,000** were not equipped with a Y chromosome. Over **5,000 individuals** indicated they were colorblind. One interesting variable in this dataset is a spam probability score, meaning (*I guess*) a numeric value that estimates how likely a given user was submitting low-quality answers.
+
+```{r}
+#| results: asis
+quarto_div(content = c(paste0("Colorblind participants: ", users_summary$n_cb), "<br>",
+                       paste0("Average spam probability: ", round(users_summary$avg_spam_prob, 3)), "<br>",
+                       paste0("Monitor types: ", users_summary$n_monitors)),
+  class = "column-margin")
+```
+
+### How much data?
+
+```{r}
+#| echo: false
+#| warning: false
+tibble(answers = nrow(answers),
+       named_colors = n_distinct(color_ranks$color),
+       hex_codes = n_distinct(color_ranks$hex))
+```
+```{r}
+#| results: asis
+#| echo: false
+quarto_div(content = "As you can see, this is a large dataset. People typed in thousands of color names for hundreds of distinct hex codes. That’s a lot of ways to say “blue.”",
+  class = c("column-margin", "callout-tip"))
+```
+
+### Answers per user
+
+```{r}
+#| results: asis
+#| echo: false
+
+hist_plot <- answers |> 
+  count(user_id, name = "n_answers") |> 
+  ggplot(aes(x = n_answers)) +
+  geom_histogram(binwidth = 1, fill = "steelblue", color = "white") +
+  scale_x_log10() +
+  labs(x = "Answers per user (log scale)", y = "Number of users")
+
+avg_plot <- answers |> 
+  count(user_id, name = "n_answers") |> 
+  left_join(users, by = "user_id") |> 
+  mutate(y_chr = case_when(y_chromosome == 1 ~ "Y", y_chromosome == 0 ~ "No Y", TRUE ~ "Unknown")) |>
+  group_by(y_chr) |>
+  summarise(mean_answers = mean(n_answers, na.rm = TRUE)) |> 
+  ggplot(aes(x = y_chr, y = mean_answers, fill = y_chr)) +
+  geom_col(show.legend = FALSE) +
+  labs(x = "Reported Y chromosome", y = "Average answers per user")
+
+density_plot <- answers |> 
+  count(user_id, name = "n_answers") |> 
+  left_join(users, by = "user_id") |> 
+  mutate(y_chr = case_when(y_chromosome == 1 ~ "Y", y_chromosome == 0 ~ "No Y", TRUE ~ "Unknown")) |> 
+  ggplot(aes(x = n_answers, color = y_chr, fill = y_chr)) +
+  geom_density(alpha = 0.2) +
+  scale_x_log10() +
+  labs(x = "Answers per user (log scale)", y = "Density",
+       fill = "Y chromosome", color = "Y chromosome")
+
+quarto_tabset(content = list("Histogram" = hist_plot,
+                             "Average by Y chromosome" = avg_plot,
+                             "Density" = density_plot),
+              level = 3)
+```
+
+```{r}
+#| echo: false
+#| results: asis
+
+cat("**What you’re seeing:**  
+- The histogram shows that most users gave fewer than 10 answers, with a long tail of power users.  <br>
+- On average, answer counts per user are fairly similar across Y chromosome groups. <br>
+- The density plot shows the shape of participation, all groups are heavily skewed.")
+```
+
+
+### Colorblindness
+
+Color perception is often assumed to be universal, but of course, it isn’t. 
+
+Let’s take a quick look at how many participants reported being colorblind:
+
+```{r}
+#| fig-cap: "Colorblindness status"
+users |> 
+  mutate(cb_status = factor(case_when(colorblind == 1 ~ "Colorblind",
+                                      colorblind == 0 ~ "Not colorblind",
+                                      TRUE ~ "Unknown"), levels = c("Not colorblind", "Colorblind", "Unknown"))) |> 
+  count(cb_status) |> 
+  ggplot(aes(x = cb_status, y = n, fill = cb_status)) +
+  geom_col(show.legend = FALSE) +
+  labs(x = "Colorblindness Status", y = "Number of users")
+```
+
+
+### Spam Probability
+
+What kind of variation is there in users' spam scores? 
+
+This variable is a bit opaque... I don’t know exactly how it's computed. But it’s cool to see how it distributes across groups.
+
+```{r}
+#| fig-cap: "Distribution of spam scores"
+#| echo: false
+users |>
+  mutate(cb_status = factor(case_when(colorblind == 1 ~ "Colorblind",
+                                      colorblind == 0 ~ "Not colorblind",
+                                      TRUE ~ "Unknown"), levels = c("Colorblind", "Not colorblind", "Unknown"))) |>
+  ggplot(aes(x = cb_status, y = spam_prob, fill = cb_status)) +
+  geom_boxplot(outlier.alpha = 0.1) +
+  scale_fill_manual(values = c("Colorblind" = "#E41A1C", "Not colorblind" = "#377EB8", "Unknown" = "#4DAF4A")) +
+  labs(x = "Colorblindness Status",
+       y = "Spam Probability",
+       fill = NULL) 
+
+users |>
+  mutate(y_chr = factor(case_when(y_chromosome == 1 ~ "Y",
+                                  y_chromosome == 0 ~ "No Y",
+                                  TRUE ~ "Unknown"), levels = c("Y", "No Y", "Unknown"))) |>
+  ggplot(aes(x = y_chr, y = spam_prob, fill = y_chr)) +
+  geom_boxplot(outlier.alpha = 0.1) +
+  scale_fill_manual(values = c("Y" = "#E41A1C", "No Y" = "#377EB8", "Unknown" = "#4DAF4A")) +
+  labs(x = "Reported Y Chromosome", y = "Spam Probability", fill = NULL)
+
+```
+
+
+### Is monitor type related?
+
+Could the type of monitor affect color perception or how people respond?
+
+```{r}
+#| fig-cap: "Monitor type vs number of users"
+users |> 
+  mutate(monitor = fct_lump(monitor, n = 3)) |>
+  count(monitor) |> 
+  ggplot(aes(x = monitor, y = n, fill = monitor)) +
+  geom_col(show.legend = FALSE) +
+  labs(x = "Monitor Type", y = "Number of users")
+```
+
+I admit, I had to google this. Most users had modern displays (LCD or Liquid Crystal Display), but there were still a few on older CRTs (Cathode Ray Tube, that really sounds like something from Back to the Future) or other types, which might influence how colors looked during the experiment.
+
+### Conclusion
+
+There’s a lot more to explore. But I really liked the unexpected combinations and perspectives people bring when interpreting color.
+
+```{r}
+#| results: asis
+quarto_div(content = "Want to try your own analysis? Check out the full dataset at the TidyTuesday GitHub.",
+           class = c("callout-tip"))
+```
+
+## TL;DR
+
+To me, `quartose` feels a bit like a lightweight take on scrollytelling. Not quite like `closeread`, which I [may have already talked about profusely](https://www.youtube.com/watch?v=ytKZ357Xtqw), but still an interesting way to shape an exploratory narrative. 
+
+Does it save me time compared to writing plain Quarto syntax? Not really. 
+
+Do I want to try it again? Oh yes.
+
+I imagine it could be useful for workshop materials or blog tutorials, though I haven’t settled on how I might use it yet.
+As Danielle wrote: 
+
+>“All that `quarto_div()` actually does is construct syntax for the Quarto parser to capture and render.” 
+
+That’s exactly what it does. And for someone already used to Quarto’s logic, it feels like a natural extension.

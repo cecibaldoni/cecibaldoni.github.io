@@ -10,6 +10,7 @@ $midrose:     #A25B43 !default;
 $coffee:      #6F4E37 !default;
 $cream:       #F3EDE2 !default;
 $brown:       #D8C3A5 !default;
+$lightgreen:  #CEE7D8 !default;
 $green:       #A9CBB7 !default;
 $midgreen:    #6F8B74 !default;
 $darkgreen:   #2D4C29 !default;
@@ -67,6 +68,16 @@ a:hover {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $headings-font-family;
+}
+
+p code, li code, span code, td code, th code, a code {
+  background-color: $lightgreen !important;
+  color: $darkgreen !important;
+  font-family: monospace;
+  font-size: 0.95em;
+  padding: 2px 6px;
+  border-radius: 6px;
+  white-space: nowrap;
 }
 
 .shrew-wrapper {

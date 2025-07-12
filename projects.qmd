@@ -13,19 +13,13 @@ class: page-projects
 
 :::{.cr-section layout="overlay-center"}
 
-My main research topics all exist around one specific animal, the common shrew (*Sorex araneus*). @cr-shrew
+I study the common shrew (*Sorex araneus*), a tiny mammal with a  metabolism so *extreme* that even a few hours without food can be fatal. @cr-shrew
 
-Shrews are bound by an incredibly fast-paced life: they **burn through energy so quickly** that they must eat constantly just to stay alive. Their metabolism is so extreme that even a few hours without food can be fatal. 
+This high metabolism makes them particularly vulnerable to seasonal changes, and it makes it **impossible for them to hibernate during winter**. Their solution? They **shrink**.
 
-This high metabolism makes them particularly vulnerable to seasonal changes, and it makes it **impossible for them to hibernate during winter**.
+Unlike animals that grow steadily over years, shrews undergo a radical transformation within a single lifetime. @cr-shrew-overlay
 
-Their solution? They **shrink**.
-
-Unlike animals that grow steadily over years or those that adapt gradually across generations, shrews undergo a radical transformation within a single lifetime. @cr-shrew-overlay
-
-As winter approaches, their skulls, brains, bones, muscles, and internal organs ***shrink in size***
-
-This process, known as **Dehnel’s Phenomenon**, is an extreme form of biological restructuring that allows them to drastically lower their energy demands when food is scarce. Then, as spring arrives, their bodies begin to regrow, reversing much of the shrinkage in preparation for a season of rapid activity and reproduction.
+This dramatic change, **Dehnel’s Phenomenon**, reduces their brain, bones, and organs to save energy in winter scarcity, regrowing them in spring for breeding.
 
 :::{#cr-shrew}
 ![](img/shrew.png){alt="Close-up of a shrew"}
@@ -41,13 +35,13 @@ This process, known as **Dehnel’s Phenomenon**, is an extreme form of biologic
 
 How does it work? @cr-shrew-cycle
 
-Shrews are born in **summer**, growing rapidly and reaching their lifetime peak in brain size within just a few months. This is the largest their brains will ever be.  [@cr-shrew-cycle]{pan-to="50%,-20%" scale-by="1.8"}
+Born in **summer**, shrews rapidly reach peak brain size. This is the largest their brains will ever be.  [@cr-shrew-cycle]{pan-to="50%,-20%" scale-by="1.8"}
 
-As **winter** sets in, something remarkable happens: their skulls begin to shrink, their brains lose mass, and their bodies become smaller and leaner. These changes reduce their energy consumption at a time when survival depends on making the most of limited resources. [@cr-shrew-cycle]{pan-to="-10%,-20%" scale-by="2"}
+As **winter** sets in, the shrew shrinks their brains and bodies, reducing energy needs. [@cr-shrew-cycle]{pan-to="-10%,-20%" scale-by="2"}
 
-Then, with the arrival of **spring**, their bodies regrow some (but not all) of what was lost. Their **body mass grows to twice its winter size by spring**. This allows them to take advantage of renewed food availability and prepare for reproduction. [@cr-shrew-cycle]{pan-to="-50%,-5%" scale-by="1.7"}
+By **spring**, they double their winter mass, gearing up to reproduce. [@cr-shrew-cycle]{pan-to="-50%,-5%" scale-by="1.7"}
 
-Shrews **live only about a year**, so this transformation happens just once in their lifetime.  @cr-shrew-cycle
+Shrews **live only about a year**, so this transformation happens just once.  @cr-shrew-cycle
 
 :::{#cr-shrew-cycle}
 ![](img/shrew-cycle.svg){alt="Shrew Cycle"}
@@ -57,17 +51,13 @@ Shrews **live only about a year**, so this transformation happens just once in t
 
 :::{.cr-section layout="sidebar-right"}
 
-What does the brain shrinkage and regrowth mean for **how shrews think, learn and behave**? @cr-shrew-cognitionbw
-
-The idea that a brain can physically shrink and then regrow challenges many assumptions about cognition, memory, and plasticity.
+What happens *cognitively* when brains shrink and regrow? @cr-shrew-cognitionbw
 
 My research explores what happens when their brain changes size: @cr-shrew-cognition
 
 How does brain size affect cognitive abilities? @cr-shrew-lightbulb
 
 Does a smaller brain lead to simpler decision-making? @cr-shrew-decisionmaking
-
-When the brain regrows, does it restore lost functions—or does it reorganize in a new way?
 
 These questions go *beyond just shrews*. Understanding how an animal maintains function despite physical changes in the brain helps us explore broader ideas in **neurodegeneration** and **energy efficiency**.
 
@@ -105,9 +95,9 @@ model_data <- readRDS("data/al_fitted.rds")
 
 :::{.cr-section layout="sidebar-right"}
 
-Brain size is of course only part of the story. @cr-captive-shrew
+Brain size is of course only part of the story... environment shapes behavior too. @cr-captive-shrew
 
-The environment an animal experiences shapes its brain and behavior. In captivity, animals face new challenges—chronic stress, lack of stimulation, and altered social dynamics.  Do shrews kept in captivity learn differently than those in the wild? @cr-captive-shrew
+In *captivity*, animals face new challenges.  Do shrews kept in captivity learn differently than those in the wild? @cr-captive-shrew
 
 I tested the ability of shrews to associate an odor cue with a reward in a Y-maze **associative learning task**. @cr-shrew-empty-plot  
 

@@ -80,6 +80,12 @@ p code, li code, span code, td code, th code, a code {
   white-space: nowrap;
 }
 
+.column-margin {
+  clear: both;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
 .shrew-wrapper {
   text-align: center;
   margin-top: 20px;
@@ -264,9 +270,22 @@ p code, li code, span code, td code, th code, a code {
   height: auto;
 }
 
-@media (max-width: 768px) {
+
+@media (min-width: 992px) {             /* only on wide screens           */
+  nav.toc-sidebar { float: right; }     /* (default, but we’re explicit)  */
   .page-icon {
     display: none !important;
+  }
+  /* push article body so TOC has room */
+  main.content { margin-right: 260px; } /* 260 px ≈ TOC width + breathing */
+
+  /* make each margin note clear the TOC and one another */
+  .column-margin {
+    float: right;
+    clear: right;       /* key line: keeps it below the sidebar */
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    max-width: 220px;   /* optional: keeps note narrower than TOC */
   }
 }
 

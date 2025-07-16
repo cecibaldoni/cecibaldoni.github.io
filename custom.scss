@@ -270,24 +270,33 @@ p code, li code, span code, td code, th code, a code {
   height: auto;
 }
 
-
-@media (min-width: 992px) {             /* only on wide screens           */
-  nav.toc-sidebar { float: right; }     /* (default, but we’re explicit)  */
+@media (max-width: 768px) {
   .page-icon {
-    display: none !important;
-  }
-  /* push article body so TOC has room */
-  main.content { margin-right: 260px; } /* 260 px ≈ TOC width + breathing */
-
-  /* make each margin note clear the TOC and one another */
-  .column-margin {
-    float: right;
-    clear: right;       /* key line: keeps it below the sidebar */
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    max-width: 220px;   /* optional: keeps note narrower than TOC */
+    display: none;
   }
 }
+
+@media (min-width: 992px) {
+  nav.toc-sidebar {
+    float: right;
+    width: 220px;
+    max-width: 220px;
+    margin-left: 2rem;
+  }
+
+  main.content {
+    margin-right: 260px; /* 220px toc + breathing room */
+  }
+
+  .column-margin {
+    float: right;
+    clear: right;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    max-width: 220px;
+  }
+}
+
 
 .page-research .page-icon {
   top: 1rem;
@@ -444,3 +453,50 @@ p code, li code, span code, td code, th code, a code {
   align-items: flex-start;
 }
 
+#cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $midrose;
+  color: $cream;
+  padding: 1em;
+  text-align: center;
+  font-family: $text-font-family;
+  font-size: 0.9em;
+  z-index: 10000;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.2);
+}
+
+#cookie-banner p {
+  margin: 0;
+}
+
+#cookie-banner button {
+  margin-left: 1em;
+  background-color: $cream;
+  color: $midrose;
+  border: none;
+  padding: 0.4em 1em;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: $text-font-family;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#cookie-banner button:hover {
+  background-color: $coffee;
+  color: $cream;
+}
+
+#cookie-banner .cookie-link {
+  margin-left: 1em;
+  color: $cream;
+  text-decoration: underline;
+  font-weight: normal;
+}
+
+#cookie-banner .cookie-link:hover {
+  color: $white;
+}

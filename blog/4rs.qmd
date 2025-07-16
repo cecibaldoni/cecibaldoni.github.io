@@ -2,7 +2,7 @@
 title: "The 4 Rs, and why they’re so confusing"
 date: 2025-05-08
 description: "This post started with a diagram I made for a talk, and ended with a discussion that showed me just how slippery scientific terms can be."
-categories: [Open Science, infographic]
+categories: [open science, infographic]
 image: img/4rs-thumbnail.png
 ---
 

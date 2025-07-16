@@ -4,11 +4,11 @@ format: html
 title-block-banner: false
 ---
 
-## Cecilia Baldoni
+# Cecilia Baldoni
 
 <br>
 
-<img src="img/back.JPG" alt="Your Image Alt Text" style="width: 45%; float: left; margin-right: 40px;"/>
+<img src="img/back.JPG" alt="" style="width: 45%; float: left; margin-right: 40px;"/>
 
 Welcome to my website! <br><br>
 I am an Early Career Researcher at the [Max Planck Institute of Animal Behaviour](https://www.ab.mpg.de/), in Konstanz, where I investigate how the environment and brain structures shape cognitive flexibility.<br><br>

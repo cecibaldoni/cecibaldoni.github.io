@@ -1,9 +1,10 @@
 project:
   type: website
   output-dir: docs
-  
+
 website:
   title: "Cecilia Baldoni"
+  site-url: https://cecibaldoni.github.io/  # ← Add your actual website URL
   favicon: shrew.png
   navbar:
     left:
@@ -31,9 +32,11 @@ website:
         href: https://www.instagram.com/cecirockyaosta/?hl=en
       - icon: github
         href: https://github.com/cecibaldoni/
+
   page-footer:
     right: "Built with [Quarto](https://quarto.org/)"
     left: "&copy; Copyright 2024, Cecilia Baldoni"
+
   google-analytics: G-DV6K7C0XDV
 
 format:
@@ -43,5 +46,12 @@ format:
     theme: custom.scss
     toc: true
     toc-depth: 2
+    meta:
+      description: "Personal website of Cecilia Baldoni"
+      author: "Cecilia Baldoni"
+      keywords: ["Cecilia Baldoni", "behavioral ecology", "neurobiology", "cognitive ecology", "science illustration"]
+    includes:
+      after-body: cookie-banner.js
+
 
 editor: source

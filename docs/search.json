@@ -1,31 +1,213 @@
 [
   {
-    "objectID": "about.html#about-me",
-    "href": "about.html#about-me",
-    "title": "Cecilia Baldoni",
-    "section": "About me",
-    "text": "About me\n I am a behavioral ecologist, broadly interested in animal cognition and cognitive ecology.  My research focuses on how animals think, make decisions, and interact with their environment. I use quantitative methods to investigate the drivers and outcomes of cognition. I test animals, in their natural habitat or in captivity under semi-natural conditions, to uncover how these cognitive processes vary across species and contexts.  I have had the opportunity to work with a variety of species, including both birds and mammals, depending on the questions at hand. My current work centers on the cognitive compromises of the common shrew, a model species for studying Dehnel’s phenomenon—a remarkable seasonal adaptation that affects brain size and behavior in small mammals.  Recently, I became more involved in open science practices, and I aim to advance openness, transparency and reproducibility in my daily life as a researcher. I’ve had the opportunity to participate to the Open Science Summer School organised by the Max Planck Digital Library and the LMU Open Science Center, where I learned practical tools and strategies to make research more accessible and collaborative."
-  },
-  {
-    "objectID": "about.html#previous-life",
-    "href": "about.html#previous-life",
-    "title": "Cecilia Baldoni",
-    "section": "Previous Life",
-    "text": "Previous Life\n Before becoming a scientist, I was a violinist, a journey that started when I was five. Over the years, I performed with various orchestras, including the United Europe Chamber Orchestra (UECO), and eventually, this work helped pay for my university studies.  While music has always been a passion, science turned out to be an even stronger driver, leading me to make the switch from professional musician to biologist.  I still enjoy playing the violin for myself and appreciate the creativity and focus it brings to my life."
-  },
-  {
-    "objectID": "blog/closeread-cheatsheet.html",
-    "href": "blog/closeread-cheatsheet.html",
-    "title": "A Cheatsheet for Closeread (or the one where I gave a talk and brought more than slides)",
+    "objectID": "privacy.html",
+    "href": "privacy.html",
+    "title": "Privacy Policy",
     "section": "",
-    "text": "So, I got invited to give a talk for R-Ladies Amsterdam. About something I really, really like: scrollytelling with Quarto and Closeread.\nThe invitation came after I shared a peek at my Closeread-built research page online. The post picked up a bit of attention. Apparently, the combination of tiny shrews and gentle scroll animations is memorable (take notes, academia!). Slowly it turned from what it showed to how I made it. That eventually turned into: “Would you like to give a talk about this?”.\nBy the way, I said yes to the talk. You already know that part, you’re here reading the aftermath, afterall.\nI love talks like this. I get to share something I’m genuinely excited about, with people who might also be curious. And I get to say: “Hey, this is easier than it looks. And also fun!”\nWhen I started getting things ready, I thought I’d just need some slides. Maybe a live demo. But then came the custom SCSS file. And the example repo. And somewhere along the way, a cheatsheet happened too.\nIt wasn’t really part of the plan. But I kept reopening the documentation to check things, and at some point I realized I was having the same three doubts on repeat. Eventually, I gave up on flipping between tabs and just made a cheatsheet. It was half an act of self-care, half a design itch.\n\nThe result is a printable cheatsheet that puts the main Closeread building blocks in one spot. It’s colorful (because why not), and it’s practical (because I needed it), and if you’re starting your own Closeread experiment, I hope it saves you a few tabs.\nI wrapped everything into a tidy GitHub repo; you will find the slides from the talk, the closeread example folder, and the cheatsheet. You can fork it, remix it, or ignore it completely. But if you’re curious, it’s there.\nAs for the talk… I think it went well. You can waatch it here if you are curious. I was very excited (is too excited possible?). Also, mildly terrified for the classic Zoom shenanigans: where is the link, screen share panic, going too fast and suddenly realizing I’m done five minutes early. But mostly, I’m just happy this tiny visual storytelling project has found its way into other people’s hands.\nIf you want to try Closeread, everything’s in the repo. And if you want to look at shrews with scroll-activated flair, well… I support that too.\nHappy scrolling."
+    "text": "This website uses Google Analytics to help understand how visitors interact with the content.\nNo personal data (like names or emails) is collected directly. Google Analytics may use cookies to collect anonymous usage data such as page views, duration, and device/browser information.\nBy using this site, you consent to this anonymous tracking.\nYou can disable cookies in your browser settings or use browser extensions to block analytics scripts.\nIf you have questions, feel free to contact me."
   },
   {
-    "objectID": "blog/closeread-cheatsheet.html#how-i-ended-up-making-a-closeread-cheatsheet-and-a-talk",
-    "href": "blog/closeread-cheatsheet.html#how-i-ended-up-making-a-closeread-cheatsheet-and-a-talk",
-    "title": "A Cheatsheet for Closeread (or the one where I gave a talk and brought more than slides)",
+    "objectID": "blog/awesome-pkm.html",
+    "href": "blog/awesome-pkm.html",
+    "title": "From “Not Sure How It Works” to “Maybe This Will Help Someone”",
     "section": "",
-    "text": "So, I got invited to give a talk for R-Ladies Amsterdam. About something I really, really like: scrollytelling with Quarto and Closeread.\nThe invitation came after I shared a peek at my Closeread-built research page online. The post picked up a bit of attention. Apparently, the combination of tiny shrews and gentle scroll animations is memorable (take notes, academia!). Slowly it turned from what it showed to how I made it. That eventually turned into: “Would you like to give a talk about this?”.\nBy the way, I said yes to the talk. You already know that part, you’re here reading the aftermath, afterall.\nI love talks like this. I get to share something I’m genuinely excited about, with people who might also be curious. And I get to say: “Hey, this is easier than it looks. And also fun!”\nWhen I started getting things ready, I thought I’d just need some slides. Maybe a live demo. But then came the custom SCSS file. And the example repo. And somewhere along the way, a cheatsheet happened too.\nIt wasn’t really part of the plan. But I kept reopening the documentation to check things, and at some point I realized I was having the same three doubts on repeat. Eventually, I gave up on flipping between tabs and just made a cheatsheet. It was half an act of self-care, half a design itch.\n\nThe result is a printable cheatsheet that puts the main Closeread building blocks in one spot. It’s colorful (because why not), and it’s practical (because I needed it), and if you’re starting your own Closeread experiment, I hope it saves you a few tabs.\nI wrapped everything into a tidy GitHub repo; you will find the slides from the talk, the closeread example folder, and the cheatsheet. You can fork it, remix it, or ignore it completely. But if you’re curious, it’s there.\nAs for the talk… I think it went well. You can waatch it here if you are curious. I was very excited (is too excited possible?). Also, mildly terrified for the classic Zoom shenanigans: where is the link, screen share panic, going too fast and suddenly realizing I’m done five minutes early. But mostly, I’m just happy this tiny visual storytelling project has found its way into other people’s hands.\nIf you want to try Closeread, everything’s in the repo. And if you want to look at shrews with scroll-activated flair, well… I support that too.\nHappy scrolling."
+    "text": "Awesome\n\n\nAt some point during my PhD, I started using Logseq to organize my knowledge.  Then it was Obsidian, then both for a time. Then Logseq again.  Guess what? Now I am back to both.\nLearning to use a note-taking app is an interesting experience. I mean, it’s something you need to manage your knowledge, but you also need some time to learn how does that actually work. I guess if you already have a great note-taking routine (I hadn’t), you know how to structure your thoughts (carnival music roaming) and you have some basic idea on how to connect your ideas (lucky you) then the learning curve is reasonable.\nFor me it was indeed interesting. I downloaded Logseq with no ideas about how to make it work. My very first entry (September 15th, 2021) recites:\n\nI installed this thing. Not sure how it works (yet). \ncit. me as a confused Logseq first-timer\n\nTruer words have never been said. That was all for that week, no more entries.  But then it was like a videogame. You keep thinking about it and you keep trying.  At some point you reach some level of certainty and move forward.  Each new level brought its own set of complexities. The longer I used it, the more questions popped up: how do people structure their vaults? What’s a good way to handle academic reading? Is there a Zotero workflow that won’t break my brain?\nIf you are here because you’d like an answer to these questions, I apologize in advance.  I do not think there is anything like this in the whole wide web. That’s because it depends on you. When I gave a workshop to PhD students about note-taking apps and PKM I had a mantra (I think at some point I should have written it on a t-shirt, I was saying it every three or four sentences):\n\nWhat works for me might not work for you. \ncit. me as a recalcitrant Logseq user\n\nI have my own workflow. I can show it to you and you can try it, but I bet you will find something about it that it’s just not right.  But then again, the internet if full of people finding their own workflow and sharing it with others (bless them).\nThat’s when I realized: I had quietly been collecting a pretty large pile of resources that other researchers (and future me!) might find useful.\nIt took a while to organize everything, but eventually I decided it was worth turning into a proper list.\n👉 Awesome PKM for Academics and Researchers"
+  },
+  {
+    "objectID": "blog/awesome-pkm.html#a-journey-often-starts-with-chaos-and-confusion",
+    "href": "blog/awesome-pkm.html#a-journey-often-starts-with-chaos-and-confusion",
+    "title": "From “Not Sure How It Works” to “Maybe This Will Help Someone”",
+    "section": "",
+    "text": "Awesome\n\n\nAt some point during my PhD, I started using Logseq to organize my knowledge.  Then it was Obsidian, then both for a time. Then Logseq again.  Guess what? Now I am back to both.\nLearning to use a note-taking app is an interesting experience. I mean, it’s something you need to manage your knowledge, but you also need some time to learn how does that actually work. I guess if you already have a great note-taking routine (I hadn’t), you know how to structure your thoughts (carnival music roaming) and you have some basic idea on how to connect your ideas (lucky you) then the learning curve is reasonable.\nFor me it was indeed interesting. I downloaded Logseq with no ideas about how to make it work. My very first entry (September 15th, 2021) recites:\n\nI installed this thing. Not sure how it works (yet). \ncit. me as a confused Logseq first-timer\n\nTruer words have never been said. That was all for that week, no more entries.  But then it was like a videogame. You keep thinking about it and you keep trying.  At some point you reach some level of certainty and move forward.  Each new level brought its own set of complexities. The longer I used it, the more questions popped up: how do people structure their vaults? What’s a good way to handle academic reading? Is there a Zotero workflow that won’t break my brain?\nIf you are here because you’d like an answer to these questions, I apologize in advance.  I do not think there is anything like this in the whole wide web. That’s because it depends on you. When I gave a workshop to PhD students about note-taking apps and PKM I had a mantra (I think at some point I should have written it on a t-shirt, I was saying it every three or four sentences):\n\nWhat works for me might not work for you. \ncit. me as a recalcitrant Logseq user\n\nI have my own workflow. I can show it to you and you can try it, but I bet you will find something about it that it’s just not right.  But then again, the internet if full of people finding their own workflow and sharing it with others (bless them).\nThat’s when I realized: I had quietly been collecting a pretty large pile of resources that other researchers (and future me!) might find useful.\nIt took a while to organize everything, but eventually I decided it was worth turning into a proper list.\n👉 Awesome PKM for Academics and Researchers"
+  },
+  {
+    "objectID": "blog/awesome-pkm.html#disclaimer.",
+    "href": "blog/awesome-pkm.html#disclaimer.",
+    "title": "From “Not Sure How It Works” to “Maybe This Will Help Someone”",
+    "section": "Disclaimer.",
+    "text": "Disclaimer.\nThere are already “awesome PKM” lists out there, a quick github search will show you 5 others. And they are great.  But somehow some are pretty general, or focused on the tools, not the context in which people use them.\nThis list is my attempt at something more specific: a curated (and opinionated) resource library, with researchers and PhD students in mind."
+  },
+  {
+    "objectID": "blog/awesome-pkm.html#whats-inside",
+    "href": "blog/awesome-pkm.html#whats-inside",
+    "title": "From “Not Sure How It Works” to “Maybe This Will Help Someone”",
+    "section": "What’s Inside",
+    "text": "What’s Inside\nIt includes:\n\nForum threads where people talk about how they actually use PKM tools in academia.\nBlog posts about real workflows; e.g. Zotero to Obsidian, or how to organize a literature review in Logseq.\nReady-to-use vaults and templates (some very polished, some simple but helpful).\nVideos and talks that show how people think through their own systems (these are one of my personal favourite. I could listen for hours to people on youtube telling me how they structure their academic knowledge).\nAcademic papers on knowledge graphs, note-taking, and scholarly PKM.\n\nI’ve grouped everything into categories, so it’s easy to browse or come back to later."
+  },
+  {
+    "objectID": "blog/awesome-pkm.html#who-this-is-for",
+    "href": "blog/awesome-pkm.html#who-this-is-for",
+    "title": "From “Not Sure How It Works” to “Maybe This Will Help Someone”",
+    "section": "Who This Is For",
+    "text": "Who This Is For\nThis might be useful if you:\n\nare writing a thesis (Bachelor, Master, Doctorate) and losing track of all your notes\nwant to stop reinventing your reading workflow every semester (been there, done that)\ntried using Obsidian or Logseq and didn’t know where to start\nfeel like your brain is full of articles you never quite remember at the right time\nyou have a to-read list that is longer than your 12yo Christmas wishlist\n\nBasically: if you’re a researcher trying to manage knowledge better, this list is for you."
+  },
+  {
+    "objectID": "blog/awesome-pkm.html#want-to-add-something",
+    "href": "blog/awesome-pkm.html#want-to-add-something",
+    "title": "From “Not Sure How It Works” to “Maybe This Will Help Someone”",
+    "section": "Want to Add Something?",
+    "text": "Want to Add Something?\nPlease do! I’d love to keep this evolving. You can:\n\nsubmit a pull request\nopen an issue\nor just message me if you’re unsure how to do those and still have something you would like to add.\n\nTips, workflows, example vaults, tiny-but-useful plugins… anything that helps researchers use PKM more intentionally is welcome."
+  },
+  {
+    "objectID": "blog/awesome-pkm.html#tldr",
+    "href": "blog/awesome-pkm.html#tldr",
+    "title": "From “Not Sure How It Works” to “Maybe This Will Help Someone”",
+    "section": "TL;DR",
+    "text": "TL;DR\nI just wanted a place to put all the good stuff in, and maybe help a few other people skip the part where they re-Google “Zotero to Obsidian academic workflow” every three weeks.\nHere’s the repo: 👉 Awesome PKM for Academics and Researchers"
+  },
+  {
+    "objectID": "blog/quartose.html",
+    "href": "blog/quartose.html",
+    "title": "TidyTuesday and Quartose",
+    "section": "",
+    "text": "Full disclosure first: this wasn’t the blogpost I planned. I had something else in mind for this week (I guess that’s a future Ceci problem).\nOn Tuesday, I saw a LinkedIn post about a new R package called quartose, created by Danielle Navarro. Like everything with the word Quarto in it, I was hooked, and after reading her blogpost I thought: this looks like fun.\nDid I already say it was Tuesday? wink wink, #TidyTuesday.\nSo I took the opportunity to explore the dataset from this week’s challenge using quartose. I didn’t start with a specific analysis in mind, I just wanted to see how quartose felt in a real document."
+  },
+  {
+    "objectID": "blog/quartose.html#why-i-tried-quartose",
+    "href": "blog/quartose.html#why-i-tried-quartose",
+    "title": "TidyTuesday and Quartose",
+    "section": "",
+    "text": "Full disclosure first: this wasn’t the blogpost I planned. I had something else in mind for this week (I guess that’s a future Ceci problem).\nOn Tuesday, I saw a LinkedIn post about a new R package called quartose, created by Danielle Navarro. Like everything with the word Quarto in it, I was hooked, and after reading her blogpost I thought: this looks like fun.\nDid I already say it was Tuesday? wink wink, #TidyTuesday.\nSo I took the opportunity to explore the dataset from this week’s challenge using quartose. I didn’t start with a specific analysis in mind, I just wanted to see how quartose felt in a real document."
+  },
+  {
+    "objectID": "blog/quartose.html#exploring-the-colour-naming-dataset-with-quartose",
+    "href": "blog/quartose.html#exploring-the-colour-naming-dataset-with-quartose",
+    "title": "TidyTuesday and Quartose",
+    "section": "Exploring the colour naming dataset with quartose",
+    "text": "Exploring the colour naming dataset with quartose\nThis week’s TidyTuesday features millions of responses from an online color naming game slash survey. It includes a lot of responses (kudos to the curator of this dataset, Nicola Rennie), along with metadata about users (e.g. self-reported Y chromosome presence, colorblindness etc.).\nRather than focusing on the full dataset, I used a subset to play with structuring and presenting small summaries. The visualizations are extremely simple, but enough to test how different layout elements from quartose could help me guide the narrative.\nYou’ll see a few of these elements below:\n\nSummary tables with side content\nTabs that organize plots by grouping\nNotes placed outside the main column\n\nThe dataset is available in the color project repo, and the TidyTuesday project is a great excuse to learn something new each week (well, that’s my excuse!)."
+  },
+  {
+    "objectID": "blog/quartose.html#welcome-to-the-color-chaos",
+    "href": "blog/quartose.html#welcome-to-the-color-chaos",
+    "title": "TidyTuesday and Quartose",
+    "section": "Welcome to the color chaos",
+    "text": "Welcome to the color chaos\nThousands of people participated in a color-naming survey online. This document explores the funny and, sometimes, messy data behind the responses.\n\nWho responded?\nLet’s begin with the basics: who were the users behind these color names?\n\n\n\nUser summary\n\n\nTotal Users\nMonitor Types\nUsers with Y\nUsers without Y\nColorblind Users\nAvg. Spam Probability\n\n\n\n\n152401\n3\n103430\n41464\n5588\n0.222\n\n\n\n\n\nOver 150,000 individuals took part in the experiment, each using one of a few different types of monitors. Of them, more than 40,000 were not equipped with a Y chromosome. Over 5,000 individuals indicated they were colorblind. One interesting variable in this dataset is a spam probability score, meaning (I guess) a numeric value that estimates how likely a given user was submitting low-quality answers.\nquarto_div(content = c(paste0(\"Colorblind participants: \", users_summary$n_cb), \"&lt;br&gt;\",\n                       paste0(\"Average spam probability: \", round(users_summary$avg_spam_prob, 3)), \"&lt;br&gt;\",\n                       paste0(\"Monitor types: \", users_summary$n_monitors)),\n  class = \"column-margin\")\n\n\nColorblind participants: 5588  Average spam probability: 0.222 Monitor types: 3\n\n\nHow much data?\n\n\n# A tibble: 1 × 3\n  answers named_colors hex_codes\n    &lt;int&gt;        &lt;int&gt;     &lt;int&gt;\n1 1058211          949       949\n\n\n\n\n\n\n\n\n\nTip\n\n\n\nAs you can see, this is a large dataset. People typed in thousands of color names for hundreds of distinct hex codes. That’s a lot of ways to say “blue.”\n\n\n\nAnswers per user\n\nHistogramAverage by Y chromosomeDensity\n\n\n\n\n\n\n\n\n\n\n\n\nWhat you’re seeing:\n- The histogram shows that most users gave fewer than 10 answers, with a long tail of power users.  - On average, answer counts per user are fairly similar across Y chromosome groups.  - The density plot shows the shape of participation, all groups are heavily skewed.\n\n\nColorblindness\nColor perception is often assumed to be universal, but of course, it isn’t.\nLet’s take a quick look at how many participants reported being colorblind:\n\nusers |&gt; \n  mutate(cb_status = factor(case_when(colorblind == 1 ~ \"Colorblind\",\n                                      colorblind == 0 ~ \"Not colorblind\",\n                                      TRUE ~ \"Unknown\"), levels = c(\"Not colorblind\", \"Colorblind\", \"Unknown\"))) |&gt; \n  count(cb_status) |&gt; \n  ggplot(aes(x = cb_status, y = n, fill = cb_status)) +\n  geom_col(show.legend = FALSE) +\n  labs(x = \"Colorblindness Status\", y = \"Number of users\")\n\n\n\n\nColorblindness status\n\n\n\n\n\n\nSpam Probability\nWhat kind of variation is there in users’ spam scores?\nThis variable is a bit opaque… I don’t know exactly how it’s computed. But it’s cool to see how it distributes across groups.\n\n\n\n\n\nDistribution of spam scores\n\n\n\n\n\n\n\nDistribution of spam scores\n\n\n\n\n\n\nIs monitor type related?\nCould the type of monitor affect color perception or how people respond?\n\nusers |&gt; \n  mutate(monitor = fct_lump(monitor, n = 3)) |&gt;\n  count(monitor) |&gt; \n  ggplot(aes(x = monitor, y = n, fill = monitor)) +\n  geom_col(show.legend = FALSE) +\n  labs(x = \"Monitor Type\", y = \"Number of users\")\n\n\n\n\nMonitor type vs number of users\n\n\n\n\nI admit, I had to google this. Most users had modern displays (LCD or Liquid Crystal Display), but there were still a few on older CRTs (Cathode Ray Tube, that really sounds like something from Back to the Future) or other types, which might influence how colors looked during the experiment.\n\n\nConclusion\nThere’s a lot more to explore. But I really liked the unexpected combinations and perspectives people bring when interpreting color.\nquarto_div(content = \"Want to try your own analysis? Check out the full dataset at the TidyTuesday GitHub.\",\n           class = c(\"callout-tip\"))\n\n\n\n\n\n\nTip\n\n\n\nWant to try your own analysis? Check out the full dataset at the TidyTuesday GitHub."
+  },
+  {
+    "objectID": "blog/quartose.html#tldr",
+    "href": "blog/quartose.html#tldr",
+    "title": "TidyTuesday and Quartose",
+    "section": "TL;DR",
+    "text": "TL;DR\nTo me, quartose feels a bit like a lightweight take on scrollytelling. Not quite like closeread, which I may have already talked about profusely, but still an interesting way to shape an exploratory narrative.\nDoes it save me time compared to writing plain Quarto syntax? Not really.\nDo I want to try it again? Oh yes.\nI imagine it could be useful for workshop materials or blog tutorials, though I haven’t settled on how I might use it yet. As Danielle wrote:\n\n“All that quarto_div() actually does is construct syntax for the Quarto parser to capture and render.”\n\nThat’s exactly what it does. And for someone already used to Quarto’s logic, it feels like a natural extension."
+  },
+  {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "Blog",
+    "section": "",
+    "text": "TidyTuesday and Quartose\n\n\n\nTidyTuesday\n\nquarto\n\nquartose\n\n\n\nAn experiment in structuring a TidyTuesday exploration using interactive elements from quartose\n\n\n\n\n\nJul 10, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nFrom “Not Sure How It Works” to “Maybe This Will Help Someone”\n\n\n\nPKM\n\nnote-taking\n\nopen resources\n\n\n\nThis is the story on how I went from Confused Logseq User to Accidental Curator of an awesome academic PKM repository\n\n\n\n\n\nJun 21, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nA Cheatsheet for Closeread (or the one where I gave a talk and brought more than slides)\n\n\n\nquarto\n\ncloseread\n\ninfographic\n\nopen resources\n\n\n\nThis post started with a talk invitation about Closeread and scrollytelling. It ended with a full demo and a printable cheatsheet, all thanks to aesthetic joy and the refusal to keep checking the same three lines of syntax.\n\n\n\n\n\nMay 31, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nThe 4 Rs, and why they’re so confusing\n\n\n\nopen science\n\ninfographic\n\n\n\nThis post started with a diagram I made for a talk, and ended with a discussion that showed me just how slippery scientific terms can be.\n\n\n\n\n\nMay 8, 2025\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "contact.html#get-in-touch",
+    "href": "contact.html#get-in-touch",
+    "title": "Cecilia Baldoni",
+    "section": "Get in Touch",
+    "text": "Get in Touch\nIf you’d like to reach out, feel free to contact me via email or through my social media platforms.\n\nEmail\n🖥️📧 cbaldoni@ab.mpg.de 🙋️ 📧 cecilia.baldons@gmail.com\n\n\nSocial Media\n🔗 LinkedIn  📷 Instagram  🐙 GitHub  ☕Ko-fi\nI look forward to hearing from you!"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Cecilia Baldoni",
+    "section": "",
+    "text": "Welcome to my website!  I am an Early Career Researcher at the Max Planck Institute of Animal Behaviour, in Konstanz, where I investigate how the environment and brain structures shape cognitive flexibility.\nIn my free time I enjoy creating silly illustrations, comics and stickers! 🎨\nHere you can find more about my research, talks, illustrations and contact details.  Explore the sections to learn more!\n\n\n\n\n  \n    \n\n    \n      \n      Get in Touch!\n    \n\n    \n      \n      About Me\n    \n\n    \n      \n      Illustrations\n    \n\n    \n      \n      Open Science\n    \n\n    \n      \n      Research Interests\n    \n\n    \n      \n      Talks and Workshops\n    \n    \n    \n      \n      Blog"
+  },
+  {
+    "objectID": "index.html#explore-the-city",
+    "href": "index.html#explore-the-city",
+    "title": "Cecilia Baldoni",
+    "section": "",
+    "text": "Get in Touch!\n    \n\n    \n      \n      About Me\n    \n\n    \n      \n      Illustrations\n    \n\n    \n      \n      Open Science\n    \n\n    \n      \n      Research Interests\n    \n\n    \n      \n      Talks and Workshops\n    \n    \n    \n      \n      Blog"
+  },
+  {
+    "objectID": "data/publications.html",
+    "href": "data/publications.html",
+    "title": "Cecilia Baldoni",
+    "section": "",
+    "text": "Gene expression comparisons between captive and wild shrew brains reveal captivity effects (2025). Biology Letters\nCaptivity alters behaviour but not seasonal brain size change in semi-naturally housed shrews (2025). Royal Society Open Science\nData and code for” Captivity alters behavior but not seasonal brain size change in semi–naturally housed shrews” (2024).\nSeasonal and comparative evidence of adaptive gene expression in mammalian brain size plasticity (2024). bioRxiv\nHistological and MRI brain atlas of the common shrew, Sorex araneus, with brain region-specific gene expression profiles (2023). Frontiers in Neuroanatomy\nMolecular mechanisms of seasonal brain shrinkage and regrowth in Sorex araneus (2023). BioRxiv\nLarge captivity effect based on gene expression comparisons between captive and wild shrew brains (2023). bioRxiv\nIntra-and interspecific variation in self-control capacities of parrots in a delay of gratification task (2022). Animal Cognition"
+  },
+  {
+    "objectID": "research.html#current-research",
+    "href": "research.html#current-research",
+    "title": "Cecilia Baldoni",
+    "section": "Research",
+    "text": "Research\nMy work focuses on how small mammals adapt to a fast-changing world — especially how their brains and behavior respond to environmental pressures.\nI’m particularly interested in seasonal brain plasticity, environmental adaptations and their cumulative effects on cognitive flexibility. Much of this work revolves around a unique little animal: the common shrew.\nExplore how the common shrew copes with winter by shrinking and regrowing its brain, and what this teaches us about brain plasticity and cognition!\n\n\nClick on the shrew to learn more! 🐾"
+  },
+  {
+    "objectID": "research.html#open-science",
+    "href": "research.html#open-science",
+    "title": "Cecilia Baldoni",
+    "section": "Open Science",
+    "text": "Open Science\nOpen science is about building a scientific culture that values accessibility, transparency, reproducibility, and collaboration.\nThis is something I care about deeply and try to reflect in my daily work.  My contributions to open science span different levels, from personal practices to community involvement and infrastructure.   I see open science as a way of working, not just a set of rules. It affects how I design studies, write code, share results, and support others in doing the same.  \nI make my data, analysis scripts, and visualizations publicly available whenever possible. Here is a list of resources where you can find my data and code: \n\nGitHub: my profile and open repositories, it includes some presentations for talks and workshops I organised. See Talks & Workshop for more! \nOSF - Open Science Framework: my profile and materials from ongoing or not-yet-published projects. \nEdmond – Max Planck Society Repository: in here you can find my data and scripts associated with peer-reviewed articles. \n\n\nOS Community & Initiatives\n\nI am an Open Science Ambassador in the Max Planck Society, helping build local awareness and promote transparent research practices across the Max Planck Institutes.\nI am an active member of SORTEE (Society for Open, Reliable, and Transparent Ecology and Evolution), where I serve on the Member Engagement Committee.\nIn 2025, I am organising the SORTEE Code Club, a monthly online meetup exploring practical tools and workflows for open science.\n→ You can find the list of events I’m currently organising here.\nI also work as a Data Editor for PCI Ecology, where I check the accessibility and reproducibility of data and code associated with recommended preprints."
+  },
+  {
+    "objectID": "research.html#selected-publications",
+    "href": "research.html#selected-publications",
+    "title": "Cecilia Baldoni",
+    "section": "Selected Publications",
+    "text": "Selected Publications\n\n  \n    \n  \n  \n    \n      Seasonal and comparative evidence of adaptive gene expression in mammalian brain size plasticity (2025)\n    \n    Shrews shrink their brains to survive winter... and their hypothalamus helps pull it off! This study reveals seasonal gene shifts tied to energy balance, brain remodeling, and even some genes linked to human neurological disorders.\n  \n\n\n\n  \n    \n  \n  \n    \n      Captivity alters behaviour but not seasonal brain size change in semi-naturally housed shrews (2025)\n    \n    Captive shrews still shrink their brains seasonally... but their behavior tells a different story! Despite semi-natural captive conditions, they showed signs of chronic stress, with higher activity and lower motivation to learn, compared to wild ones. It shows how captivity can quietly reshape research outcomes.\n  \n\n\n\n  \n    \n  \n  \n    \n      Gene expression comparisons between captive and wild shrew brains reveal captivity effects (2025)\n    \n    Captivity alters how shrew brains work at the molecular level: hundreds of genes changed expression after just two months! These shifts echo patterns seen in human disorders like depression and neurodegeneration, raising caution for interpreting data from captive animals.\n  \n\n\n\n  \n    \n  \n  \n    \n      Histological and MRI brain atlas of the common shrew, Sorex araneus, with brain region-specific gene expression profiles (2023)\n    \n    The common shrew is one of the few mammals that shrinks and regrows its brain... and now it has its own detailed brain atlas! This openly available resource combines histology, MRI, and gene expression to unlock the shrew brain."
+  },
+  {
+    "objectID": "research.html#talks-workshops",
+    "href": "research.html#talks-workshops",
+    "title": "Cecilia Baldoni",
+    "section": "Workshops and Talks",
+    "text": "Workshops and Talks\n\nWorkshops:\nWhat is Open Science Anyway? - 🔗link event and Open Quarto presentation  SORTEE Code Club - find the list of events I am organising here  Personal Knowledge Management and Note-Taking Apps - Open Resources\n\n\nTalks:\nBaldoni C.,  Invited Seminar Talk - Messerli Institute Vienna, Austria Shrinking Shrews: Cognitive Challenges in a Changing Brain Baldoni C., Farantouri M., Raptis K., Nourani E., Dechmann D.  ISBE: Melbourne, Australia, 2024  Seasonal Brain Size Variation and Its Impact on Spatial Navigation and Learning in the Common Shrew (Sorex araneus)  Baldoni C., von Elverfeldt D., Dechmann D. MPIAB - RADO Seminar: Radolfzell, Germany, 2023 News from the Shrews: insight from brain structure during Dehnel’s phenomenon from Neuroimaging Baldoni C., Farantouri M., Raptis K., Nourani E., Dechmann D. Animal Behaviour: Bielefeld, Germany, 2023 Brain size and spatial learning: the case of the common shrew (Sorex araneus)  Baldoni C., Nourani E., Dechmann D. IV Convegno Nazionale sui Piccoli Mammiferi: Grosseto, Italy, 2023 Seasonal change in brain size affects spatial learning skills in common shrews (Sorex araneus) Baldoni C., Dechmann D. Animal Behaviour Society: San Josè, Costa Rica, 2022 Seasonal change in brain size affects associative learning skills in common shrews (Sorex araneus) Baldoni C., Scaravelli D., Priori P., Carpentari S., Torboli C., Franzoi A., Pedrini P. IV Italian Bat Conference: Padova, Italy, 2019 Diversity and consistency of nocturnal migration of bats at the bird ringing station ‘Bocca di Caset’ Baldoni C., Cicero M., Pasini A., Caselli N., Scaravelli D. XX Italian Conference of Ornithology: Naples, Italy, 2019 Assessing the distribution of the Ring-necked parakeet (Psittacula krameri) in Bologna, Italy: a citizen-science approach Baldoni C., Brucks D., Krasheninnikova A., Petelle M., von Bayern A. ASAB Summer conference: Konstanz, Germany, 2019 Let it go: two macaw species are able to wait for a better reward in a rotating self-control paradigm Baldoni C., Giglio G., Scaravelli D. II European Meeting of Young Ornithologists: Torino, Italy, 2018 An approach to the study of effects of fire on birds in Mediterranean woods."
+  },
+  {
+    "objectID": "illustrations.html",
+    "href": "illustrations.html",
+    "title": "Cecilia Baldoni",
+    "section": "",
+    "text": "📢 Page under construction! Come back soon!  \nIn this page you can find a selection of illustrations, sketches, and visual experiments I’ve created for different projects.  I love combining science and design, and helping others visually communicate their work.  You can support my work or request a custom commission (graphical abstracts, favicons, logos, or visuals for websites and talks) through Ko-fi:"
+  },
+  {
+    "objectID": "illustrations.html#illustrations",
+    "href": "illustrations.html#illustrations",
+    "title": "Cecilia Baldoni",
+    "section": "",
+    "text": "📢 Page under construction! Come back soon!  \nIn this page you can find a selection of illustrations, sketches, and visual experiments I’ve created for different projects.  I love combining science and design, and helping others visually communicate their work.  You can support my work or request a custom commission (graphical abstracts, favicons, logos, or visuals for websites and talks) through Ko-fi:"
+  },
+  {
+    "objectID": "illustrations.html#dissertation-chapters",
+    "href": "illustrations.html#dissertation-chapters",
+    "title": "Cecilia Baldoni",
+    "section": "Dissertation Chapters",
+    "text": "Dissertation Chapters"
+  },
+  {
+    "objectID": "illustrations.html#vector-illustrations",
+    "href": "illustrations.html#vector-illustrations",
+    "title": "Cecilia Baldoni",
+    "section": "Vector Illustrations",
+    "text": "Vector Illustrations\n\n  \n  \n  \n  \n  \n  \n\nThese are elements from the illustrated isometric city I designed for my homepage. Each building represents a different section of my site — and yes, I drew all of them"
+  },
+  {
+    "objectID": "illustrations.html#icons-logos",
+    "href": "illustrations.html#icons-logos",
+    "title": "Cecilia Baldoni",
+    "section": "Icons & Logos",
+    "text": "Icons & Logos\n\n  \n  \n  \n  \n\n\n\n  \n  \n  \n  \n  \n\n\n\n  \n  \n  \n  \n  \n  \n\n © cecibaldoni, 2025. All works in this page are licensed under a Creative Commons Attribution-NonDerivative-NonCommercial 4.0 International License.  This means you’re welcome to share anything from this page for non-commercial purposes as long as you credit me as the creator!\n\n\nWant a high-res version or a custom illustration? Contact me here️!\n\n×"
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Cecilia Baldoni",
+    "section": "",
+    "text": "I study the common shrew (Sorex araneus), a tiny mammal with a metabolism so extreme that even a few hours without food can be fatal.\n\n\n\n\nThis high metabolism makes them particularly vulnerable to seasonal changes, and it makes it impossible for them to hibernate during winter. Their solution? They shrink.\n\n\n\n\nUnlike animals that grow steadily over years, shrews undergo a radical transformation within a single lifetime.\n\n\n\n\nThis dramatic change, Dehnel’s Phenomenon, reduces their brain, bones, and organs to save energy in winter scarcity, regrowing them in spring for breeding.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow does it work?\n\n\n\n\nBorn in summer, shrews rapidly reach peak brain size. This is the largest their brains will ever be.\n\n\n\n\nAs winter sets in, the shrew shrinks their brains and bodies, reducing energy needs.\n\n\n\n\nBy spring, they double their winter mass, gearing up to reproduce.\n\n\n\n\nShrews live only about a year, so this transformation happens just once.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhat happens cognitively when brains shrink and regrow?\n\n\n\n\nMy research explores what happens when their brain changes size:\n\n\n\n\nHow does brain size affect cognitive abilities?\n\n\n\n\nDoes a smaller brain lead to simpler decision-making?\n\n\n\n\nThese questions go beyond just shrews. Understanding how an animal maintains function despite physical changes in the brain helps us explore broader ideas in neurodegeneration and energy efficiency."
+  },
+  {
+    "objectID": "projects.html#shrew",
+    "href": "projects.html#shrew",
+    "title": "Cecilia Baldoni",
+    "section": "",
+    "text": "I study the common shrew (Sorex araneus), a tiny mammal with a metabolism so extreme that even a few hours without food can be fatal.\n\n\n\n\nThis high metabolism makes them particularly vulnerable to seasonal changes, and it makes it impossible for them to hibernate during winter. Their solution? They shrink.\n\n\n\n\nUnlike animals that grow steadily over years, shrews undergo a radical transformation within a single lifetime.\n\n\n\n\nThis dramatic change, Dehnel’s Phenomenon, reduces their brain, bones, and organs to save energy in winter scarcity, regrowing them in spring for breeding.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow does it work?\n\n\n\n\nBorn in summer, shrews rapidly reach peak brain size. This is the largest their brains will ever be.\n\n\n\n\nAs winter sets in, the shrew shrinks their brains and bodies, reducing energy needs.\n\n\n\n\nBy spring, they double their winter mass, gearing up to reproduce.\n\n\n\n\nShrews live only about a year, so this transformation happens just once.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhat happens cognitively when brains shrink and regrow?\n\n\n\n\nMy research explores what happens when their brain changes size:\n\n\n\n\nHow does brain size affect cognitive abilities?\n\n\n\n\nDoes a smaller brain lead to simpler decision-making?\n\n\n\n\nThese questions go beyond just shrews. Understanding how an animal maintains function despite physical changes in the brain helps us explore broader ideas in neurodegeneration and energy efficiency."
+  },
+  {
+    "objectID": "projects.html#shrew-captivity",
+    "href": "projects.html#shrew-captivity",
+    "title": "Cecilia Baldoni",
+    "section": "Does captivity influence learning?",
+    "text": "Does captivity influence learning?\n\n\n\n\nBrain size is of course only part of the story… environment shapes behavior too.\n\n\n\n\nIn captivity, animals face new challenges. Do shrews kept in captivity learn differently than those in the wild?\n\n\n\n\nI tested the ability of shrews to associate an odor cue with a reward in a Y-maze associative learning task.\n\n\n\n\nEach dot represents an individual shrew’s decision in a trial. The x-axis represents the trial number, from 1 to 10. The y-axis shows whether they made the correct choice (1) or the wrong one (0).\n\n\n\n\nSummer wild (orange) shrews had the highest and earliest success rates.\n\n\n\n\nWinter wild (dark blue) shrews showed a similar learning curve, but they learned at a slower rate and did not reach the Summer success rate.\n\n\n\n\nWinter captive (light blue) shrews showed no learning, never deviating from chance.\n\n\n\n\n📄 This work is published in Royal Society Open Science: Captivity alters behaviour but not seasonal brain size change in semi-naturally housed shrews\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProject Collaborators\nI conduct this research supervised by Dr. Dina Dechmann at the Max Planck Institute of Animal Behaviour\n Collaborators:  Prof. Dominik von Elverfeldt, University of Freiburg, Germany  Prof. Liliana Dávalos, Stony Brook University, New York  Prof. John Nieland, University of Aalborg, Denmark"
   },
   {
     "objectID": "blog/4rs.html",
@@ -77,213 +259,31 @@
     "text": "I made an infographic.\nI joined a discussion.\nThe discussion got a bit messy.\nI learned a lot.\nOpen science is not about always getting things right the first time. It is about being transparent enough to revise your thinking, share what you have learned, and leave room for nuance and complexity. This post is part of that process.\nFor now, I will leave the diagram as it is. Maybe I will revise it later. Either way, I hope it gets people thinking, and talking."
   },
   {
-    "objectID": "projects.html",
-    "href": "projects.html",
-    "title": "Cecilia Baldoni",
+    "objectID": "blog/closeread-cheatsheet.html",
+    "href": "blog/closeread-cheatsheet.html",
+    "title": "A Cheatsheet for Closeread (or the one where I gave a talk and brought more than slides)",
     "section": "",
-    "text": "I study the common shrew (Sorex araneus), a tiny mammal with a metabolism so extreme that even a few hours without food can be fatal.\n\n\n\n\nThis high metabolism makes them particularly vulnerable to seasonal changes, and it makes it impossible for them to hibernate during winter. Their solution? They shrink.\n\n\n\n\nUnlike animals that grow steadily over years, shrews undergo a radical transformation within a single lifetime.\n\n\n\n\nThis dramatic change, Dehnel’s Phenomenon, reduces their brain, bones, and organs to save energy in winter scarcity, regrowing them in spring for breeding.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow does it work?\n\n\n\n\nBorn in summer, shrews rapidly reach peak brain size. This is the largest their brains will ever be.\n\n\n\n\nAs winter sets in, the shrew shrinks their brains and bodies, reducing energy needs.\n\n\n\n\nBy spring, they double their winter mass, gearing up to reproduce.\n\n\n\n\nShrews live only about a year, so this transformation happens just once.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhat happens cognitively when brains shrink and regrow?\n\n\n\n\nMy research explores what happens when their brain changes size:\n\n\n\n\nHow does brain size affect cognitive abilities?\n\n\n\n\nDoes a smaller brain lead to simpler decision-making?\n\n\n\n\nThese questions go beyond just shrews. Understanding how an animal maintains function despite physical changes in the brain helps us explore broader ideas in neurodegeneration and energy efficiency."
+    "text": "So, I got invited to give a talk for R-Ladies Amsterdam. About something I really, really like: scrollytelling with Quarto and Closeread.\nThe invitation came after I shared a peek at my Closeread-built research page online. The post picked up a bit of attention. Apparently, the combination of tiny shrews and gentle scroll animations is memorable (take notes, academia!). Slowly it turned from what it showed to how I made it. That eventually turned into: “Would you like to give a talk about this?”.\nBy the way, I said yes to the talk. You already know that part, you’re here reading the aftermath, afterall.\nI love talks like this. I get to share something I’m genuinely excited about, with people who might also be curious. And I get to say: “Hey, this is easier than it looks. And also fun!”\nWhen I started getting things ready, I thought I’d just need some slides. Maybe a live demo. But then came the custom SCSS file. And the example repo. And somewhere along the way, a cheatsheet happened too.\nIt wasn’t really part of the plan. But I kept reopening the documentation to check things, and at some point I realized I was having the same three doubts on repeat. Eventually, I gave up on flipping between tabs and just made a cheatsheet. It was half an act of self-care, half a design itch.\n\nThe result is a printable cheatsheet that puts the main Closeread building blocks in one spot. It’s colorful (because why not), and it’s practical (because I needed it), and if you’re starting your own Closeread experiment, I hope it saves you a few tabs.\nI wrapped everything into a tidy GitHub repo; you will find the slides from the talk, the closeread example folder, and the cheatsheet. You can fork it, remix it, or ignore it completely. But if you’re curious, it’s there.\nAs for the talk… I think it went well. You can waatch it here if you are curious. I was very excited (is too excited possible?). Also, mildly terrified for the classic Zoom shenanigans: where is the link, screen share panic, going too fast and suddenly realizing I’m done five minutes early. But mostly, I’m just happy this tiny visual storytelling project has found its way into other people’s hands.\nIf you want to try Closeread, everything’s in the repo. And if you want to look at shrews with scroll-activated flair, well… I support that too.\nHappy scrolling."
   },
   {
-    "objectID": "projects.html#shrew",
-    "href": "projects.html#shrew",
-    "title": "Cecilia Baldoni",
+    "objectID": "blog/closeread-cheatsheet.html#how-i-ended-up-making-a-closeread-cheatsheet-and-a-talk",
+    "href": "blog/closeread-cheatsheet.html#how-i-ended-up-making-a-closeread-cheatsheet-and-a-talk",
+    "title": "A Cheatsheet for Closeread (or the one where I gave a talk and brought more than slides)",
     "section": "",
-    "text": "I study the common shrew (Sorex araneus), a tiny mammal with a metabolism so extreme that even a few hours without food can be fatal.\n\n\n\n\nThis high metabolism makes them particularly vulnerable to seasonal changes, and it makes it impossible for them to hibernate during winter. Their solution? They shrink.\n\n\n\n\nUnlike animals that grow steadily over years, shrews undergo a radical transformation within a single lifetime.\n\n\n\n\nThis dramatic change, Dehnel’s Phenomenon, reduces their brain, bones, and organs to save energy in winter scarcity, regrowing them in spring for breeding.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow does it work?\n\n\n\n\nBorn in summer, shrews rapidly reach peak brain size. This is the largest their brains will ever be.\n\n\n\n\nAs winter sets in, the shrew shrinks their brains and bodies, reducing energy needs.\n\n\n\n\nBy spring, they double their winter mass, gearing up to reproduce.\n\n\n\n\nShrews live only about a year, so this transformation happens just once.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhat happens cognitively when brains shrink and regrow?\n\n\n\n\nMy research explores what happens when their brain changes size:\n\n\n\n\nHow does brain size affect cognitive abilities?\n\n\n\n\nDoes a smaller brain lead to simpler decision-making?\n\n\n\n\nThese questions go beyond just shrews. Understanding how an animal maintains function despite physical changes in the brain helps us explore broader ideas in neurodegeneration and energy efficiency."
+    "text": "So, I got invited to give a talk for R-Ladies Amsterdam. About something I really, really like: scrollytelling with Quarto and Closeread.\nThe invitation came after I shared a peek at my Closeread-built research page online. The post picked up a bit of attention. Apparently, the combination of tiny shrews and gentle scroll animations is memorable (take notes, academia!). Slowly it turned from what it showed to how I made it. That eventually turned into: “Would you like to give a talk about this?”.\nBy the way, I said yes to the talk. You already know that part, you’re here reading the aftermath, afterall.\nI love talks like this. I get to share something I’m genuinely excited about, with people who might also be curious. And I get to say: “Hey, this is easier than it looks. And also fun!”\nWhen I started getting things ready, I thought I’d just need some slides. Maybe a live demo. But then came the custom SCSS file. And the example repo. And somewhere along the way, a cheatsheet happened too.\nIt wasn’t really part of the plan. But I kept reopening the documentation to check things, and at some point I realized I was having the same three doubts on repeat. Eventually, I gave up on flipping between tabs and just made a cheatsheet. It was half an act of self-care, half a design itch.\n\nThe result is a printable cheatsheet that puts the main Closeread building blocks in one spot. It’s colorful (because why not), and it’s practical (because I needed it), and if you’re starting your own Closeread experiment, I hope it saves you a few tabs.\nI wrapped everything into a tidy GitHub repo; you will find the slides from the talk, the closeread example folder, and the cheatsheet. You can fork it, remix it, or ignore it completely. But if you’re curious, it’s there.\nAs for the talk… I think it went well. You can waatch it here if you are curious. I was very excited (is too excited possible?). Also, mildly terrified for the classic Zoom shenanigans: where is the link, screen share panic, going too fast and suddenly realizing I’m done five minutes early. But mostly, I’m just happy this tiny visual storytelling project has found its way into other people’s hands.\nIf you want to try Closeread, everything’s in the repo. And if you want to look at shrews with scroll-activated flair, well… I support that too.\nHappy scrolling."
   },
   {
-    "objectID": "projects.html#shrew-captivity",
-    "href": "projects.html#shrew-captivity",
+    "objectID": "about.html#about-me",
+    "href": "about.html#about-me",
     "title": "Cecilia Baldoni",
-    "section": "Does captivity influence learning?",
-    "text": "Does captivity influence learning?\n\n\n\n\nBrain size is of course only part of the story… environment shapes behavior too.\n\n\n\n\nIn captivity, animals face new challenges. Do shrews kept in captivity learn differently than those in the wild?\n\n\n\n\nI tested the ability of shrews to associate an odor cue with a reward in a Y-maze associative learning task.\n\n\n\n\nEach dot represents an individual shrew’s decision in a trial. The x-axis represents the trial number, from 1 to 10. The y-axis shows whether they made the correct choice (1) or the wrong one (0).\n\n\n\n\nSummer wild (orange) shrews had the highest and earliest success rates.\n\n\n\n\nWinter wild (dark blue) shrews showed a similar learning curve, but they learned at a slower rate and did not reach the Summer success rate.\n\n\n\n\nWinter captive (light blue) shrews showed no learning, never deviating from chance.\n\n\n\n\n📄 This work is published in Royal Society Open Science: Captivity alters behaviour but not seasonal brain size change in semi-naturally housed shrews\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProject Collaborators\nI conduct this research supervised by Dr. Dina Dechmann at the Max Planck Institute of Animal Behaviour\n Collaborators:  Prof. Dominik von Elverfeldt, University of Freiburg, Germany  Prof. Liliana Dávalos, Stony Brook University, New York  Prof. John Nieland, University of Aalborg, Denmark"
+    "section": "About me",
+    "text": "About me\n I am a behavioral ecologist, broadly interested in animal cognition and cognitive ecology.  My research focuses on how animals think, make decisions, and interact with their environment. I use quantitative methods to investigate the drivers and outcomes of cognition. I test animals, in their natural habitat or in captivity under semi-natural conditions, to uncover how these cognitive processes vary across species and contexts.  I have had the opportunity to work with a variety of species, including both birds and mammals, depending on the questions at hand. My current work centers on the cognitive compromises of the common shrew, a model species for studying Dehnel’s phenomenon—a remarkable seasonal adaptation that affects brain size and behavior in small mammals.  Recently, I became more involved in open science practices, and I aim to advance openness, transparency and reproducibility in my daily life as a researcher. I’ve had the opportunity to participate to the Open Science Summer School organised by the Max Planck Digital Library and the LMU Open Science Center, where I learned practical tools and strategies to make research more accessible and collaborative."
   },
   {
-    "objectID": "illustrations.html",
-    "href": "illustrations.html",
+    "objectID": "about.html#previous-life",
+    "href": "about.html#previous-life",
     "title": "Cecilia Baldoni",
-    "section": "",
-    "text": "📢 Page under construction! Come back soon!  \nIn this page you can find a selection of illustrations, sketches, and visual experiments I’ve created for different projects.  I love combining science and design, and helping others visually communicate their work.  You can support my work or request a custom commission (graphical abstracts, favicons, logos, or visuals for websites and talks) through Ko-fi:"
-  },
-  {
-    "objectID": "illustrations.html#illustrations",
-    "href": "illustrations.html#illustrations",
-    "title": "Cecilia Baldoni",
-    "section": "",
-    "text": "📢 Page under construction! Come back soon!  \nIn this page you can find a selection of illustrations, sketches, and visual experiments I’ve created for different projects.  I love combining science and design, and helping others visually communicate their work.  You can support my work or request a custom commission (graphical abstracts, favicons, logos, or visuals for websites and talks) through Ko-fi:"
-  },
-  {
-    "objectID": "illustrations.html#dissertation-chapters",
-    "href": "illustrations.html#dissertation-chapters",
-    "title": "Cecilia Baldoni",
-    "section": "Dissertation Chapters",
-    "text": "Dissertation Chapters"
-  },
-  {
-    "objectID": "illustrations.html#vector-illustrations",
-    "href": "illustrations.html#vector-illustrations",
-    "title": "Cecilia Baldoni",
-    "section": "Vector Illustrations",
-    "text": "Vector Illustrations\n\n  \n  \n  \n  \n  \n  \n\nThese are elements from the illustrated isometric city I designed for my homepage. Each building represents a different section of my site — and yes, I drew all of them"
-  },
-  {
-    "objectID": "illustrations.html#icons-logos",
-    "href": "illustrations.html#icons-logos",
-    "title": "Cecilia Baldoni",
-    "section": "Icons & Logos",
-    "text": "Icons & Logos\n\n  \n  \n  \n  \n\n\n\n  \n  \n  \n  \n  \n\n\n\n  \n  \n  \n  \n  \n  \n\n © cecibaldoni, 2025. All works in this page are licensed under a Creative Commons Attribution-NonDerivative-NonCommercial 4.0 International License.  This means you’re welcome to share anything from this page for non-commercial purposes as long as you credit me as the creator!\n\n\nWant a high-res version or a custom illustration? Contact me here️!\n\n×"
-  },
-  {
-    "objectID": "research.html#current-research",
-    "href": "research.html#current-research",
-    "title": "Cecilia Baldoni",
-    "section": "Research",
-    "text": "Research\nMy work focuses on how small mammals adapt to a fast-changing world — especially how their brains and behavior respond to environmental pressures.\nI’m particularly interested in seasonal brain plasticity, environmental adaptations and their cumulative effects on cognitive flexibility. Much of this work revolves around a unique little animal: the common shrew.\nExplore how the common shrew copes with winter by shrinking and regrowing its brain, and what this teaches us about brain plasticity and cognition!\n\n\nClick on the shrew to learn more! 🐾"
-  },
-  {
-    "objectID": "research.html#open-science",
-    "href": "research.html#open-science",
-    "title": "Cecilia Baldoni",
-    "section": "Open Science",
-    "text": "Open Science\nOpen science is about building a scientific culture that values accessibility, transparency, reproducibility, and collaboration.\nThis is something I care about deeply and try to reflect in my daily work.  My contributions to open science span different levels, from personal practices to community involvement and infrastructure.   I see open science as a way of working, not just a set of rules. It affects how I design studies, write code, share results, and support others in doing the same.  \nI make my data, analysis scripts, and visualizations publicly available whenever possible. Here is a list of resources where you can find my data and code: \n\nGitHub: my profile and open repositories, it includes some presentations for talks and workshops I organised. See Talks & Workshop for more! \nOSF - Open Science Framework: my profile and materials from ongoing or not-yet-published projects. \nEdmond – Max Planck Society Repository: in here you can find my data and scripts associated with peer-reviewed articles. \n\n\nOS Community & Initiatives\n\nI am an Open Science Ambassador in the Max Planck Society, helping build local awareness and promote transparent research practices across the Max Planck Institutes.\nI am an active member of SORTEE (Society for Open, Reliable, and Transparent Ecology and Evolution), where I serve on the Member Engagement Committee.\nIn 2025, I am organising the SORTEE Code Club, a monthly online meetup exploring practical tools and workflows for open science.\n→ You can find the list of events I’m currently organising here.\nI also work as a Data Editor for PCI Ecology, where I check the accessibility and reproducibility of data and code associated with recommended preprints."
-  },
-  {
-    "objectID": "research.html#selected-publications",
-    "href": "research.html#selected-publications",
-    "title": "Cecilia Baldoni",
-    "section": "Selected Publications",
-    "text": "Selected Publications\n\n  \n    \n  \n  \n    \n      Seasonal and comparative evidence of adaptive gene expression in mammalian brain size plasticity (2025)\n    \n    Shrews shrink their brains to survive winter... and their hypothalamus helps pull it off! This study reveals seasonal gene shifts tied to energy balance, brain remodeling, and even some genes linked to human neurological disorders.\n  \n\n\n\n  \n    \n  \n  \n    \n      Captivity alters behaviour but not seasonal brain size change in semi-naturally housed shrews (2025)\n    \n    Captive shrews still shrink their brains seasonally... but their behavior tells a different story! Despite semi-natural captive conditions, they showed signs of chronic stress, with higher activity and lower motivation to learn, compared to wild ones. It shows how captivity can quietly reshape research outcomes.\n  \n\n\n\n  \n    \n  \n  \n    \n      Gene expression comparisons between captive and wild shrew brains reveal captivity effects (2025)\n    \n    Captivity alters how shrew brains work at the molecular level: hundreds of genes changed expression after just two months! These shifts echo patterns seen in human disorders like depression and neurodegeneration, raising caution for interpreting data from captive animals.\n  \n\n\n\n  \n    \n  \n  \n    \n      Histological and MRI brain atlas of the common shrew, Sorex araneus, with brain region-specific gene expression profiles (2023)\n    \n    The common shrew is one of the few mammals that shrinks and regrows its brain... and now it has its own detailed brain atlas! This openly available resource combines histology, MRI, and gene expression to unlock the shrew brain."
-  },
-  {
-    "objectID": "research.html#talks-workshops",
-    "href": "research.html#talks-workshops",
-    "title": "Cecilia Baldoni",
-    "section": "Workshops and Talks",
-    "text": "Workshops and Talks\n\nWorkshops:\nWhat is Open Science Anyway? - 🔗link event and Open Quarto presentation  SORTEE Code Club - find the list of events I am organising here  Personal Knowledge Management and Note-Taking Apps - Open Resources\n\n\nTalks:\nBaldoni C.,  Invited Seminar Talk - Messerli Institute Vienna, Austria Shrinking Shrews: Cognitive Challenges in a Changing Brain Baldoni C., Farantouri M., Raptis K., Nourani E., Dechmann D.  ISBE: Melbourne, Australia, 2024  Seasonal Brain Size Variation and Its Impact on Spatial Navigation and Learning in the Common Shrew (Sorex araneus)  Baldoni C., von Elverfeldt D., Dechmann D. MPIAB - RADO Seminar: Radolfzell, Germany, 2023 News from the Shrews: insight from brain structure during Dehnel’s phenomenon from Neuroimaging Baldoni C., Farantouri M., Raptis K., Nourani E., Dechmann D. Animal Behaviour: Bielefeld, Germany, 2023 Brain size and spatial learning: the case of the common shrew (Sorex araneus)  Baldoni C., Nourani E., Dechmann D. IV Convegno Nazionale sui Piccoli Mammiferi: Grosseto, Italy, 2023 Seasonal change in brain size affects spatial learning skills in common shrews (Sorex araneus) Baldoni C., Dechmann D. Animal Behaviour Society: San Josè, Costa Rica, 2022 Seasonal change in brain size affects associative learning skills in common shrews (Sorex araneus) Baldoni C., Scaravelli D., Priori P., Carpentari S., Torboli C., Franzoi A., Pedrini P. IV Italian Bat Conference: Padova, Italy, 2019 Diversity and consistency of nocturnal migration of bats at the bird ringing station ‘Bocca di Caset’ Baldoni C., Cicero M., Pasini A., Caselli N., Scaravelli D. XX Italian Conference of Ornithology: Naples, Italy, 2019 Assessing the distribution of the Ring-necked parakeet (Psittacula krameri) in Bologna, Italy: a citizen-science approach Baldoni C., Brucks D., Krasheninnikova A., Petelle M., von Bayern A. ASAB Summer conference: Konstanz, Germany, 2019 Let it go: two macaw species are able to wait for a better reward in a rotating self-control paradigm Baldoni C., Giglio G., Scaravelli D. II European Meeting of Young Ornithologists: Torino, Italy, 2018 An approach to the study of effects of fire on birds in Mediterranean woods."
-  },
-  {
-    "objectID": "data/publications.html",
-    "href": "data/publications.html",
-    "title": "Cecilia Baldoni",
-    "section": "",
-    "text": "Gene expression comparisons between captive and wild shrew brains reveal captivity effects (2025). Biology Letters\nCaptivity alters behaviour but not seasonal brain size change in semi-naturally housed shrews (2025). Royal Society Open Science\nData and code for” Captivity alters behavior but not seasonal brain size change in semi–naturally housed shrews” (2024).\nSeasonal and comparative evidence of adaptive gene expression in mammalian brain size plasticity (2024). bioRxiv\nHistological and MRI brain atlas of the common shrew, Sorex araneus, with brain region-specific gene expression profiles (2023). Frontiers in Neuroanatomy\nMolecular mechanisms of seasonal brain shrinkage and regrowth in Sorex araneus (2023). BioRxiv\nLarge captivity effect based on gene expression comparisons between captive and wild shrew brains (2023). bioRxiv\nIntra-and interspecific variation in self-control capacities of parrots in a delay of gratification task (2022). Animal Cognition"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Cecilia Baldoni",
-    "section": "",
-    "text": "Welcome to my website!  I am an Early Career Researcher at the Max Planck Institute of Animal Behaviour, in Konstanz, where I investigate how the environment and brain structures shape cognitive flexibility.\nIn my free time I enjoy creating silly illustrations, comics and stickers! 🎨\nHere you can find more about my research, talks, illustrations and contact details.  Explore the sections to learn more!"
-  },
-  {
-    "objectID": "index.html#cecilia-baldoni",
-    "href": "index.html#cecilia-baldoni",
-    "title": "Cecilia Baldoni",
-    "section": "",
-    "text": "Welcome to my website!  I am an Early Career Researcher at the Max Planck Institute of Animal Behaviour, in Konstanz, where I investigate how the environment and brain structures shape cognitive flexibility.\nIn my free time I enjoy creating silly illustrations, comics and stickers! 🎨\nHere you can find more about my research, talks, illustrations and contact details.  Explore the sections to learn more!"
-  },
-  {
-    "objectID": "index.html#explore-the-city",
-    "href": "index.html#explore-the-city",
-    "title": "Cecilia Baldoni",
-    "section": "Explore the City",
-    "text": "Explore the City\n\n  \n    \n\n    \n      \n      Get in Touch!\n    \n\n    \n      \n      About Me\n    \n\n    \n      \n      Illustrations\n    \n\n    \n      \n      Open Science\n    \n\n    \n      \n      Research Interests\n    \n\n    \n      \n      Talks and Workshops\n    \n    \n    \n      \n      Blog"
-  },
-  {
-    "objectID": "contact.html#get-in-touch",
-    "href": "contact.html#get-in-touch",
-    "title": "Cecilia Baldoni",
-    "section": "Get in Touch",
-    "text": "Get in Touch\nIf you’d like to reach out, feel free to contact me via email or through my social media platforms.\n\nEmail\n🖥️📧 cbaldoni@ab.mpg.de 🙋️ 📧 cecilia.baldons@gmail.com\n\n\nSocial Media\n🔗 LinkedIn  📷 Instagram  🐙 GitHub  ☕Ko-fi\nI look forward to hearing from you!"
-  },
-  {
-    "objectID": "blog/index.html",
-    "href": "blog/index.html",
-    "title": "Blog",
-    "section": "",
-    "text": "TidyTuesday and Quartose\n\n\n\nTidyTuesday\n\nquarto\n\nquartose\n\n\n\nAn experiment in structuring a TidyTuesday exploration using interactive elements from quartose\n\n\n\n\n\nJul 10, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nFrom “Not Sure How It Works” to “Maybe This Will Help Someone”\n\n\n\nPKM\n\nnote-taking\n\nopen resources\n\n\n\nThis is the story on how I went from Confused Logseq User to Accidental Curator of an awesome academic PKM repository\n\n\n\n\n\nJun 21, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nA Cheatsheet for Closeread (or the one where I gave a talk and brought more than slides)\n\n\n\nquarto\n\ncloseread\n\ninfographic\n\nopen resources\n\n\n\nThis post started with a talk invitation about Closeread and scrollytelling. It ended with a full demo and a printable cheatsheet, all thanks to aesthetic joy and the refusal to keep checking the same three lines of syntax.\n\n\n\n\n\nMay 31, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nThe 4 Rs, and why they’re so confusing\n\n\n\nOpen Science\n\ninfographic\n\n\n\nThis post started with a diagram I made for a talk, and ended with a discussion that showed me just how slippery scientific terms can be.\n\n\n\n\n\nMay 8, 2025\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "blog/quartose.html",
-    "href": "blog/quartose.html",
-    "title": "TidyTuesday and Quartose",
-    "section": "",
-    "text": "Full disclosure first: this wasn’t the blogpost I planned. I had something else in mind for this week (I guess that’s a future Ceci problem).\nOn Tuesday, I saw a LinkedIn post about a new R package called quartose, created by Danielle Navarro. Like everything with the word Quarto in it, I was hooked, and after reading her blogpost I thought: this looks like fun.\nDid I already say it was Tuesday? wink wink, #TidyTuesday.\nSo I took the opportunity to explore the dataset from this week’s challenge using quartose. I didn’t start with a specific analysis in mind, I just wanted to see how quartose felt in a real document."
-  },
-  {
-    "objectID": "blog/quartose.html#why-i-tried-quartose",
-    "href": "blog/quartose.html#why-i-tried-quartose",
-    "title": "TidyTuesday and Quartose",
-    "section": "",
-    "text": "Full disclosure first: this wasn’t the blogpost I planned. I had something else in mind for this week (I guess that’s a future Ceci problem).\nOn Tuesday, I saw a LinkedIn post about a new R package called quartose, created by Danielle Navarro. Like everything with the word Quarto in it, I was hooked, and after reading her blogpost I thought: this looks like fun.\nDid I already say it was Tuesday? wink wink, #TidyTuesday.\nSo I took the opportunity to explore the dataset from this week’s challenge using quartose. I didn’t start with a specific analysis in mind, I just wanted to see how quartose felt in a real document."
-  },
-  {
-    "objectID": "blog/quartose.html#exploring-the-colour-naming-dataset-with-quartose",
-    "href": "blog/quartose.html#exploring-the-colour-naming-dataset-with-quartose",
-    "title": "TidyTuesday and Quartose",
-    "section": "Exploring the colour naming dataset with quartose",
-    "text": "Exploring the colour naming dataset with quartose\nThis week’s TidyTuesday features millions of responses from an online color naming game slash survey. It includes a lot of responses (kudos to the curator of this dataset, Nicola Rennie), along with metadata about users (e.g. self-reported Y chromosome presence, colorblindness etc.).\nRather than focusing on the full dataset, I used a subset to play with structuring and presenting small summaries. The visualizations are extremely simple, but enough to test how different layout elements from quartose could help me guide the narrative.\nYou’ll see a few of these elements below:\n\nSummary tables with side content\nTabs that organize plots by grouping\nNotes placed outside the main column\n\nThe dataset is available in the color project repo, and the TidyTuesday project is a great excuse to learn something new each week (well, that’s my excuse!)."
-  },
-  {
-    "objectID": "blog/quartose.html#welcome-to-the-color-chaos",
-    "href": "blog/quartose.html#welcome-to-the-color-chaos",
-    "title": "TidyTuesday and Quartose",
-    "section": "Welcome to the color chaos",
-    "text": "Welcome to the color chaos\nThousands of people participated in a color-naming survey online. This document explores the funny and, sometimes, messy data behind the responses.\n\nWho responded?\nLet’s begin with the basics: who were the users behind these color names?\n\n\n\nUser summary\n\n\nTotal Users\nMonitor Types\nUsers with Y\nUsers without Y\nColorblind Users\nAvg. Spam Probability\n\n\n\n\n152401\n3\n103430\n41464\n5588\n0.222\n\n\n\n\n\nOver 150,000 individuals took part in the experiment, each using one of a few different types of monitors. Of them, more than 40,000 were not equipped with a Y chromosome. Over 5,000 individuals indicated they were colorblind. One interesting variable in this dataset is a spam probability score, meaning (I guess) a numeric value that estimates how likely a given user was submitting low-quality answers.\nquarto_div(content = c(paste0(\"Colorblind participants: \", users_summary$n_cb), \"&lt;br&gt;\",\n                       paste0(\"Average spam probability: \", round(users_summary$avg_spam_prob, 3)), \"&lt;br&gt;\",\n                       paste0(\"Monitor types: \", users_summary$n_monitors)),\n  class = \"column-margin\")\n\n\nColorblind participants: 5588  Average spam probability: 0.222 Monitor types: 3\n\n\nHow much data?\n\n\n# A tibble: 1 × 3\n  answers named_colors hex_codes\n    &lt;int&gt;        &lt;int&gt;     &lt;int&gt;\n1 1058211          949       949\n\n\n\n\n\n\n\n\n\nTip\n\n\n\nAs you can see, this is a large dataset. People typed in thousands of color names for hundreds of distinct hex codes. That’s a lot of ways to say “blue.”\n\n\n\nAnswers per user\n\nHistogramAverage by Y chromosomeDensity\n\n\n\n\n\n\n\n\n\n\n\n\nWhat you’re seeing:\n- The histogram shows that most users gave fewer than 10 answers, with a long tail of power users.  - On average, answer counts per user are fairly similar across Y chromosome groups.  - The density plot shows the shape of participation, all groups are heavily skewed.\n\n\nColorblindness\nColor perception is often assumed to be universal, but of course, it isn’t.\nLet’s take a quick look at how many participants reported being colorblind:\n\nusers |&gt; \n  mutate(cb_status = factor(case_when(colorblind == 1 ~ \"Colorblind\",\n                                      colorblind == 0 ~ \"Not colorblind\",\n                                      TRUE ~ \"Unknown\"), levels = c(\"Not colorblind\", \"Colorblind\", \"Unknown\"))) |&gt; \n  count(cb_status) |&gt; \n  ggplot(aes(x = cb_status, y = n, fill = cb_status)) +\n  geom_col(show.legend = FALSE) +\n  labs(x = \"Colorblindness Status\", y = \"Number of users\")\n\n\n\n\nColorblindness status\n\n\n\n\n\n\nSpam Probability\nWhat kind of variation is there in users’ spam scores?\nThis variable is a bit opaque… I don’t know exactly how it’s computed. But it’s cool to see how it distributes across groups.\n\n\n\n\n\nDistribution of spam scores\n\n\n\n\n\n\n\nDistribution of spam scores\n\n\n\n\n\n\nIs monitor type related?\nCould the type of monitor affect color perception or how people respond?\n\nusers |&gt; \n  mutate(monitor = fct_lump(monitor, n = 3)) |&gt;\n  count(monitor) |&gt; \n  ggplot(aes(x = monitor, y = n, fill = monitor)) +\n  geom_col(show.legend = FALSE) +\n  labs(x = \"Monitor Type\", y = \"Number of users\")\n\n\n\n\nMonitor type vs number of users\n\n\n\n\nI admit, I had to google this. Most users had modern displays (LCD or Liquid Crystal Display), but there were still a few on older CRTs (Cathode Ray Tube, that really sounds like something from Back to the Future) or other types, which might influence how colors looked during the experiment.\n\n\nConclusion\nThere’s a lot more to explore. But I really liked the unexpected combinations and perspectives people bring when interpreting color.\nquarto_div(content = \"Want to try your own analysis? Check out the full dataset at the TidyTuesday GitHub.\",\n           class = c(\"callout-tip\"))\n\n\n\n\n\n\nTip\n\n\n\nWant to try your own analysis? Check out the full dataset at the TidyTuesday GitHub."
-  },
-  {
-    "objectID": "blog/quartose.html#tldr",
-    "href": "blog/quartose.html#tldr",
-    "title": "TidyTuesday and Quartose",
-    "section": "TL;DR",
-    "text": "TL;DR\nTo me, quartose feels a bit like a lightweight take on scrollytelling. Not quite like closeread, which I may have already talked about profusely, but still an interesting way to shape an exploratory narrative.\nDoes it save me time compared to writing plain Quarto syntax? Not really.\nDo I want to try it again? Oh yes.\nI imagine it could be useful for workshop materials or blog tutorials, though I haven’t settled on how I might use it yet. As Danielle wrote:\n\n“All that quarto_div() actually does is construct syntax for the Quarto parser to capture and render.”\n\nThat’s exactly what it does. And for someone already used to Quarto’s logic, it feels like a natural extension."
-  },
-  {
-    "objectID": "blog/awesome-pkm.html",
-    "href": "blog/awesome-pkm.html",
-    "title": "From “Not Sure How It Works” to “Maybe This Will Help Someone”",
-    "section": "",
-    "text": "Awesome\n\n\nAt some point during my PhD, I started using Logseq to organize my knowledge.  Then it was Obsidian, then both for a time. Then Logseq again.  Guess what? Now I am back to both.\nLearning to use a note-taking app is an interesting experience. I mean, it’s something you need to manage your knowledge, but you also need some time to learn how does that actually work. I guess if you already have a great note-taking routine (I hadn’t), you know how to structure your thoughts (carnival music roaming) and you have some basic idea on how to connect your ideas (lucky you) then the learning curve is reasonable.\nFor me it was indeed interesting. I downloaded Logseq with no ideas about how to make it work. My very first entry (September 15th, 2021) recites:\n\nI installed this thing. Not sure how it works (yet). \ncit. me as a confused Logseq first-timer\n\nTruer words have never been said. That was all for that week, no more entries.  But then it was like a videogame. You keep thinking about it and you keep trying.  At some point you reach some level of certainty and move forward.  Each new level brought its own set of complexities. The longer I used it, the more questions popped up: how do people structure their vaults? What’s a good way to handle academic reading? Is there a Zotero workflow that won’t break my brain?\nIf you are here because you’d like an answer to these questions, I apologize in advance.  I do not think there is anything like this in the whole wide web. That’s because it depends on you. When I gave a workshop to PhD students about note-taking apps and PKM I had a mantra (I think at some point I should have written it on a t-shirt, I was saying it every three or four sentences):\n\nWhat works for me might not work for you. \ncit. me as a recalcitrant Logseq user\n\nI have my own workflow. I can show it to you and you can try it, but I bet you will find something about it that it’s just not right.  But then again, the internet if full of people finding their own workflow and sharing it with others (bless them).\nThat’s when I realized: I had quietly been collecting a pretty large pile of resources that other researchers (and future me!) might find useful.\nIt took a while to organize everything, but eventually I decided it was worth turning into a proper list.\n👉 Awesome PKM for Academics and Researchers"
-  },
-  {
-    "objectID": "blog/awesome-pkm.html#a-journey-often-starts-with-chaos-and-confusion",
-    "href": "blog/awesome-pkm.html#a-journey-often-starts-with-chaos-and-confusion",
-    "title": "From “Not Sure How It Works” to “Maybe This Will Help Someone”",
-    "section": "",
-    "text": "Awesome\n\n\nAt some point during my PhD, I started using Logseq to organize my knowledge.  Then it was Obsidian, then both for a time. Then Logseq again.  Guess what? Now I am back to both.\nLearning to use a note-taking app is an interesting experience. I mean, it’s something you need to manage your knowledge, but you also need some time to learn how does that actually work. I guess if you already have a great note-taking routine (I hadn’t), you know how to structure your thoughts (carnival music roaming) and you have some basic idea on how to connect your ideas (lucky you) then the learning curve is reasonable.\nFor me it was indeed interesting. I downloaded Logseq with no ideas about how to make it work. My very first entry (September 15th, 2021) recites:\n\nI installed this thing. Not sure how it works (yet). \ncit. me as a confused Logseq first-timer\n\nTruer words have never been said. That was all for that week, no more entries.  But then it was like a videogame. You keep thinking about it and you keep trying.  At some point you reach some level of certainty and move forward.  Each new level brought its own set of complexities. The longer I used it, the more questions popped up: how do people structure their vaults? What’s a good way to handle academic reading? Is there a Zotero workflow that won’t break my brain?\nIf you are here because you’d like an answer to these questions, I apologize in advance.  I do not think there is anything like this in the whole wide web. That’s because it depends on you. When I gave a workshop to PhD students about note-taking apps and PKM I had a mantra (I think at some point I should have written it on a t-shirt, I was saying it every three or four sentences):\n\nWhat works for me might not work for you. \ncit. me as a recalcitrant Logseq user\n\nI have my own workflow. I can show it to you and you can try it, but I bet you will find something about it that it’s just not right.  But then again, the internet if full of people finding their own workflow and sharing it with others (bless them).\nThat’s when I realized: I had quietly been collecting a pretty large pile of resources that other researchers (and future me!) might find useful.\nIt took a while to organize everything, but eventually I decided it was worth turning into a proper list.\n👉 Awesome PKM for Academics and Researchers"
-  },
-  {
-    "objectID": "blog/awesome-pkm.html#disclaimer.",
-    "href": "blog/awesome-pkm.html#disclaimer.",
-    "title": "From “Not Sure How It Works” to “Maybe This Will Help Someone”",
-    "section": "Disclaimer.",
-    "text": "Disclaimer.\nThere are already “awesome PKM” lists out there, a quick github search will show you 5 others. And they are great.  But somehow some are pretty general, or focused on the tools, not the context in which people use them.\nThis list is my attempt at something more specific: a curated (and opinionated) resource library, with researchers and PhD students in mind."
-  },
-  {
-    "objectID": "blog/awesome-pkm.html#whats-inside",
-    "href": "blog/awesome-pkm.html#whats-inside",
-    "title": "From “Not Sure How It Works” to “Maybe This Will Help Someone”",
-    "section": "What’s Inside",
-    "text": "What’s Inside\nIt includes:\n\nForum threads where people talk about how they actually use PKM tools in academia.\nBlog posts about real workflows; e.g. Zotero to Obsidian, or how to organize a literature review in Logseq.\nReady-to-use vaults and templates (some very polished, some simple but helpful).\nVideos and talks that show how people think through their own systems (these are one of my personal favourite. I could listen for hours to people on youtube telling me how they structure their academic knowledge).\nAcademic papers on knowledge graphs, note-taking, and scholarly PKM.\n\nI’ve grouped everything into categories, so it’s easy to browse or come back to later."
-  },
-  {
-    "objectID": "blog/awesome-pkm.html#who-this-is-for",
-    "href": "blog/awesome-pkm.html#who-this-is-for",
-    "title": "From “Not Sure How It Works” to “Maybe This Will Help Someone”",
-    "section": "Who This Is For",
-    "text": "Who This Is For\nThis might be useful if you:\n\nare writing a thesis (Bachelor, Master, Doctorate) and losing track of all your notes\nwant to stop reinventing your reading workflow every semester (been there, done that)\ntried using Obsidian or Logseq and didn’t know where to start\nfeel like your brain is full of articles you never quite remember at the right time\nyou have a to-read list that is longer than your 12yo Christmas wishlist\n\nBasically: if you’re a researcher trying to manage knowledge better, this list is for you."
-  },
-  {
-    "objectID": "blog/awesome-pkm.html#want-to-add-something",
-    "href": "blog/awesome-pkm.html#want-to-add-something",
-    "title": "From “Not Sure How It Works” to “Maybe This Will Help Someone”",
-    "section": "Want to Add Something?",
-    "text": "Want to Add Something?\nPlease do! I’d love to keep this evolving. You can:\n\nsubmit a pull request\nopen an issue\nor just message me if you’re unsure how to do those and still have something you would like to add.\n\nTips, workflows, example vaults, tiny-but-useful plugins… anything that helps researchers use PKM more intentionally is welcome."
-  },
-  {
-    "objectID": "blog/awesome-pkm.html#tldr",
-    "href": "blog/awesome-pkm.html#tldr",
-    "title": "From “Not Sure How It Works” to “Maybe This Will Help Someone”",
-    "section": "TL;DR",
-    "text": "TL;DR\nI just wanted a place to put all the good stuff in, and maybe help a few other people skip the part where they re-Google “Zotero to Obsidian academic workflow” every three weeks.\nHere’s the repo: 👉 Awesome PKM for Academics and Researchers"
+    "section": "Previous Life",
+    "text": "Previous Life\n Before becoming a scientist, I was a violinist, a journey that started when I was five. Over the years, I performed with various orchestras, including the United Europe Chamber Orchestra (UECO), and eventually, this work helped pay for my university studies.  While music has always been a passion, science turned out to be an even stronger driver, leading me to make the switch from professional musician to biologist.  I still enjoy playing the violin for myself and appreciate the creativity and focus it brings to my life."
   }
 ]

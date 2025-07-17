@@ -414,6 +414,12 @@ p code, li code, span code, td code, th code, a code {
   flex-direction: row; /* default desktop layout */
 }
 
+.listing-item p {
+  font-size: 0.9em;
+  line-height: 1.4em;
+}
+
+
 @media (max-width: 768px) {
   .listing-item {
     flex-direction: column;
@@ -499,4 +505,57 @@ p code, li code, span code, td code, th code, a code {
 
 #cookie-banner .cookie-link:hover {
   color: $white;
+}
+
+/* Project cards for research page */
+
+.research-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 24px;
+  margin: 2em 0;
+  justify-items: center;
+}
+
+.project-card {
+  background-color: $lightgreen;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  text-align: center;
+  width: 100%;
+  max-width: 320px;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  text-align: center;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.project-card h3 {
+  font-family: $headings-font-family;
+  margin: 0.8em auto 0.4em;
+  text-align: center;
+  color: $darkgreen;
+}
+
+.project-card p {
+  padding: 0 1em 1em;
+  font-size: 0.8em;
+  color: $gray-900;
+}
+
+.project-card a {
+  text-decoration: none;
+  color: inherit;
 }

@@ -7,3 +7,7 @@ listing:
   categories: true
   filter-ui: true
 ---
+
+::: {.page-icon}
+<img src="../img/icons/van.svg" alt="" aria-hidden="true">
+:::

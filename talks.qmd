@@ -1,0 +1,81 @@
+---
+title: ""
+format: html
+---
+
+::: {.page-icon}
+<img src="img/icons/talks-workshops.svg" alt="" aria-hidden="true">
+:::
+
+## Workshops and Talks {#talks-workshops}
+
+### Workshops
+
+- **What is Open Science Anyway?**  
+  [Event link](https://www.ab.mpg.de/events/40760/345436) · [Slides](https://github.com/cecibaldoni/OpenScience-Rado)
+
+- **SORTEE Code Club**  
+  Organizer · [List of events](https://docs.google.com/spreadsheets/d/1rOOOE7ghPduwtFftG0DJJf0DXVigAdcmQ0xdEwbKQXo/edit)
+
+- **Personal Knowledge Management and Note-Taking Apps**  
+  [Open Resources](https://github.com/cecibaldoni/PKM-workshop)
+
+---
+
+### Conference Talks & Seminars
+
+#### 2025
+
+- **Baldoni C.**  
+  *Beyond the standard: Unconventional vertebrate models in biomedicine EMBO, Edinburg, UK*  
+  **The shrew as a model for brain shrinkage without neurodegeneration**
+- **Invited Seminar** — *Messerli Institute, Vienna, Austria*  
+  **Shrinking Shrews: Cognitive Challenges in a Changing Brain**
+  
+  
+#### 2024
+
+- **Baldoni C.**, Farantouri M., Raptis K., Nourani E., Dechmann D.  
+  *International Society for Behavioral Ecology (ISBE), Melbourne, Australia*  
+  **Seasonal Brain Size Variation and Its Impact on Spatial Navigation and Learning in the Common Shrew (*Sorex araneus*)**
+
+#### 2023
+
+- **Baldoni C.**, von Elverfeldt D., Dechmann D.  
+  *MPIAB RADO Seminar, Radolfzell, Germany*  
+  **News from the Shrews: Brain structure during Dehnel’s phenomenon from neuroimaging**
+
+- **Baldoni C.**, Farantouri M., Raptis K., Nourani E., Dechmann D.  
+  *Animal Behaviour Conference, Bielefeld, Germany*  
+  **Brain size and spatial learning in the common shrew (*Sorex araneus*)**
+
+- **Baldoni C.**, Nourani E., Dechmann D.  
+  *IV Convegno Nazionale sui Piccoli Mammiferi, Grosseto, Italy*  
+  **Seasonal brain size changes affect spatial learning in common shrews (*Sorex araneus*)**
+
+#### 2022
+
+- **Baldoni C.**, Dechmann D.  
+  *Animal Behaviour Society, San José, Costa Rica*  
+  **Seasonal brain changes impact associative learning in common shrews (*Sorex araneus*)**
+
+
+#### 2019
+
+- **Baldoni C.**, Scaravelli D., et al.  
+  *IV Italian Bat Conference, Padova, Italy*  
+  **Nocturnal bat migration at the bird ringing station ‘Bocca di Caset’**
+
+- **Baldoni C.**, Cicero M., et al.  
+  *XX Italian Ornithology Conference, Naples, Italy*  
+  **Citizen-science approach to Ring-necked parakeet distribution in Bologna**
+
+- **Baldoni C.**, Brucks D., et al.  
+  *ASAB Summer Conference, Konstanz, Germany*  
+  **Self-control in two macaw species using a rotating paradigm**
+
+#### 2018
+
+- **Baldoni C.**, Giglio G., Scaravelli D.  
+  *II European Meeting of Young Ornithologists, Torino, Italy*  
+  **Effects of fire on birds in Mediterranean woods**

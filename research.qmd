@@ -10,143 +10,56 @@ class: page-research
 
 ## Research {#current-research}
 
-My work focuses on how small mammals adapt to a fast-changing world — especially how their brains and behavior respond to environmental pressures.
+```{=html}
+<div class="research-gallery">
 
-I’m particularly interested in seasonal brain plasticity, environmental adaptations and their cumulative effects on cognitive flexibility. Much of this work revolves around a unique little animal: the common shrew.
-
-**Explore how the common shrew copes with winter by shrinking and regrowing its brain, and what this teaches us about brain plasticity and cognition!**
-
-<div class="shrew-wrapper">
-  <div class="shrew-caption">Click on the shrew to learn more! 🐾</div>
-  <a href="projects.qmd" class="hover-image-link">
-    <img src="img/shrew.png" alt="Shrew teaser" class="hover-image">
+<div class="project-card">
+  <a href="projects.qmd">
+    <img src="img/shrew.png" alt="Shrews">
+    <h3>Shrews</h3>
+    <p>Seasonal brain plasticity, cognition, shrews... explored through data and visual storytelling.</p>
   </a>
 </div>
 
-## Open Science {#open-science}
-
-Open science is about building a scientific culture that values accessibility, transparency, reproducibility, and collaboration.
-
-This is something I care about deeply and try to reflect in my daily work. <br> My contributions to open science span different levels, from personal practices to community involvement and infrastructure.  <br> <br>
-I see open science as a way of working, not just a set of rules. It affects how I design studies, write code, share results, and support others in doing the same. <br> <br>
-
-I make my data, analysis scripts, and visualizations publicly available whenever possible. <br><br>Here is a list of resources where you can find my data and code: <br><br>
-
-- [GitHub](https://github.com/cecibaldoni?tab=repositories): my profile and open repositories, it includes some presentations for talks and workshops I organised. See [Talks & Workshop](#talks-workshops) for more! <br>
-- [OSF - Open Science Framework](https://osf.io/jdxn2/): my profile and materials from ongoing or not-yet-published projects. <br>
-- [Edmond – Max Planck Society Repository](https://edmond.mpg.de/dataverse/edmond/?q=%22Baldoni%2C+Cecilia%22): in here you can find my data and scripts associated with peer-reviewed articles. <br>
-
-### OS Community & Initiatives
-
-- I am an **Open Science Ambassador** in the [Max Planck Society](https://www.openscience-groups.mpg.de/ambassadors), helping build local awareness and promote transparent research practices across the Max Planck Institutes.
-- I am an active member of [SORTEE](https://www.sortee.org/) (Society for Open, Reliable, and Transparent Ecology and Evolution), where I serve on the **Member Engagement Committee**.
-- In 2025, I am organising the [SORTEE Code Club](https://www.sortee.org/code_club/), a monthly online meetup exploring practical tools and workflows for open science.  
-  → You can find the list of events I'm currently organising [here](https://docs.google.com/spreadsheets/d/1rOOOE7ghPduwtFftG0DJJf0DXVigAdcmQ0xdEwbKQXo/edit).
-
-- I also work as a **Data Editor** for [PCI Ecology](https://ecology.peercommunityin.org/), where I check the accessibility and reproducibility of data and code associated with recommended preprints.
-
-
-## Selected Publications
-
-```{=html}
-<div class="listing-item">
-  <div class="thumbnail">
-    <img src="img/pub/gene-expression.png"
-         alt="Gene expression"
-         class="thumbnail-image">
-  </div>
-  <div>
-    <p><strong><a href="https://elifesciences.org/articles/100788">
-      Seasonal and comparative evidence of adaptive gene expression in mammalian brain size plasticity (2025)
-    </a></strong></p>
-    <p>Shrews shrink their brains to survive winter... and their hypothalamus helps pull it off! This study reveals seasonal gene shifts tied to energy balance, brain remodeling, and even some genes linked to human neurological disorders.</p>
-  </div>
+<div class="project-card">
+  <a href="talks.qmd">
+    <img src="img/violin.jpg" alt="Workshops and Talks">
+    <h3>Workshops & Talks</h3>
+    <p>Conferences, seminars, and hands-on workshops on open workflows and data science.</p>
+  </a>
 </div>
 
-<div class="listing-item">
-  <div class="thumbnail">
-    <img src="img/pub/captivity-cognition.png"
-         alt="Captivity effects on brain size and cognition"
-         class="thumbnail-image">
-  </div>
-  <div>
-    <p><strong><a href="https://royalsocietypublishing.org/doi/full/10.1098/rsos.242138">
-      Captivity alters behaviour but not seasonal brain size change in semi-naturally housed shrews (2025)
-    </a></strong></p>
-    <p>Captive shrews still shrink their brains seasonally... but their behavior tells a different story! Despite semi-natural captive conditions, they showed signs of chronic stress, with higher activity and lower motivation to learn, compared to wild ones. It shows how captivity can quietly reshape research outcomes.</p>
-  </div>
+<div class="project-card">
+  <a href="open-science.qmd">
+    <img src="img/icons/open-science.svg" alt="Open Science">
+    <h3>Open Science</h3>
+    <p>Personal and community efforts to improve transparency and reproducibility in science.</p>
+  </a>
 </div>
 
-<div class="listing-item">
-  <div class="thumbnail">
-    <img src="img/pub/gene-captivity.png"
-         alt="Gene expression wild vs captive"
-         class="thumbnail-image">
-  </div>
-  <div>
-    <p><strong><a href="https://royalsocietypublishing.org/doi/10.1098/rsbl.2024.0478">
-      Gene expression comparisons between captive and wild shrew brains reveal captivity effects (2025)
-    </a></strong></p>
-    <p>Captivity alters how shrew brains work at the molecular level: hundreds of genes changed expression after just two months! These shifts echo patterns seen in human disorders like depression and neurodegeneration, raising caution for interpreting data from captive animals.</p>
-  </div>
+<div class="project-card">
+  <a href="datasets.qmd">
+    <img src="img/fen-monitor.png" alt="Datasets">
+    <h3>Datasets</h3>
+    <p>Published and openly available datasets from my research.</p>
+  </a>
 </div>
 
-<div class="listing-item">
-  <div class="thumbnail">
-    <img src="img/pub/atlas.png"
-         alt="Shrew Brain Atlas"
-         class="thumbnail-image">
-  </div>
-  <div>
-    <p><strong><a href="https://www.frontiersin.org/journals/neuroanatomy/articles/10.3389/fnana.2023.1168523/full">
-      Histological and MRI brain atlas of the common shrew, <em>Sorex araneus</em>, with brain region-specific gene expression profiles (2023)
-    </a></strong></p>
-    <p>The common shrew is one of the few mammals that shrinks and regrows its brain... and now it has its own detailed brain atlas! This openly available resource combines histology, MRI, and gene expression to unlock the shrew brain.</p>
-  </div>
+<div class="project-card">
+  <a href="illustrations.qmd">
+    <img src="img/illustrations/funkyanimals.png" alt="Illustrations">
+    <h3>Illustrations</h3>
+    <p>Science-inspired art and illustrations.</p>
+  </a>
+</div>
+
+<div class="project-card">
+  <a href="publications.qmd">
+    <img src="img/atlas.png" alt="Publications">
+    <h3>Publications</h3>
+    <p>My academic (and not) publications.</p>
+  </a>
+</div>
+
 </div>
 ```
-
-
-  
-## Workshops and Talks {#talks-workshops}
-
-
-#### **Workshops**: 
-
-**What is Open Science Anyway?** - [🔗link event](https://www.ab.mpg.de/events/40760/345436) and [Open Quarto presentation](https://github.com/cecibaldoni/OpenScience-Rado) <br>
-**SORTEE Code Club** - find the list of events I am organising [here](https://docs.google.com/spreadsheets/d/1rOOOE7ghPduwtFftG0DJJf0DXVigAdcmQ0xdEwbKQXo/edit) <br>
-**Personal Knowledge Management and Note-Taking Apps** - [Open Resources](https://github.com/cecibaldoni/PKM-workshop)
-
-
-
-#### **Talks**: 
-**Baldoni C.,** <br>
-*Invited Seminar Talk - Messerli Institute Vienna, Austria*<br>
-Shrinking Shrews: Cognitive Challenges in a Changing Brain<br>
-**Baldoni C.**, Farantouri M., Raptis K., Nourani E., Dechmann D. <br>
-*ISBE: Melbourne, Australia, 2024* <br>
-Seasonal Brain Size Variation and Its Impact on Spatial Navigation and Learning in the Common Shrew (*Sorex araneus*) <br>
-**Baldoni C.**, von Elverfeldt D., Dechmann D.<br>
-*MPIAB - RADO Seminar: Radolfzell, Germany, 2023*<br>
-News from the Shrews: insight from brain structure during Dehnel’s phenomenon from Neuroimaging<br>
-**Baldoni C.**, Farantouri M., Raptis K., Nourani E., Dechmann D.<br>
-*Animal Behaviour: Bielefeld, Germany, 2023*<br>
-Brain size and spatial learning: the case of the common shrew (*Sorex araneus*) <br>
-**Baldoni C.**, Nourani E., Dechmann D.<br>
-*IV Convegno Nazionale sui Piccoli Mammiferi: Grosseto, Italy, 2023*<br>
-Seasonal change in brain size affects spatial learning skills in common shrews (*Sorex araneus*)<br>
-**Baldoni C.**, Dechmann D.<br>
-Animal Behaviour Society: San Josè, Costa Rica, 2022<br>
-Seasonal change in brain size affects associative learning skills in common shrews (*Sorex araneus*)<br>
-**Baldoni C.**, Scaravelli D., Priori P., Carpentari S., Torboli C., Franzoi A., Pedrini P.<br>
-*IV Italian Bat Conference: Padova, Italy, 2019*<br>
-Diversity and consistency of nocturnal migration of bats at the bird ringing station ‘Bocca di Caset’<br>
-**Baldoni C.**, Cicero M., Pasini A., Caselli N., Scaravelli D.<br>
-*XX Italian Conference of Ornithology: Naples, Italy, 2019*<br>
-Assessing the distribution of the Ring-necked parakeet (*Psittacula krameri*) in Bologna, Italy: a citizen-science approach<br>
-**Baldoni C.**, Brucks D., Krasheninnikova A., Petelle M., von Bayern A.<br>
-*ASAB Summer conference: Konstanz, Germany, 2019*<br>
-Let it go: two macaw species are able to wait for a better reward in a rotating self-control paradigm<br>
-**Baldoni C.**, Giglio G., Scaravelli D.<br>
-*II European Meeting of Young Ornithologists: Torino, Italy, 2018*<br>
-An approach to the study of effects of fire on birds in Mediterranean woods.<br>

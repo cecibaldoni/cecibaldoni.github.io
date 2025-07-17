@@ -18,7 +18,7 @@ I see open science as a way of working, not just a set of rules. It affects how 
 I make my data, analysis scripts, and visualizations publicly available whenever possible. <br><br>Here is a list of resources where you can find my data and code: <br><br>
 
 - [GitHub](https://github.com/cecibaldoni?tab=repositories): my profile and open repositories, it includes some presentations for talks and workshops I organised. <br>
-   →  See [Workshop and Talks](talk.qmd#talks-workshops) for more! <br>
+   →  See [Workshop and Talks](talks.qmd#talks-workshops) for more! <br>
 - [OSF - Open Science Framework](https://osf.io/jdxn2/): my profile and materials from ongoing or not-yet-published projects. <br>
 - [Edmond – Max Planck Society Repository](https://edmond.mpg.de/dataverse/edmond/?q=%22Baldoni%2C+Cecilia%22): in here you can find my data and scripts associated with peer-reviewed articles. <br>
 

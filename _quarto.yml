@@ -10,8 +10,8 @@ website:
     left:
       - text: "About"
         href: about.qmd
-      - text: "Research"
-        href: research.qmd
+      - text: "Projects"
+        href: project.qmd
       - text: "Blog"
         href: blog/index.qmd
       - text: "Contact"

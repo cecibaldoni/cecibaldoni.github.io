@@ -45,8 +45,8 @@ Use the city map to explore my research, talks, drawings, and more.<br><br>
       <span class="city-label">Open Science</span>
     </a>
 
-    <a href="research.qmd#current-research" class="city-icon icon-research">
-      <img src="img/icons/research.svg" alt="Research">
+    <a href="project.qmd#current-research" class="city-icon icon-research">
+      <img src="img/icons/research.svg" alt="Projects">
       <span class="city-label">Research Interests</span>
     </a>
 

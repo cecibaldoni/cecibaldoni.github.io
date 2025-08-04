@@ -33,7 +33,7 @@ website:
     right: "Built with [Quarto](https://quarto.org/)"
     left: "&copy; Copyright 2024, Cecilia Baldoni"
 
-  google-analytics: G-DV6K7C0XDV
+  #google-analytics: G-DV6K7C0XDV
 
 format:
   html:

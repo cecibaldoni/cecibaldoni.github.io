@@ -567,7 +567,60 @@ ul.task-list li input[type="checkbox"] {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>© Copyright 2024, Cecilia Baldoni</p>
+<div>
+© Copyright 2025, Cecilia Baldoni
+</div>
+<div id="cookie-banner-placeholder">
+
+</div>
+<style>
+  #cookie-banner {
+    position: fixed; bottom: 0; left: 0; width: 100%;
+    background-color: #222; color: #fff; padding: 15px 25px;
+    z-index: 1000; text-align: center; font-size: 0.9em;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+  }
+  #cookie-banner p { margin: 0; }
+  #cookie-banner a { color: #aed6ff; text-decoration: underline; margin-left: 10px; }
+  #cookie-banner button {
+    margin: 0 15px; padding: 5px 15px; border: none;
+    background-color: #4CAF50; color: white; cursor: pointer; border-radius: 4px;
+  }
+</style>
+<script>
+  function loadGoogleAnalytics() {
+    const gascript = document.createElement("script");
+    gascript.async = true;
+    gascript.src = "https://www.googletagmanager.com/gtag/js?id=G-DV6K7C0XDV";
+    document.head.appendChild(gascript);
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DV6K7C0XDV');
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    if (localStorage.getItem("cookieAccepted") === "true") {
+      loadGoogleAnalytics();
+      return;
+    }
+    const bannerHTML = `
+      <div id="cookie-banner">
+        <p>
+          This website uses cookies for analytics. By clicking "OK", you agree to its use.
+          <button id="accept-cookies">OK</button>
+          <a href="privacy.html" class="cookie-link">(learn more)</a>
+        </p>
+      </div>`;
+    document.getElementById("cookie-banner-placeholder").innerHTML = bannerHTML;
+    
+    document.getElementById("accept-cookies").addEventListener("click", function () {
+      localStorage.setItem("cookieAccepted", "true");
+      document.getElementById("cookie-banner").remove();
+      loadGoogleAnalytics();
+    });
+  });
+</script>
 </div>   
     <div class="nav-footer-center">
       &nbsp;

@@ -253,15 +253,20 @@ ggplot(reflections_final, aes(x = skill, y = enjoyment, color = tag)) +
   scale_x_continuous(limits = c(0, 10), breaks = seq(0, 10, 2)) +
   scale_y_continuous(limits = c(0, 10), breaks = seq(0, 10, 2)) +
   geom_hline(yintercept = 5, linetype = "dashed", color = "gray50") +
-  geom_vline(xintercept = 5, linetype = "dashed", color = "gray50")
+  geom_vline(xintercept = 5, linetype = "dashed", color = "gray50") +
+    annotate("text", x = 7.5, y = 7.5, label = "Zone of Genius", color = "gray20", fontface = "bold") +
+  annotate("text", x = 7.5, y = 2.5, label = "Burnout Zone", color = "gray20", fontface = "bold") +
+  annotate("text", x = 2.5, y = 7.5, label = "Growth Zone", color = "gray20", fontface = "bold") +
+  annotate("text", x = 2.5, y = 2.5, label = "Toil Zone", color = "gray20", fontface = "bold")
+
 ```
 
 This simple scatter plot is a map of my professional self.
 
--   Top-Right - **My Zone of Genius** (High Skill, High Enjoyment): For me, this is where Coding, Presentation, and Mentoring live.
--   Bottom-Right - **The Burnout Zone** (High Skill, Low Enjoyment): Things I'm good at but drain me.
--   Top-Left - **The Growth Zone** (Low Skill, High Enjoyment): Things I love and should invest more time in.
--   Bottom-Left - **The Toil Zone** (Low Skill, Low Enjoyment): Tasks to minimize/delegate/automate.
+-   **My Zone of Genius** (High Skill, High Enjoyment): For me, this is where Coding, Presentation, and Mentoring live.
+-   **The Burnout Zone** (High Skill, Low Enjoyment): Things I'm good at but drain me.
+-   **The Growth Zone** (Low Skill, High Enjoyment): Things I love and should invest more time in.
+-   **The Toil Zone** (Low Skill, Low Enjoyment): Tasks to minimize/delegate/automate.
 
 That's it. This journey gave me a powerful quantitative map of my skills and passions.
 

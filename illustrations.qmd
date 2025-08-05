@@ -1,6 +1,5 @@
 ---
 title: ""
-format: html
 page-layout: full
 ---
 

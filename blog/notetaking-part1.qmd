@@ -8,23 +8,25 @@ categories: [PKM, note-taking]
 
 ## The PPP (Post PhD Panic)
 
-It was January. I had finished my PhD the previous November and, after taking all of December off for a much-needed (and probably longer than it should've been) holiday, I started the new year with a slow-dawning realisation. I guess it could be summarised in: *“and now, what?”*.
+It was January. I had finished my PhD the previous November and, after taking all of December off for a much-needed (and probably longer than it should've been) holiday, I started the new year with a slow-dawning realisation.
+
+I guess it could be summarised in: *“and now, what?”*.
 
 Despite a well documented history of growth (*I was a **doctor** for crying out loud!*), I couldn't clearly answer two simple questions: What am I actually *good* at? And what do I *enjoy* doing?
 
 The paralysis was real. I could list my accomplishments, but they felt like monolithic blocks. “I wrote a dissertation” could be a great conversation starter, but it’s not necessarily clear what that entails.
 
-Take, for example, "writing a scientific article". It's a huge part of academic life, but do I like it? Am I good at it? 
+Take, for example, "writing a scientific article". It's a huge part of academic life, but do I like it? Am I good at it?
 
 The question itself is flawed because the task is too broad. "Writing an article" is a galaxy of smaller tasks: data collection, writing a draft, collaborating back-and-forth with co-authors (do they even read my innumerable emails at some point?), documenting everything because I forget what I am doing 3 hours later, making figures, endless reviews (spoiler alert: I hate that part). Is it possible to assign a single score for enjoyment or skill to “writing an article"?
 
-But realising the problem is always the first step, from there it’s kind of easy to lay a path. So I decided to try a simple weekly review: every Friday, I’d sit down and try to reflect on my work week. The reality? When I finally sat down with my thoughts I could barely remember a single task from the previous five days. I knew I had been busy, I knew I had worked, but when I tried to recall what I’d actually done, my brain just filled with static. It was as if the entire week had passed in a blur with no discernible imprints on my memory. 
+But realizing the problem is always the first step, from there it’s kind of easy to lay a path. So I decided to try a simple weekly review: every Friday, I’d sit down and try to reflect on my work week. The reality? When I finally sat down with my thoughts I could barely remember a single task from the previous five days. I knew I had been busy, I knew I had worked, but when I tried to recall what I’d actually done, my brain just filled with static. It was as if the entire week had passed in a blur with no imprints on my memory. 
 
 ::: {#fig-homer-brain fig-cap="Disclaimer: There's a better clip of Abe Simpson with static in his brain, but I couldn't find it, so Homer will have to do."}
 ![A gif of Homer Simpson's brain showing an old school cartoon going on inside his empty head](img/homer-simpson-brain.gif)
 :::
 
-That’s when it hit me: I’ve spent years taking notes on *things*  in Logseq. If I can take notes on everything else, why not on my own work? That’s when I decided to turn my note-taking flow inward, and build a system for getting to know myself better.
+That’s when it hit me: I’ve spent years taking notes on *things* in Logseq. If I can take notes on everything else, why not on my own work? That’s when I decided to turn my note-taking flow inward, and build a system for getting to know myself better.
 
 ## "We Need Clay!" (or: my citations are always messed up)
 
@@ -43,13 +45,13 @@ In the project page, I tried to summarize the plan it in few bullet points:
 ::: callout-note
 #### Phases
 
--   **Data collection:** I need data to work with. Record the tasks or activities I do throughout the week and write down how I feel about them, but also if I feel skilled at them or not.
+-   **Data collection:** I need data to work with. Record the tasks or activities done throughout the week and write down how I feel about them, but also if I feel skilled at them or not.
 
     -   **Mandatory:** Write down small and specific tasks. For example, instead of *"wrote article"* say *"wrote 200-word paragraph about the function of AQP4"*
 
--   **Review:** After the week is over, check the entries in Logseq for recurrent patterns. For example, things that weren't real tasks, but you did them because you wanted to, needed to, or enjoyed it.
+-   **Review:** After the week is over, check the entries in Logseq for recurrent patterns. For example, things that weren't real tasks, but did them because I wanted to, needed to, or enjoyed it.
 
--   **Create keywords from the data:** Having specific tasks you enjoy/are good at, you can now extract skills. Look at what words repeat often.
+-   **Create keywords from the data:** Having specific tasks I enjoy/am good at, I can now extract skills.
 
     -   *E.g.,* “I like explaining concepts visually” → "Visual Communication, Science Communication”
     -   *E.g.,* “I enjoy breaking down complex topics” → "Content Structuring, Information Design”
@@ -76,9 +78,13 @@ To make this a real habit, I embedded this empty structure directly into my dail
 
 I won't lie, the beginning was extremely difficult. I’m sure I’m not alone in this: you finish your workday, you’re mentally exhausted, but you cannot recollect what you actually did. It's like meditation; everyone sucks at it at the beginning. But with practice, the process became easier, and I got better at acknowledging the small tasks: "Today I wrote a difficult email, I felt super good about it, even if I wasn't feeling very skilled." Done. One data point.
 
-For a while, this worked. I was collecting entries. Then, a new kind of excitement took hold. I wasn't just journaling anymore; I was *building a dataset*. Mindblowing sound. And if you have a dataset... you *have* to plot it. I think it's a law somewhere, look it up.
+For a while, this worked. Then, a new kind of excitement took hold. I wasn't just journaling anymore; I was *building a dataset*.
 
-This decision to move my notes into R for analysis was the turning point that exposed every flaw in my simple little system.
+*Mindblowing sound*.
+
+And if you have a dataset... you *have* to plot it. I think it's a law somewhere, look it up.
+
+This decision to move my notes into R for analysis was the turning point that **exposed every flaw** in my simple little system.
 
 ## The Roadblocks in R
 
@@ -101,9 +107,11 @@ fake_reflections <- tibble::tribble(~task, ~feeling_score, ~enjoyment, ~skill,
 
 ```
 
-The first problem was immediately obvious. My `Task` descriptions were unique and messy, with no repeatable patterns: great for a human reader but useless for aggregation.
+The first problem was immediately obvious. I should have seen this coming. My `Task` descriptions were unique and messy, with no repeatable patterns: great for a human reader but useless for aggregation.
 
-I should have seen this coming. This led to the first iteration: creating a `Tag` field for consistent taxonomy for my work. This meant exactly what you are thinking: going back to all my entries and add meaningful tags.
+This led to the first iteration: creating a `Tag` field for consistent taxonomy for my work.
+
+This meant exactly what you are thinking: going back to all my entries and add meaningful tags.
 
 Yuppi, she said sarcastically.
 
@@ -193,9 +201,12 @@ I had to pause and create distinct definitions for myself:
 **Enjoyment**: Did I actually like the task itself? e.g. you can feel accomplished after a task you found profoundly boring.
 :::
 
-Here’s how the (my) distinction plays out: - You might feel stressed while troubleshooting code (Feeling: "anxious, challenged"), but deeply enjoy the puzzle-solving (Enjoyment: 8/10). - You might feel calm while doing mundane admin work (Feeling: "relaxed"), but find it intensely boring (Enjoyment: 2/10).
+Here’s how the (my) distinction plays out:
 
-This clarification fundamentally improved my data. I started noticing tasks where my `Feeling` was low but `Enjoyment` was high. For example, I often felt anxious before a presentation (Feeling score: 3/10), but I consistently rated my Enjoyment of the act of presenting as very high (9/10). This simple distinction revealed that some of the activities that are most rewarding for me are also the ones that push me out of my comfort zone. In this case, I maintained "Feeling" as a numerical score, but I introduced a categorical tag alongside it:
+-   You might feel stressed while troubleshooting code (Feeling: "anxious, challenged"), but deeply enjoy the problem-solving (Enjoyment: 8/10).
+-   You might feel calm while doing mundane admin work (Feeling: "relaxed"), but find it intensely boring (Enjoyment: 2/10).
+
+This clarification fundamentally improved my data. I started noticing tasks where my `Feeling` was low but `Enjoyment` was high. For example, I often felt anxious before a presentation (Feeling score: 3/10), but I consistently rated my Enjoyment of the act of presenting as very high (9/10). This simple distinction revealed that some of the activities that are most rewarding for me are also the ones that push me out of my comfort zone. In this case, I maintained `Feeling` as a numerical score, but I introduced a categorical tag alongside it:
 
 ```{r}
 library(tidyverse)
@@ -286,7 +297,7 @@ That's a story for another time. In Part 2, we'll leave the numbers behind and v
 
 Here is the function I use to extract the structured data from my Logseq journal files. You can adapt it for your own vault/folder.
 
-```r
+``` r
 
 # Helper to safely extract a regex group
 extract_field <- function(lines, pattern) {

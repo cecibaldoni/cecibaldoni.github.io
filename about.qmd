@@ -1,6 +1,5 @@
 ---
 title: ""
-format: html
 class: page-research
 ---
 
@@ -10,17 +9,35 @@ class: page-research
 
 ## About me
 
-<img src="img/profile.jpg" alt="Shrew Fieldwork" style="width: 45%; float: left; margin-right: 20px;"/> 
-I am a behavioral ecologist, broadly interested in animal cognition and cognitive ecology. <br> <br>My research focuses on how animals think, make decisions, and interact with their environment. I use quantitative methods to investigate the drivers and outcomes of cognition. I test animals, in their natural habitat or in captivity under semi-natural conditions, to uncover how these cognitive processes vary across species and contexts.
-<br><br>
-I have had the opportunity to work with a variety of species, including both birds and mammals, depending on the questions at hand. [My current work](project.qmd) centers on the cognitive compromises of the common shrew, a model species for studying brain size plasticity and behavior.
-<br><br><br><br>
-Recently, I became more involved in [open science practices](open-science.qmd), and I aim to advance openness, transparency and reproducibility in my daily life as a researcher.<br><br>
-I've had the opportunity to participate to the [Open Science Summer School](https://osip.mpdl.mpg.de/2024/09/20/summer-school-materials-available/) organised by the [Max Planck Digital Library](https://www.mpg.de/807277/max-planck-digital-library) and the [LMU Open Science Center](https://www.osc.uni-muenchen.de/index.html), where I learned practical tools and strategies to make research more accessible and collaborative.
-<br><br><br><br>
+```{=html}
+<div class="about-me" style="display:flex; align-items:center; gap:2rem;">
+  <img src="img/BaldoniCecilia.JPG" class="about-me-img" style="border-radius:50%; max-width:200px;">
+  <div class="about-me-text">
+    <ul>
+      <li><strong>Scientist</strong></li>
+      <li>Enjoy designing and leading <strong>workshops</strong></li>
+      <li>Love connecting research <strong>ideas</strong> with everyday challenges</li>
+      <li>Obsessed with <strong>note-taking apps</strong></li>
+      <li>Always curious, always <strong>learning something new</strong></li>
+</ul>
+  </div>
+</div>
+```
+<br>
+I work at the intersection of science, communication, and collaboration. 
 
-## Previous Life
+[My current work](shrews.qmd) centers on the cognitive compromises of the common shrew, a model species for studying brain size plasticity and behavior.
+
+I’m passionate about facilitating workshops, supporting digital collaboration, and making complex workflows more transparent. You can see examples of this in my [Talks & Workshops](talks.qmd) and [Projects](project.qmd) pages.
+
+I am deeply involved in [open science practices](open-science.qmd), and I aim to advance openness, transparency and reproducibility in my daily life as a researcher.<br><br> I believe openness is both a technical choice and cultural one, about how we share knowledge and invite others to build on it.
+
+
+--- 
+<br>
+
 <img src="img/violin.jpg" alt="20 Years of Violin" style="width: 45%; float: right; margin-left: 20px;"/>
 Before becoming a scientist, I was a violinist, a journey that started when I was five. Over the years, I performed with various orchestras, including the United Europe Chamber Orchestra (UECO), and eventually, this work helped pay for my university studies.
 <br><br> While music has always been a passion, science turned out to be an even stronger driver, leading me to make the switch from professional musician to biologist.  <br><br>
 I still enjoy playing the violin for myself and appreciate the creativity and focus it brings to my life.
+

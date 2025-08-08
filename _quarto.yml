@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: docs
+  resources:
+    - sitemap.xml
 
 website:
   title: "Cecilia Baldoni"
@@ -38,7 +40,7 @@ website:
       <style>
         #cookie-banner {
           position: fixed; bottom: 0; left: 0; width: 100%;
-          background-color: #222; color: #fff; padding: 15px 25px;
+          background-color: #6F4E37; color: #F3EDE2; padding: 15px 25px;
           z-index: 1000; text-align: center; font-size: 0.9em;
           box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
         }
@@ -46,7 +48,8 @@ website:
         #cookie-banner a { color: #aed6ff; text-decoration: underline; margin-left: 10px; }
         #cookie-banner button {
           margin: 0 15px; padding: 5px 15px; border: none;
-          background-color: #4CAF50; color: white; cursor: pointer; border-radius: 4px;
+          background-color: #F3EDE2; color: #A25B43; cursor: pointer; border-radius: 4px;
+          transition: background-color 0.3s ease, color 0.3s ease;
         }
       </style>
       <script>

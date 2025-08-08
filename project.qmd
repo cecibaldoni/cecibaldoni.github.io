@@ -1,6 +1,5 @@
 ---
 title: ""
-format: html
 class: page-research
 ---
 
@@ -23,7 +22,7 @@ class: page-research
 
 <div class="project-card">
   <a href="talks.qmd">
-    <img src="img/violin.jpg" alt="Workshops and Talks">
+    <img src="img/ceci-talk.JPG" alt="Workshops and Talks">
     <h3>Workshops & Talks</h3>
     <p>Conferences, seminars, and hands-on workshops on open workflows and data science.</p>
   </a>

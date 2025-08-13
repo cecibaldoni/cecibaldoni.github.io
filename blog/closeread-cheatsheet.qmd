@@ -10,7 +10,7 @@ image: img/cheatsheet-closeread-thumbnail.png
 
 So, I got invited to give a talk for R-Ladies Amsterdam. About something I really, really like: scrollytelling with Quarto and Closeread.
 
-The invitation came after I shared a peek at my [Closeread-built research page](https://cecibaldoni.github.io/projects.html) online. The [post](https://www.linkedin.com/posts/cecilia-baldoni_winners-of-the-closeread-prize-data-driven-activity-7312506715554394114-TVGZ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAExecj4B9BWcK9Ukk_8R5JrCXzPLf5E0dgI) picked up a bit of attention. Apparently, the combination of tiny shrews and gentle scroll animations is memorable (*take notes, academia!*). Slowly it turned from *what it showed* to *how I made it*. That eventually turned into: “Would you like to give a talk about this?”.
+The invitation came after I shared a peek at my [Closeread-built research page](https://cecibaldoni.github.io/shrews.html) online. The [post](https://www.linkedin.com/posts/cecilia-baldoni_winners-of-the-closeread-prize-data-driven-activity-7312506715554394114-TVGZ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAExecj4B9BWcK9Ukk_8R5JrCXzPLf5E0dgI) picked up a bit of attention. Apparently, the combination of tiny shrews and scroll animations is memorable (*take notes, academia!*). Slowly it turned from *what it showed* to *how I made it*. That eventually turned into: “Would you like to give a talk about this?”.
 
 By the way, I said yes to the talk. You already know that part, you're here reading the aftermath, afterall.
 
@@ -20,13 +20,13 @@ When I started getting things ready, I thought I’d just need some slides. Mayb
 
 It wasn’t really part of the plan. But I kept reopening the documentation to check things, and at some point I realized I was having the same three doubts on repeat. Eventually, I gave up on flipping between tabs and just made a **cheatsheet**. It was half an act of self-care, half a design itch.
 
-![](img/cheatsheet-closeread.png)
+![A cheatsheet for Closeread](img/cheatsheet-closeread.png)
 
 The result is a printable cheatsheet that puts the main Closeread building blocks in one spot. It’s colorful (because why not), and it’s practical (because I needed it), and if you’re starting your own Closeread experiment, I hope it saves you a few tabs.
 
 I wrapped everything into [a tidy GitHub repo](https://github.com/cecibaldoni/scrollytelling-quarto-closeread); you will find the slides from the talk, the closeread example folder, and the cheatsheet. You can fork it, remix it, or ignore it completely. But if you’re curious, it’s there.
 
-As for the talk… I think it went well. You can waatch it [here](https://www.youtube.com/watch?feature=shared&v=ytKZ357Xtqw) if you are curious. I was *very* excited (is too excited possible?). Also, mildly terrified for the classic Zoom shenanigans: where is the link, screen share panic, going too fast and suddenly realizing I’m done five minutes early. But mostly, I’m just happy this tiny visual storytelling project has found its way into other people’s hands.
+As for the talk… I think it went well. You can watch it [here](https://www.youtube.com/watch?feature=shared&v=ytKZ357Xtqw) if you are curious. I was *very* excited (is too excited possible?). Also, mildly terrified for the classic Zoom shenanigans: where is the link, screen share panic, going too fast and suddenly realizing I’m done five minutes early. But mostly, I’m just happy this tiny visual storytelling project has found its way into other people’s hands.
 
 If you want to try Closeread, everything’s in the repo. And if you want to look at shrews with scroll-activated flair, well... I support that too.
 

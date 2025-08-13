@@ -9,6 +9,9 @@ title: ""
 ## Workshops and Talks {#talks-workshops}
 
 ### Workshops
+- **Data wrangling with {tidyverse}**  
+  [Event link](https://sara-edu.netlify.app/summer/2025-r4b/) · [Slides](https://cecibaldoni.github.io/data-wrangling-tidyverse/#/title-slide)
+
 
 - **What is Open Science Anyway?**  
   [Event link](https://www.ab.mpg.de/events/40760/345436) · [Slides](https://github.com/cecibaldoni/OpenScience-Rado)

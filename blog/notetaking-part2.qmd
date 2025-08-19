@@ -16,6 +16,8 @@ I could have stopped there, satisfied with my color-coded chart. But here's the 
 
 Could I find meaning in that mess? Let's find out.
 
+![The gif i was looking for in the previous part, with Grampa Simpson thinking back and finding only static noise](img/grampasimpsonwide.gif)
+
 *Small notes before we begin:*
 
 *1. This post is structured in* chapters*, and it's a deliberate choice. Since this whole adventure is about analyzing long-form writing, it felt right to structure the post itself like a book. We're on a literary adventure here, people!*

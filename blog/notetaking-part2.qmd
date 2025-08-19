@@ -167,7 +167,7 @@ words_counted  %>%
   geom_col()
 ```
 
-[ ](img/most-used-words1.svg)
+![](img/most-used-words1.svg)
 
 Fun fact! From my own entries the most used word was "Time". Which I found very intriguing.
 
@@ -175,7 +175,7 @@ A funnier fact? That's the second most used word in the Jane Austen books! Take 
 
 Actually, it's also the first word for Brontë and Horwell, isn't that interesting?
 
-Want to do this yourself? The core of it is using `unnest_tokens()` to create one word per row and `count()` to tally them up. Here’s how it looks on a small, reproducible example:
+Want to do this yourself? The core of it is using `unnest_tokens()` to create one word per row and `count()` to tally them up. 
 
 ## Chapter 3: What is the `sentiment` of my writing?
 

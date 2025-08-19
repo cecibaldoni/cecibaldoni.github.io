@@ -2,7 +2,7 @@
 title: "Is Note-Taking as powerful as I think? (2/2)"
 description: "Part 2 of 2 - This post shows how I dived into my digital journal to extract information about my writing style, my weekly mood, and yes, make more plots."
 date: 2025-08-19
-#image: 
+image: img/grampasimpson.gif
 categories: [PKM, note-taking]
 ---
 

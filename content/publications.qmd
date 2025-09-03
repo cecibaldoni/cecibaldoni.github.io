@@ -63,7 +63,7 @@ title: ""
 
 <div class="listing-item">
   <div class="thumbnail">
-    <img src="img/gene-captivity.png"
+    <img src="../img/gene-captivity.png"
          alt="Gene expression wild vs captive"
          class="thumbnail-image">
   </div>

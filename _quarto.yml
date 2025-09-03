@@ -11,13 +11,13 @@ website:
   navbar:
     left:
       - text: "About"
-        href: about.qmd
+        href: content/about.qmd
       - text: "Projects"
-        href: project.qmd
+        href: content/project.qmd
       - text: "Blog"
         href: blog/index.qmd
       - text: "Contact"
-        href: contact.qmd
+        href: content/contact.qmd
 
     right:
       - text: "{{< iconify fa6-brands:google-scholar >}}"
@@ -27,7 +27,7 @@ website:
       - text: "{{< iconify meteor-icons:bluesky >}}"
         href: https://bsky.app/profile/cecibaldoni.bsky.social
       - icon: instagram
-        href: https://www.instagram.com/cecirockyaosta/?hl=en
+        href: https://www.instagram.com/cecibaldoni/?hl=en
       - icon: github
         href: https://github.com/cecibaldoni/
 

@@ -1,0 +1,217 @@
+---
+title: ""
+css: "../closeread.css"
+format:
+  closeread-html:
+    #toc: false #I think it's default for closeread format
+    embed-resources: true
+    remove-header-space: true
+class: page-projects
+---
+ 
+## The challenge of being small {#shrew}
+
+:::{.cr-section layout="overlay-center"}
+
+I study the common shrew (*Sorex araneus*), a tiny mammal with a  metabolism so *extreme* that even a few hours without food can be fatal. @cr-shrew
+
+This high metabolism makes them particularly vulnerable to seasonal changes, and it makes it **impossible for them to hibernate during winter**. Their solution? They **shrink**.
+
+Unlike animals that grow steadily over years, shrews undergo a radical transformation within a single lifetime. @cr-shrew-overlay
+
+This dramatic change, **Dehnel’s Phenomenon**, reduces their brain, bones, and organs to save energy in winter scarcity, regrowing them in spring for breeding.
+
+:::{#cr-shrew}
+![](../img/shrew-original.png){alt="Close-up of a shrew"}
+:::
+
+:::{#cr-shrew-overlay}
+![](../img/shrew-overlay.png){alt="Close-up of a shrew"}
+:::
+
+:::
+
+:::{.cr-section layout="sidebar-right"}
+
+How does it work? @cr-shrew-cycle
+
+Born in **summer**, shrews rapidly reach peak brain size. This is the largest their brains will ever be.  [@cr-shrew-cycle]{pan-to="50%,-20%" scale-by="1.8"}
+
+As **winter** sets in, the shrew shrinks their brains and bodies, reducing energy needs. [@cr-shrew-cycle]{pan-to="-10%,-20%" scale-by="2"}
+
+By **spring**, they double their winter mass, gearing up to reproduce. [@cr-shrew-cycle]{pan-to="-50%,-5%" scale-by="1.7"}
+
+Shrews **live only about a year**, so this transformation happens just once.  @cr-shrew-cycle
+
+:::{#cr-shrew-cycle}
+![](../img/shrew-cycle.svg){alt="Shrew Cycle"}
+:::
+
+:::
+
+:::{.cr-section layout="sidebar-right"}
+
+What happens *cognitively* when brains shrink and regrow? @cr-shrew-cognitionbw
+
+My research explores what happens when their brain changes size: @cr-shrew-cognition
+
+How does brain size affect cognitive abilities? @cr-shrew-lightbulb
+
+Does a smaller brain lead to simpler decision-making? @cr-shrew-decisionmaking
+
+These questions go *beyond just shrews*. Understanding how an animal maintains function despite physical changes in the brain helps us explore broader ideas in **neurodegeneration** and **energy efficiency**.
+
+:::{#cr-shrew-cognitionbw}
+![](../img/shrew-cognitionbw.svg){alt="Shrew cognition" width="70%"}
+
+:::
+
+:::{#cr-shrew-cognition}
+![](../img/shrew-cognition.svg){alt="Shrew cognition" width="70%"}
+:::
+
+:::{#cr-shrew-lightbulb}
+![](../img/shrew-cognition-lightbulb.svg){alt="Shrew cognition" width="70%"}
+:::
+
+:::{#cr-shrew-decisionmaking}
+![](../img/shrew-cognition-complete.svg){alt="Shrew cognition" width="70%"}
+:::
+
+:::
+
+## Does captivity influence learning? {#shrew-captivity}
+
+```{r}
+#| echo: false
+#| fig-asp: 1.2
+#| message: false
+library(ggplot2)
+library(tidyverse)
+raw_data <- readRDS("../data/al_data.rds")
+model_data <- readRDS("../data/al_fitted.rds")
+```
+
+
+:::{.cr-section layout="sidebar-right"}
+
+Brain size is of course only part of the story... environment shapes behavior too. @cr-captive-shrew
+
+In *captivity*, animals face new challenges.  Do shrews kept in captivity learn differently than those in the wild? @cr-captive-shrew
+
+I tested the ability of shrews to associate an odor cue with a reward in a Y-maze **associative learning task**. @cr-shrew-empty-plot  
+
+Each **dot** represents an individual shrew's decision in a trial.  The **x-axis** represents the trial number, from 1 to 10. The **y-axis** shows whether they made the correct choice (**1**) or the wrong one (**0**). @cr-shrew-empty-plot  
+
+**Summer wild (orange)** shrews had the highest and earliest success rates. @cr-shrew-summer-plot
+
+**Winter wild (dark blue)** shrews showed a similar learning curve, but they learned at a slower rate and did not reach the **Summer** success rate. @cr-shrew-wild-plot
+
+**Winter captive (light blue)** shrews showed no learning, never deviating from chance. @cr-shrew-complete-plot
+
+📄 This work is published in *Royal Society Open Science*: [*Captivity alters behaviour but not seasonal brain size change in semi-naturally housed shrews*](https://royalsocietypublishing.org/doi/10.1098/rsos.242138)  
+
+:::{#cr-captive-shrew}
+![](../img/captive-shrew.jpg){alt="Shrew cognition"}
+:::
+
+:::{#cr-shrew-empty-plot}
+```{r out.width="100%"}
+ggplot(raw_data, aes(x = trial, y = success, color = category)) +
+  geom_jitter(width =  0.05, height = 0.05) +
+  labs(x = "Trial", y = "Success rate") +
+  labs(color="Status", fill="CI 95%") +
+  scale_color_manual(values = c("#D16103","#0AA9A9", "#0A33A9"), labels = c("Summer Wild","Winter Captive", "Winter Wild")) +
+  theme_bw() +
+  theme(legend.position = "none",
+        axis.title.x = element_text(size=15, vjust=0),
+        axis.title.y = element_text(size=15, vjust=0),
+        axis.text.x = element_text(size=12, vjust=0),
+        legend.text = element_text(size = 10),
+        axis.text.y = element_text(size=12, vjust=0))
+```
+:::
+
+:::{#cr-shrew-summer-plot}
+```{r out.width="100%"}
+ggplot(filter(raw_data, category == "summer wild"), aes(x = trial, y = success, color = category)) +
+  geom_jitter(width =  0.05, height = 0.05) +
+  labs(x = "Trial", y = "Success rate") +
+  labs(color="Status", fill="CI 95%") +
+
+  scale_color_manual(values = c("#D16103","#0AA9A9", "#0A33A9"), labels = c("Summer Wild","Winter Captive", "Winter Wild")) +
+  scale_fill_manual(values = c("#D16103","#0AA9A9", "#0A33A9"), labels = c("Summer Wild","Winter Captive", "Winter Wild")) +
+  scale_x_discrete(breaks = raw_data$trial, labels = raw_data$trial) +
+  geom_line(data = filter(model_data, category == "summer wild"), aes(x = trial, y = AvgEstimate, group = category), linewidth = 2) +
+  geom_ribbon(data = filter(model_data, category == "summer wild"),
+              aes(x = trial, ymin = Lower, ymax = Upper, fill = category, group = category),
+              alpha = 0.2, inherit.aes = FALSE) +
+  theme_bw() +
+  theme(legend.position = "none",
+        axis.title.x = element_text(size=15, vjust=0),
+        axis.title.y = element_text(size=15, vjust=0),
+        axis.text.x = element_text(size=12, vjust=0),
+        legend.text = element_text(size = 10),
+        axis.text.y = element_text(size=12, vjust=0))
+```
+:::
+
+:::{#cr-shrew-wild-plot}
+```{r out.width="100%"}
+ggplot(filter(raw_data, category %in% c("summer wild", "winter wild")), aes(x = trial, y = success, color = category)) +
+  geom_jitter(width =  0.05, height = 0.05) +
+  labs(x = "Trial", y = "Success rate") +
+  labs(color="Status", fill="CI 95%") +
+
+  scale_color_manual(values = c("#D16103", "#0A33A9"), labels = c("Summer Wild", "Winter Wild")) +
+  scale_fill_manual(values = c("#D16103", "#0A33A9"), labels = c("Summer Wild", "Winter Wild")) +
+  scale_x_discrete(breaks = raw_data$trial, labels = raw_data$trial) +
+  geom_line(data = filter(model_data, category %in% c("summer wild", "winter wild")), aes(x = trial, y = AvgEstimate, group = category), linewidth = 2) +
+  geom_ribbon(data = filter(model_data, category %in% c("summer wild", "winter wild")),
+              aes(x = trial, ymin = Lower, ymax = Upper, fill = category, group = category),
+              alpha = 0.2, inherit.aes = FALSE) +
+  theme_bw() +
+  theme(legend.position = "none",
+        axis.title.x = element_text(size=15, vjust=0),
+        axis.title.y = element_text(size=15, vjust=0),
+        axis.text.x = element_text(size=12, vjust=0),
+        legend.text = element_text(size = 10),
+        axis.text.y = element_text(size=12, vjust=0))
+```
+:::
+
+:::{#cr-shrew-complete-plot}
+```{r out.width="100%"}
+ggplot(raw_data, aes(x = trial, y = success, color = category)) +
+  geom_jitter(width =  0.05, height = 0.05) +
+  labs(x = "Trial", y = "Success rate") +
+  labs(color="Status", fill="CI 95%") +
+
+  scale_color_manual(values = c("#D16103","#0AA9A9", "#0A33A9"), labels = c("Summer Wild","Winter Captive", "Winter Wild")) +
+  scale_fill_manual(values = c("#D16103","#0AA9A9", "#0A33A9"), labels = c("Summer Wild","Winter Captive", "Winter Wild")) +
+  scale_x_discrete(breaks = raw_data$trial, labels = raw_data$trial) +
+  geom_line(data = model_data, aes(x = trial, y = AvgEstimate, group = category), linewidth = 2) +
+  geom_ribbon(data = model_data,
+              aes(x = trial, ymin = Lower, ymax = Upper, fill = category, group = category),
+              alpha = 0.2, inherit.aes = FALSE) +
+  theme_bw() +
+  theme(legend.position = "none",
+        axis.title.x = element_text(size=15, vjust=0),
+        axis.title.y = element_text(size=15, vjust=0),
+        axis.text.x = element_text(size=12, vjust=0),
+        legend.text = element_text(size = 10),
+        axis.text.y = element_text(size=12, vjust=0))
+```
+:::
+
+:::
+
+
+### Project Collaborators {#collaborators}
+
+I conduct this research supervised by [Dr. Dina Dechmann](https://www.ab.mpg.de/person/98231/2736) at the [Max Planck Institute of Animal Behaviour](https://www.ab.mpg.de/)
+
+<br> *Collaborators*: <br>
+[Prof. Dominik von Elverfeldt](https://www.uniklinik-freiburg.de/mr-en/team/elverfeldt.html), University of Freiburg, Germany <br>
+[Prof. Liliana Dávalos](https://www.stonybrook.edu/commcms/ecoevo/_people/_faculty_pages/davalos.php), Stony Brook University, New York <br>
+[Prof. John Nieland](https://vbn.aau.dk/en/persons/133797), University of Aalborg, Denmark <br>

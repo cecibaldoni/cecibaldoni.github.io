@@ -1,0 +1,14 @@
+---
+title: "Privacy Policy"
+format: html
+---
+
+This website uses Google Analytics to help understand how visitors interact with the content.
+
+No personal data (like names or emails) is collected directly. Google Analytics may use cookies to collect anonymous usage data such as page views, duration, and device/browser information.
+
+By using this site, you consent to this anonymous tracking.
+
+You can disable cookies in your browser settings or use browser extensions to block analytics scripts.
+
+If you have questions, feel free to [contact me](mailto:cecilia.baldons@gmail.com).

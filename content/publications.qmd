@@ -1,0 +1,119 @@
+---
+title: ""
+---
+
+## Selected Publications
+
+```{=html}
+<div class="listing-item">
+  <div class="thumbnail">
+    <img src="img/CB-graphabstract.svg"
+         alt="Brain diffusion properties shrews"
+         class="thumbnail-image">
+  </div>
+  <div>
+    <p><strong><a href="https://www.sciencedirect.com/science/article/pii/S0960982225010814">
+      Programmed seasonal brain shrinkage in the common shrew via water loss without cell death (2025)
+    </a></strong></p>
+    <p>In vivo MRI has revealed that common shrews shrink their brains for winter survival not through cell death, but by safely and reversibly losing water from their brain cells!</p>
+  </div>
+</div>
+
+<div class="listing-item">
+  <div class="thumbnail">
+    <img src="img/aselli.png"
+         alt="Pancreas gene expression in shrew"
+         class="thumbnail-image">
+  </div>
+  <div>
+    <p><strong><a href="https://www.biorxiv.org/content/10.1101/2025.05.22.654563v1.full">
+      Gene expression reveals the pancreas of Aselli as a critical organ for plasma cell differentiation in common shrew (2025 preprint)
+    </a></strong></p>
+    <p>First look at molecular pathways in the Aselli pancreas, suggesting a key role in immune cell differentiation during brain‑plasticity cycles.</p>
+  </div>
+</div>
+
+<div class="listing-item">
+  <div class="thumbnail">
+    <img src="img/gene-expression.png"
+         alt="Gene expression"
+         class="thumbnail-image">
+  </div>
+  <div>
+    <p><strong><a href="https://elifesciences.org/articles/100788">
+      Seasonal and comparative evidence of adaptive gene expression in mammalian brain size plasticity (2025)
+    </a></strong></p>
+    <p>Shrews shrink their brains to survive winter... and their hypothalamus helps pull it off! This study reveals seasonal gene shifts tied to energy balance, brain remodeling, and even some genes linked to human neurological disorders.</p>
+  </div>
+</div>
+
+<div class="listing-item">
+  <div class="thumbnail">
+    <img src="img/shrew-cognition.svg"
+         alt="Captivity effects on brain size and cognition"
+         class="thumbnail-image">
+  </div>
+  <div>
+    <p><strong><a href="https://royalsocietypublishing.org/doi/full/10.1098/rsos.242138">
+      Captivity alters behaviour but not seasonal brain size change in semi-naturally housed shrews (2025)
+    </a></strong></p>
+    <p>Captive shrews still shrink their brains seasonally... but their behavior tells a different story! Despite semi-natural captive conditions, they showed signs of chronic stress, with higher activity and lower motivation to learn, compared to wild ones. It shows how captivity can quietly reshape research outcomes.</p>
+  </div>
+</div>
+
+<div class="listing-item">
+  <div class="thumbnail">
+    <img src="img/gene-captivity.png"
+         alt="Gene expression wild vs captive"
+         class="thumbnail-image">
+  </div>
+  <div>
+    <p><strong><a href="https://royalsocietypublishing.org/doi/10.1098/rsbl.2024.0478">
+      Gene expression comparisons between captive and wild shrew brains reveal captivity effects (2025)
+    </a></strong></p>
+    <p>Captivity alters how shrew brains work at the molecular level: hundreds of genes changed expression after just two months! These shifts echo patterns seen in human disorders like depression and neurodegeneration, raising caution for interpreting data from captive animals.</p>
+  </div>
+</div>
+
+<div class="listing-item">
+  <div class="thumbnail">
+    <img src="img/illustrations/generaldisc.png"
+         alt="Dehnel’s phenomenon cognition"
+         class="thumbnail-image">
+  </div>
+  <div>
+    <p><strong><a href="https://kops.uni-konstanz.de/server/api/core/bitstreams/e0d74103-3884-47b1-b828-b86219cca825/content">
+      From summer growth to winter decline: brain size, captive effect & cognitive outcomes in common shrew during Dehnel’s phenomenon
+    </a></strong></p>
+    <p>In my dissertation, I explore how seasonal brain plasticity affects learning and physiology in the common shrew (*Sorex araneus*)</p>
+  </div>
+</div>
+
+<div class="listing-item">
+  <div class="thumbnail">
+    <img src="img/atlas.png"
+         alt="Shrew Brain Atlas"
+         class="thumbnail-image">
+  </div>
+  <div>
+    <p><strong><a href="https://www.frontiersin.org/journals/neuroanatomy/articles/10.3389/fnana.2023.1168523/full">
+      Histological and MRI brain atlas of the common shrew, <em>Sorex araneus</em>, with brain region-specific gene expression profiles (2023)
+    </a></strong></p>
+    <p>The common shrew is one of the few mammals that shrinks and regrows its brain... and now it has its own detailed brain atlas! This openly available resource combines histology, MRI, and gene expression to unlock the shrew brain.</p>
+  </div>
+</div>
+
+<div class="listing-item">
+  <div class="thumbnail">
+    <img src="img/parrots.png"
+         alt="Parrot self-control study"
+         class="thumbnail-image">
+  </div>
+  <div>
+    <p><strong><a href="https://link.springer.com/article/10.1007/s10071-021-01565-6">
+      Intra‑ and interspecific variation in self‑control capacities of parrots in a delay of gratification task (2022)
+    </a></strong></p>
+    <p>This study compared self‑control across four parrot species using a delayed‑gratification task. Findings highlight how feeding ecology and social structure may shape impulse control.</p>
+  </div>
+</div>
+```

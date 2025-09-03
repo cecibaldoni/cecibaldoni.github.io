@@ -1,0 +1,120 @@
+---
+title: ""
+page-layout: full
+---
+
+## Illustrations
+
+***📢  Page under construction! Come back soon! ***
+<br><br>
+
+In this page you can find a selection of illustrations, sketches, and visual experiments I've created for different projects.
+<br><br>
+I *love* combining science and design, and helping others visually communicate their work. 
+<br><br>
+You can support my work or request a **custom commission** (graphical abstracts, favicons, logos, or visuals for websites and talks) through [Ko-fi](https://ko-fi.com/cecibaldoni):
+
+```{=html}
+<a href='https://ko-fi.com/cecibaldoni' target='_blank'>
+  <img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi5.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' />
+</a>
+```
+---
+
+## Dissertation Chapters
+
+```{=html}
+<div class="modular-gallery">
+  <img src="img/illustrations/chap1.png" class="tile small">
+  <img src="img/illustrations/chap2.png" class="tile small">
+  <img src="img/illustrations/chap3.png" class="tile small">
+  <img src="img/illustrations/front-page.png" class="tile big">
+  <img src="img/illustrations/chap4.png" class="tile small">
+  <img src="img/illustrations/generaldisc.png" class="tile small">
+</div>
+```
+
+## Vector Illustrations
+```{=html}
+<div class="modular-gallery">
+  <img src="img/illustrations/animals.png" class="tile small">
+  <img src="img/illustrations/hering-shrews.png" class="tile big">
+  <img src="img/illustrations/funkyanimals.png" class="tile small">
+  <img src="img/illustrations/lady.png" class="tile big">
+  <img src="img/illustrations/lady2.png" class="tile small">
+  <img src="img/illustrations/lady3.png" class="tile small">
+</div>
+```
+
+These are elements from the illustrated isometric city I designed for my homepage.
+Each building represents a different section of my site — and yes, I drew all of them
+
+```{=html}
+<div class="modular-gallery">
+  <img src="img/illustrations/city-details.png" class="tile big">
+  <img src="img/illustrations/buildings-details.png" class="tile big">
+</div>
+```
+
+
+## Icons & Logos
+```{=html}
+<div class="micro-gallery">
+  <img src="img/illustrations/cognition.png" class="tile micro">
+  <img src="img/illustrations/brain.png" class="tile micro">
+  <img src="img/illustrations/microstructure.png" class="tile micro">
+  <img src="img/illustrations/cage.png" class="tile micro">
+</div>
+
+<div class="micro-gallery">
+  <img src="img/illustrations/climatechange.png" class="tile micro">
+  <img src="img/illustrations/deforestation.png" class="tile micro">
+  <img src="img/illustrations/eolic.png" class="tile micro">
+  <img src="img/illustrations/hunting.png" class="tile micro">
+  <img src="img/illustrations/virus.png" class="tile micro">
+</div>
+
+<div class="micro-gallery">
+  <img src="img/illustrations/join1.svg" class="tile micro">
+  <img src="img/illustrations/join2.svg" class="tile micro">
+  <img src="img/illustrations/join3.svg" class="tile micro">
+  <img src="img/illustrations/join4.svg" class="tile micro">
+  <img src="img/illustrations/join5.svg" class="tile micro">
+  <img src="img/illustrations/join6.svg" class="tile micro">
+</div>
+```
+
+
+
+<br><br>
+© cecibaldoni, 2025. All works in this page are licensed under a [Creative Commons Attribution-NonDerivative-NonCommercial 4.0 International License](https://creativecommons.org/licenses/by-nc-nd/4.0). <br> This means you’re welcome to share anything from this page for non-commercial purposes as long as you credit me as the creator!
+
+<div id="img-popup" class="img-popup hidden">
+  <p>
+    Want a high-res version or a custom illustration?<br>
+    <a href="contact.qmd">Contact me here️!</a>
+  </p>
+  <span class="close-popup">×</span>
+</div>
+
+<script>
+  const popup = document.getElementById("img-popup");
+  const closeBtn = document.querySelector(".close-popup");
+
+  document.addEventListener("contextmenu", function(e) {
+    if (e.target.tagName === "IMG") {
+      e.preventDefault();
+      popup.classList.remove("hidden");
+    }
+  });
+
+  closeBtn.addEventListener("click", function() {
+    popup.classList.add("hidden");
+  });
+
+  document.addEventListener("click", function(e) {
+    if (!popup.contains(e.target)) {
+      popup.classList.add("hidden");
+    }
+  });
+</script>

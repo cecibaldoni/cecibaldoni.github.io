@@ -1,5 +1,5 @@
 ## Welcome
-for my personal website. This repo contains the code and resources for my site, which features a range of content from detailed project explorations to artistic illustrations. Here's a brief overview of the main sections:
+This repo contains the code and resources for my site, which features a range of content from detailed project explorations to artistic illustrations. Here's a brief overview of the main sections:
 
 ### Pages
 - Index: Enter my virtual space through an isometric cityscape, where each building icon opens a new page

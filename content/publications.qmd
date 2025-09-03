@@ -7,7 +7,7 @@ title: ""
 ```{=html}
 <div class="listing-item">
   <div class="thumbnail">
-    <img src="img/CB-graphabstract.svg"
+    <img src="../img/CB-graphabstract.svg"
          alt="Brain diffusion properties shrews"
          class="thumbnail-image">
   </div>
@@ -21,7 +21,7 @@ title: ""
 
 <div class="listing-item">
   <div class="thumbnail">
-    <img src="img/aselli.png"
+    <img src="../img/aselli.png"
          alt="Pancreas gene expression in shrew"
          class="thumbnail-image">
   </div>
@@ -35,7 +35,7 @@ title: ""
 
 <div class="listing-item">
   <div class="thumbnail">
-    <img src="img/gene-expression.png"
+    <img src="../img/gene-expression.png"
          alt="Gene expression"
          class="thumbnail-image">
   </div>
@@ -49,7 +49,7 @@ title: ""
 
 <div class="listing-item">
   <div class="thumbnail">
-    <img src="img/shrew-cognition.svg"
+    <img src="../img/shrew-cognition.svg"
          alt="Captivity effects on brain size and cognition"
          class="thumbnail-image">
   </div>
@@ -77,7 +77,7 @@ title: ""
 
 <div class="listing-item">
   <div class="thumbnail">
-    <img src="img/illustrations/generaldisc.png"
+    <img src="../img/illustrations/generaldisc.png"
          alt="Dehnel’s phenomenon cognition"
          class="thumbnail-image">
   </div>
@@ -91,7 +91,7 @@ title: ""
 
 <div class="listing-item">
   <div class="thumbnail">
-    <img src="img/atlas.png"
+    <img src="../img/atlas.png"
          alt="Shrew Brain Atlas"
          class="thumbnail-image">
   </div>
@@ -105,7 +105,7 @@ title: ""
 
 <div class="listing-item">
   <div class="thumbnail">
-    <img src="img/parrots.png"
+    <img src="../img/parrots.png"
          alt="Parrot self-control study"
          class="thumbnail-image">
   </div>

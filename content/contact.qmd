@@ -1,11 +1,14 @@
 ---
 title: ""
-format: html
+format:
+  html:
+    toc: false
 class: page-contact
+
 ---
 
 ::: {.page-icon}
-<img src="img/icons/contact.svg" alt="" aria-hidden="true">
+<img src="../img/icons/contact.svg" alt="" aria-hidden="true">
 :::
 
 ## Get in Touch

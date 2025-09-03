@@ -217,27 +217,6 @@
     "text": "Workshops and Talks\n\nWorkshops\n\nData wrangling with {tidyverse}\nEvent link · Slides\nWhat is Open Science Anyway?\nEvent link · Slides\nSORTEE Code Club\nOrganizer · List of events\nPersonal Knowledge Management and Note-Taking Apps\nOpen Resources\n\n\n\n\nConference Talks & Seminars\n\n2025\n\nBaldoni C.\nBeyond the standard: Unconventional vertebrate models in biomedicine EMBO, Edinburg, UK\nThe shrew as a model for brain shrinkage without neurodegeneration\nInvited Seminar — Messerli Institute, Vienna, Austria\nShrinking Shrews: Cognitive Challenges in a Changing Brain\n\n\n\n2024\n\nBaldoni C., Farantouri M., Raptis K., Nourani E., Dechmann D.\nInternational Society for Behavioral Ecology (ISBE), Melbourne, Australia\nSeasonal Brain Size Variation and Its Impact on Spatial Navigation and Learning in the Common Shrew (Sorex araneus)\n\n\n\n2023\n\nBaldoni C., von Elverfeldt D., Dechmann D.\nMPIAB RADO Seminar, Radolfzell, Germany\nNews from the Shrews: Brain structure during Dehnel’s phenomenon from neuroimaging\nBaldoni C., Farantouri M., Raptis K., Nourani E., Dechmann D.\nAnimal Behaviour Conference, Bielefeld, Germany\nBrain size and spatial learning in the common shrew (Sorex araneus)\nBaldoni C., Nourani E., Dechmann D.\nIV Convegno Nazionale sui Piccoli Mammiferi, Grosseto, Italy\nSeasonal brain size changes affect spatial learning in common shrews (Sorex araneus)\n\n\n\n2022\n\nBaldoni C., Dechmann D.\nAnimal Behaviour Society, San José, Costa Rica\nSeasonal brain changes impact associative learning in common shrews (Sorex araneus)\n\n\n\n2019\n\nBaldoni C., Scaravelli D., et al.\nIV Italian Bat Conference, Padova, Italy\nNocturnal bat migration at the bird ringing station ‘Bocca di Caset’\nBaldoni C., Cicero M., et al.\nXX Italian Ornithology Conference, Naples, Italy\nCitizen-science approach to Ring-necked parakeet distribution in Bologna\nBaldoni C., Brucks D., et al.\nASAB Summer Conference, Konstanz, Germany\nSelf-control in two macaw species using a rotating paradigm\n\n\n\n2018\n\nBaldoni C., Giglio G., Scaravelli D.\nII European Meeting of Young Ornithologists, Torino, Italy\nEffects of fire on birds in Mediterranean woods"
   },
   {
-    "objectID": "content/index.html",
-    "href": "content/index.html",
-    "title": "Cecilia Baldoni",
-    "section": "",
-    "text": "Welcome to my website!  I am an Early Career Researcher at the Max Planck Institute of Animal Behaviour, in Konstanz, where I investigate how the environment and brain structures shape cognitive flexibility.\nIn my free time I enjoy creating silly illustrations, and code! 🎨\nUse the city map to explore my research, talks, drawings, and more. \n\n\n\n  \n    \n\n    \n      \n      Get in Touch!\n    \n\n    \n      \n      About Me\n    \n\n    \n      \n      Illustrations\n    \n\n    \n      \n      Open Science\n    \n\n    \n      \n      Research Interests\n    \n\n    \n      \n      Talks and Workshops\n    \n    \n    \n      \n      Blog"
-  },
-  {
-    "objectID": "content/index.html#explore-the-city",
-    "href": "content/index.html#explore-the-city",
-    "title": "Cecilia Baldoni",
-    "section": "",
-    "text": "Get in Touch!\n    \n\n    \n      \n      About Me\n    \n\n    \n      \n      Illustrations\n    \n\n    \n      \n      Open Science\n    \n\n    \n      \n      Research Interests\n    \n\n    \n      \n      Talks and Workshops\n    \n    \n    \n      \n      Blog"
-  },
-  {
-    "objectID": "data/publications.html",
-    "href": "data/publications.html",
-    "title": "Cecilia Baldoni",
-    "section": "",
-    "text": "Gene expression comparisons between captive and wild shrew brains reveal captivity effects (2025). Biology Letters\nCaptivity alters behaviour but not seasonal brain size change in semi-naturally housed shrews (2025). Royal Society Open Science\nData and code for” Captivity alters behavior but not seasonal brain size change in semi–naturally housed shrews” (2024).\nSeasonal and comparative evidence of adaptive gene expression in mammalian brain size plasticity (2024). bioRxiv\nHistological and MRI brain atlas of the common shrew, Sorex araneus, with brain region-specific gene expression profiles (2023). Frontiers in Neuroanatomy\nMolecular mechanisms of seasonal brain shrinkage and regrowth in Sorex araneus (2023). BioRxiv\nLarge captivity effect based on gene expression comparisons between captive and wild shrew brains (2023). bioRxiv\nIntra-and interspecific variation in self-control capacities of parrots in a delay of gratification task (2022). Animal Cognition"
-  },
-  {
     "objectID": "content/datasets.html",
     "href": "content/datasets.html",
     "title": "Cecilia Baldoni",
@@ -250,6 +229,20 @@
     "title": "Cecilia Baldoni",
     "section": "",
     "text": "Coming soon!"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Cecilia Baldoni",
+    "section": "",
+    "text": "Welcome to my website!  I am an Early Career Researcher at the Max Planck Institute of Animal Behaviour, in Konstanz, where I investigate how the environment and brain structures shape cognitive flexibility.\nIn my free time I enjoy creating silly illustrations, and code! 🎨\nUse the city map to explore my research, talks, drawings, and more. \n\n\n\n  \n    \n\n    \n      \n      Get in Touch!\n    \n\n    \n      \n      About Me\n    \n\n    \n      \n      Illustrations\n    \n\n    \n      \n      Open Science\n    \n\n    \n      \n      Research Interests\n    \n\n    \n      \n      Talks and Workshops\n    \n    \n    \n      \n      Blog"
+  },
+  {
+    "objectID": "index.html#explore-the-city",
+    "href": "index.html#explore-the-city",
+    "title": "Cecilia Baldoni",
+    "section": "",
+    "text": "Get in Touch!\n    \n\n    \n      \n      About Me\n    \n\n    \n      \n      Illustrations\n    \n\n    \n      \n      Open Science\n    \n\n    \n      \n      Research Interests\n    \n\n    \n      \n      Talks and Workshops\n    \n    \n    \n      \n      Blog"
   },
   {
     "objectID": "content/shrews.html",
@@ -319,7 +312,7 @@
     "href": "content/about.html#about-me",
     "title": "Cecilia Baldoni",
     "section": "About me",
-    "text": "About me\n\n  \n  \n    \n      Scientist\n      Enjoy designing and leading workshops\n      Love connecting research ideas with everyday challenges\n      Obsessed with note-taking apps\n      Always curious, always learning something new\n\n  \n\n I work at the intersection of science, communication, and collaboration.\nMy current work centers on the cognitive compromises of the common shrew, a model species for studying brain size plasticity and behavior.\nI’m passionate about facilitating workshops, supporting digital collaboration, and making complex workflows more transparent. You can see examples of this in my Talks & Workshops and Projects pages.\nI am deeply involved in open science practices, and I aim to advance openness, transparency and reproducibility in my daily life as a researcher. I believe openness is both a technical choice and cultural one, about how we share knowledge and invite others to build on it.\n\n\n Before becoming a scientist, I was a violinist, a journey that started when I was five. Over the years, I performed with various orchestras, including the United Europe Chamber Orchestra (UECO), and eventually, this work helped pay for my university studies.  While music has always been a passion, science turned out to be an even stronger driver, leading me to make the switch from professional musician to biologist.  I still enjoy playing the violin for myself and appreciate the creativity and focus it brings to my life."
+    "text": "About me\n\n  \n  \n    \n      Scientist\n      Enjoy designing and leading workshops\n      Love connecting research ideas with everyday challenges\n      Obsessed with note-taking apps\n      Always curious, always learning something new\n\n  \n\n I work at the intersection of science, communication, and collaboration.\nMy current work centers on the cognitive compromises of the common shrew, a model species for studying brain size plasticity and behavior.\nI’m passionate about facilitating workshops, supporting digital collaboration, and making complex workflows more transparent. You can see examples of this in my Talks & Workshops and Projects pages.\nI am deeply involved in open science practices, and I aim to advance openness, transparency and reproducibility in my daily life as a researcher. I believe openness is both a technical choice and cultural one, about how we share knowledge and invite others to build on it.\n\n ## Previous life\n Before becoming a scientist, I was a violinist, a journey that started when I was five. Over the years, I performed with various orchestras, including the United Europe Chamber Orchestra (UECO), and eventually, this work helped pay for my university studies.  While music has always been a passion, science turned out to be an even stronger driver, leading me to make the switch from professional musician to biologist.  I still enjoy playing the violin for myself and appreciate the creativity and focus it brings to my life."
   },
   {
     "objectID": "content/privacy.html",

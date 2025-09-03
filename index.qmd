@@ -1,0 +1,63 @@
+---
+title: ""
+title-block-banner: false
+---
+
+# Cecilia Baldoni
+
+<br>
+
+<img src="img/back.JPG" alt="" style="width: 40%; float: left; margin-right: 40px;"/>
+
+Welcome to my website! <br><br>
+I am an Early Career Researcher at the [Max Planck Institute of Animal Behaviour](https://www.ab.mpg.de/), in Konstanz, where I investigate how the environment and brain structures shape cognitive flexibility.<br><br>
+
+In my free time I enjoy creating silly illustrations, and code! 🎨<br><br>
+
+Use the city map to explore my research, talks, drawings, and more.<br><br>
+<br>
+
+## Explore the City
+
+```{=html}
+<div class="city-wrapper">
+  <div class="city-layer">
+    <img src="img/ceci-city.svg" alt="City background" class="city-background">
+
+    <a href="content/contact.qmd" class="city-icon icon-contact">
+      <img src="img/icons/contact.svg" alt="Contact">
+      <span class="city-label">Get in Touch!</span>
+    </a>
+
+    <a href="content/about.qmd" class="city-icon icon-home">
+      <img src="img/icons/home.svg" alt="Home">
+      <span class="city-label">About Me</span>
+    </a>
+
+    <a href="content/illustrations.qmd" class="city-icon icon-illustration">
+      <img src="img/icons/illustrations.svg" alt="Illustration">
+      <span class="city-label">Illustrations</span>
+    </a>
+
+    <a href="content/open-science.qmd" class="city-icon icon-open-science">
+      <img src="img/icons/open-science.svg" alt="Open Science">
+      <span class="city-label">Open Science</span>
+    </a>
+
+    <a href="content/project.qmd#current-research" class="city-icon icon-research">
+      <img src="img/icons/research.svg" alt="Projects">
+      <span class="city-label">Research Interests</span>
+    </a>
+
+    <a href="content/talks.qmd" class="city-icon icon-talks-workshops">
+      <img src="img/icons/talks-workshops.svg" alt="Talks & Workshops">
+      <span class="city-label">Talks and Workshops</span>
+    </a>
+    
+    <a href="blog/index.qmd" class="city-icon icon-blog">
+      <img src="img/icons/van.svg" alt="Blog">
+      <span class="city-label">Blog</span>
+    </a>
+  </div>
+</div>
+```

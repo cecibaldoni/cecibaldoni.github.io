@@ -1,10 +1,13 @@
 ---
 title: ""
 class: page-research
+format:
+  html:
+    toc: false
 ---
 
 ::: {.page-icon}
-<img src="img/icons/research.svg" alt="" aria-hidden="true">
+<img src="../img/icons/research.svg" alt="" aria-hidden="true">
 :::
 
 ## Projects {#current-research}
@@ -14,7 +17,7 @@ class: page-research
 
 <div class="project-card">
   <a href="shrews.qmd">
-    <img src="img/shrew-original.png" alt="Shrews">
+    <img src="../img/shrew-original.png" alt="Shrews">
     <h3>Shrews</h3>
     <p>Seasonal brain plasticity, cognition, shrews... explored through data and visual storytelling.</p>
   </a>
@@ -22,7 +25,7 @@ class: page-research
 
 <div class="project-card">
   <a href="talks.qmd">
-    <img src="img/ceci-talk.JPG" alt="Workshops and Talks">
+    <img src="../img/ceci-talk.JPG" alt="Workshops and Talks">
     <h3>Workshops & Talks</h3>
     <p>Conferences, seminars, and hands-on workshops on open workflows and data science.</p>
   </a>
@@ -30,7 +33,7 @@ class: page-research
 
 <div class="project-card">
   <a href="open-science.qmd">
-    <img src="img/icons/open-science.svg" alt="Open Science">
+    <img src="../img/icons/open-science.svg" alt="Open Science">
     <h3>Open Science</h3>
     <p>Personal and community efforts to improve transparency and reproducibility in science.</p>
   </a>
@@ -38,7 +41,7 @@ class: page-research
 
 <div class="project-card">
   <a href="datasets.qmd">
-    <img src="img/fen-monitor.png" alt="Datasets">
+    <img src="../img/fen-monitor.png" alt="Datasets">
     <h3>Datasets</h3>
     <p>Published and openly available datasets from my research.</p>
   </a>
@@ -46,7 +49,7 @@ class: page-research
 
 <div class="project-card">
   <a href="illustrations.qmd">
-    <img src="img/illustrations/funkyanimals.png" alt="Illustrations">
+    <img src="../img/illustrations/funkyanimals.png" alt="Illustrations">
     <h3>Illustrations</h3>
     <p>Science-inspired art and illustrations.</p>
   </a>
@@ -54,7 +57,7 @@ class: page-research
 
 <div class="project-card">
   <a href="publications.qmd">
-    <img src="img/atlas.png" alt="Publications">
+    <img src="../img/atlas.png" alt="Publications">
     <h3>Publications</h3>
     <p>My academic (and not) publications.</p>
   </a>

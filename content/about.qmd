@@ -1,17 +1,20 @@
 ---
 title: ""
 class: page-research
+format:
+  html:
+    toc: false
 ---
 
 ::: {.page-icon}
-<img src="img/icons/home.svg" alt="" aria-hidden="true">
+<img src="../img/icons/home.svg" alt="" aria-hidden="true">
 :::
 
 ## About me
 
 ```{=html}
 <div class="about-me" style="display:flex; align-items:center; gap:2rem;">
-  <img src="img/BaldoniCecilia.JPG" class="about-me-img" style="border-radius:50%; max-width:200px;">
+  <img src="../img/BaldoniCecilia.JPG" class="about-me-img" style="border-radius:50%; max-width:200px;">
   <div class="about-me-text">
     <ul>
       <li><strong>Scientist</strong></li>
@@ -35,8 +38,9 @@ I am deeply involved in [open science practices](open-science.qmd), and I aim to
 
 --- 
 <br>
+## Previous life
 
-<img src="img/violin.jpg" alt="20 Years of Violin" style="width: 45%; float: right; margin-left: 20px;"/>
+<img src="../img/violin.jpg" alt="20 Years of Violin" style="width: 45%; float: right; margin-left: 20px;"/>
 Before becoming a scientist, I was a violinist, a journey that started when I was five. Over the years, I performed with various orchestras, including the United Europe Chamber Orchestra (UECO), and eventually, this work helped pay for my university studies.
 <br><br> While music has always been a passion, science turned out to be an even stronger driver, leading me to make the switch from professional musician to biologist.  <br><br>
 I still enjoy playing the violin for myself and appreciate the creativity and focus it brings to my life.

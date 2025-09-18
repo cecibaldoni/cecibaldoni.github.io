@@ -12,7 +12,7 @@ title-block-banner: false
 Welcome to my website! <br><br>
 I am an Early Career Researcher at the [Max Planck Institute of Animal Behaviour](https://www.ab.mpg.de/), in Konstanz, where I investigate how the environment and brain structures shape cognitive flexibility.<br><br>
 
-In my free time I enjoy creating silly illustrations, and code! 🎨<br><br>
+In my free time I enjoy coding and creating illustrations! 🎨<br><br>
 
 Use the city map to explore my research, talks, drawings, and more.<br><br>
 <br>

@@ -15,7 +15,7 @@ title: ""
     <p><strong><a href="https://www.sciencedirect.com/science/article/pii/S0960982225010814">
       Programmed seasonal brain shrinkage in the common shrew via water loss without cell death (2025)
     </a></strong></p>
-    <p>In vivo MRI has revealed that common shrews shrink their brains for winter survival not through cell death, but by safely and reversibly losing water from their brain cells!</p>
+    <p><i>In vivo</i> MRI has revealed that common shrews shrink their brains for winter survival not through cell death, but by safely and reversibly losing water from their brain cells!</p>
   </div>
 </div>
 
@@ -83,9 +83,9 @@ title: ""
   </div>
   <div>
     <p><strong><a href="https://kops.uni-konstanz.de/server/api/core/bitstreams/e0d74103-3884-47b1-b828-b86219cca825/content">
-      From summer growth to winter decline: brain size, captive effect & cognitive outcomes in common shrew during Dehnel’s phenomenon
+      From summer growth to winter decline: brain size, captive effect & cognitive outcomes in common shrew during Dehnel’s phenomenon (2024)
     </a></strong></p>
-    <p>In my dissertation, I explore how seasonal brain plasticity affects learning and physiology in the common shrew (*Sorex araneus*)</p>
+    <p>In my dissertation, I explore how seasonal brain plasticity affects learning and physiology in the common shrew!</p>
   </div>
 </div>
 

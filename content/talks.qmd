@@ -3,7 +3,7 @@ title: ""
 ---
 
 ::: {.page-icon}
-<img src="img/icons/talks-workshops.svg" alt="" aria-hidden="true">
+<img src="../img/icons/talks-workshops.svg" alt="" aria-hidden="true">
 :::
 
 ## Workshops and Talks {#talks-workshops}
@@ -12,12 +12,14 @@ title: ""
 - **Data wrangling with {tidyverse}**  
   [Event link](https://sara-edu.netlify.app/summer/2025-r4b/) · [Slides](https://cecibaldoni.github.io/data-wrangling-tidyverse/#/title-slide)
 
+- **Scrollytelling Science with Quarto and Closeread**
+  [Youtube](https://www.youtube.com/watch?feature=shared&v=ytKZ357Xtqw) · [Slides](https://cecibaldoni.github.io/scrollytelling-quarto-closeread/#/TitleSlide)
 
 - **What is Open Science Anyway?**  
   [Event link](https://www.ab.mpg.de/events/40760/345436) · [Slides](https://github.com/cecibaldoni/OpenScience-Rado)
 
 - **SORTEE Code Club**  
-  Organizer · [List of events](https://docs.google.com/spreadsheets/d/1rOOOE7ghPduwtFftG0DJJf0DXVigAdcmQ0xdEwbKQXo/edit)
+  [List of events](https://docs.google.com/spreadsheets/d/1rOOOE7ghPduwtFftG0DJJf0DXVigAdcmQ0xdEwbKQXo/edit)
 
 - **Personal Knowledge Management and Note-Taking Apps**  
   [Open Resources](https://github.com/cecibaldoni/PKM-workshop)
@@ -31,7 +33,8 @@ title: ""
 - **Baldoni C.**  
   *Beyond the standard: Unconventional vertebrate models in biomedicine EMBO, Edinburg, UK*  
   **The shrew as a model for brain shrinkage without neurodegeneration**
-- **Invited Seminar** — *Messerli Institute, Vienna, Austria*  
+- **Baldoni C.** 
+  *Invited Seminar* — *Messerli Institute, Vienna, Austria*  
   **Shrinking Shrews: Cognitive Challenges in a Changing Brain**
   
   

@@ -12,7 +12,7 @@ image: img/4rs-thumbnail.png
 
 What do we actually mean when we say something is reproducible? Or replicable? Or reliable? These words come up all the time, especially when you are reading about open science or trying to make your research more transparent. They sound straightforward, but we do not always use them the same way, even when we think we do.
 
-A few months ago, while preparing a talk on open science (you can find the presentation [here](https://cecibaldoni.quarto.pub/open-science---rado-seminar/openscience.html#/title)), I ran into a familiar tangle. I had reached the part about the four Rs, and, as usual, things were a bit muddled. I did what I often do when something does not quite make sense: I made a visual. In this case, I wanted to map out *reliable, repeatable, reproducible*, and *replicable*, the way I had learned them. It was not meant to be a final word on anything. I just needed a clearer picture for myself.
+A few months ago, while preparing a talk on open science (you can find the presentation [here](https://cecibaldoni.quarto.pub/open-science---rado-seminar/openscience.html#/title)), I ran into this tangle: I had reached the part about the four Rs, and, in my head, things were a bit confused. I did what I often do when something does not quite make sense: I made a visual. In this case, I wanted to map out *reliable, repeatable, reproducible*, and *replicable*, the way I had learned them. It was not meant to be a final word on anything. I just needed a clearer picture for myself.
 
 ![](img/4rs.png)
 
@@ -27,19 +27,19 @@ In other words, these terms all ask a similar question: if we try the same proce
 
 ## The moment things got interesting
 
-A few weeks later, I attended a great workshop hosted by SORTEE, the Society for Open, Reliable, and Transparent Ecology and Evolution. It focused on reproducible data analysis in R, and after the main talk, someone posted a question in the community Slack: what exactly is the difference between reproducible and reliable?
+A few weeks later, I attended a great workshop hosted by [SORTEE](https://sortee.org/), the Society for Open, Reliable, and Transparent Ecology and Evolution. It focused on reproducible data analysis in R, and after the main talk, someone posted a question in the community Slack: *"what exactly is the difference between reproducible and reliable?"*
 
-I thought it was a simple follow-up question, something we would all agree on quickly. Several people responded. But as the conversation went on, it became clear we were not saying quite the same thing. Each of us had a slightly different take on what the terms meant, and none of us were strangers to the topic.
+I thought it was a simple follow-up question, something we would all agree on quickly. Several people responded, and as the conversation went on, it became clear we were not saying quite the same thing. Each of us had a slightly different take on what the terms meant (and none of us were strangers to the topic!).
 
 It turns out that agreeing on being rigorous is easier than agreeing on what the words mean.
 
-## Same Terms, Different Fields
+## Same terms, different fields
 
 So, who was right in that thread? It turns out, it depends who you ask.
 
-After looking into it more carefully, I realised that the same two terms, *reproducibility* and *replicability*, are used across many fields, but people do not always mean the same thing by them. That is not just a quirk, it actually reflects the kinds of questions different disciplines are used to asking.
+After looking into it more carefully, I realised that the same two terms, *reproducibility* and *replicability*, are used across many fields, but people do not always mean the same thing by them.
 
-**If you are working in computational science**, like data science or software development, *reproducibility* usually means re-running someone else's code with the same data and getting the same output. It is about whether your pipeline works and whether it can be used again by someone else. *Replicability*, on the other hand, is when someone collects new data, applies the same method, and gets similar results. The focus here is often on reproducible code, documented workflows, and consistent environments.
+**If you are working in computational science**, like data science or software development, *reproducibility* usually means re-running someone else's code with the same data and getting the same output. It is about whether your pipeline works and whether it can be used again by someone else. *Replicability*, on the other hand, is when someone collects new data, applies the same method, and gets similar results. The focus here is often on reproducible code, or documented workflows.
 
 **In psychology or the life sciences**, things look a bit different. *Reproducibility* tends to mean reanalyzing the same dataset and seeing if you come to the same statistical conclusions. *Replicability* usually means repeating the study with new participants, or samples, or data, and checking whether the same effect appears again. The focus is less on rerunning code and more on checking whether findings hold up when repeated.
 
@@ -80,7 +80,7 @@ I joined a discussion.
 The discussion got a bit messy.  
 I learned a lot.
 
-Open science is not about always getting things right the first time. It is about being transparent enough to revise your thinking, share what you have learned, and leave room for nuance and complexity. This post is part of that process.
+Open science is not about always getting things right the first time. It is about being transparent enough to revise your thinking, share what you have learned, and leave room for complexity. This post is part of that process.
 
 For now, I will leave the diagram as it is. Maybe I will revise it later. Either way, I hope it gets people thinking, and talking.
 

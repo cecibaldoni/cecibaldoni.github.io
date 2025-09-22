@@ -21,28 +21,28 @@ You can support my work or request a **custom commission** (graphical abstracts,
 ```
 ---
 
-## Dissertation Chapters
+### Dissertation Chapters
 
 ```{=html}
 <div class="modular-gallery">
-  <img src="img/illustrations/chap1.png" class="tile small">
-  <img src="img/illustrations/chap2.png" class="tile small">
-  <img src="img/illustrations/chap3.png" class="tile small">
-  <img src="img/illustrations/front-page.png" class="tile big">
-  <img src="img/illustrations/chap4.png" class="tile small">
-  <img src="img/illustrations/generaldisc.png" class="tile small">
+  <img src="../img/illustrations/chap1.png" class="tile small">
+  <img src="../img/illustrations/chap2.png" class="tile small">
+  <img src="../img/illustrations/chap3.png" class="tile small">
+  <img src="../img/illustrations/front-page.png" class="tile big">
+  <img src="../img/illustrations/chap4.png" class="tile small">
+  <img src="../img/illustrations/generaldisc.png" class="tile small">
 </div>
 ```
 
-## Vector Illustrations
+### Vector Illustrations
 ```{=html}
 <div class="modular-gallery">
-  <img src="img/illustrations/animals.png" class="tile small">
-  <img src="img/illustrations/hering-shrews.png" class="tile big">
-  <img src="img/illustrations/funkyanimals.png" class="tile small">
-  <img src="img/illustrations/lady.png" class="tile big">
-  <img src="img/illustrations/lady2.png" class="tile small">
-  <img src="img/illustrations/lady3.png" class="tile small">
+  <img src="../img/illustrations/animals.png" class="tile small">
+  <img src="../img/illustrations/hering-shrews.png" class="tile big">
+  <img src="../img/illustrations/funkyanimals.png" class="tile small">
+  <img src="../img/illustrations/lady.png" class="tile big">
+  <img src="../img/illustrations/lady2.png" class="tile small">
+  <img src="../img/illustrations/lady3.png" class="tile small">
 </div>
 ```
 
@@ -51,36 +51,36 @@ Each building represents a different section of my site — and yes, I drew all 
 
 ```{=html}
 <div class="modular-gallery">
-  <img src="img/illustrations/city-details.png" class="tile big">
-  <img src="img/illustrations/buildings-details.png" class="tile big">
+  <img src="../img/illustrations/city-details.png" class="tile big">
+  <img src="../img/illustrations/buildings-details.png" class="tile big">
 </div>
 ```
 
 
-## Icons & Logos
+### Icons & Logos
 ```{=html}
 <div class="micro-gallery">
-  <img src="img/illustrations/cognition.png" class="tile micro">
-  <img src="img/illustrations/brain.png" class="tile micro">
-  <img src="img/illustrations/microstructure.png" class="tile micro">
-  <img src="img/illustrations/cage.png" class="tile micro">
+  <img src="../img/illustrations/cognition.png" class="tile micro">
+  <img src="../img/illustrations/brain.png" class="tile micro">
+  <img src="../img/illustrations/microstructure.png" class="tile micro">
+  <img src="../img/illustrations/cage.png" class="tile micro">
 </div>
 
 <div class="micro-gallery">
-  <img src="img/illustrations/climatechange.png" class="tile micro">
-  <img src="img/illustrations/deforestation.png" class="tile micro">
-  <img src="img/illustrations/eolic.png" class="tile micro">
-  <img src="img/illustrations/hunting.png" class="tile micro">
-  <img src="img/illustrations/virus.png" class="tile micro">
+  <img src="../img/illustrations/climatechange.png" class="tile micro">
+  <img src="../img/illustrations/deforestation.png" class="tile micro">
+  <img src="../img/illustrations/eolic.png" class="tile micro">
+  <img src="../img/illustrations/hunting.png" class="tile micro">
+  <img src="../img/illustrations/virus.png" class="tile micro">
 </div>
 
 <div class="micro-gallery">
-  <img src="img/illustrations/join1.svg" class="tile micro">
-  <img src="img/illustrations/join2.svg" class="tile micro">
-  <img src="img/illustrations/join3.svg" class="tile micro">
-  <img src="img/illustrations/join4.svg" class="tile micro">
-  <img src="img/illustrations/join5.svg" class="tile micro">
-  <img src="img/illustrations/join6.svg" class="tile micro">
+  <img src="../img/illustrations/join1.svg" class="tile micro">
+  <img src="../img/illustrations/join2.svg" class="tile micro">
+  <img src="../img/illustrations/join3.svg" class="tile micro">
+  <img src="../img/illustrations/join4.svg" class="tile micro">
+  <img src="../img/illustrations/join5.svg" class="tile micro">
+  <img src="../img/illustrations/join6.svg" class="tile micro">
 </div>
 ```
 

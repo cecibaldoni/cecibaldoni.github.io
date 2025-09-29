@@ -31,17 +31,18 @@ I work at the intersection of science, communication, and collaboration.
 
 [My current work](shrews.qmd) centers on the cognitive compromises of the common shrew, a model species for studying brain size plasticity and behavior.
 
-I’m passionate about facilitating workshops, supporting digital collaboration, and making complex workflows more transparent. You can see examples of this in my [Talks & Workshops](talks.qmd) and [Projects](project.qmd) pages.
+I combine research with hands-on leadership to build communities that empower learning and collaboration. I’m passionate about **facilitating workshops**, supporting digital collaboration, and I focus on making **complex ideas accessible** and **connecting people** across fields. You can see examples of this in my [Talks & Workshops](talks.qmd) and [Projects](project.qmd) pages.
 
 I am deeply involved in [open science practices](open-science.qmd), and I aim to advance openness, transparency and reproducibility in my daily life as a researcher.<br><br> I believe openness is both a technical choice and cultural one, about how we share knowledge and invite others to build on it.
 
+Here are a few highlights of my community impact so far:
 
---- 
-<br>
-## Previous life
+- Elected **representative** during my PhD and postdoc, giving voice to peers across departments
+- Leading the **SORTEE code club** and helping run the **R-Ladies blog**, nurturing inclusive spaces for data science
+- Part of The Turing Way’s community management working group, shaping best practices for open collaboration
+- **Translator** for the Raspberry Pi Foundation and **code editor** for PCI Ecology; helping global audiences access science and coding content
+- Workshop leader for **R programming** and **personal knowledge management**, demystifying tools to help others level up
 
-<img src="../img/violin.jpg" alt="20 Years of Violin" style="width: 45%; float: right; margin-left: 20px;"/>
-Before becoming a scientist, I was a violinist, a journey that started when I was five. Over the years, I performed with various orchestras, including the United Europe Chamber Orchestra (UECO), and eventually, this work helped pay for my university studies.
-<br><br> While music has always been a passion, science turned out to be an even stronger driver, leading me to make the switch from professional musician to biologist.  <br><br>
-I still enjoy playing the violin for myself and appreciate the creativity and focus it brings to my life.
+I’m always curious about new ways to connect people, ideas, and tools—and I genuinely enjoy helping others learn and grow.
 
+If you want to collaborate, share ideas, or just have a friendly chat, feel free to [reach out](contact.qmd) or book some time to talk.

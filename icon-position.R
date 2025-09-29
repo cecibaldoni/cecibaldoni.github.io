@@ -1,18 +1,20 @@
 # Calculations for icon positioning ----
 
 # canvas size from Inkscape
-canvas_width <- 5754.115
-canvas_height <- 3235.690
+canvas_width <- 5989.414
+canvas_height <- 3508.340
 
 # icons positions and sizes
+#X and Y are in the move tav in "Transform"
+#Width is in the scale tab, but resize to 100% before checking the width in px
 icons <- list(
-  contact = list(x = 2181.909, y = 453.326, w = 983.975),
-  home = list(x = 3230.057, y = 28.726, w = 1262.055),
-  illustration = list(x = 3657.613, y = 1089.041, w = 977.5),
-  open_science = list(x = 1074.053, y = 1183.316, w = 459.129),
-  research = list(x = 1325.287, y = 411.785, w = 1242.664),
-  talks_workshops = list(x = 2716.678, y = 386.725, w = 941,811),
-  blog = list(x=4966,693, y=1119,354, w=415,982)
+  contact = list(x = 2254.159, y = 469.710, w = 983.975),
+  home = list(x = 3465.356, y = 139.875, w = 1240.665),
+  illustration = list(x = 3892.912, y = 1200.190, w = 977.5),
+  open_science = list(x = 1309.351, y = 1294.465, w = 459.129),
+  research = list(x = 1561.580, y = 522.934, w = 1242.664),
+  talks_workshops = list(x = 2951.977, y = 497.873, w = 941.813),
+  blog = list(x=5198.774, y=1283.996, w=328.140)
 )
 
 # calculate top, left, and width in percentages
@@ -35,26 +37,4 @@ for (name in names(css_rules)) {
               css_rules[[name]]$left,
               css_rules[[name]]$width))
 }
-
-## Google scholar publication list ----
-library(scholar)
-library(dplyr)
-library(readr)
-library(stringr)
-
-pubs <- get_publications("mxM_Py8AAAAJ&hl")
-
-html_lines <- pubs %>%
-  arrange(desc(year)) %>%
-  mutate(authors_bolded = str_replace_all(author,
-                                          regex("C Baldoni", ignore_case = TRUE),
-                                          paste0("<strong>","C Baldoni", "</strong>")),
-         line = paste0("<div class='pub-item'>",
-                       authors_bolded, ".<br>",
-                       "<em>", title, "</em><br>",
-                       "<span class='journal'>", journal, "</span> (", year, ")",
-                       "</div><br>")) %>%
-  pull(line)
-
-write_lines(html_lines, "data/publications.html")
 

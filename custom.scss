@@ -188,7 +188,7 @@ p code, li code, span code, td code, th code, a code {
 }
 
 .city-icon:hover img {
-  transform: translateY(-3px);
+  transform: translateY(-2%);
   filter: brightness(1.2) drop-shadow(0 0 8px rgba(255,255,255,0.6));
 }
 
@@ -200,47 +200,49 @@ p code, li code, span code, td code, th code, a code {
   transition: transform 0.2s ease, filter 0.3s ease;
 }
 
+
+// Icons css from R script
 .icon-contact {
-  top: 14.01%;
-  left: 37.92%;
-  width: 17.10%;
+  top: 13.39%;
+  left: 37.64%;
+  width: 16.43%;
 }
 
 .icon-home {
-  top: 0.89%;
-  left: 56.13%;
-  width: 21.93%;
+  top: 5.50%;
+  left: 57.86%;
+  width: 20.71%;
 }
 
 .icon-illustration {
-  top: 33.66%;
-  left: 63.57%;
-  width: 16.99%;
+  top: 35.21%;
+  left: 65.00%;
+  width: 16.32%;
 }
 
 .icon-open-science {
-  top: 36.57%;
-  left: 18.67%;
-  width: 7.98%;
+  top: 38.50%;
+  left: 21.86%;
+  width: 7.67%;
 }
 
 .icon-research {
-  top: 12.73%;
-  left: 23.03%;
-  width: 21.60%;
+  top: 15.91%;
+  left: 26.07%;
+  width: 20.75%;
 }
 
 .icon-talks-workshops {
-  top: 11.95%;
-  left: 47.21%;
-  width: 16.35%;
+  top: 14.19%;
+  left: 49.29%;
+  width: 15.72%;
 }
 
 .icon-blog {
-  top: 34.58%;
-  left: 86.30%;
-  width: 7.21%;
-}
+  top: 38.0%;
+  left: 86.80%;
+  width: 5.48%;
+} 
 
 .city-label {
   position: absolute;
@@ -274,7 +276,7 @@ p code, li code, span code, td code, th code, a code {
 
 .city-icon:hover .city-label {
   opacity: 1;
-  transform: translateX(-50%) translateY(-16px);
+  transform: translateX(-50%) translateY(-10px);
 }
 
 /* icons for each page */

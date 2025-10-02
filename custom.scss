@@ -378,6 +378,13 @@ p code, li code, span code, td code, th code, a code {
   background-color: white;
 }
 
+.tile.rectangle {
+  grid-column: span 2;
+  grid-row: span 1;
+  background-color: transparent;
+  object-fit: contain;
+}
+
 .tile.portrait {
   aspect-ratio: 3 / 4.2;
   object-fit: contain;

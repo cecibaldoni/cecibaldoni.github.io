@@ -9,36 +9,30 @@ categories: [microblogging]
 ## Sick at home, everything slows
 
 I’ve been home all day, stuck in that foggy place when being sick means lots of napping and little productivity. <br>
-I spent the morning dozing in and out of naps, wrapped in my personal heavy blanket, Otto, my loyal companion but also my worst enemy in my crucade for warmth. 
-At first, we battled over who got to claim the blanket as their own, but then he realised he could settle down on me, becoming my heavy-warm blanket, and peace was restored. Work is out of the question, but somehow my brain would still like to do something fun. When the fever-induced headache finally began to fade I thought: maybe this is the perfect chance to try something I’ve been curious about for a while: **microblogging**.
+I spent the morning dozing in and out of naps, wrapped in my personal heavy blanket, Otto, my loyal companion in my crusade for warmth. 
+Work is out of the question, but somehow my brain would still like to do something fun. When the fever-induced headache finally began to fade I thought: maybe this is the perfect chance to try something I’ve been curious about for a while: **microblogging**.
 
 ![Otto the dog laying on me like a cozy, warm, heavy blanket, while I type this microblog post on Rstudio](img/otto-blanket.jpeg)
 
 ## What I read about microblogging on the internet
 
-Microblogging is like this hybrid form of writing. It’s short, but not like a post on bluesky. I guess it would be more similar in lenght to Linkedin posts, but somehow I can only think that the closer to what Tumblr is (didn't it started as a blogging platform anyway?). 
+Microblogging is like this hybrid form of writing. It’s short, but not like a post on bluesky. I guess it would be more similar in length to Linkedin posts, but I think it closer to what Tumblr is (isn't it a blogging platform anyway?). Somehow the definition differ depending on who you ask. The only common point is that it's *short*. 
 
 I read about microblogging the first time via a post on Bluesky. It was about something technical (R or Quarto, I can’t remember exactly), mostly a short “how to” guide.
-What struck me was how incredibly simple it looked, mostly because it was so short and to the point!<br>
-I thought, if all the instructions I need fit into 200 words or less, then it has to be doable. That brevity made the topic feel accessible. It also feels like a perfect way to share knowledge or thoughts without getting bogged down in preparation, or polish (or both). 
+What struck me was how incredibly simple it looked. If all the instructions I need fit into 200 words or less, i thought, then it has to be doable. It also feels like a perfect way to share knowledge or thoughts without getting bogged down in preparation, or polish (or both). 
 
 ## Embrace the messiness
 
-Here’s my personal take: microblogging is a style of writing that’s short because it’s unpolished and kinda unplanned. It also lands somewhere between journaling and a brief report. It appeals to me because it lets me practice writing without prepping forever. I actually feel like I can write more, experiment more, and not fear the messiness. Maybe that messiness is the point?
+Here’s my personal take: microblogging is a style of writing that’s short because it’s unpolished and kinda unplanned. It appeals to me because it lets me practice writing without prepping forever. I actually feel like I can write more, experiment more, and not fear the messiness.
 
-There’s also something emotionally freeing about embracing imperfection in creative work. Letting go of the need for everything to be spotless relieves a lot of the stress around writing (but, for me, also drawing). It’s like allowing yourself to breathe and just be in the moment with your ideas.
-
-Practically speaking, messy writing can actually generate more ideas and keep creativity flowing. Microblogging acts as a low-stakes testing ground where I can share mini discoveries without fear of failure or over-editing. 
-Like this micro blog post about microblogging!
+There’s also something emotionally freeing about embracing imperfection in creative work. Letting go of the need for everything to be spotless relieves a lot of the stress around writing (but, for me, also drawing).
 
 Plus, I feel like it could help my conciseness, which I desperately need.
 
 ## My plan from now on
 
-I want to mix this into my blog, along with the more structured entries. Today I wrote directly in markdown, with little plan and no drafting. 
-
-Content-wise, I want to experiment with small tool or workflow tips, or personal reflections. The idea is to capture the little things that often get lost in longer writing projects but somehow build up when shared consistently.
+Content-wise, I want to experiment with workflow tips, or personal reflections. The idea is to capture the little things that often get lost in longer writing projects but somehow build up when shared consistently.
 
 Maybe, as a bonus, this informal writing habit will keep my creativity flowing and eventually feed into my longer, more polished projects.
 
-Back to nap I go.
+Sounds like a plan. Back to nap I go.

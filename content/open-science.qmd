@@ -19,8 +19,7 @@ I make my data, analysis scripts, and visualizations publicly available whenever
 
 - [GitHub](https://github.com/cecibaldoni?tab=repositories): my profile and open repositories, it includes some presentations for talks and workshops I organised. <br>
    →  See [Workshop and Talks](talks.qmd#talks-workshops) for more! <br>
-- [OSF - Open Science Framework](https://osf.io/jdxn2/): my profile and materials from ongoing or not-yet-published projects. <br>
-- [Edmond – Max Planck Society Repository](https://edmond.mpg.de/dataverse/edmond/?q=%22Baldoni%2C+Cecilia%22): in here you can find my data and scripts associated with peer-reviewed articles. <br>
+- [Edmond – Max Planck Society Repository](https://edmond.mpg.de/dataverse/edmond/?q=%22Baldoni%2C+Cecilia%22): in here you can find my data and scripts associated with peer-reviewed articles, but also for projects not yet published!. <br>
 
 ### Community & Initiatives
 

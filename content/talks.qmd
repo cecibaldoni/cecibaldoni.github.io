@@ -6,13 +6,22 @@ title: ""
 <img src="../img/icons/talks-workshops.svg" alt="" aria-hidden="true">
 :::
 
-## Workshops and Talks {#talks-workshops}
+## Talks & Workshops {#talks-workshops}
 
-### Workshops
-- **Data wrangling with {tidyverse}**  
+### Workshop, Webinar, Unconference
+- **How to start your own Code Club ** <br>
+  *October 16th, 2025* <br>
+  ~Materials available soons!~
+- **Live from the nesting box – programming for birds** <br>
+  *October 3rd, 4th, 5th, 2025* <br>
+  [Event link](https://www.maxcine.de/events/workshop-3-live-from-the-nesting-box-programming-for-birds)
+
+- **Data wrangling with {tidyverse}**  <br>
+  *July 26th, 2025* <br>
   [Event link](https://sara-edu.netlify.app/summer/2025-r4b/) · [Slides](https://cecibaldoni.github.io/data-wrangling-tidyverse/#/title-slide)
 
-- **Scrollytelling Science with Quarto and Closeread**
+- **Scrollytelling Science with Quarto and Closeread**  <br>
+  *May 28th, 2025* <br>
   [Youtube](https://www.youtube.com/watch?feature=shared&v=ytKZ357Xtqw) · [Slides](https://cecibaldoni.github.io/scrollytelling-quarto-closeread/#/TitleSlide)
 
 - **What is Open Science Anyway?**  

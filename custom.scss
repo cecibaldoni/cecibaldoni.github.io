@@ -280,7 +280,6 @@ p code, li code, span code, td code, th code, a code {
 }
 
 /* icons for each page */
-
 .page-icon {
   position: absolute;
   top: 6rem;
@@ -294,7 +293,18 @@ p code, li code, span code, td code, th code, a code {
   height: auto;
 }
 
-@media (max-width: 768px) {
+/* Tablet and small laptop adjustments */
+@media (min-width: 1001px) and (max-width: 1300px) {
+  .page-icon {
+    top: 6rem;
+    left: 2rem;
+    width: 120px;
+  }
+  
+}
+
+/* Hide on mobile */
+@media (max-width: 1000px) {
   .page-icon {
     display: none;
   }
@@ -319,13 +329,6 @@ p code, li code, span code, td code, th code, a code {
     margin-bottom: 1rem;
     max-width: 220px;
   }
-}
-
-
-.page-research .page-icon {
-  top: 1rem;
-  left: 1rem;
-  width: 60px;
 }
 
 

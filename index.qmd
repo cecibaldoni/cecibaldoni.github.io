@@ -46,7 +46,7 @@ Dive into the interactive city below to explore my projects, workshops, open sci
 
     <a href="content/project.qmd#current-research" class="city-icon icon-research">
       <img src="img/icons/research.svg" alt="Projects">
-      <span class="city-label">Research Interests</span>
+      <span class="city-label">Projects</span>
     </a>
 
     <a href="content/talks.qmd" class="city-icon icon-talks-workshops">

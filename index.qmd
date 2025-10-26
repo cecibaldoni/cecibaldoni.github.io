@@ -58,6 +58,11 @@ Dive into the interactive city below to explore my projects, workshops, open sci
       <img src="img/icons/van.svg" alt="Blog">
       <span class="city-label">Blog</span>
     </a>
+    
+    <a href="content/contact.qmd#book-a-time-to-chat" class="city-icon icon-coffee">
+      <img src="img/icons/coffee-kiosk.svg" alt="Book a Time to Chat!">
+      <span class="city-label">Book a Time to Chat!</span>
+    </a>
   </div>
 </div>
 ```

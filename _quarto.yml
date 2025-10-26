@@ -7,7 +7,7 @@ project:
 website:
   title: "Cecilia Baldoni"
   site-url: https://cecibaldoni.github.io/
-  favicon: shrew.png
+  favicon: img/shrew.png
   navbar:
     left:
       - text: "About"

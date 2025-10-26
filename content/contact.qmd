@@ -13,17 +13,18 @@ class: page-contact
 
 ## Get in Touch
 
-If you'd like to reach out, feel free to contact me via email or through my social media platforms.
+**I'd love to connect!**
+
+If you have questions, ideas for collaboration, or want to chat, here’s how to find me. I typically respond within 2 business days.
 
 ### Email
 
-🖥️📧 [cbaldoni\@ab.mpg.de](mailto:cbaldoni@ab.mpg.de)<br>
-🙋️ 📧 [cecilia.baldons@gmail.com](mailto:cecilia.baldons@gmail.com)
+- 📧 [Email me at work](mailto:cbaldoni@ab.mpg.de)  
+- 🙋 [Email me personally](mailto:cecilia.baldons@gmail.com)
 
+### Connect with me on Social Media!
 
-### Social Media
-
-🔗 [LinkedIn](https://www.linkedin.com/in/cecilia-baldoni-93a1102b9/?original_referer=https%3A%2F%2Fwww%2Egoogle%2Ecom%2F&originalSubdomain=de)
+🔗 [LinkedIn](https://www.linkedin.com/in/cecilia-baldoni/)
 <br>
 📷 [Instagram](https://www.instagram.com/cecibaldoni/?hl=en)
 <br>
@@ -31,5 +32,36 @@ If you'd like to reach out, feel free to contact me via email or through my soci
 <br>
 ☕[Ko-fi](https://ko-fi.com/cecibaldoni)
 
+### Book a time to chat!
+
+📅 [Schedule time with me](https://calendar.app.google/Hb3sWw6NhEQoTWt3A) at your convenience using my Google Calendar.
+
+Here’s what to know:
+
+- Choose a time that fits your schedule (no need to wait for back-and-forth emails)
+- Great for  brainstorming sessions, or just a friendly catch-up
+- If you have any specific topic in mind, or you feel I should prepare something in advance, let me know through the Booking Form!
+- If you don’t see an open slot, just reach out by email and we’ll find another time!
+
+Looking forward to connecting!
+
+
+### Send me a message directly
+
+<form action="mailto:cbaldoni@ab.mpg.de" method="post" enctype="text/plain">
+  <label for="name">Name:</label><br>
+  <input type="text" id="name" name="name" required><br>
+  
+  <label for="email">Your Email:</label><br>
+  <input type="email" id="email" name="email" required><br>
+  
+  <label for="subject">Subject:</label><br>
+  <input type="text" id="subject" name="subject" required><br>
+  
+  <label for="message">Message:</label><br>
+  <textarea id="message" name="message" rows="5" required></textarea><br>
+  
+  <button type="submit">Send Message</button>
+</form>
 
 I look forward to hearing from you!

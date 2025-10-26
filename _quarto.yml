@@ -92,7 +92,7 @@ format:
   html:
     theme: custom.scss
     toc: true
-    toc-depth: 2
+    toc-depth: 3
     navigation:
       sidebar: false
     meta:

@@ -11,18 +11,18 @@ title: ""
 ### Workshop, Webinar, Unconference
 - **How to start your own Code Club** - SORTEE Unconference 5 <br>
   *October 16th, 2025* <br>
-  [Slides](https://cecibaldoni.quarto.pub/how-to-start-your-own-code-club/#/title-slide) · [Github Repo](https://github.com/SORTEE/CodeClub/tree/main/20251016_SORTEE-Unconference5-CodeClub)
+  [Open Guide](https://sortee.github.io/start-your-codeclub-guide/) · [Slides](https://cecibaldoni.quarto.pub/how-to-start-your-own-code-club/#/title-slide) · [Github Repo](https://github.com/SORTEE/start-your-codeclub-guide)
 - **Live from the nesting box – programming for birds** <br>
   *October 3rd, 4th, 5th, 2025* <br>
   [Event link](https://www.maxcine.de/events/workshop-3-live-from-the-nesting-box-programming-for-birds) · [Poster](../img/MF_Plakat.jpg){target="_blank"}
 
 - **Data wrangling with {tidyverse}**  <br>
   *July 26th, 2025* <br>
-  [Event link](https://sara-edu.netlify.app/summer/2025-r4b/) · [Slides](https://cecibaldoni.github.io/data-wrangling-tidyverse/#/title-slide)
+  [Event link](https://sara-edu.netlify.app/summer/2025-r4b/) · [Slides](https://cecibaldoni.github.io/data-wrangling-tidyverse/#/title-slide) · [YouTube](https://youtu.be/KcyZRyf2VKM?si=kUwZT4OUbOOeGXin)
 
 - **Scrollytelling Science with Quarto and Closeread**  <br>
   *May 28th, 2025* <br>
-  [Youtube](https://www.youtube.com/watch?feature=shared&v=ytKZ357Xtqw) · [Slides](https://cecibaldoni.github.io/scrollytelling-quarto-closeread/#/TitleSlide)
+  [YouTube](https://www.youtube.com/watch?feature=shared&v=ytKZ357Xtqw) · [Slides](https://cecibaldoni.github.io/scrollytelling-quarto-closeread/#/TitleSlide)
 
 - **What is Open Science Anyway?**  
   [Event link](https://www.ab.mpg.de/events/40760/345436) · [Slides](https://github.com/cecibaldoni/OpenScience-Rado)

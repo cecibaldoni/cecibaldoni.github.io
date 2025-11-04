@@ -80,6 +80,17 @@ p code, li code, span code, td code, th code, a code {
   white-space: nowrap;
 }
 
+pre, pre code {
+  background-color: $lightgreen !important;
+  color: $darkgreen !important;
+  font-family: monospace;
+  font-size: 0.95em;
+  padding: 10px;
+  border-radius: 12px;
+  border: 2px solid $coffee;
+  white-space: pre-wrap;
+}
+
 .column-margin {
   clear: both;
   margin-top: 1em;

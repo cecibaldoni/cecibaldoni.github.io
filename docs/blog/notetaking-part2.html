@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -70,14 +70,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../img/shrew.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-a41cf1faf819cc1fd24517c0d1908f0a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-af2f8bfcf8a1ff1b3aa309b8e9198a69.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../site_libs/quarto-contrib/iconify-2.1.0/iconify-icon.min.js"></script>
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
@@ -117,6 +118,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Cecilia Baldoni</span>
     </a>
@@ -273,7 +276,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </blockquote>
 <p>Before any analysis, I had to get my data out of Logseq and into R. This involves looping through all your journal files and pulling out any lines, and blocks, that contain your target tags (mine were <code>#journaling</code>, and <code>#moodlog</code>). This is very similar to the loop I wrote for the Part 1 of this series, I just swapped the tags:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>logseq_path <span class="ot">&lt;-</span> <span class="st">"~/Logseq/journals"</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>md_files <span class="ot">&lt;-</span> <span class="fu">list.files</span>(logseq_path, <span class="at">pattern =</span> <span class="st">"</span><span class="sc">\\</span><span class="st">.md$"</span>, <span class="at">full.names =</span> <span class="cn">TRUE</span>)</span>
@@ -319,7 +322,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>entries <span class="ot">&lt;-</span> <span class="fu">map_df</span>(md_files, extract_entries)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>entries <span class="ot">&lt;-</span> <span class="fu">map_df</span>(md_files, extract_entries)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>After running this, you’re left with a data frame. But it’s not pretty: it’s a raw data dump full of markdown syntax with weird tabs (<code>\t</code>), newlines (<code>\n</code>), and automated metadata.</p>
 <p>Here is an example of how it might look like, built with some fake entries:</p>
@@ -335,7 +338,7 @@ Then there was the problem about the metadata. First, there was <code>collapsed:
 <p><strong>Weapon 3: <code>str_squish()</code></strong><br>
 Have you heard about this function? It removes all the weird extra spaces from your text. It’s an absolute lifesaver.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>entries <span class="ot">&lt;-</span> entries <span class="sc">%&gt;%</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
@@ -350,7 +353,7 @@ Have you heard about this function? It removes all the weird extra spaces from y
 <span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>      <span class="fu">str_remove_all</span>(<span class="fu">fixed</span>(<span class="st">"{{renderer :wordcount_}}"</span>)) <span class="sc">%&gt;%</span></span>
 <span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>      </span>
 <span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>      <span class="fu">str_squish</span>()</span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 </section>
@@ -363,7 +366,7 @@ Have you heard about this function? It removes all the weird extra spaces from y
 <p>The first important step is to remove <code>stop_words</code>, meaning all the articles, prepositions and “fillers” words. You can use a specific dataset embedded in <code>tidytext</code>. Without the filler words, what remains it’s only important stuff (well, let’s see!).</p>
 <p>Which is the most used word in my journal entries?</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidytext)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidytext)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>words_counted <span class="ot">&lt;-</span> entries <span class="sc">%&gt;%</span></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unnest_tokens</span>(word, entry_text) <span class="sc">%&gt;%</span></span>
@@ -374,7 +377,7 @@ Have you heard about this function? It removes all the weird extra spaces from y
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(n <span class="sc">&gt;</span> <span class="dv">6</span>) <span class="sc">%&gt;%</span> </span>
 <span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">word =</span> <span class="fu">reorder</span>(word, n)) <span class="sc">%&gt;%</span> </span>
 <span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(n,word)) <span class="sc">+</span></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p><img src="img/most-used-words1.svg" class="img-fluid"></p>
 <p>Fun fact! From my own entries the most used word was “Time”. Which I found very intriguing.</p>
@@ -389,7 +392,7 @@ Have you heard about this function? It removes all the weird extra spaces from y
 <p>The <code>get_sentiment()</code> function from the <code>syuzhet</code> package does all this work for you, creating a single sentiment score for each day’s entry.</p>
 <p>The first thing I did was plot the sentiment score of my entries over time. This is where the story took another sharp turn.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(syuzhet)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(syuzhet)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>sentiment <span class="ot">&lt;-</span> entries <span class="sc">%&gt;%</span></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
@@ -403,13 +406,13 @@ Have you heard about this function? It removes all the weird extra spaces from y
 <span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">colour =</span> tag)) <span class="sc">+</span></span>
 <span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"loess"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>, <span class="at">color =</span> <span class="st">"orange"</span>) <span class="sc">+</span></span>
 <span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">0</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>) <span class="sc">+</span></span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Date"</span>, <span class="at">y =</span> <span class="st">"Sentiment Score"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Date"</span>, <span class="at">y =</span> <span class="st">"Sentiment Score"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p><img src="img/sentiment-score1.svg" class="img-fluid"></p>
 <p>Is it my impression or is there a bit of a gap? How come?</p>
 <p>Then I looked at the dates and realised: that’s when I was writing my dissertation! I remember now, the tag I was using during that time was <code>#Dissertation Journal</code>, to distinguish it from other entries. I should add those entries too. Well, easy enough, I could re-run my loop, adding an additional tag!</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>extract_entries <span class="ot">&lt;-</span> <span class="cf">function</span>(file_path) {</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>extract_entries <span class="ot">&lt;-</span> <span class="cf">function</span>(file_path) {</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  lines <span class="ot">&lt;-</span> <span class="fu">readLines</span>(file_path, <span class="at">warn =</span> <span class="cn">FALSE</span>)</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  file_date <span class="ot">&lt;-</span> <span class="fu">str_extract</span>(<span class="fu">basename</span>(file_path), <span class="st">"</span><span class="sc">\\</span><span class="st">d{4}_</span><span class="sc">\\</span><span class="st">d{2}_</span><span class="sc">\\</span><span class="st">d{2}"</span>) <span class="sc">%&gt;%</span> <span class="fu">ymd</span>()</span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  </span>
@@ -481,14 +484,14 @@ Have you heard about this function? It removes all the weird extra spaces from y
 <span id="cb5-70"><a href="#cb5-70" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">colour =</span> tag)) <span class="sc">+</span></span>
 <span id="cb5-71"><a href="#cb5-71" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"loess"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>, <span class="at">color =</span> <span class="st">"orange"</span>) <span class="sc">+</span></span>
 <span id="cb5-72"><a href="#cb5-72" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">0</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>) <span class="sc">+</span></span>
-<span id="cb5-73"><a href="#cb5-73" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Date"</span>, <span class="at">y =</span> <span class="st">"Sentiment Score"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-73"><a href="#cb5-73" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Date"</span>, <span class="at">y =</span> <span class="st">"Sentiment Score"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p><img src="img/sentiment-score2.svg" class="img-fluid"></p>
 <p>This seems about right! I am happy I left the tags in the dataset now, I could see the evolution of my journaling, from <code>moodlog</code> to <code>journaling</code>, with a big sidetrack project in the middle!</p>
 <p>The tag column could also have a new meaning. I could now <em>FOR EXAMPLE</em> visualise if I was more prone to use negative words while writing my dissertation (no, we are not going there. It was just a thought).</p>
 <p>But with these new entries, what about my most used words now?</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Re-run word frequency with the new tag</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Re-run word frequency with the new tag</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>words_counted <span class="ot">&lt;-</span> entries <span class="sc">%&gt;%</span></span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unnest_tokens</span>(word, entry_text) <span class="sc">%&gt;%</span></span>
@@ -499,7 +502,7 @@ Have you heard about this function? It removes all the weird extra spaces from y
 <span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(n <span class="sc">&gt;</span> <span class="dv">20</span>) <span class="sc">%&gt;%</span> </span>
 <span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">word =</span> <span class="fu">reorder</span>(word, n)) <span class="sc">%&gt;%</span> </span>
 <span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(n,word)) <span class="sc">+</span></span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p><img src="img/most-used-words2.svg" class="img-fluid"></p>
 <p>After including my dissertation entries, the word frequency analysis had completely changed. My most used word was not <code>time</code> anymore, but <code>paper</code>.</p>
@@ -508,7 +511,7 @@ Have you heard about this function? It removes all the weird extra spaces from y
 <h3 class="anchored" data-anchor-id="a-word-cloud-solved-everything">A word cloud solved everything</h3>
 <p>To understand what was driving these scores, I wanted to see the most common positive and negative words. The <code>tidytext</code> book has a fantastic visualization for this: a comparison word cloud.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>positive_negative_words <span class="ot">&lt;-</span> entries <span class="sc">%&gt;%</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>positive_negative_words <span class="ot">&lt;-</span> entries <span class="sc">%&gt;%</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># i need to tokenize into single words</span></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unnest_tokens</span>(word, entry_text) <span class="sc">%&gt;%</span></span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">inner_join</span>(<span class="fu">get_sentiments</span>(<span class="st">"bing"</span>)) <span class="sc">%&gt;%</span></span>
@@ -524,7 +527,7 @@ Have you heard about this function? It removes all the weird extra spaces from y
 <span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">max.words =</span> <span class="dv">100</span></span>
 <span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>  )</span>
 <span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a><span class="co">#LOL shrew is a NEGATIVE word XD </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a><span class="co">#LOL shrew is a NEGATIVE word XD </span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p><img src="img/word-cloud.png" class="img-fluid"></p>
 <p>This is where things get both interesting and messy.</p>
@@ -542,7 +545,7 @@ Have you heard about this function? It removes all the weird extra spaces from y
 <p>This is where Logseq’s structure really shines. Since every journal entry is automatically tied to a daily note, getting the day of the week is incredibly simple with the <code>wday()</code> function from the <code>lubridate</code> package. I decided to look at the average sentiment for each day of the week, and that’s when I found it. A clear, undeniable pattern.</p>
 <p>Apparently, my week has a villain, and its name is <code>Friday</code>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lubridate) <span class="co"># For wday()</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lubridate) <span class="co"># For wday()</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co"># It should have columns for 'date' and 'sentiment_score'</span></span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -581,7 +584,7 @@ Have you heard about this function? It removes all the weird extra spaces from y
 <span id="cb8-37"><a href="#cb8-37" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
 <span id="cb8-38"><a href="#cb8-38" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Day of the Week"</span>,</span>
 <span id="cb8-39"><a href="#cb8-39" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Average Sentiment Score"</span></span>
-<span id="cb8-40"><a href="#cb8-40" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-40"><a href="#cb8-40" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p><img src="img/weekdays.svg" class="img-fluid"></p>
 <p><img src="img/week.svg" class="img-fluid"></p>
@@ -594,7 +597,7 @@ Have you heard about this function? It removes all the weird extra spaces from y
 <p>After looking at my main themes, I got curious. What about the <code>stop_words</code>? Could they tell a story too?</p>
 <p>I started thinking about it when I saw the word “like” so often repeated. I am not sure I use it in my writing as a verb, but more like… well, exactly like that. I would find it interesting to investigate which stop words I use more often, and if I should rethink the way I write.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Find and count only the stop words</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Find and count only the stop words</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>stop_words_counted <span class="ot">&lt;-</span> entries <span class="sc">%&gt;%</span></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unnest_tokens</span>(word, entry_text) <span class="sc">%&gt;%</span></span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Keep only the words that are in the stop_words list</span></span>
@@ -605,13 +608,13 @@ Have you heard about this function? It removes all the weird extra spaces from y
 <span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(n <span class="sc">&gt;</span> <span class="dv">50</span>) <span class="sc">%&gt;%</span> </span>
 <span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">word =</span> <span class="fu">reorder</span>(word, n)) <span class="sc">%&gt;%</span> </span>
 <span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(n,word)) <span class="sc">+</span></span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p><img src="img/stop-words.svg" class="img-fluid"></p>
 <p>Ok, using the whole stop-words dataset might not have much information. The fact that “I” and “the” are the most used ones doesn’t tell me much on its own.</p>
 <p>But I could filter out of this dataset. For example, I started with <strong>modal verbs</strong>. I wanted to see if I was a person of ‘shoulds,’ ‘coulds,’ or ‘wants.’ Then I went over the <strong>pronouns</strong>, then <strong>conjunctions</strong> and <strong>time transition words</strong>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>stop_words_counted <span class="sc">%&gt;%</span> </span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>stop_words_counted <span class="sc">%&gt;%</span> </span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(word <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"should"</span>, <span class="st">"could"</span>, <span class="st">"would"</span>, <span class="st">"will"</span>, <span class="st">"want"</span>, <span class="st">"shall"</span>, <span class="st">"can"</span>)) <span class="sc">%&gt;%</span> </span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">word =</span> <span class="fu">reorder</span>(word, n)) <span class="sc">%&gt;%</span> </span>
 <span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(n,word)) <span class="sc">+</span></span>
@@ -633,7 +636,7 @@ Have you heard about this function? It removes all the weird extra spaces from y
 <span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(word <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"before"</span>, <span class="st">"after"</span>, <span class="st">"during"</span>, <span class="st">"since"</span>, <span class="st">"until"</span>, <span class="st">"ago"</span>, <span class="st">"within"</span>))  <span class="sc">%&gt;%</span> </span>
 <span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">word =</span> <span class="fu">reorder</span>(word, n)) <span class="sc">%&gt;%</span> </span>
 <span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(n,word)) <span class="sc">+</span></span>
-<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p><img src="img/1.svg" class="img-fluid"> <img src="img/2.svg" class="img-fluid"> <img src="img/3.svg" class="img-fluid"> <img src="img/4.svg" class="img-fluid"></p>
 </section>
@@ -709,13 +712,14 @@ Have you heard about this function? It removes all the weird extra spaces from y
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

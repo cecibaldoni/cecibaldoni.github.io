@@ -10,3 +10,5 @@ blog/drafts/
 docs/blog/drafts/
 
 
+
+**/*.quarto_ipynb

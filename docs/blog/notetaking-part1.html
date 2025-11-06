@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -70,14 +70,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../img/shrew.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-a41cf1faf819cc1fd24517c0d1908f0a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-af2f8bfcf8a1ff1b3aa309b8e9198a69.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../site_libs/quarto-contrib/iconify-2.1.0/iconify-icon.min.js"></script>
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
@@ -117,6 +118,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Cecilia Baldoni</span>
     </a>
@@ -273,7 +276,7 @@ Figure&nbsp;1: Disclaimer: There’s a better clip of Abe Simpson with static in
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Phases
+<span class="screen-reader-only">Note</span>Phases
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -302,7 +305,7 @@ Phases
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Version 1.0
+<span class="screen-reader-only">Note</span>Version 1.0
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -329,7 +332,7 @@ Version 1.0
 <h2 class="anchored" data-anchor-id="the-roadblocks-in-r">The Roadblocks in R</h2>
 <p>After a few months, I had a reasonable amount of data and was ready to make the jump to R. To make this journey reproducible for you, I’ll use a small, fake dataset that perfectly mirrors the structure of my real data (for the whole workflow, check the last section!):</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># A reproducible example of the data (after extraction)</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># this mimics what the parsing script would produce</span></span>
@@ -338,7 +341,7 @@ Version 1.0
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>                                    <span class="st">"Wrote a difficult email"</span>, <span class="dv">5</span>, <span class="dv">4</span>, <span class="dv">6</span>,</span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>                                    <span class="st">"Gave Tidyverse workshop"</span>, <span class="dv">7</span>, <span class="dv">9</span>, <span class="dv">10</span>,</span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>                                    <span class="st">"Debugged failing script"</span>, <span class="dv">4</span>, <span class="dv">8</span>, <span class="dv">9</span>,</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>                                    <span class="st">"Organized project files"</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>                                    <span class="st">"Organized project files"</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>The first problem was immediately obvious. I should have seen this coming. My <code>Task</code> descriptions were unique and messy, with no repeatable patterns: great for a human reader but useless for aggregation.</p>
 <p>This led to the first iteration: creating a <code>Tag</code> field for consistent taxonomy for my work.</p>
@@ -350,7 +353,7 @@ Version 1.0
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Version 2.0
+<span class="screen-reader-only">Note</span>Version 2.0
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -367,23 +370,23 @@ Version 2.0
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Same fake data, but with tag as well</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>fake_reflections <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tribble</span>(<span class="sc">~</span>task, <span class="sc">~</span>feeling_score, <span class="sc">~</span>enjoyment, <span class="sc">~</span>skill, <span class="sc">~</span>tag, </span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>                                    <span class="st">"Wrote a difficult email"</span>, <span class="dv">5</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="st">"writing"</span>, </span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>                                    <span class="st">"Gave Tidyverse workshop"</span>, <span class="dv">7</span>, <span class="dv">9</span>, <span class="dv">10</span>, <span class="st">"presentation; mentoring"</span>,</span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>                                    <span class="st">"Debugged failing script"</span>, <span class="dv">4</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="st">"coding"</span>, </span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>                                    <span class="st">"Organized project files"</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="st">"organisation; project management"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>                                    <span class="st">"Organized project files"</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="st">"organisation; project management"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Nice! Now I can extract the information and plot it!</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>fake_reflections <span class="ot">&lt;-</span> fake_reflections <span class="sc">%&gt;%</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>fake_reflections <span class="ot">&lt;-</span> fake_reflections <span class="sc">%&gt;%</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">separate_rows</span>(tag, <span class="at">sep =</span> <span class="st">"</span><span class="sc">\\</span><span class="st">s*;</span><span class="sc">\\</span><span class="st">s*"</span>) <span class="sc">%&gt;%</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">tag =</span> <span class="fu">str_to_title</span>(tag))</span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(fake_reflections, <span class="fu">aes</span>(<span class="at">x =</span> skill, <span class="at">y =</span> enjoyment, <span class="at">color =</span> tag)) <span class="sc">+</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">size=</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">size=</span><span class="dv">3</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -394,7 +397,7 @@ Version 2.0
 </div>
 <p>Oh. Wait a minute.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(fake_reflections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(fake_reflections)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>tibble [6 × 5] (S3: tbl_df/tbl/data.frame)
  $ task         : chr [1:6] "Wrote a difficult email" "Gave Tidyverse workshop" "Gave Tidyverse workshop" "Debugged failing script" ...
@@ -446,13 +449,13 @@ Note
 </ul>
 <p>This clarification fundamentally improved my data. I started noticing tasks where my <code>Feeling</code> was low but <code>Enjoyment</code> was high. For example, I often felt anxious before a presentation (Feeling score: 3/10), but I consistently rated my Enjoyment of the act of presenting as very high (9/10). This simple distinction revealed that some of the activities that are most rewarding for me are also the ones that push me out of my comfort zone. In this case, I maintained <code>Feeling</code> as a numerical score, but I introduced a categorical tag alongside it:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>fake_reflections <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tribble</span>(<span class="sc">~</span>task, <span class="sc">~</span>feeling_score, <span class="sc">~</span>feeling_text, <span class="sc">~</span>enjoyment, <span class="sc">~</span>skill, <span class="sc">~</span>tag,</span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>                                    <span class="st">"Wrote a difficult email"</span>,  <span class="dv">5</span>, <span class="st">"focused"</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="st">"writing"</span>,</span>
 <span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>                                    <span class="st">"Gave Tidyverse workshop"</span>,  <span class="dv">3</span>, <span class="st">"anxious"</span>, <span class="dv">9</span>, <span class="dv">10</span>, <span class="st">"presentation"</span>,</span>
 <span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>                                    <span class="st">"Debugged failing script"</span>,  <span class="dv">4</span>, <span class="st">"challenged"</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="st">"coding"</span>,</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>                                    <span class="st">"Organized project files"</span>,  <span class="dv">7</span>, <span class="st">"productive"</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="st">"project management"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>                                    <span class="st">"Organized project files"</span>,  <span class="dv">7</span>, <span class="st">"productive"</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="st">"project management"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>This is still a working system. I am not sure yet what do I want to prioritize: the numerical score or the categorical tag, or perhaps find a way to integrate both. I need more data collection before making a decision. But ehi, that’s exactly what I love about taking notes! It’s like this system that’s always growing and getting better as I figure things out more about my own experiences.</p>
 </section>
@@ -460,7 +463,7 @@ Note
 <h2 class="anchored" data-anchor-id="a-system-for-self-knowledge-and-whats-next">A system for self-knowledge (and what’s next)</h2>
 <p>This whole process taught me a crucial lesson: building and refining the note-taking system was the self-reflection. The journey of wrestling with my messy data forced me to define what I do, how I categorize my work. And in the end, I finally got my plot!</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co"># A more thorough fake dataset</span></span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -500,7 +503,7 @@ Note
 <span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="fl">7.5</span>, <span class="at">y =</span> <span class="fl">7.5</span>, <span class="at">label =</span> <span class="st">"Zone of Genius"</span>, <span class="at">color =</span> <span class="st">"gray20"</span>, <span class="at">fontface =</span> <span class="st">"bold"</span>) <span class="sc">+</span></span>
 <span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="fl">7.5</span>, <span class="at">y =</span> <span class="fl">2.5</span>, <span class="at">label =</span> <span class="st">"Burnout Zone"</span>, <span class="at">color =</span> <span class="st">"gray20"</span>, <span class="at">fontface =</span> <span class="st">"bold"</span>) <span class="sc">+</span></span>
 <span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="fl">2.5</span>, <span class="at">y =</span> <span class="fl">7.5</span>, <span class="at">label =</span> <span class="st">"Growth Zone"</span>, <span class="at">color =</span> <span class="st">"gray20"</span>, <span class="at">fontface =</span> <span class="st">"bold"</span>) <span class="sc">+</span></span>
-<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="fl">2.5</span>, <span class="at">y =</span> <span class="fl">2.5</span>, <span class="at">label =</span> <span class="st">"Toil Zone"</span>, <span class="at">color =</span> <span class="st">"gray20"</span>, <span class="at">fontface =</span> <span class="st">"bold"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="fl">2.5</span>, <span class="at">y =</span> <span class="fl">2.5</span>, <span class="at">label =</span> <span class="st">"Toil Zone"</span>, <span class="at">color =</span> <span class="st">"gray20"</span>, <span class="at">fontface =</span> <span class="st">"bold"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -533,7 +536,7 @@ Note
 <section id="for-the-adventurous-the-full-r-parsing-script" class="level2">
 <h2 class="anchored" data-anchor-id="for-the-adventurous-the-full-r-parsing-script">For the adventurous: the full R Parsing script</h2>
 <p>Here is the function I use to extract the structured data from my Logseq journal files. You can adapt it for your own vault/folder.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Helper to safely extract a regex group</span></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>extract_field <span class="ot">&lt;-</span> <span class="cf">function</span>(lines, pattern) {</span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  match <span class="ot">&lt;-</span> <span class="fu">str_match</span>(lines, pattern)</span>
@@ -593,7 +596,7 @@ Note
 <span id="cb8-58"><a href="#cb8-58" aria-hidden="true" tabindex="-1"></a><span class="co"># To run it yourself:</span></span>
 <span id="cb8-59"><a href="#cb8-59" aria-hidden="true" tabindex="-1"></a><span class="co"># logseq_path &lt;- "/path/to/your/Logseq/journals"</span></span>
 <span id="cb8-60"><a href="#cb8-60" aria-hidden="true" tabindex="-1"></a><span class="co"># md_files &lt;- list.files(logseq_path, pattern = "\\.md$", full.names = TRUE)</span></span>
-<span id="cb8-61"><a href="#cb8-61" aria-hidden="true" tabindex="-1"></a><span class="co"># reflections &lt;- map_dfr(md_files, extract_reflections)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-61"><a href="#cb8-61" aria-hidden="true" tabindex="-1"></a><span class="co"># reflections &lt;- map_dfr(md_files, extract_reflections)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 
 </section>
@@ -650,13 +653,14 @@ Note
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

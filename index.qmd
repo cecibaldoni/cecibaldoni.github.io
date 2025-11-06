@@ -17,6 +17,11 @@ Alongside my work, I’m dedicated to creating spaces where **science and commun
 Dive into the interactive city below to explore my projects, workshops, open science efforts, and community activities.<br><br>
 <br>
 
+This website won the [Best Personal Academic Website contest](https://theacademicdesigner.com/) in 2025, for the Best Interactive website! Read what the judges had to say about it [here](https://theacademicdesigner.com/2025/winners-of-the-best-personal-academic-websites-contest-2025/)!
+<br>
+
+![](img/BPAWC.png){width="500px" fig-align="center"}
+
 ## Explore the City
 
 ```{=html}

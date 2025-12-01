@@ -171,7 +171,7 @@ Other times, I had ten minutes and barely wrote a sentence.
 I'm saying this because length didn't matter.
 What mattered was showing up and doing it.
 
-Example entry
+Example entry:
 
 ```         
 - [[Dissertation Journal]] post-writing 5 min
@@ -185,10 +185,11 @@ Example entry
 
 If you're starting out, you might consider having a list of prompts.
 The more you practice with your dissertation journal, the less likely you might need them, but it's a good starting point for when you have the "blank page syndrome" or you have no idea where your thoughts are.
-I got my prompts from this [blogpost](https://thetendingyear.com/1-38-keeping-a-dissertation-journal/), here are the ones that I kept: - Where am I at?
-What did I accomplish today?
+I got my prompts from this [blogpost](https://thetendingyear.com/1-38-keeping-a-dissertation-journal/), here are the ones that I kept: 
+- Where am I at?
+- What did I accomplish today?
 - What was my biggest obstacle?
-What do I do in the future if I find this again?
+- What do I do in the future if I find this again?
 - Is there anything I need to read or learn before the next writing session?
 - How should I start the next session of this project?
 
@@ -252,7 +253,7 @@ I *stayed on track*.
 Like for real.
 It had never happened before!
 
-Example
+Example:
 
 ```         
 I am gonna try with this form of free writing, and then use it as dissertation journal. I would like to make a plugin myself to have both timer and wordcount in the same renderer (not sure if it's possible, but I would like to try).
@@ -272,7 +273,7 @@ Every entry was a set of valid responses to the reality of doing difficult intel
 Writing about emotions didn't make them disappear (that would be *too conventient*) but it did make them less likely to derail my entire day or week.
 Once something was on the page, it somehow had less power over me; I could see it, acknowledge it, give it space, and then create some distance from it to move on to the actual work.
 
-Example
+Example:
 
 ```         
 - [[Dissertation Journal]]
@@ -318,7 +319,7 @@ Some days, I'd start journaling about feeling overwhelmed and just...
 keep going down that path.
 Twenty minutes later, I'd written three paragraphs about imposter syndrome and everything I was doing wrong, and accomplished nothing else except making myself feel worse.
 
-Example from my own dissertation journal
+Example:
 
 ```         
 As the first day truly back into my working habits, it was not so bad. I have now a working discussion draft, that still need a lot of work but it's not a blank page. I think it could be nice to have this pre and post writing free-writing sessions, and would be super great to be able to tag them usefully in logseq so to have them all organised.

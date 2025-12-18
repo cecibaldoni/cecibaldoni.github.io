@@ -1,0 +1,27 @@
+---
+title: "The unintended consequence of note-taking"
+description: "Spoiler alert: it's about self-soothing"
+date: 2025-12-15
+image: img/sherlockholmes.gif
+categories: [microblogging, note-taking]
+editor: 
+  markdown: 
+    wrap: sentence
+---
+
+Some days ago I was thinking about Sherlock Holmes’s "Brain Attic" theory. 
+The idea is that your brain is a small room, and you need to plan where to put and how to choose your furniture. You throw out the trivia about the solar system to make room for a gazillion varieties of tobacco ash. 
+Very Victorian. And very wrong.
+
+This idea of a brain being a passive room with with slowly dusting furniture is a complete lie. My brain is a high-stress kitchen during a dinner rush where every burner is on and someone just dropped a crate of eggs. If I try to store a "piece of furniture" in there, it just becomes a fire hazard. 
+Some time ago I’ve realized I can’t keep information stored there, it just get in the way of the actual cooking. 
+My brain is a processing unit, not a storage unit, and sometimes it is overheating because it's rendering a complex theoretical framework using the same RAM it’s using to remember I need to buy nore dish soap.
+
+What to do then? I dump all of it. I take all the half-baked fragments of an idea and I drop it to a digital page or a notebook somewhere.
+
+We talk about PKM as this noble quest for "knowledge management" or "idea generation" or building some master database for the future (though that’s what I tell people so I sound productive). 
+Honestly, it’s pure self-soothing. There is a specific, almost embarrassing, relief in seeing a chaotic thought turned into a static line of text. The moment it’s "out there" the emotional temperature in my head drops by ten degrees.
+
+I’m just clearing the kitchen so I can hear myself think for five minutes without slipping on the mental eggs.
+
+Next time you feel that post-journaling zen ask yourself: are you actually happy you saved that information, or are you just relieved you finally dumped it?

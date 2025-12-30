@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2025-08-03">
+<meta name="description" content="Part 1 of 2 - This post shows how I transformed simple daily work logs in Logseq into a powerful data visualization in R to better understand my own strengths and interests.">
+
+<title>Note-Taking is more powerful than you think (1/2) – Cecilia Baldoni</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../img/shrew.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-af2f8bfcf8a1ff1b3aa309b8e9198a69.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/iconify-2.1.0/iconify-icon.min.js"></script>
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Cecilia Baldoni</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../content/about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../content/project.html"> 
+<span class="menu-text">Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../blog/index.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../content/contact.html"> 
+<span class="menu-text">Contact</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://scholar.google.com/citations?user=mxM_Py8AAAAJ&amp;hl=en&amp;oi=sra"> 
+<span class="menu-text"><iconify-icon role="img" inline="" icon="fa6-brands:google-scholar" aria-label="Icon google-scholar from fa6-brands Iconify.design set." title="Icon google-scholar from fa6-brands Iconify.design set."></iconify-icon></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://ko-fi.com/cecibaldoni"> 
+<span class="menu-text"><iconify-icon role="img" inline="" icon="simple-icons:kofi" aria-label="Icon kofi from simple-icons Iconify.design set." title="Icon kofi from simple-icons Iconify.design set."></iconify-icon></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://bsky.app/profile/cecibaldoni.bsky.social"> 
+<span class="menu-text"><iconify-icon role="img" inline="" icon="meteor-icons:bluesky" aria-label="Icon bluesky from meteor-icons Iconify.design set." title="Icon bluesky from meteor-icons Iconify.design set."></iconify-icon></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.instagram.com/cecibaldoni/?hl=en"> <i class="bi bi-instagram" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/cecibaldoni/"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#the-ppp-post-phd-panic" id="toc-the-ppp-post-phd-panic" class="nav-link active" data-scroll-target="#the-ppp-post-phd-panic">The PPP (Post PhD Panic)</a></li>
+  <li><a href="#we-need-clay-or-my-citations-are-always-messed-up" id="toc-we-need-clay-or-my-citations-are-always-messed-up" class="nav-link" data-scroll-target="#we-need-clay-or-my-citations-are-always-messed-up">“We Need Clay!” (or: my citations are always messed up)</a></li>
+  <li><a href="#the-roadblocks-in-r" id="toc-the-roadblocks-in-r" class="nav-link" data-scroll-target="#the-roadblocks-in-r">The Roadblocks in R</a></li>
+  <li><a href="#defining-what-matters" id="toc-defining-what-matters" class="nav-link" data-scroll-target="#defining-what-matters">Defining what matters</a></li>
+  <li><a href="#a-system-for-self-knowledge-and-whats-next" id="toc-a-system-for-self-knowledge-and-whats-next" class="nav-link" data-scroll-target="#a-system-for-self-knowledge-and-whats-next">A system for self-knowledge (and what’s next)</a></li>
+  <li><a href="#tldr" id="toc-tldr" class="nav-link" data-scroll-target="#tldr">TL;DR</a></li>
+  <li><a href="#for-the-adventurous-the-full-r-parsing-script" id="toc-for-the-adventurous-the-full-r-parsing-script" class="nav-link" data-scroll-target="#for-the-adventurous-the-full-r-parsing-script">For the adventurous: the full R Parsing script</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Note-Taking is more powerful than you think (1/2)</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">PKM</div>
+    <div class="quarto-category">note-taking</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Part 1 of 2 - This post shows how I transformed simple daily work logs in Logseq into a powerful data visualization in R to better understand my own strengths and interests.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">August 3, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="the-ppp-post-phd-panic" class="level2">
+<h2 class="anchored" data-anchor-id="the-ppp-post-phd-panic">The PPP (Post PhD Panic)</h2>
+<p>It was January. I had finished my PhD the previous November and, after taking all of December off for a much-needed (and probably longer than it should’ve been) holiday, I started the new year with a slow-dawning realisation.</p>
+<p>I guess it could be summarised in: <em>“and now, what?”</em>.</p>
+<p>Despite a well documented history of growth (<em>I was a <strong>doctor</strong> for crying out loud!</em>), I couldn’t clearly answer two simple questions: What am I actually <em>good</em> at? And what do I <em>enjoy</em> doing?</p>
+<p>The paralysis was real. I could list my accomplishments, but they felt like monolithic blocks. “I wrote a dissertation” could be a great conversation starter, but it’s not necessarily clear what that entails.</p>
+<p>Take, for example, “writing a scientific article”. It’s a huge part of academic life, but do I like it? Am I good at it?</p>
+<p>The question itself is flawed because the task is too broad. “Writing an article” is a galaxy of smaller tasks: data collection, writing a draft, collaborating back-and-forth with co-authors (do they even read my innumerable emails at some point?), documenting everything because I forget what I am doing 3 hours later, making figures, endless reviews (spoiler alert: I hate that part). Is it possible to assign a single score for enjoyment or skill to “writing an article”?</p>
+<p>So I decided to try a simple weekly review: every Friday, I’d sit down and try to reflect on my work week. Which tasks did I do? Did I like doing them? Was I skilled enough?</p>
+<p>The reality? When I finally sat down with my thoughts I could barely remember a single task from the previous five days. I knew I had been busy, I knew I had worked, but when I tried to recall what I’d actually done, my brain just filled with static. It was as if the entire week had passed in a blur with no imprints on my memory.&nbsp;</p>
+<div id="fig-homer-brain" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-homer-brain-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/homer-simpson-brain.gif" class="img-fluid figure-img"></p>
+<figcaption>A gif of Homer Simpson’s brain showing an old school cartoon going on inside his empty head</figcaption>
+</figure>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-homer-brain-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Disclaimer: There’s a better clip of Abe Simpson with static in his brain, but I couldn’t find it, so Homer will have to do.
+</figcaption>
+</figure>
+</div>
+<p>That’s when it hit me: I’ve spent years taking notes on <em>things</em> in Logseq. If I can take notes on everything else, why not on my own work? That’s when I decided to turn my note-taking flow inward, and build a system for getting to know myself better.</p>
+</section>
+<section id="we-need-clay-or-my-citations-are-always-messed-up" class="level2">
+<h2 class="anchored" data-anchor-id="we-need-clay-or-my-citations-are-always-messed-up">“We Need Clay!” (or: my citations are always messed up)</h2>
+<p>You know how Sherlock Holmes said, <em>“Data! Data! Data! I can’t make bricks without clay”</em>?</p>
+<p>Well, I didn’t. I had to google it because my brain had somewhat summarized it in <em>“I need clay!”</em>, which didn’t make much sense when I wrote it down. I blame my internal Italian-to-English translator.</p>
+<p>Either way, as a good scientist, I knew I needed data.</p>
+<p>I decided to stick with Logseq for many reasons.</p>
+<p>First of all, I <strong>love</strong> Logseq.</p>
+<p>Secondly, I spent years building a routine of note-taking, so I could just add an additional step. Logseq was the hub for my PhD research, it is where I plan these blogpost, my work tasks and anything important in my life. But one thing is to write things down and another one is to read them again and <em>do something</em> with them (more on this topic coming soon, stay tuned for Part 2 on this note-taking blogpost series).</p>
+<p>When I started this “project” I had a very loose plan. The first important rule was to put all the entries together. I chose the tag <code>#SelfReflection</code> (mostly because <code>#journaling</code> was already taken for other things).</p>
+<p>In the project page, I tried to summarize the plan it in few bullet points:</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Phases
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p><strong>Data collection:</strong> I need data to work with. Record the tasks or activities done throughout the week and write down how I feel about them, but also if I feel skilled at them or not.</p>
+<ul>
+<li><strong>Mandatory:</strong> Write down small and specific tasks. For example, instead of <em>“wrote article”</em> say <em>“wrote 200-word paragraph about the function of AQP4”</em></li>
+</ul></li>
+<li><p><strong>Review:</strong> After the week is over, check the entries in Logseq for recurrent patterns. For example, things that weren’t real tasks, but did them because I wanted to, needed to, or enjoyed it.</p></li>
+<li><p><strong>Create keywords from the data:</strong> Having specific tasks I enjoy/am good at, I can now extract skills.</p>
+<ul>
+<li><em>E.g.,</em> “I like explaining concepts visually” → “Visual Communication, Science Communication”</li>
+<li><em>E.g.,</em> “I enjoy breaking down complex topics” → “Content Structuring, Information Design”</li>
+<li><em>E.g.,</em> “I love to create systems for organizing data” → “Knowledge Management”</li>
+</ul></li>
+<li><p><strong>Rinse and repeat</strong></p></li>
+</ul>
+</div>
+</div>
+<p>As you can see, my initial system was quite simple.</p>
+<p>And, as you might have noticed, I already left you with a spoiler: after a few weeks I edited the first point to remind myself that too broad tasks were <em>not the point</em>. But that’s the good thing about trying a system, you can always improve it!</p>
+<p>For <strong>Version 1.0</strong> I created a template that I could call anywhere in my notes:</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Version 1.0
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>#SelfReflection
+<ul>
+<li><strong>Task</strong>:</li>
+<li><strong>Feeling</strong>:</li>
+<li><strong>Enjoyment</strong>:</li>
+<li><strong>Skill Level</strong>:</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<p>To make this a real habit, I embedded this empty structure directly into my daily notes template in Logseq. Every morning as I was opening Logseq, it was there.</p>
+<p>I won’t lie, the beginning was extremely difficult. I’m sure I’m not alone in this: you finish your workday, you’re mentally exhausted, but you cannot recollect what you actually did.</p>
+<p>But it’s like meditation; everyone sucks at it at the beginning. With practice, the process became easier, and I got better at acknowledging the small tasks: “Today I wrote a difficult email, I felt super good about it, even if I wasn’t feeling very skilled.” Done. One data point.</p>
+<p>For a while, this worked. Then, a new kind of excitement took hold. I wasn’t just journaling anymore; I was <em>building a dataset</em>.</p>
+<p><em>Mindblowing sound</em>.</p>
+<p>And if you have a dataset… you <em>have</em> to plot it. I think it’s a law somewhere, look it up.</p>
+<p>This decision to move my notes into R for analysis was the turning point that <strong>exposed every flaw</strong> in my simple little system.</p>
+</section>
+<section id="the-roadblocks-in-r" class="level2">
+<h2 class="anchored" data-anchor-id="the-roadblocks-in-r">The Roadblocks in R</h2>
+<p>After a few months, I had a reasonable amount of data and was ready to make the jump to R. To make this journey reproducible for you, I’ll use a small, fake dataset that perfectly mirrors the structure of my real data (for the whole workflow, check the last section!):</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># A reproducible example of the data (after extraction)</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># this mimics what the parsing script would produce</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>fake_reflections <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tribble</span>(<span class="sc">~</span>task, <span class="sc">~</span>feeling_score, <span class="sc">~</span>enjoyment, <span class="sc">~</span>skill,</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>                                    <span class="st">"Wrote a difficult email"</span>, <span class="dv">5</span>, <span class="dv">4</span>, <span class="dv">6</span>,</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>                                    <span class="st">"Gave Tidyverse workshop"</span>, <span class="dv">7</span>, <span class="dv">9</span>, <span class="dv">10</span>,</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>                                    <span class="st">"Debugged failing script"</span>, <span class="dv">4</span>, <span class="dv">8</span>, <span class="dv">9</span>,</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>                                    <span class="st">"Organized project files"</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>The first problem was immediately obvious. I should have seen this coming. My <code>Task</code> descriptions were unique and messy, with no repeatable patterns: great for a human reader but useless for aggregation.</p>
+<p>This led to the first iteration: creating a <code>Tag</code> field for consistent taxonomy for my work.</p>
+<p>This meant exactly what you are thinking: going back to all my entries and add meaningful tags.</p>
+<p>Yuppi, she said sarcastically.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Version 2.0
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>#SelfReflection
+<ul>
+<li><strong>Task</strong>:</li>
+<li><strong>Feeling</strong>:</li>
+<li><strong>Enjoyment</strong>:</li>
+<li><strong>Skill Level</strong>:</li>
+<li><strong>Tag</strong>:</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Same fake data, but with tag as well</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>fake_reflections <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tribble</span>(<span class="sc">~</span>task, <span class="sc">~</span>feeling_score, <span class="sc">~</span>enjoyment, <span class="sc">~</span>skill, <span class="sc">~</span>tag, </span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>                                    <span class="st">"Wrote a difficult email"</span>, <span class="dv">5</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="st">"writing"</span>, </span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>                                    <span class="st">"Gave Tidyverse workshop"</span>, <span class="dv">7</span>, <span class="dv">9</span>, <span class="dv">10</span>, <span class="st">"presentation; mentoring"</span>,</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>                                    <span class="st">"Debugged failing script"</span>, <span class="dv">4</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="st">"coding"</span>, </span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>                                    <span class="st">"Organized project files"</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="st">"organisation; project management"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Nice! Now I can extract the information and plot it!</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>fake_reflections <span class="ot">&lt;-</span> fake_reflections <span class="sc">%&gt;%</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">separate_rows</span>(tag, <span class="at">sep =</span> <span class="st">"</span><span class="sc">\\</span><span class="st">s*;</span><span class="sc">\\</span><span class="st">s*"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">tag =</span> <span class="fu">str_to_title</span>(tag))</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(fake_reflections, <span class="fu">aes</span>(<span class="at">x =</span> skill, <span class="at">y =</span> enjoyment, <span class="at">color =</span> tag)) <span class="sc">+</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">size=</span><span class="dv">3</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="notetaking-part1_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Oh. Wait a minute.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(fake_reflections)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>tibble [6 × 5] (S3: tbl_df/tbl/data.frame)
+ $ task         : chr [1:6] "Wrote a difficult email" "Gave Tidyverse workshop" "Gave Tidyverse workshop" "Debugged failing script" ...
+ $ feeling_score: num [1:6] 5 7 7 4 6 6
+ $ enjoyment    : num [1:6] 4 9 9 8 7 7
+ $ skill        : num [1:6] 6 10 10 9 8 8
+ $ tag          : chr [1:6] "Writing" "Presentation" "Mentoring" "Coding" ...</code></pre>
+</div>
+</div>
+<p>I had duplicate entries in my tibble! How?</p>
+<p>Well, better data wrangling people would know already, but it took me a minute to discover the “problem” (if we want to call it problem).</p>
+<p>I used multiple tags per task, thinking it would best capture my experience. If I am giving a workshop, it’s both “Mentoring” and “Presentation”, why choose? It is different than, for example, giving a presentation to a lab meeting. Mentoring could also be other things, like helping a student prepare with their application or interview. I was pretty happy with my recordings.</p>
+<p>But when you run <code>separate_rows(tag, sep = "\s*;\s*")</code>, for every row with multiple tags (e.g.&nbsp;“Mentoring” and “Presentation”), it creates a new row per tag, duplicating all the other fields (task, feeling, etc.) for each tag. So, if a task has two tags, you get two rows (one for each tag, but all fields except tag are exactly duplicated). For three tags, three rows. For one tag, no duplication.</p>
+<p><strong>Aargh.</strong> What now? some entries, like the <code>Gave Tidyverse workshop</code>, were now duplicated, skewing my data. My clever system was an analytical headache. That real-world problem forced me back to the drawing board to weigh the trade-off between keeping this system (it’s not <em>that</em> bad) or clarity.</p>
+<p>I considered a few options:</p>
+<ol type="1">
+<li>Keep the multiple tags and duplicated rows.</li>
+<li>Force myself to choose only one primary tag per task.</li>
+<li>If a task truly had multiple facets, break it into smaller, single-tag tasks.</li>
+<li>Add a <code>Tag2</code> field for secondary tags.</li>
+</ol>
+<p>I can see the pro and cons for all options. I wondered about what to do. The reason why I wrote it all here it’s because, ultimately, the best option for me could not be the best option for someone else. This is the beauty of Personal Knowledge Management (PKM): “what works for me might not work for you”.</p>
+<p>The key is to find a system that serves your analytical goals. Do you mind the multiple rows? Maybe not. I can see a use of it: for example if you want to see which <code>Tags</code> are often paired together, and if they are often associated with high enjoyment score.</p>
+<p>But I am not so interested in that, so I chose option 3. It forced me to be more specific about what I was actually doing. If I couldn’t choose a single tag, the task was probably too big anyway.</p>
+</section>
+<section id="defining-what-matters" class="level2">
+<h2 class="anchored" data-anchor-id="defining-what-matters">Defining what matters</h2>
+<p>With my tagging system refined, I was ready. But then I hit my <em>nth</em> roadblock, and I realized I wasn’t.</p>
+<p>Namely, I looked back at my data and realized I was using <code>Feeling</code> and <code>Enjoyment</code> interchangeably. That is <em>not</em> a good sign. There was a reason I created two fields, but what was that again? And why didn’t I write it down?</p>
+<p>I had to pause and create distinct definitions for myself:</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Feeling</strong>: What was my emotional state during or just after the task? This is about the immediate mood (e.g.&nbsp;energized, frustrated, proud, anxious). It can be influenced by deadlines or context.</p>
+<p><strong>Enjoyment</strong>: Did I actually like the task itself? e.g.&nbsp;you can feel accomplished after a task you found profoundly boring.</p>
+</div>
+</div>
+<p>Here’s how the (my) distinction plays out:</p>
+<ul>
+<li>You might feel stressed while troubleshooting code (Feeling: “anxious, challenged”), but deeply enjoy the problem-solving (Enjoyment: 8/10).</li>
+<li>You might feel calm while doing mundane admin work (Feeling: “relaxed”), but find it intensely boring (Enjoyment: 2/10).</li>
+</ul>
+<p>This clarification fundamentally improved my data. I started noticing tasks where my <code>Feeling</code> was low but <code>Enjoyment</code> was high. For example, I often felt anxious before a presentation (Feeling score: 3/10), but I consistently rated my Enjoyment of the act of presenting as very high (9/10). This simple distinction revealed that some of the activities that are most rewarding for me are also the ones that push me out of my comfort zone. In this case, I maintained <code>Feeling</code> as a numerical score, but I introduced a categorical tag alongside it:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>fake_reflections <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tribble</span>(<span class="sc">~</span>task, <span class="sc">~</span>feeling_score, <span class="sc">~</span>feeling_text, <span class="sc">~</span>enjoyment, <span class="sc">~</span>skill, <span class="sc">~</span>tag,</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>                                    <span class="st">"Wrote a difficult email"</span>,  <span class="dv">5</span>, <span class="st">"focused"</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="st">"writing"</span>,</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>                                    <span class="st">"Gave Tidyverse workshop"</span>,  <span class="dv">3</span>, <span class="st">"anxious"</span>, <span class="dv">9</span>, <span class="dv">10</span>, <span class="st">"presentation"</span>,</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>                                    <span class="st">"Debugged failing script"</span>,  <span class="dv">4</span>, <span class="st">"challenged"</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="st">"coding"</span>,</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>                                    <span class="st">"Organized project files"</span>,  <span class="dv">7</span>, <span class="st">"productive"</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="st">"project management"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>This is still a working system. I am not sure yet what do I want to prioritize: the numerical score or the categorical tag, or perhaps find a way to integrate both. I need more data collection before making a decision. But ehi, that’s exactly what I love about taking notes! It’s like this system that’s always growing and getting better as I figure things out more about my own experiences.</p>
+</section>
+<section id="a-system-for-self-knowledge-and-whats-next" class="level2">
+<h2 class="anchored" data-anchor-id="a-system-for-self-knowledge-and-whats-next">A system for self-knowledge (and what’s next)</h2>
+<p>This whole process taught me a crucial lesson: building and refining the note-taking system was the self-reflection. The journey of wrestling with my messy data forced me to define what I do, how I categorize my work. And in the end, I finally got my plot!</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co"># A more thorough fake dataset</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>reflections_final <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tribble</span>(<span class="sc">~</span>task, <span class="sc">~</span>enjoyment, <span class="sc">~</span>skill, <span class="sc">~</span>tag,</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Gave Tidyverse workshop"</span>, <span class="dv">9</span>, <span class="dv">10</span>, <span class="st">"Presentation"</span>,</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Debugged a complex script"</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="st">"Coding"</span>,</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Mentored a junior colleague on their project"</span>, <span class="dv">9</span>, <span class="dv">8</span>, <span class="st">"Mentoring"</span>,</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Outlined a new blog post idea"</span>, <span class="dv">8</span>, <span class="dv">7</span>, <span class="st">"Writing"</span>,</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Designed a data visualization"</span>, <span class="dv">9</span>, <span class="dv">9</span>, <span class="st">"Coding"</span>,</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Automated a boring report with a script"</span>, <span class="dv">10</span>, <span class="dv">8</span>, <span class="st">"Coding"</span>,</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Addressed reviewer comments (round 3)"</span>, <span class="dv">2</span>, <span class="dv">9</span>, <span class="st">"Writing"</span>,</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Formatted citations for a paper"</span>, <span class="dv">3</span>, <span class="dv">10</span>, <span class="st">"Admin"</span>,</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Answered 50 emails in one afternoon"</span>, <span class="dv">4</span>, <span class="dv">8</span>, <span class="st">"Admin"</span>,</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Chased co-authors for manuscript feedback"</span>, <span class="dv">2</span>, <span class="dv">7</span>, <span class="st">"Project Management"</span>,</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Wrote detailed project documentation"</span>, <span class="dv">5</span>, <span class="dv">8</span>, <span class="st">"Writing"</span>,</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Learned a new ggplot extension"</span>, <span class="dv">8</span>, <span class="dv">4</span>, <span class="st">"Learning"</span>,</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>  <span class="st">"First attempt at a simple Shiny app"</span>, <span class="dv">9</span>, <span class="dv">5</span>, <span class="st">"Coding"</span>,</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Networking at a conference"</span>, <span class="dv">7</span>, <span class="dv">5</span>, <span class="st">"Networking"</span>,</span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Trying out a new note-taking method"</span>, <span class="dv">8</span>, <span class="dv">3</span>, <span class="st">"PKM"</span>,</span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Recording a short tutorial video"</span>, <span class="dv">7</span>, <span class="dv">4</span>, <span class="st">"Presentation"</span>,</span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Manually copied data from PDF to Excel"</span>, <span class="dv">1</span>, <span class="dv">3</span>, <span class="st">"Data Entry"</span>,</span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Sat through a mandatory, irrelevant meeting"</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="st">"Meetings"</span>,</span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Troubleshot a printer connection issue"</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="st">"Admin"</span>,</span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Filled out travel reimbursement forms"</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="st">"Admin"</span>,</span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Unsuccessfully tried to configure a server"</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="st">"Coding"</span>)</span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a><span class="co"># The ggplot code remains the same</span></span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(reflections_final, <span class="fu">aes</span>(<span class="at">x =</span> skill, <span class="at">y =</span> enjoyment, <span class="at">color =</span> tag)) <span class="sc">+</span></span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">size =</span> <span class="dv">4</span>) <span class="sc">+</span></span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Skill Level"</span>, <span class="at">y =</span> <span class="st">"Enjoyment"</span>,</span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"Task Type"</span>) <span class="sc">+</span></span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">10</span>), <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">2</span>)) <span class="sc">+</span></span>
+<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">10</span>), <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">2</span>)) <span class="sc">+</span></span>
+<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">5</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>, <span class="at">color =</span> <span class="st">"gray50"</span>) <span class="sc">+</span></span>
+<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">5</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>, <span class="at">color =</span> <span class="st">"gray50"</span>) <span class="sc">+</span></span>
+<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="fl">7.5</span>, <span class="at">y =</span> <span class="fl">7.5</span>, <span class="at">label =</span> <span class="st">"Zone of Genius"</span>, <span class="at">color =</span> <span class="st">"gray20"</span>, <span class="at">fontface =</span> <span class="st">"bold"</span>) <span class="sc">+</span></span>
+<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="fl">7.5</span>, <span class="at">y =</span> <span class="fl">2.5</span>, <span class="at">label =</span> <span class="st">"Burnout Zone"</span>, <span class="at">color =</span> <span class="st">"gray20"</span>, <span class="at">fontface =</span> <span class="st">"bold"</span>) <span class="sc">+</span></span>
+<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="fl">2.5</span>, <span class="at">y =</span> <span class="fl">7.5</span>, <span class="at">label =</span> <span class="st">"Growth Zone"</span>, <span class="at">color =</span> <span class="st">"gray20"</span>, <span class="at">fontface =</span> <span class="st">"bold"</span>) <span class="sc">+</span></span>
+<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="fl">2.5</span>, <span class="at">y =</span> <span class="fl">2.5</span>, <span class="at">label =</span> <span class="st">"Toil Zone"</span>, <span class="at">color =</span> <span class="st">"gray20"</span>, <span class="at">fontface =</span> <span class="st">"bold"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="notetaking-part1_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>This simple scatter plot is a map of my professional self.</p>
+<ul>
+<li><strong>My Zone of Genius</strong> (High Skill, High Enjoyment): For me, this is where Coding, Presentation, and Mentoring live.</li>
+<li><strong>The Burnout Zone</strong> (High Skill, Low Enjoyment): Things I’m good at but drain me.</li>
+<li><strong>The Growth Zone</strong> (Low Skill, High Enjoyment): Things I love and should invest more time in.</li>
+<li><strong>The Toil Zone</strong> (Low Skill, Low Enjoyment): Tasks to minimize/delegate/automate.</li>
+</ul>
+<p>That’s it. This journey gave me a powerful quantitative map of my skills and passions.</p>
+<p>But what about the stories hidden in the unstructured text of my daily notes? What themes and patterns emerge when I’m not scoring and tagging, but just writing?</p>
+<p>That’s a story for another time. In Part 2, we’ll leave the numbers behind and venture into the world of text mining to see what other secrets my Logseq vault is waiting to tell me.</p>
+</section>
+<section id="tldr" class="level2">
+<h2 class="anchored" data-anchor-id="tldr">TL;DR</h2>
+<ul>
+<li><em>Motivation:</em> To overcome post-PhD uncertainty, I needed to understand what work tasks I was good at and what I genuinely enjoyed.</li>
+<li><em>Method:</em> I used a daily template in Logseq to systematically record my work tasks, rating each on a 1-10 scale for Skill Level and Enjoyment, and adding descriptive Tags.</li>
+<li><em>Iteration:</em> Moving this data to R for visualization revealed flaws in my system. I had to refine my process by breaking down large tasks, solving a data-duplication issue caused by multiple tags, and creating clear definitions for my metrics (like Feeling vs.&nbsp;Enjoyment).</li>
+<li><em>Payoff:</em> The result is a scatter plot that visually maps my professional self into four key zones (e.g., “Zone of Genius”), providing clear data on my career preferences.</li>
+<li><em>Core Lesson:</em> The act of building and refining a personal tracking system is, in itself, a powerful form of self-reflection. The messy process is where the real learning happens.</li>
+</ul>
+</section>
+<section id="for-the-adventurous-the-full-r-parsing-script" class="level2">
+<h2 class="anchored" data-anchor-id="for-the-adventurous-the-full-r-parsing-script">For the adventurous: the full R Parsing script</h2>
+<p>Here is the function I use to extract the structured data from my Logseq journal files. You can adapt it for your own vault/folder.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Helper to safely extract a regex group</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>extract_field <span class="ot">&lt;-</span> <span class="cf">function</span>(lines, pattern) {</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  match <span class="ot">&lt;-</span> <span class="fu">str_match</span>(lines, pattern)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.null</span>(match) <span class="sc">&amp;&amp;</span> <span class="fu">nrow</span>(match) <span class="sc">&gt;</span> <span class="dv">0</span>) match[, <span class="dv">2</span>] <span class="cf">else</span> <span class="cn">NA_character_</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>extract_reflections <span class="ot">&lt;-</span> <span class="cf">function</span>(file) {</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>  lines <span class="ot">&lt;-</span> <span class="fu">readLines</span>(file, <span class="at">warn =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>  entries <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>  inside_block <span class="ot">&lt;-</span> <span class="cn">FALSE</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>  current_block <span class="ot">&lt;-</span> <span class="fu">c</span>()</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (line <span class="cf">in</span> lines) {</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (<span class="fu">grepl</span>(<span class="st">"^- +#SelfReflection"</span>, line)) {</span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (<span class="fu">length</span>(current_block) <span class="sc">&gt;</span> <span class="dv">0</span>) entries <span class="ot">&lt;-</span> <span class="fu">append</span>(entries, <span class="fu">list</span>(current_block))</span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>      current_block <span class="ot">&lt;-</span> <span class="fu">c</span>(line)</span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>      inside_block <span class="ot">&lt;-</span> <span class="cn">TRUE</span></span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> <span class="cf">if</span> (inside_block) {</span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (<span class="fu">grepl</span>(<span class="st">"^</span><span class="sc">\\</span><span class="st">s+"</span>, line)) {</span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>        current_block <span class="ot">&lt;-</span> <span class="fu">c</span>(current_block, line)</span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>      } <span class="cf">else</span> <span class="cf">if</span> (line <span class="sc">==</span> <span class="st">""</span> <span class="sc">||</span> <span class="fu">grepl</span>(<span class="st">"^- +[^#]"</span>, line)) {</span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>        entries <span class="ot">&lt;-</span> <span class="fu">append</span>(entries, <span class="fu">list</span>(current_block))</span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>        current_block <span class="ot">&lt;-</span> <span class="fu">c</span>()</span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>        inside_block <span class="ot">&lt;-</span> <span class="cn">FALSE</span></span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">length</span>(current_block) <span class="sc">&gt;</span> <span class="dv">0</span>) entries <span class="ot">&lt;-</span> <span class="fu">append</span>(entries, <span class="fu">list</span>(current_block))</span>
+<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">map_dfr</span>(entries, <span class="cf">function</span>(entry) {</span>
+<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a>    task_line <span class="ot">&lt;-</span> entry[<span class="fu">grepl</span>(<span class="st">"</span><span class="sc">\\</span><span class="st">*</span><span class="sc">\\</span><span class="st">*Task</span><span class="sc">\\</span><span class="st">*</span><span class="sc">\\</span><span class="st">*:"</span>, entry)]</span>
+<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a>    feeling_line <span class="ot">&lt;-</span> entry[<span class="fu">grepl</span>(<span class="st">"</span><span class="sc">\\</span><span class="st">*</span><span class="sc">\\</span><span class="st">*Feeling</span><span class="sc">\\</span><span class="st">*</span><span class="sc">\\</span><span class="st">*:"</span>, entry)]</span>
+<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a>    enjoyment_line <span class="ot">&lt;-</span> entry[<span class="fu">grepl</span>(<span class="st">"</span><span class="sc">\\</span><span class="st">*</span><span class="sc">\\</span><span class="st">*Enjoyment</span><span class="sc">\\</span><span class="st">*</span><span class="sc">\\</span><span class="st">*:"</span>, entry)]</span>
+<span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a>    skill_line <span class="ot">&lt;-</span> entry[<span class="fu">grepl</span>(<span class="st">"</span><span class="sc">\\</span><span class="st">*</span><span class="sc">\\</span><span class="st">*Skill Level</span><span class="sc">\\</span><span class="st">*</span><span class="sc">\\</span><span class="st">*:"</span>, entry)]</span>
+<span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a>    tag_line <span class="ot">&lt;-</span> entry[<span class="fu">grepl</span>(<span class="st">"</span><span class="sc">\\</span><span class="st">*</span><span class="sc">\\</span><span class="st">*Tag</span><span class="sc">\\</span><span class="st">*</span><span class="sc">\\</span><span class="st">*:"</span>, entry)]</span>
+<span id="cb8-37"><a href="#cb8-37" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-38"><a href="#cb8-38" aria-hidden="true" tabindex="-1"></a>    task <span class="ot">&lt;-</span> <span class="fu">extract_field</span>(task_line, <span class="st">"</span><span class="sc">\\</span><span class="st">*</span><span class="sc">\\</span><span class="st">*Task</span><span class="sc">\\</span><span class="st">*</span><span class="sc">\\</span><span class="st">*: *(.*)"</span>)</span>
+<span id="cb8-39"><a href="#cb8-39" aria-hidden="true" tabindex="-1"></a>    feeling_score <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(<span class="fu">extract_field</span>(feeling_line, <span class="st">"</span><span class="sc">\\</span><span class="st">*</span><span class="sc">\\</span><span class="st">*Feeling</span><span class="sc">\\</span><span class="st">*</span><span class="sc">\\</span><span class="st">*:</span><span class="sc">\\</span><span class="st">s*(</span><span class="sc">\\</span><span class="st">d+)"</span>))</span>
+<span id="cb8-40"><a href="#cb8-40" aria-hidden="true" tabindex="-1"></a>    feeling_text <span class="ot">&lt;-</span> <span class="fu">extract_field</span>(feeling_line, <span class="st">"</span><span class="sc">\\</span><span class="st">*</span><span class="sc">\\</span><span class="st">*Feeling</span><span class="sc">\\</span><span class="st">*</span><span class="sc">\\</span><span class="st">*:</span><span class="sc">\\</span><span class="st">s*</span><span class="sc">\\</span><span class="st">d+</span><span class="sc">\\</span><span class="st">s*[-–—]</span><span class="sc">\\</span><span class="st">s*(.*)"</span>)</span>
+<span id="cb8-41"><a href="#cb8-41" aria-hidden="true" tabindex="-1"></a>    enjoyment <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(<span class="fu">extract_field</span>(enjoyment_line, <span class="st">"</span><span class="sc">\\</span><span class="st">*</span><span class="sc">\\</span><span class="st">*Enjoyment</span><span class="sc">\\</span><span class="st">*</span><span class="sc">\\</span><span class="st">*: *(</span><span class="sc">\\</span><span class="st">d+)"</span>))</span>
+<span id="cb8-42"><a href="#cb8-42" aria-hidden="true" tabindex="-1"></a>    skill <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(<span class="fu">extract_field</span>(skill_line, <span class="st">"</span><span class="sc">\\</span><span class="st">*</span><span class="sc">\\</span><span class="st">*Skill Level</span><span class="sc">\\</span><span class="st">*</span><span class="sc">\\</span><span class="st">*: *(</span><span class="sc">\\</span><span class="st">d+)"</span>))</span>
+<span id="cb8-43"><a href="#cb8-43" aria-hidden="true" tabindex="-1"></a>    tag <span class="ot">&lt;-</span> <span class="fu">extract_field</span>(tag_line, <span class="st">"</span><span class="sc">\\</span><span class="st">*</span><span class="sc">\\</span><span class="st">*Tag</span><span class="sc">\\</span><span class="st">*</span><span class="sc">\\</span><span class="st">*:</span><span class="sc">\\</span><span class="st">s*(.*)"</span>)</span>
+<span id="cb8-44"><a href="#cb8-44" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-45"><a href="#cb8-45" aria-hidden="true" tabindex="-1"></a>    <span class="fu">tibble</span>(</span>
+<span id="cb8-46"><a href="#cb8-46" aria-hidden="true" tabindex="-1"></a>      <span class="at">file =</span> <span class="fu">basename</span>(file),</span>
+<span id="cb8-47"><a href="#cb8-47" aria-hidden="true" tabindex="-1"></a>      <span class="at">task =</span> task,</span>
+<span id="cb8-48"><a href="#cb8-48" aria-hidden="true" tabindex="-1"></a>      <span class="at">feeling_score =</span> feeling_score,</span>
+<span id="cb8-49"><a href="#cb8-49" aria-hidden="true" tabindex="-1"></a>      <span class="at">feeling_text =</span> feeling_text,</span>
+<span id="cb8-50"><a href="#cb8-50" aria-hidden="true" tabindex="-1"></a>      <span class="at">enjoyment =</span> enjoyment,</span>
+<span id="cb8-51"><a href="#cb8-51" aria-hidden="true" tabindex="-1"></a>      <span class="at">skill =</span> skill,</span>
+<span id="cb8-52"><a href="#cb8-52" aria-hidden="true" tabindex="-1"></a>      <span class="at">tag =</span> tag</span>
+<span id="cb8-53"><a href="#cb8-53" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb8-54"><a href="#cb8-54" aria-hidden="true" tabindex="-1"></a>  })</span>
+<span id="cb8-55"><a href="#cb8-55" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb8-56"><a href="#cb8-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-57"><a href="#cb8-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-58"><a href="#cb8-58" aria-hidden="true" tabindex="-1"></a><span class="co"># To run it yourself:</span></span>
+<span id="cb8-59"><a href="#cb8-59" aria-hidden="true" tabindex="-1"></a><span class="co"># logseq_path &lt;- "/path/to/your/Logseq/journals"</span></span>
+<span id="cb8-60"><a href="#cb8-60" aria-hidden="true" tabindex="-1"></a><span class="co"># md_files &lt;- list.files(logseq_path, pattern = "\\.md$", full.names = TRUE)</span></span>
+<span id="cb8-61"><a href="#cb8-61" aria-hidden="true" tabindex="-1"></a><span class="co"># reflections &lt;- map_dfr(md_files, extract_reflections)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/cecibaldoni\.github\.io\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<div>
+© Copyright 2025, Cecilia Baldoni
+</div>
+<div id="cookie-banner-placeholder">
+
+</div>
+<style>
+  #cookie-banner {
+    position: fixed; bottom: 0; left: 0; width: 100%;
+    background-color: #6F4E37; color: #F3EDE2; padding: 15px 25px;
+    z-index: 1000; text-align: center; font-size: 0.9em;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+  }
+  #cookie-banner p { margin: 0; }
+  #cookie-banner a { color: #aed6ff; text-decoration: underline; margin-left: 10px; }
+  #cookie-banner button {
+    margin: 0 15px; padding: 5px 15px; border: none;
+    background-color: #F3EDE2; color: #A25B43; cursor: pointer; border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+</style>
+<script>
+  function loadGoogleAnalytics() {
+    const gascript = document.createElement("script");
+    gascript.async = true;
+    gascript.src = "https://www.googletagmanager.com/gtag/js?id=G-DV6K7C0XDV";
+    document.head.appendChild(gascript);
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DV6K7C0XDV');
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    if (localStorage.getItem("cookieAccepted") === "true") {
+      loadGoogleAnalytics();
+      return;
+    }
+    const bannerHTML = `
+      <div id="cookie-banner">
+        <p>
+          This website uses cookies for analytics. By clicking "OK", you agree to its use.
+          <button id="accept-cookies">OK</button>
+          <a href="privacy.html" class="cookie-link">(learn more)</a>
+        </p>
+      </div>`;
+    document.getElementById("cookie-banner-placeholder").innerHTML = bannerHTML;
+    
+    document.getElementById("accept-cookies").addEventListener("click", function () {
+      localStorage.setItem("cookieAccepted", "true");
+      document.getElementById("cookie-banner").remove();
+      loadGoogleAnalytics();
+    });
+  });
+</script>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Built with <a href="https://quarto.org/">Quarto</a></p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

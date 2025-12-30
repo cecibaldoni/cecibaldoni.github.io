@@ -4,8 +4,11 @@ listing:
   contents: "."
   type: default
   sort: "date desc"
+  date-format: "YYYY-MM-DD"
   categories: true
   filter-ui: true
+  include:
+    date: "<=today"
 ---
 
 ::: {.page-icon}

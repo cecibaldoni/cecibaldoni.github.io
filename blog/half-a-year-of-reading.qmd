@@ -64,7 +64,7 @@ We’re scientists here: we love a non-linear dataset.
 No spoilers appear here (except perhaps for Dune, but the statute of limitations on a fifty-year-old series has surely expired).
 As for the ratings, they are purely a reflection of my own debatable taste.
 
-### 1. "How to become the Dark Lord, and die trying" - Django Wexler
+#### 1. "How to become the Dark Lord, and die trying" - Django Wexler
 
 ![](img/book-covers/waxler1.jpeg) If you are on a reading rut and feel like you're never going to get into the reading pace ever again, read this book and change your mind.
 That is what it did for me.
@@ -76,12 +76,12 @@ It was the perfect way to ease in.
 I will leave this extract.
 Because why not.
 
-### 2. "Everyone wants to rule the world, except me" - Django Wexler
+#### 2. "Everyone wants to rule the world, except me" - Django Wexler
 
 ![](img/book-covers/waxler2.jpeg) After the first book, the momentum was high.
 It's the kind of story that reminds you that being the hero is usually a logistical nightmare and rarely worth the effort.
 
-### 7. "Unnatural Magic" - C. M. Waggoner
+#### 7. "Unnatural Magic" - C. M. Waggoner
 
 ![](img/book-covers/unnatural-magic.jpeg) This book was *heavy*. A 180-degree turn from the previous two, which were so fun to read.
 The reason why eludes me, though.
@@ -90,7 +90,7 @@ Was it maybe the Mary Sue character?
 She was quite boring, honestly: beautiful AND smart.
 It’s hard to root for someone who never struggles.
 
-### 3. "Demon hunting society" - C. M. Waggoner
+#### 3. "Demon hunting society" - C. M. Waggoner
 
 A book with such a twist.
 If I had to draw a plot of this book, it would be a **Gaussian curve**: a boring beginning, a peak of "oh, there was a reason for that, cool!", and a quite flat ending.
@@ -102,7 +102,7 @@ The author's writing style is really nice and enjoyable, but I would not buy it 
 Honestly, I do not know how I failed back then, because I love everything about this book.
 So much so that I bought the whole series.
 
-### 4. "Come Rain, Come Shine" - Kazuo Ishiguro
+#### 4. "Come Rain, Come Shine" - Kazuo Ishiguro
 
 ![](img/book-covers/come-rain.jpeg)
 
@@ -111,13 +111,13 @@ Maybe the pocket size, or the fact that it's from Kazuo Ishiguro?
 Why do I assume Kazuo Ishiguro would write poetry?
 Maybe because the prose is so delicate it might as well be verse.
 
-### 6. "Dune Messiah" - Frank Herbert
+#### 6. "Dune Messiah" - Frank Herbert
 
 Feels like a transition book in the series.
 It was okay.
 Funny that the most interesting character is Duncan Idaho.
 
-### 11. Hotel Avocado - Bob Mortimer
+#### 11. Hotel Avocado - Bob Mortimer
 
 ![](img/book-covers/hotel-avocado.jpeg) This is a classic airport book.
 I love buying books at the airport, because I find my good share of English books (I live in Germany, the English choice in bookstores is relegated to three shelves, half-filled with classics).
@@ -125,7 +125,7 @@ That said: how is it possible to read a book where you hate every single charact
 All of them, and for different reasons.
 That shouldn't be possible, yet here we are.
 
-### 13. Interior: Chinatown - Charles Yu
+#### 13. Interior: Chinatown - Charles Yu
 
 ![](img/book-covers/interior-chinatown.jpeg)
 
@@ -135,7 +135,7 @@ I don't know about the series yet, but Jimmy O. Yang is the lead, so I’m alrea
 
 ------------------------------------------------------------------------
 
-## The cats books (Italian Purchases)
+### The cats books (Italian Purchases)
 
 ![](img/book-covers/cats.jpg) During a trip in Italy to visit my family, I bought a bunch of books on a whim.
 Without realising it, I bought them all with a common theme, and my mom laughed a lot when she noticed.
@@ -144,23 +144,23 @@ I would like to say that I didn't buy them because there's a cat in the cover.
 But I could be lying.
 They are also all written by award-winning women.
 
-### 9. Una stanza per Momoko (Ora ora de hitori igu mo) - Chisako Wakatake
+#### 9. Una stanza per Momoko (Ora ora de hitori igu mo) - Chisako Wakatake
 
 A nice story, but the focus is on growing old.
 I’m still too hip and young to relate—or so I thought right before my knee made a horrible cracking sound.
 
-### 10. Vengo io da te (I'll come to you) - Rebecca Kaufmann
+#### 10. Vengo io da te (I'll come to you) - Rebecca Kaufmann
 
 An interesting report on an extended family’s "year in the life." I still haven't figured out why there was a cat on the cover, other than as a trap for people like me.
 
-### 12. La cura del silenzio (Counsel Culture) - Kim Hye-jin
+#### 12. La cura del silenzio (Counsel Culture) - Kim Hye-jin
 
 The "slow healing" from public shaming in this book felt incredibly accurate.
 And it mostly involved feeding street cats and walking the city at night, which is relatable.
 I also find the English title incredibly witty.
 Right after reading this book I shipped it to my mom (she liked it too!)
 
-### 14. Un gatto per i giorni difficili (We'll prescribe you a cat) - Syou Ishida
+#### 14. Un gatto per i giorni difficili (We'll prescribe you a cat) - Syou Ishida
 
 This is likely my favourite out of the cats books.
 An extremely weird take on mental health, and a strange premise all together.
@@ -168,7 +168,7 @@ That said, it;s surprisingly comforting and fun!
 
 ------------------------------------------------------------------------
 
-### 15. Il castello dei destini incrociati (The Castle of Crossed Destinies) - Italo Calvino
+#### 15. Il castello dei destini incrociati (The Castle of Crossed Destinies) - Italo Calvino
 
 ![](img/book-covers/calvino.jpeg) The book is great, but the best part of this edition was the 49-page preface about Italo Calvino.
 I say this, because I *know* Italo Calvino's books.
@@ -176,13 +176,13 @@ I grew up as a child with some of its most famous tales, I studied some in high 
 How is it possible that I still find some that I haven't read yet?
 But I do, and it gives me the same feeling as opening a can of butter cookies and finding cookies in it, and not buttons.
 
-### 19. Marigold Mind Laundry - Jungeun Yun
+#### 19. Marigold Mind Laundry - Jungeun Yun
 
 ![](img/book-covers/mind-laundry.jpg) I liked the idea so much, but I think that I fantasized about this a bit too much before reading the book.
 Probably I was expecting something similar to "Before the coffee gets cold", but it wasn't.
 It's not necessarily a critique, I guess that the overall magical feeling was over the top for me. (disclaimer: the picture shows both the English and Italian version, and there's a funny reason for it! I brought this book with me during a trip with some of my besties, and one of them had the exact same book with her!).
 
-### 16. Children of Dune - Frank Herbert
+#### 16. Children of Dune - Frank Herbert
 
 ![My cat Lyn laying on the book "Children of Dune", effectively preventing me from reading it.](img/book-covers/children-dune.jpg) The suspense is killing me.
 Is the Preacher Muad'Dib?
@@ -191,7 +191,7 @@ Is Jessica betraying everyone?
 And seriously, what the heck is wrong with Duncan?
 (Lyn was trying to save me from reading this book, bless her heart).
 
-### 17. Thursday Murder Club - Richard Osman
+#### 17. Thursday Murder Club - Richard Osman
 
 ![](img/book-covers/murder-club.jpeg)
 
@@ -199,7 +199,7 @@ Retirees solving cold cases in a retirement village.
 It is as good as it sound.
 I bought the second book of this series and it will be one of my first reads on 2026!
 
-### 18. "The survivor who wants to die at the end" - Adam Silvera
+#### 18. "The survivor who wants to die at the end" - Adam Silvera
 
 ![](img/book-covers/adam-silvera.jpeg)
 

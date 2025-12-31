@@ -1,4 +1,4 @@
-name: Scheduled Quarto Publish
+name: Scheduled website rendering
 
 on:
   workflow_dispatch:

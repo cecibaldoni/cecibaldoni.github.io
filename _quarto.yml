@@ -4,6 +4,9 @@ project:
   resources:
     - sitemap.xml
 
+execute:
+  freeze: auto
+
 website:
   title: "Cecilia Baldoni"
   site-url: https://cecibaldoni.github.io/

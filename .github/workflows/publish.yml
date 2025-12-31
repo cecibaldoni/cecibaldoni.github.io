@@ -24,7 +24,7 @@ jobs:
       # Add any other packages you use in your .qmd files to the list below
       - name: Install dependencies
         run: |
-          Rscript -e 'install.packages(c("rmarkdown", "knitr", "tidyverse", "quartose"))'
+          Rscript -e 'install.packages(c("rmarkdown", "knitr", "tidyverse", "quartose". "kableExtra"))'
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2

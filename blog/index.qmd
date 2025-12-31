@@ -1,14 +1,12 @@
 ---
 title: Blog
 listing:
-  contents: "."
+  contents: ../blog/*.qmd
   type: default
   sort: "date desc"
   date-format: "YYYY-MM-DD"
   categories: true
   filter-ui: true
-  include:
-    date: "<=today"
 ---
 
 ::: {.page-icon}

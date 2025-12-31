@@ -1,7 +1,7 @@
 ---
 title: Blog
 listing:
-  contents: "."
+  contents: "blog"
   type: default
   sort: "date desc"
   date-format: "YYYY-MM-DD"

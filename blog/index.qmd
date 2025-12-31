@@ -1,7 +1,9 @@
 ---
 title: Blog
 listing:
-  contents: ../blog/*.qmd
+  contents: 
+    - "*.qmd"
+    - "!index.qmd"
   type: default
   sort: "date desc"
   date-format: "YYYY-MM-DD"

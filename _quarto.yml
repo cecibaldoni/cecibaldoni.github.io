@@ -33,11 +33,13 @@ website:
         href: https://www.instagram.com/cecibaldoni/?hl=en
       - icon: github
         href: https://github.com/cecibaldoni/
+      - icon: LinkedIn
+        href: https://www.linkedin.com/in/cecilia-baldoni/
 
   page-footer: 
     right: "Built with [Quarto](https://quarto.org/)"
     left: |
-      <div>&copy; Copyright 2025, Cecilia Baldoni</div>
+      <div>&copy; Copyright 2026, Cecilia Baldoni</div>
 
       <div id="cookie-banner-placeholder"></div>
       <style>
@@ -101,6 +103,6 @@ format:
     meta:
       description: "Personal website of Cecilia Baldoni"
       author: "Cecilia Baldoni"
-      keywords: ["Cecilia Baldoni", "behavioral ecology", "neurobiology", "cognitive ecology", "science illustration"]
+      keywords: ["Cecilia Baldoni", "behavioral ecology", "neuroscience", "cognition", "science illustration", "science communication"]
 
 editor: source

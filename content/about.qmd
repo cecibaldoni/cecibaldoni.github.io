@@ -27,6 +27,7 @@ format:
 </div>
 ```
 <br>
+
 > Scientific discovery is a social process: it depends as much on biological data as it does on the infrastructure used to share it.
 
 My work exists at the intersection of research, technical infrastructure, and community leadership.

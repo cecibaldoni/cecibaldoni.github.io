@@ -135,8 +135,8 @@ p a {
 blockquote {
   margin: 2.5rem 0;
   padding: 1rem 1.5rem 1rem 2rem;
-  border-left: 6px solid $secondary; // The high-impact pivot
-  background-color: rgba($secondary, 0.03); // The low-impact background
+  border-left: 6px solid $pop;
+  background-color: rgba($secondary, 0.03);
   border-radius: 0 8px 8px 0;
   position: relative;
 
@@ -159,7 +159,7 @@ blockquote {
     text-align: right;
 
     &::before {
-      content: "— "; /* Adds the dash automatically */
+      content: "— ";
     }
   }
 }
@@ -453,6 +453,7 @@ pre.sourceCode > code {
 }
 
 /* Responsive Queries */
+
 @media (min-width: 992px) {
   nav.toc-sidebar { float: right; width: 220px; margin-left: 2rem; }
   main.content { margin-right: 260px; }
@@ -461,4 +462,31 @@ pre.sourceCode > code {
 @media (max-width: 768px) {
   .listing-item { flex-direction: column; align-items: center; }
   .page-icon { display: none; }
+  
+  main.content {
+    margin: 0 !important;
+    padding: 0 15px;
+    width: 100% !important;
+  }
+
+  p {text-align: left !important; hyphens: auto;}
+  
+  [style*="float"] {
+    float: none !important;
+    width: 100% !important;
+    max-width: 400px !important;
+    margin: 0 auto 1.5rem !important;
+    display: block !important;
+  }
+
+  [style*="display:flex"], [style*="display: flex"] {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 1.5rem !important;
+  }
+
+  .about-me-text, .about-me-img {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
 }

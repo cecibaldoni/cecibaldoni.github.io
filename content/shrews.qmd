@@ -209,7 +209,7 @@ ggplot(raw_data, aes(x = trial, y = success, color = category)) +
 
 ### Project Collaborators {#collaborators}
 
-I conduct this research supervised by [Dr. Dina Dechmann](https://www.ab.mpg.de/person/98231/2736) at the [Max Planck Institute of Animal Behaviour](https://www.ab.mpg.de/)
+I conduct this research with [Dr. Dina Dechmann](https://www.ab.mpg.de/person/98231/2736) at the [Max Planck Institute of Animal Behaviour](https://www.ab.mpg.de/)
 
 <br> *Collaborators*: <br>
 [Prof. Dominik von Elverfeldt](https://www.uniklinik-freiburg.de/mr-en/team/elverfeldt.html), University of Freiburg, Germany <br>

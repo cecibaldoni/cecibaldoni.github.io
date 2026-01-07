@@ -26,8 +26,8 @@ title: ""
          class="thumbnail-image">
   </div>
   <div>
-    <p><strong><a href="https://www.biorxiv.org/content/10.1101/2025.05.22.654563v1.full">
-      Gene expression reveals the pancreas of Aselli as a critical organ for plasma cell differentiation in common shrew (2025 preprint)
+    <p><strong><a href="https://link.springer.com/article/10.1186/s12915-025-02420-7">
+      Gene expression reveals the pancreas of Aselli as a critical organ for plasma cell differentiation in common shrew (2025)
     </a></strong></p>
     <p>First look at molecular pathways in the Aselli pancreas, suggesting a key role in immune cell differentiation during brain‑plasticity cycles.</p>
   </div>

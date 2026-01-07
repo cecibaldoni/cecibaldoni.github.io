@@ -27,13 +27,15 @@ format:
 </div>
 ```
 <br>
-I work at the intersection of science, communication, and collaboration. 
+> Scientific discovery is a social process: it depends as much on biological data as it does on the infrastructure used to share it.
+
+My work exists at the intersection of research, technical infrastructure, and community leadership.
 
 [My current work](shrews.qmd) centers on the cognitive compromises of the common shrew, a model species for studying brain size plasticity and behavior.
 
-I combine research with hands-on leadership to build communities that empower learning and collaboration. I’m passionate about **facilitating workshops**, supporting digital collaboration, and I focus on making **complex ideas accessible** and **connecting people** across fields. You can see examples of this in my [Talks & Workshops](talks.qmd) and [Projects](project.qmd) pages.
+I lead community initiatives that transform Open Science from a policy requirement into a practical workflow. This involves building the technical systems and professional networks necessary for digital collaboration. I love **facilitating workshops** and I focus on making **complex ideas accessible** and **connecting people** across fields. You can see examples of this in my [Talks & Workshops](talks.qmd) and [Projects](project.qmd) pages.
 
-I am deeply involved in [open science practices](open-science.qmd), and I aim to advance openness, transparency and reproducibility in my daily life as a researcher.<br><br> I believe openness is both a technical choice and cultural one, about how we share knowledge and invite others to build on it.
+Practicing [Open Science](open-science.qmd) is both a technical choice and a cultural one. I am committed to advancing transparency and reproducibility through literal infrastructure—ensuring data is not just "available" but actually usable.
 
 Here are a few highlights of my community impact so far:
 

@@ -15,18 +15,19 @@ I see open science as a way of working, not just a set of rules. It affects how 
 
 ### What I share
 
-I make my data, analysis scripts, and visualizations publicly available whenever possible. <br><br>Here is a list of resources where you can find my data and code: <br><br>
+I publish the data, analysis scripts, and visualizations for my research projects as a standard part of my workflow. Cleaning code for public release is a slow process, but it is the only way to ensure the results are actually reproducible. <br><br>Here is a list of resources where you can find my data and code: <br><br>
 
 - [GitHub](https://github.com/cecibaldoni?tab=repositories): my profile and open repositories, it includes some presentations for talks and workshops I organised. <br>
    →  See [Workshop and Talks](talks.qmd#talks-workshops) for more! <br>
 - [Edmond – Max Planck Society Repository](https://edmond.mpg.de/dataverse/edmond/?q=%22Baldoni%2C+Cecilia%22): in here you can find my data and scripts associated with peer-reviewed articles, but also for projects not yet published!. <br>
 
-### Community & Initiatives
+### Community Management and Governance
 
-Open science also means supporting the systems and communities that make it possible. I contribute through organizing, reviewing, and community-building:
+Open science also means supporting the systems and communities that make it possible. Here is how I contribute:
 
-- I am an **Open Science Ambassador** in the [Max Planck Society](https://www.openscience-groups.mpg.de/ambassadors), helping build local awareness and promote transparent research practices across the Max Planck Institutes.
+- I am an **Open Science Ambassador** in the [Max Planck Society](https://www.openscience-groups.mpg.de/ambassadors), I advise researchers at my institute on how to comply with data-sharing mandates and use institutional repositories.
 - I am an active member of [SORTEE](https://www.sortee.org/) (Society for Open, Reliable, and Transparent Ecology and Evolution), where I serve on the **Member Engagement Committee**.
 - In 2025, I am organising the [SORTEE Code Club](https://www.sortee.org/code_club/), a monthly online meetup exploring practical tools and workflows for open science.  
   → See the upcoming schedule [here](https://docs.google.com/spreadsheets/d/1rOOOE7ghPduwtFftG0DJJf0DXVigAdcmQ0xdEwbKQXo/edit).
 - I also work as a **Data Editor** for [PCI Ecology](https://ecology.peercommunityin.org/), where I check the accessibility and reproducibility of data and code associated with recommended preprints.
+- Code of Conduct Committee [The Carpentries](https://carpentries.org/): I resolve governance and policy disputes within this international network of data science instructors.

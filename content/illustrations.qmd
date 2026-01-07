@@ -1,6 +1,7 @@
 ---
 title: ""
 page-layout: full
+toc: false
 ---
 
 ## Illustrations
@@ -25,8 +26,8 @@ You can support my work or request a **custom commission** (graphical abstracts,
   <img src="../img/illustrations/chap1.png" class="tile small">
   <img src="../img/illustrations/chap2.png" class="tile small">
   <img src="../img/illustrations/chap3.png" class="tile small">
-  <img src="../img/illustrations/front-page.png" class="tile big">
   <img src="../img/illustrations/chap4.png" class="tile small">
+  <img src="../img/illustrations/front-page.png" class="tile big">
   <img src="../img/illustrations/generaldisc.png" class="tile small">
 </div>
 ```
@@ -34,9 +35,9 @@ You can support my work or request a **custom commission** (graphical abstracts,
 ### Vector Illustrations
 ```{=html}
 <div class="modular-gallery">
-  <img src="../img/illustrations/animals.png" class="tile small">
   <img src="../img/illustrations/hering-shrews.png" class="tile big">
   <img src="../img/illustrations/funkyanimals.png" class="tile small">
+  <img src="../img/illustrations/animals.png" class="tile small">
   <img src="../img/illustrations/lady.png" class="tile big">
   <img src="../img/illustrations/lady2.png" class="tile small">
   <img src="../img/illustrations/lady3.png" class="tile small">
@@ -48,9 +49,9 @@ You can support my work or request a **custom commission** (graphical abstracts,
 ### Science and Infographics
 ```{=html}
 <div class="modular-gallery">
-  <img src="../img/illustrations/4rs.png" class="tile small">
   <img src="../img/illustrations/shrew-lifespan.png" class="tile rectangle">
   <img src="../img/illustrations/current-biology.png" class="tile small">
+  <img src="../img/illustrations/4rs.png" class="tile small">
   <img src="../img/illustrations/common-species-paper.png" class="tile rectangle">
   <img src="../img/illustrations/PKMindmap.png" class="tile small">
   <img src="../img/illustrations/cheatsheet-closeread.png" class="tile rectangle">
@@ -84,6 +85,8 @@ You can support my work or request a **custom commission** (graphical abstracts,
   <img src="../img/illustrations/join6.svg" class="tile micro">
 </div>
 ```
+
+<br><br>
 
 These are elements from the illustrated isometric city I designed for my homepage.
 Each building represents a different section of my site — and yes, I drew all of them!

@@ -4,7 +4,9 @@ format:
   html:
     toc: false
 class: page-contact
-
+filters:
+  - fontawesome
+  - iconify
 ---
 
 ::: {.page-icon}
@@ -13,7 +15,7 @@ class: page-contact
 
 ## Get in Touch
 
-**I'd love to connect!**
+**I would love to connect!**
 
 If you have questions, ideas for collaboration, or want to chat, here’s how to find me. I typically respond within 2 business days.
 
@@ -24,15 +26,18 @@ If you have questions, ideas for collaboration, or want to chat, here’s how to
 
 ### Connect with me on Social Media!
 
-🔗 [LinkedIn](https://www.linkedin.com/in/cecilia-baldoni/)
-<br>
-📷 [Instagram](https://www.instagram.com/cecibaldoni/?hl=en)
-<br>
-🐙 [GitHub](https://github.com/cecibaldoni)
-<br>
-☕[Ko-fi](https://ko-fi.com/cecibaldoni)
+<div class="social-icons">
+  <a href="https://github.com/cecibaldoni" aria-label="GitHub">{{< fa brands github >}}</a>
+  <a href="https://www.linkedin.com/in/cecilia-baldoni/" aria-label="LinkedIn">{{< fa brands linkedin >}}</a>
+  <a href="https://bsky.app/profile/cecibaldoni.bsky.social" aria-label="Bluesky">{{< fa brands bluesky >}}</a>
+  <a href="https://substack.com/@cecibaldoni?" aria-label="Website">{{< fa bookmark >}}</a>
+  <a href="https://ko-fi.com/cecibaldoni" aria-label="Ko-fi">{{< iconify simple-icons:kofi >}}</a>
+  <a href="https://www.instagram.com/cecibaldoni/?hl=en" aria-label="Instagram">{{< fa brands instagram >}}</a>
+</div>
+
 
 ### Book a time to chat!
+
 
 📅 [Schedule time with me](https://calendar.app.google/Hb3sWw6NhEQoTWt3A) at your convenience using my Google Calendar.
 
@@ -44,24 +49,3 @@ Here’s what to know:
 - If you don’t see an open slot, just reach out by email and we’ll find another time!
 
 Looking forward to connecting!
-
-
-### Send me a message directly
-
-<form action="mailto:cbaldoni@ab.mpg.de" method="post" enctype="text/plain">
-  <label for="name">Name:</label><br>
-  <input type="text" id="name" name="name" required><br>
-  
-  <label for="email">Your Email:</label><br>
-  <input type="email" id="email" name="email" required><br>
-  
-  <label for="subject">Subject:</label><br>
-  <input type="text" id="subject" name="subject" required><br>
-  
-  <label for="message">Message:</label><br>
-  <textarea id="message" name="message" rows="5" required></textarea><br>
-  
-  <button type="submit">Send Message</button>
-</form>
-
-I look forward to hearing from you!

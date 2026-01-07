@@ -8,14 +8,23 @@ title: ""
 
 ## Talks & Workshops {#talks-workshops}
 
-### Workshop, Webinar, Unconference
-- **How to start your own Code Club** - SORTEE Unconference 5 <br>
-  *October 16th, 2025* <br>
-  [Open Guide](https://sortee.github.io/start-your-codeclub-guide/) · [Slides](https://cecibaldoni.quarto.pub/how-to-start-your-own-code-club/#/title-slide) · [Github Repo](https://github.com/SORTEE/start-your-codeclub-guide)
-- **Live from the nesting box – programming for birds** <br>
-  *October 3rd, 4th, 5th, 2025* <br>
-  [Event link](https://www.maxcine.de/events/workshop-3-live-from-the-nesting-box-programming-for-birds) · [Poster](../img/MF_Plakat.jpg){target="_blank"}
+My public speaking and teaching work is split between technical training for researchers and public engagement for broader audiences. <br> I believe that if research is not shared in an accessible way, the work is functionally incomplete.
 
+### Technical Training
+
+<br>
+
+##### *Upcoming*
+
+- **Winter School 2026** - SARA Institute of Science <br>
+  *January 23-27, 2026* <br>
+  ~ coming soon ~
+
+##### *Recent*  
+- **How to start your own Code Club** - SORTEE Unconference 5 <br>
+  *October 16th, 2025*<br>
+  [Open Guide](https://sortee.github.io/start-your-codeclub-guide/) · [Slides](https://cecibaldoni.quarto.pub/how-to-start-your-own-code-club/#/title-slide) · [Github Repo](https://github.com/SORTEE/start-your-codeclub-guide)
+  
 - **Data wrangling with {tidyverse}**  <br>
   *July 26th, 2025* <br>
   [Event link](https://sara-edu.netlify.app/summer/2025-r4b/) · [Slides](https://cecibaldoni.github.io/data-wrangling-tidyverse/#/title-slide) · [YouTube](https://youtu.be/KcyZRyf2VKM?si=kUwZT4OUbOOeGXin)
@@ -24,30 +33,53 @@ title: ""
   *May 28th, 2025* <br>
   [YouTube](https://www.youtube.com/watch?feature=shared&v=ytKZ357Xtqw) · [Slides](https://cecibaldoni.github.io/scrollytelling-quarto-closeread/#/TitleSlide)
 
-- **What is Open Science Anyway?**  
+- **What is Open Science Anyway?**  <br>
+  *February 14th, 2025* <br>
   [Event link](https://www.ab.mpg.de/events/40760/345436) · [Slides](https://github.com/cecibaldoni/OpenScience-Rado)
 
-- **SORTEE Code Club**  
+- **SORTEE Code Club**  <br>
+  *2025*<br> 
   [List of events](https://docs.google.com/spreadsheets/d/1rOOOE7ghPduwtFftG0DJJf0DXVigAdcmQ0xdEwbKQXo/edit)
 
 - **Personal Knowledge Management and Note-Taking Apps**  
+  *December 2024 - November 2025* <br>
   [Open Resources](https://github.com/cecibaldoni/PKM-workshop)
+
+### Public Engagement
+
+- **Shrinking shrews: what a small mammal can teach us about brain and behavior** <br>
+  *Univesität Konstanz, Germany · November 20th, 2025*<br>
+  [Open Science Slam](https://www.kim.uni-konstanz.de/kim-news/news-detailseite/open-science-slam-2025/) - *Invited Talk* <br>
+
+- **The curious case of the Common Shrew** <br>
+  *Hochrhein-Seminar für Mathematik und Naturwissenschaften · November 7th, 2025* <br>
+  [Event link](https://hochrhein-seminar.de/2025/11/vortrag-fuer-die-oberstufe-am-7-11-25/)
+
+- **Live from the nesting box – programming for birds** <br>
+  *MAXCINE, Germany · October 3rd, 4th, 5th, 2025* <br>
+  [Event link](https://www.maxcine.de/events/workshop-3-live-from-the-nesting-box-programming-for-birds) · [Poster](../img/MF_Plakat.jpg){target="_blank"}
+
+### In the Media
+
+- "Rare seasonal brain shrinkage in shrews is driven by water loss, not cell death" - [Max Planck Society](https://www.ab.mpg.de/743885/news_publication_25258209_transferred)
+
+- "Cervello del toporagno si restringe in inverno e rinasce in estate: c'è qualcosa da imparare?" - [Alzheimer Reise]((https://www.alzheimer-riese.it/contributi-dal-mondo/ricerche/13165-cervello-del-toporagno-si-restringe-in-inverno-e-rinasce-in-estate-ce-qualcosa-da-imparare?fbclid=IwY2xjawMufO1leHRuA2FlbQIxMQBicmlkETA0V0c4bnBRZ1RpMExPVjZrAR4a9cx52JNMZ7tzeut_eTJU4hvVoPMjMz66SovPjbggcnVJDUAil1NCbtYs0A_aem_khVQDoOrjck4yXV8uLroUg))
+
+- "Wasserverlust lässt das Gehirn von Spitzmäusen im Winter schrumpfen" - [Vbio](https://www.vbio.de/aktuelles/details?tx_news_pi1%5Bnews%5D=33565&cHash=51215d4c198198ba0a36e7c9350213c4)
+
+- "Rare seasonal brain shrinkage in shrews is driven by water loss, not cell death, MRI study reveals" - [Phys Org](https://phys.org/news/2025-08-rare-seasonal-brain-shrinkage-shrews.html)
+  
+- "Shrews' Seasonal Brain Shrinkage Tied to Water Loss" - [MirageNews](https://www.miragenews.com/shrews-seasonal-brain-shrinkage-tied-to-water-1524928/#:~:text=Cecilia%20Baldoni%2C%20a%20postdoctoral%20researcher,the%20same%2C%22%20Nieland%20adds.)
+
+- "Shrews That Shrink Their Brains with the Seasons May Hold Clues to Treating Brain Disease" - [DongaScience](https://www.dongascience.com/en/news/73769)
+  
+- "Gene Expression Shifts as Shrews Shrink and Regrow Their Brains" - [The Scientist](https://www.the-scientist.com/gene-expression-shifts-as-shrews-shrink-and-regrow-their-brains-72364)
 
 ---
 
-### Conference Talks & Seminars
+### Scientific Conferences and Seminars
 
 #### 2025
-
-- **Baldoni C.** <br>
-  *Invited Talk* — [Open Science Slam - Univesität Konstanz](https://www.kim.uni-konstanz.de/kim-news/news-detailseite/open-science-slam-2025/) <br>
-  Konstanz, Germany - 20/11/2025 <br>
-  ***Shrinking shrews: what a small mammal can teach us about brain and behavior***
-  
-- **Baldoni C.** <br> 
-  *Invited Seminar* — *Hochrhein-Seminar für Mathematik und Naturwissenschaften* <br>
-  Online - 07/11/2025 <br>
-  ***The curious case of the Common Shrew***
   
 - **Baldoni C.** & Dechmann D. <br>
   *Beyond the standard: Unconventional vertebrate models in biomedicine, EMBO* <br>

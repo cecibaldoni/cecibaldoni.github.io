@@ -1,6 +1,13 @@
 ---
 title: ""
 title-block-banner: false
+include-after-body:
+  text: |
+    <style>
+      #quarto-margin-sidebar {
+        visibility: hidden;
+      }
+    </style>
 ---
 
 # Cecilia Baldoni
@@ -9,18 +16,19 @@ title-block-banner: false
 
 <img src="img/back.JPG" alt="" style="width: 40%; float: left; margin-right: 40px;"/>
 
-Welcome to my website! <br><br>
-I am an Early Career Researcher at the [Max Planck Institute of Animal Behaviour](https://www.ab.mpg.de/) where I explore how the brain and environment shape adaptable minds.<br><br>
+I am a researcher at the [Max Planck Institute of Animal Behaviour](https://www.ab.mpg.de/) where I explore how brain and environment shape how animals think.<br><br>
 
-Alongside my work, I’m dedicated to creating spaces where **science and community** come together to share knowledge and spark collaboration.<br><br>
+Beyond the lab, I lead community operations and open science initiatives. My work focuses on building the technical systems and professional networks that allow researchers to share knowledge and automate their workflows at scale.
 
-Dive into the interactive city below to explore my projects, workshops, open science efforts, and community activities.<br><br>
+**Dive into the interactive city below to explore my projects, workshops, open science efforts, and community activities**.<br><br>
 <br>
 
 This website won the [Best Personal Academic Website contest](https://theacademicdesigner.com/) in 2025, for the Best Interactive website! Read what the judges had to say about it [here](https://theacademicdesigner.com/2025/winners-of-the-best-personal-academic-websites-contest-2025/)!
 <br>
 
 ![](img/BPAWC.png){width="500px" fig-align="center"}
+
+
 
 ## Explore the City
 

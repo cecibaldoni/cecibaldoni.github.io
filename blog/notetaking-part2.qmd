@@ -6,7 +6,7 @@ image: img/grampasimpson.gif
 categories: [PKM, note-taking]
 ---
 
-# Is Note-Taking as Powerful as I Think? (A text mining journey)
+# A text mining journey
 
 In the first part of this series, I made a plot.
 

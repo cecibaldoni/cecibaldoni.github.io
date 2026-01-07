@@ -1,52 +1,102 @@
-/*-- scss:uses --*/
+/* 1. Define Variables using CSS syntax */
+:root {
+  --linen: #fff7ef;
+  --chickpea: #ffcf85;
+  --coral: #eb7447;
+  --lightgreen: #E3F2FF;
+  --blue: #27a7d8;
+  --evergreen: #084024;
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&display=swap");
+  --primary: var(--coral);
+  --secondary: var(--blue);
+  --pop: var(--chickpea);
+  --light: var(--lightgreen);
+  --dark: var(--evergreen);
+
+  --body-bg: var(--linen);
+  --body-color: var(--evergreen);
+}
+
+/* 2. Base Styles */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..800&family=Space+Grotesk:wght@300..700&display=swap');
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  text-align: justify;
+  color: var(--body-color);
+  background-color: var(--body-bg);
+}
 
 h1, h2, h3, h4, h5, h6 {
-  color: #4F5D48; 
-  font-family: "News Cycle", "Arial Narrow Bold", sans-serif;
+  font-family: "JetBrains Mono", monospace;
+  color: var(--dark);
+  text-align: left;
 }
 
-a {
-  color: #A25B43; 
-  text-decoration: none; 
+/* 3. Link Styles (Expanded from nested SCSS) */
+p a {
+  text-decoration: none;
+  color: var(--secondary);
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
 }
 
-a:hover {
-  color: #6F4E37; 
-  text-decoration: underline;
+p a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  width: 100%;
+  height: 4px;
+  background-color: hsla(207, 100%, 90%, .75);
+  z-index: -1;
+  transition: all .3s ease-in-out;
 }
 
-/* Navbar Styles */
+p a:hover::before {
+  bottom: 0;
+  height: 100%;
+}
+
+/* 4. Navbar Styles */
 .navbar {
-  background-color: #A9CBB7; 
-  font-family: "News Cycle", "Arial Narrow Bold", sans-serif !important;
-  font-size: 20px;
-  font-weight: bold;
-  border-bottom: 1px solid #aaa; 
+  background-color: var(--primary);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1.3rem;
+  font-weight: 700;
+  border-bottom: 2px solid var(--pop);
 }
 
 .navbar a {
-  color: #6F8B74;
+  color: var(--body-bg);
+  transition: color 0.5s ease;
+}
+
+.navbar a:active {
+  color: white;
 }
 
 .navbar a:hover {
-  color: #6F4E37; 
+  color: var(--pop);
 }
 
-/* background color for Closeread sections */
+/* 5. Closeread Sections */
 .cr-section {
-  background-color: #F3EDE2 !important; 
+  background-color: var(--body-bg) !important; 
 }
 
 .narrative {
-  font-family: "Poppins", sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   font-size: 18px;
-  background-color: rgba(178, 205, 227, 0.8)!important; 
-  color: #1D3C1F !important; /* $darkgreen */
+  background-color: rgba(227, 242, 255, 0.8) !important; /* Based on lightgreen */
+  color: var(--dark) !important;
   text-align: justify;
   border-radius: 15px !important;
+  padding: 20px;
 }
 
 .cr-section .sticky-col .sticky-col-stack .cr-active {

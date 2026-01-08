@@ -83,12 +83,12 @@ My public speaking and teaching work is split between technical training for res
   
 - **Baldoni C.** & Dechmann D. <br>
   *Beyond the standard: Unconventional vertebrate models in biomedicine, EMBO* <br>
-  Edinburg, UK - 12/06/2025 <br>
+  Edinburg, UK  <br>
   ***The shrew as a model for brain shrinkage without neurodegeneration***
   
 - **Baldoni C.** <br>
   *Invited Seminar* — *Messerli Institute* <br>
-  Vienna, Austria - 17/03/2025 <br>
+  Vienna, Austria  <br>
   ***Shrinking Shrews: Cognitive Challenges in a Changing Brain***
   
   
@@ -96,46 +96,54 @@ My public speaking and teaching work is split between technical training for res
 
 - **Baldoni C.**, Farantouri M., Raptis K., Nourani E., Dechmann D.  <br>
   *International Society for Behavioral Ecology (ISBE)* <br>
-  Melbourne, Australia - 01/10/2024 <br>
+  Melbourne, Australia  <br>
   ***Seasonal Brain Size Variation and Its Impact on Spatial Navigation and Learning in the Common Shrew (*Sorex araneus*)***
 
 #### 2023
 
 - **Baldoni C.**, von Elverfeldt D., Dechmann D.  <br>
-  *MPIAB RADO Seminar, Radolfzell, Germany*  
+  *Wikelski Department Seminar*
+  Radolfzell, Germany  <br>
   ***News from the Shrews: Brain structure during Dehnel’s phenomenon from neuroimaging***
 
 - **Baldoni C.**, Farantouri M., Raptis K., Nourani E., Dechmann D.  <br>
-  *Animal Behaviour Conference, Bielefeld, Germany*  
+  *Animal Behaviour Conference* <br>
+  Bielefeld, Germany <br>
   ***Brain size and spatial learning in the common shrew (*Sorex araneus*)***
 
 - **Baldoni C.**, Nourani E., Dechmann D.  <br>
-  *IV Convegno Nazionale sui Piccoli Mammiferi, Grosseto, Italy*  
+  *IV Convegno Nazionale sui Piccoli Mammiferi* <br>
+  Grosseto, Italy <br>
   ***Seasonal brain size changes affect spatial learning in common shrews (*Sorex araneus*)***
 
 #### 2022
 
 - **Baldoni C.**, Dechmann D.  <br>
-  *Animal Behaviour Society, San José, Costa Rica*  
+  *Animal Behaviour Society* <br>
+  San José, Costa Rica <br>
   ***Seasonal brain changes impact associative learning in common shrews (*Sorex araneus*)***
 
 
 #### 2019
 
 - **Baldoni C.**, Scaravelli D., et al.  <br>
-  *IV Italian Bat Conference, Padova, Italy*  
+  *IV Italian Bat Conference* <br>
+  Padova, Italy <br>
   ***Nocturnal bat migration at the bird ringing station ‘Bocca di Caset’***
 
 - **Baldoni C.**, Cicero M., et al.  <br>
-  *XX Italian Ornithology Conference, Naples, Italy*  
+  *XX Italian Ornithology Conference* <br>
+  Naples, Italy <br>
   ***Citizen-science approach to Ring-necked parakeet distribution in Bologna***
 
 - **Baldoni C.**, Brucks D., et al.  <br>
-  *ASAB Summer Conference, Konstanz, Germany*  
+  *ASAB Summer Conference* <br>
+  Konstanz, Germany <br>
   ***Self-control in two macaw species using a rotating paradigm***
 
 #### 2018
 
 - **Baldoni C.**, Giglio G., Scaravelli D.  <br>
-  *II European Meeting of Young Ornithologists, Torino, Italy*  
+  *II European Meeting of Young Ornithologists* <br>
+  Torino, Italy <br>
   **Effects of fire on birds in Mediterranean woods**

@@ -30,7 +30,7 @@ If you have questions, ideas for collaboration, or want to chat, here’s how to
   <a href="https://github.com/cecibaldoni" aria-label="GitHub">{{< fa brands github >}}</a>
   <a href="https://www.linkedin.com/in/cecilia-baldoni/" aria-label="LinkedIn">{{< fa brands linkedin >}}</a>
   <a href="https://bsky.app/profile/cecibaldoni.bsky.social" aria-label="Bluesky">{{< fa brands bluesky >}}</a>
-  <a href="https://substack.com/@cecibaldoni?" aria-label="Website">{{< fa bookmark >}}</a>
+  <a href="https://substack.com/@cecibaldoni" aria-label="Substack">{{< fa bookmark >}}</a>
   <a href="https://ko-fi.com/cecibaldoni" aria-label="Ko-fi">{{< iconify simple-icons:kofi >}}</a>
   <a href="https://www.instagram.com/cecibaldoni/?hl=en" aria-label="Instagram">{{< fa brands instagram >}}</a>
 </div>

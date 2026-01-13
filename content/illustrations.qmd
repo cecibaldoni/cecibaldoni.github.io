@@ -84,6 +84,12 @@ You can support my work or request a **custom commission** (graphical abstracts,
   <img src="../img/illustrations/join5.svg" class="tile micro">
   <img src="../img/illustrations/join6.svg" class="tile micro">
 </div>
+
+<div class="modular-gallery">
+  <img src="../img/illustrations/ceci_shirt.png" class ="tile small">
+  <img src="../img/illustrations/shrew-tshirt-round.png" class ="tile small">
+  <img src="../img/illustrations/Logo.png" class ="tile small">
+</div>
 ```
 
 <br><br>

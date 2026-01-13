@@ -25,8 +25,8 @@ website:
     right:
       - text: "{{< iconify fa6-brands:google-scholar >}}"
         href: https://scholar.google.com/citations?user=mxM_Py8AAAAJ&hl=en&oi=sra
-      - text: "{{< iconify simple-icons:kofi >}}"
-        href: https://ko-fi.com/cecibaldoni  
+      - text: "{{< iconify garden:bookmark-fill-12 >}}"
+        href: https://substack.com/@cecibaldoni
       - text: "{{< iconify meteor-icons:bluesky >}}"
         href: https://bsky.app/profile/cecibaldoni.bsky.social
       - icon: instagram

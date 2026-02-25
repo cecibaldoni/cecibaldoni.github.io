@@ -16,11 +16,15 @@ My public speaking and teaching work is split between technical training for res
 
 ##### *Upcoming*
 
-- **Winter School 2026** - SARA Institute of Science <br>
-  *January 23-27, 2026* <br>
-  ~ coming soon ~
+- **Software Carpentry Workshop** - Philipps University Marburg <br>
+  *March 3-4, 2026* <br>
+  [Event link](https://jengelmann.github.io/2026-03-03-Phillips-University-Marburg-Online/)
 
 ##### *Recent*  
+- **Winter School 2026** - SARA Institute of Science <br>
+  *January 23-27, 2026* <br>
+  [Github Repo](https://github.com/cecibaldoni/SARA-WW-2026)
+  
 - **How to start your own Code Club** - SORTEE Unconference 5 <br>
   *October 16th, 2025*<br>
   [Open Guide](https://sortee.github.io/start-your-codeclub-guide/) · [Slides](https://cecibaldoni.quarto.pub/how-to-start-your-own-code-club/#/title-slide) · [Github Repo](https://github.com/SORTEE/start-your-codeclub-guide)
@@ -46,6 +50,10 @@ My public speaking and teaching work is split between technical training for res
   [Open Resources](https://github.com/cecibaldoni/PKM-workshop)
 
 ### Public Engagement
+
+- **Building Inclusive Computational Skills** <br>
+  *WiCS+E · February 23rd, 2026* <br>
+  [Event link](https://www.eventbrite.co.uk/e/building-inclusive-computational-skills-online-panel-discussion-tickets-1981353031253) · [Slides](https://cecibaldoni.github.io/WiCS-panel/#/title-slide)
 
 - **Shrinking shrews: what a small mammal can teach us about brain and behavior** <br>
   *Univesität Konstanz, Germany · November 20th, 2025*<br>
@@ -75,6 +83,9 @@ My public speaking and teaching work is split between technical training for res
   
 - "Gene Expression Shifts as Shrews Shrink and Regrow Their Brains" - [The Scientist](https://www.the-scientist.com/gene-expression-shifts-as-shrews-shrink-and-regrow-their-brains-72364)
 
+- "Scientists found that this tiny mammal ‘regrows’ its brain in winter. And it could help cure Alzheimer’s" - [Discover Wildlife](https://www.discoverwildlife.com/animal-facts/mammals/common-shrew-shrink)
+
+- "Why this mammal eats its own brain" - [Washington Post](https://www.washingtonpost.com/climate-environment/2022/11/30/shrews-shrink-regrow-own-brains/)
 ---
 
 ### Scientific Conferences and Seminars

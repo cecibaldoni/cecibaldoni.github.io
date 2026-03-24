@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2026-03-24">
+<meta name="description" content="This post is about project management. No, it does not offer solutions because solutions don’t exist.">
 
-<title>Blog – Cecilia Baldoni</title>
+<title>How to keep up when you’re gorging yourself with tasks – Cecilia Baldoni</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -34,8 +36,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="../img/shrew.png" rel="icon" type="image/png">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -74,65 +74,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -162,7 +104,7 @@ window.Quarto = {
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../blog/index.html" aria-current="page"> 
+    <a class="nav-link" href="../blog/index.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
@@ -210,21 +152,46 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(12)</span></div><div class="category" data-category="Y2xvc2VyZWFk">closeread <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZGlzc2VydGF0aW9u">dissertation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="aW5mb2dyYXBoaWM=">infographic <span class="quarto-category-count">(2)</span></div><div class="category" data-category="bWljcm9ibG9nZ2luZw==">microblogging <span class="quarto-category-count">(2)</span></div><div class="category" data-category="bm90ZS10YWtpbmc=">note-taking <span class="quarto-category-count">(7)</span></div><div class="category" data-category="b3BlbiUyMHJlc291cmNlcw==">open resources <span class="quarto-category-count">(2)</span></div><div class="category" data-category="b3BlbiUyMHNjaWVuY2U=">open science <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UGhE">PhD <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UEtN">PKM <span class="quarto-category-count">(4)</span></div><div class="category" data-category="cHJvamVjdCUyMG1hbmFnZW1lbnQ=">project management <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cXVhcnRv">quarto <span class="quarto-category-count">(2)</span></div><div class="category" data-category="cXVhcnRvc2U=">quartose <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cmVhZGluZw==">reading <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c2tldGNobm90aW5n">sketchnoting <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VGlkeVR1ZXNkYXk=">TidyTuesday <span class="quarto-category-count">(1)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#the-first-problem-is-location-not-time" id="toc-the-first-problem-is-location-not-time" class="nav-link active" data-scroll-target="#the-first-problem-is-location-not-time">The first problem is Location, not Time</a></li>
+  <li><a href="#what-i-actually-use" id="toc-what-i-actually-use" class="nav-link" data-scroll-target="#what-i-actually-use">What I actually use</a></li>
+  <li><a href="#where-it-actually-falls-apart" id="toc-where-it-actually-falls-apart" class="nav-link" data-scroll-target="#where-it-actually-falls-apart">Where it actually falls apart</a></li>
+  <li><a href="#the-system-doesnt-need-to-make-sense-to-anyone-else" id="toc-the-system-doesnt-need-to-make-sense-to-anyone-else" class="nav-link" data-scroll-target="#the-system-doesnt-need-to-make-sense-to-anyone-else">The System Doesn’t Need to Make Sense to Anyone Else</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Blog</h1>
-</div>
+<h1 class="title">How to keep up when you’re gorging yourself with tasks</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">note-taking</div>
+    <div class="quarto-category">PKM</div>
+    <div class="quarto-category">project management</div>
+  </div>
+  </div>
 
+<div>
+  <div class="description">
+    This post is about project management. No, it does not offer solutions because solutions don’t exist.
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">March 24, 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -234,380 +201,60 @@ window.Quarto = {
 </header>
 
 
-<div class="page-icon">
-<p><img src="../img/icons/van.svg" alt="" aria-hidden="true"></p>
+<p>I think about Moria from <em>One Piece</em> sometimes.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/moria.png" class="img-fluid figure-img"></p>
+<figcaption>Gecko Moria, character from the manga One Piece, swell up from all the souls he had for dinner.</figcaption>
+</figure>
 </div>
-
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="listing-actions-group">
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="bm90ZS10YWtpbmclMkNQS00lMkNwcm9qZWN0JTIwbWFuYWdlbWVudA==" data-listing-date-sort="1774310400000" data-listing-file-modified-sort="1774367675246" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1569">
-<div class="thumbnail"><a href="../blog/project-management.html" class="no-external">
-
-<img loading="lazy" src="../blog/img/moria.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/project-management.html" class="no-external">How to keep up when you’re gorging yourself with tasks</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bm90ZS10YWtpbmc='); return false;">note-taking</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UEtN'); return false;">PKM</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvamVjdCUyMG1hbmFnZW1lbnQ='); return false;">project management</div>
-
-</div>
-<div class="delink listing-description"><a href="../blog/project-management.html" class="no-external">
-<p>This post is about project management. No, it does not offer solutions because solutions don’t exist.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../blog/project-management.html" class="no-external">
-<div class="listing-date">
-2026-03-24
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="cmVhZGluZw==" data-listing-date-sort="1767139200000" data-listing-file-modified-sort="1774367675119" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2037">
-<div class="thumbnail"><a href="../blog/half-a-year-of-reading.html" class="no-external">
-
-<p class="card-img-top"><img loading='lazy' src="img/book-covers/waxler1.jpeg"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/half-a-year-of-reading.html" class="no-external">Half a year of reading</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('cmVhZGluZw=='); return false;">reading</div>
-
-</div>
-<div class="delink listing-description"><a href="../blog/half-a-year-of-reading.html" class="no-external">
-<p>My “end-of-the-year” reading summary. But mostly is about how I climbed up from a bookless pit.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../blog/half-a-year-of-reading.html" class="no-external">
-<div class="listing-date">
-2025-12-31
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="bWljcm9ibG9nZ2luZyUyQ25vdGUtdGFraW5n" data-listing-date-sort="1765756800000" data-listing-file-modified-sort="1774367675119" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="328">
-<div class="thumbnail"><a href="../blog/consequences-notetaking.html" class="no-external">
-
-<img loading="lazy" src="../blog/img/sherlockholmes.gif" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/consequences-notetaking.html" class="no-external">The unintended consequence of note-taking</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bWljcm9ibG9nZ2luZw=='); return false;">microblogging</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bm90ZS10YWtpbmc='); return false;">note-taking</div>
-
-</div>
-<div class="delink listing-description"><a href="../blog/consequences-notetaking.html" class="no-external">
-<p>Spoiler alert: it’s about self-soothing</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../blog/consequences-notetaking.html" class="no-external">
-<div class="listing-date">
-2025-12-15
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="bm90ZS10YWtpbmclMkNQaEQlMkNkaXNzZXJ0YXRpb24=" data-listing-date-sort="1762214400000" data-listing-file-modified-sort="1774367675119" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="25" data-listing-word-count-sort="4940">
-<div class="thumbnail"><a href="../blog/dissertation-journal.html" class="no-external">
-
-<img loading="lazy" src="../blog/img/generaldisc.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/dissertation-journal.html" class="no-external">The Dissertation Journal that saved my sanity</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bm90ZS10YWtpbmc='); return false;">note-taking</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UGhE'); return false;">PhD</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZGlzc2VydGF0aW9u'); return false;">dissertation</div>
-
-</div>
-<div class="delink listing-description"><a href="../blog/dissertation-journal.html" class="no-external">
-<p>Doing a PhD means trying 100 systems and stick to 3. If you have to try something this year, let it be a dissertation journal</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../blog/dissertation-journal.html" class="no-external">
-<div class="listing-date">
-2025-11-04
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="bWljcm9ibG9nZ2luZw==" data-listing-date-sort="1759449600000" data-listing-file-modified-sort="1774367675246" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="417">
-<div class="thumbnail"><a href="../blog/microblogging.html" class="no-external">
-
-<img loading="lazy" src="../blog/img/otto-blanket.jpeg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/microblogging.html" class="no-external">An experiment in microblogging</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bWljcm9ibG9nZ2luZw=='); return false;">microblogging</div>
-
-</div>
-<div class="delink listing-description"><a href="../blog/microblogging.html" class="no-external">
-<p>Being home sick has its pros: more writing time for experiments</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../blog/microblogging.html" class="no-external">
-<div class="listing-date">
-2025-10-03
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="bm90ZS10YWtpbmclMkNza2V0Y2hub3Rpbmc=" data-listing-date-sort="1758153600000" data-listing-file-modified-sort="1774367675246" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2489">
-<div class="thumbnail"><a href="../blog/sketchnoting-beginners.html" class="no-external">
-
-<img loading="lazy" src="../blog/img/sketchnotes.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/sketchnoting-beginners.html" class="no-external">So, you want to start Sketchnoting (but don’t know how)</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bm90ZS10YWtpbmc='); return false;">note-taking</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('c2tldGNobm90aW5n'); return false;">sketchnoting</div>
-
-</div>
-<div class="delink listing-description"><a href="../blog/sketchnoting-beginners.html" class="no-external">
-<p>This post is for you if you’ve ever looked at a sketchnote and thought: “That’s cool, but I could never do that.”</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../blog/sketchnoting-beginners.html" class="no-external">
-<div class="listing-date">
-2025-09-18
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-categories="UEtNJTJDbm90ZS10YWtpbmc=" data-listing-date-sort="1755561600000" data-listing-file-modified-sort="1774367675246" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="20" data-listing-word-count-sort="3980">
-<div class="thumbnail"><a href="../blog/notetaking-part2.html" class="no-external">
-
-<img loading="lazy" src="../blog/img/grampasimpson.gif" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/notetaking-part2.html" class="no-external">Is Note-Taking as powerful as I think? (2/2)</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('UEtN'); return false;">PKM</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bm90ZS10YWtpbmc='); return false;">note-taking</div>
-
-</div>
-<div class="delink listing-description"><a href="../blog/notetaking-part2.html" class="no-external">
-<p>Part 2 of 2 - This post shows how I dived into my digital journal to extract information about my writing style, my weekly mood, and yes, make more plots.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../blog/notetaking-part2.html" class="no-external">
-<div class="listing-date">
-2025-08-19
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="7" data-categories="UEtNJTJDbm90ZS10YWtpbmc=" data-listing-date-sort="1754179200000" data-listing-file-modified-sort="1774367675246" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="19" data-listing-word-count-sort="3695">
-<div class="thumbnail"><a href="../blog/notetaking-part1.html" class="no-external">
-
-<p class="card-img-top"><img loading='lazy' src="img/homer-simpson-brain.gif"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/notetaking-part1.html" class="no-external">Note-Taking is more powerful than you think (1/2)</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('UEtN'); return false;">PKM</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bm90ZS10YWtpbmc='); return false;">note-taking</div>
-
-</div>
-<div class="delink listing-description"><a href="../blog/notetaking-part1.html" class="no-external">
-<p>Part 1 of 2 - This post shows how I transformed simple daily work logs in Logseq into a powerful data visualization in R to better understand my own strengths and interests.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../blog/notetaking-part1.html" class="no-external">
-<div class="listing-date">
-2025-08-03
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="8" data-categories="VGlkeVR1ZXNkYXklMkNxdWFydG8lMkNxdWFydG9zZQ==" data-listing-date-sort="1752105600000" data-listing-file-modified-sort="1774367675246" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1827">
-<div class="thumbnail"><a href="../blog/quartose.html" class="no-external">
-
-<img loading="lazy" src="https://i0.wp.com/imgs.xkcd.com/blag/doghouse_color_wheel_altered.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/quartose.html" class="no-external">TidyTuesday and Quartose</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('VGlkeVR1ZXNkYXk='); return false;">TidyTuesday</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cXVhcnRv'); return false;">quarto</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cXVhcnRvc2U='); return false;">quartose</div>
-
-</div>
-<div class="delink listing-description"><a href="../blog/quartose.html" class="no-external">
-<p>An experiment in structuring a TidyTuesday exploration using interactive elements from <code>quartose</code></p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../blog/quartose.html" class="no-external">
-<div class="listing-date">
-2025-07-10
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="9" data-categories="UEtNJTJDbm90ZS10YWtpbmclMkNvcGVuJTIwcmVzb3VyY2Vz" data-listing-date-sort="1750464000000" data-listing-file-modified-sort="1774367675119" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="809">
-<div class="thumbnail"><a href="../blog/awesome-pkm.html" class="no-external">
-
-<img loading="lazy" src="../blog/img/PKM-thumbnail.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/awesome-pkm.html" class="no-external">From “Not Sure How It Works” to “Maybe This Will Help Someone”</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('UEtN'); return false;">PKM</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bm90ZS10YWtpbmc='); return false;">note-taking</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('b3BlbiUyMHJlc291cmNlcw=='); return false;">open resources</div>
-
-</div>
-<div class="delink listing-description"><a href="../blog/awesome-pkm.html" class="no-external">
-<p>This is the story on how I went from Confused Logseq User to Accidental Curator of an awesome academic PKM repository</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../blog/awesome-pkm.html" class="no-external">
-<div class="listing-date">
-2025-06-21
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="10" data-categories="cXVhcnRvJTJDY2xvc2VyZWFkJTJDaW5mb2dyYXBoaWMlMkNvcGVuJTIwcmVzb3VyY2Vz" data-listing-date-sort="1748649600000" data-listing-file-modified-sort="1774367675119" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="405">
-<div class="thumbnail"><a href="../blog/closeread-cheatsheet.html" class="no-external">
-
-<img loading="lazy" src="../blog/img/cheatsheet-closeread-thumbnail.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/closeread-cheatsheet.html" class="no-external">A Cheatsheet for Closeread (or the one where I gave a talk and brought more than slides)</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('cXVhcnRv'); return false;">quarto</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Y2xvc2VyZWFk'); return false;">closeread</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('aW5mb2dyYXBoaWM='); return false;">infographic</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('b3BlbiUyMHJlc291cmNlcw=='); return false;">open resources</div>
-
-</div>
-<div class="delink listing-description"><a href="../blog/closeread-cheatsheet.html" class="no-external">
-<p>This post started with a talk invitation about Closeread and scrollytelling. It ended with a full demo and a printable cheatsheet, all thanks to aesthetic joy and the refusal to keep checking the same three lines of syntax.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../blog/closeread-cheatsheet.html" class="no-external">
-<div class="listing-date">
-2025-05-31
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="11" data-categories="b3BlbiUyMHNjaWVuY2UlMkNpbmZvZ3JhcGhpYw==" data-listing-date-sort="1746662400000" data-listing-file-modified-sort="1774367675119" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1276">
-<div class="thumbnail"><a href="../blog/4rs.html" class="no-external">
-
-<img loading="lazy" src="../blog/img/4rs-thumbnail.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/4rs.html" class="no-external">The 4 Rs, and why they’re so confusing</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('b3BlbiUyMHNjaWVuY2U='); return false;">open science</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('aW5mb2dyYXBoaWM='); return false;">infographic</div>
-
-</div>
-<div class="delink listing-description"><a href="../blog/4rs.html" class="no-external">
-<p>This post started with a diagram I made for a talk, and ended with a discussion that showed me just how slippery scientific terms can be.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../blog/4rs.html" class="no-external">
-<div class="listing-date">
-2025-05-08
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+<p>He’s a character who gorges himself on souls, eating them like bonbons to add to his power. As he does, he becomes more powerful and fearsome, but at the same he gradually loses his own consciousness, his mind fragmenting under the weight of what he’s taken in.</p>
+<p>There’s a lesson here somewhere, and if you swap <em>souls</em> for <em>projects</em>, it becomes eerily fitting. It maps perfectly onto what I feel when I say <em>yes</em> to too many projects at once: you gorge on too many and you slowly lose consciousness.</p>
+<p>Yes, I feel like Moria. Minus the whiny attitude (he’s a wimp. You wouldn’t say with that badass pose).</p>
+<p>If you have small tasks or things that finish in a sitting, my approach is quite simple: <em>if I’m thinking about it now, I can do it now.</em> It honestly works only with emails, slack messages, or anything that would not open a Pandora vase filled with distraction. But what about big projects? What about conflicting priorities stacked on top of each other? What about <em>deadlines</em>?</p>
+<p>Well, stick with me, while we swim into the scary waters of <em>project management</em>.</p>
+<section id="the-first-problem-is-location-not-time" class="level2">
+<h2 class="anchored" data-anchor-id="the-first-problem-is-location-not-time">The first problem is Location, not Time</h2>
+<p>Everyone will tell you the first problem in project management is time. Managing your time. Blocking your calendar. Getting ahead of deadlines.</p>
+<p>Not necessarily wrong, of course you need to block your calendar.</p>
+<p>For example, a friend of mine swears by fake deadlines. They create an artificial cutoff before the real one arrives, so they can be ahead of the panic. It’s a good system, nothing wrong with it, <em>if it works</em>. I think my brain knows the difference between the real and the fake deadline. The real deadline lives somewhere deep and irretrievable. Unless I forget the real one entirely (in which case this whole metaphor falls apart).</p>
+<p>Even if you block the calendar and act upon fake/real deadlines, how do you know what to do? How do you stay on top of the soul-eating (pun intended) tasks, in the correct order, while organising different collborators or levels of priorities?</p>
+<p>So the real question becomes: where does a project actually <em>live?</em></p>
+<p>I don’t mean in what folder or under what tag. I mean: what is the <em>journey</em> this project takes through your systems, and does each stop serve a purpose?</p>
+<p>Consider a real project as it arrives: it starts as an email thread, or a GitHub issue. Maybe someone else initiated it; maybe you did. Maybe it was a conversation while having coffee, or during a meeting focused on something else entirely. Either way, it’s sitting in an inbox that was not designed to hold ongoing thoughts. So you move it. Into a note-taking app, <em>maybe</em>, or onto a whiteboard, or both. How to forget the everlasting analog notebook. I hope it does not leave in a paper you found stacked under your desk, but it might. And now it exists in two places, maybe three if we count your brain. You update one and not the other. Three weeks later you’re looking at your calendar block (the one you made in a rare moment of optimism) and you realize the version of the project that actually exists is the one in your notes, not the one you scheduled time for. What do you do now?</p>
+<p>The problem is that the same project is <em>living</em> in three different places, each one showing a different version of the truth, and none of them are talking to each other. And no, I will not be swayed into thinking that it’s because <em>“you’re tracking too much”</em>. Because there’s no such a thing as taking too many notes (am I obsessed? Not the topic of this blogpost).</p>
+<p>My answer to this mess is: transfer your knowledge with intention. Each tool should hold a different <em>phase</em> or <em>type</em> of engagement with the project. The question to ask yourself is less “where should this go?” and more “what am I doing with it <em>here</em>, and does that change when it moves <em>there</em>?”</p>
+</section>
+<section id="what-i-actually-use" class="level2">
+<h2 class="anchored" data-anchor-id="what-i-actually-use">What I actually use</h2>
+<p>The other problem with opening up your workflow for others to see is that it sets up the wrong expectations. <em>She’s writing about project management</em>, you might think, <em>then she might be extremely organised</em>. Well, yes and no. I feel extremely organised, myself; but that does not exclude that my system is based on four colored markers, three apps, and a Friday panic.</p>
+<p>So here is a breakdown on what I use, and how.</p>
+<p><strong>Logseq</strong> is where things land first. I wrote about this so many times that it’s becoming boring and obsessing. I know it, you know it, and it’s not gonna change (and again, you don’t have to use Logseq if you can use whatever works for you). This is the place where emails, conversations, follow-ups, half-formed ideas gets dumped without friction. The powerful thing is that Logseq forces a choice immediately: is this thought attached to a <em>date</em> (in which case it’s a task) or a <em>project page</em> (in which case it’s part of something larger)? You can’t just write a note that floats. The structure of this app forces you to think before dumping.</p>
+<p><strong>Google Calendar</strong> is the only place with real deadlines attached. Not fake deadlines, not inspirational time blocks, but actual commitments. If it’s not on the calendar, it doesn’t exist, and by extension it doesn’t have a deadline. This is harsh, but also… the calendar never lies to me. Unlike my brain.</p>
+<p><strong>Analog notebook</strong> - yes, it still exists. I like to think that it holds a purpose, and maybe it does. It’s mostly rambling if I’m honest. And mostly from when I am away from my computer and I can’t drop that rambling anywhere else. It does help me think tho, and sediment things I need to think about (see also “witheboard”). It is also where I doodle, because digital sucks for that!</p>
+<p><strong>GitHub</strong> is where I work with other people, and where the work is mainly, but not exclusively, codable. And by that I do not mean only scripts and code, but also encodable. Like messages, or responsibility that can be converted into a specific format. For example, GitHub could be a place where a community of people working in the same project identifies who holds the duty for a specific task, and can assign a reviewer that holds you accountable for that duty. Quite handy.</p>
+<p><strong>Obsidian</strong> is for long-form thinking. When something needs coherence,and real writing (like this blogpost) it moves here. I use Obsidian to track my extremely long term This is where projects get documented properly, where the thinking sediments into something that will still make sense in three weeks.</p>
+<p><strong>The whiteboard</strong> — and I’m aware of the absurdity here. I am a professional promoter of note-taking apps and digitalization. I have strong opinions about knowledge management. And yet. Two whiteboards: one at home, one at work. Four colored markers. Zero shame. What the whiteboard does that none of the apps do is <em>make me think</em>. There’s something about the physicality of it that clarifies in a way that typing never does. And the thinking sediments differently. You stand in front of a whiteboard and let the problem sink in. Why haven’t I replaced it? I’ve tried. Nothing compares.</p>
+</section>
+<section id="where-it-actually-falls-apart" class="level2">
+<h2 class="anchored" data-anchor-id="where-it-actually-falls-apart">Where it actually falls apart</h2>
+<p>Three hiccups. They come up again and again.</p>
+<p><strong>1. The silent commitment.</strong> An email thread that started as a quick conversation becomes a real obligation, but you never formally entered it into any system. It lives only in the email chain. Weeks later, the other person follows up, and you think: <em>oh. That thing. I was supposed to be doing that.</em> I didn’t forget because you’re forgetful (well…). I forgot because I never moved it from “interesting correspondence” to “actual project”. It strongly goes back to “where the project lives”, doesn’t it?</p>
+<p><strong>2. The “it’s too early for this idea!” idea.</strong> Something comes up that I know matters, but it’s not time to act yet. It’s too nebulous and too fragile to assign to a project page. So it floats. It lives only in my unreliable brain. Chaos ensues.</p>
+<p><strong>3. The orphaned project.</strong> This is honestly the worst one, and it happens to me roughly 80 percent of the time. A project finishes, or should finish, but you never formally close it. It lingers as an old calendar block, an orphaned project page in Logseq. Not active, not done, just haunting you from multiple places at once.</p>
+<p>There are probably fixes for all of these. If I’d found them yet, I’d be using them (I’m not).</p>
+</section>
+<section id="the-system-doesnt-need-to-make-sense-to-anyone-else" class="level2">
+<h2 class="anchored" data-anchor-id="the-system-doesnt-need-to-make-sense-to-anyone-else">The System Doesn’t Need to Make Sense to Anyone Else</h2>
+<p>Here’s what I’ve learned: a system does not need to be elegant or universal or explicable to another human being. It needs to work.</p>
+<p>My system is inefficient by some measures. It’s analog and digital in a way that makes no sense if you read the productivity books. But it keeps me on top of the pile. It means that when I’m drowning, I can still see the surface.</p>
+<p>The most efficient system is not the one that works theoretically. It’s the one that works <em>in practice</em>, for your actual brain, with your actual constraints.</p>
+<p>If that system looks like madness from the outside, that’s fine. You can think about the badass pose Moria has and convince yourself that your are just absorbing power, and not losing consciousness yet.</p>
+
+
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

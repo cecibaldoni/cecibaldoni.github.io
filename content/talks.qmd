@@ -16,11 +16,12 @@ My public speaking and teaching work is split between technical training for res
 
 ##### *Upcoming*
 
+
+##### *Recent*  
 - **Software Carpentry Workshop** - Philipps University Marburg <br>
   *March 3-4, 2026* <br>
   [Event link](https://jengelmann.github.io/2026-03-03-Phillips-University-Marburg-Online/)
 
-##### *Recent*  
 - **Winter School 2026** - SARA Institute of Science <br>
   *January 23-27, 2026* <br>
   [Github Repo](https://github.com/cecibaldoni/SARA-WW-2026)
@@ -90,6 +91,13 @@ My public speaking and teaching work is split between technical training for res
 
 ### Scientific Conferences and Seminars
 
+#### 2026
+
+- **Baldoni C.** <br>
+  *Invited Seminar* — *University of Tübingen* <br>
+  Tübingen, Germany  <br>
+  ***The common shrew: cognitive challenges in a changing brain***
+  
 #### 2025
   
 - **Baldoni C.** & Dechmann D. <br>

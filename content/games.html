@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Blog – Cecilia Baldoni</title>
+<title>games – Cecilia Baldoni</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -34,8 +34,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="../img/shrew.png" rel="icon" type="image/png">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -74,65 +72,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -162,7 +102,7 @@ window.Quarto = {
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../blog/index.html" aria-current="page"> 
+    <a class="nav-link" href="../blog/index.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
@@ -210,404 +150,90 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(12)</span></div><div class="category" data-category="Y2xvc2VyZWFk">closeread <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZGlzc2VydGF0aW9u">dissertation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="aW5mb2dyYXBoaWM=">infographic <span class="quarto-category-count">(2)</span></div><div class="category" data-category="bWljcm9ibG9nZ2luZw==">microblogging <span class="quarto-category-count">(2)</span></div><div class="category" data-category="bm90ZS10YWtpbmc=">note-taking <span class="quarto-category-count">(7)</span></div><div class="category" data-category="b3BlbiUyMHJlc291cmNlcw==">open resources <span class="quarto-category-count">(2)</span></div><div class="category" data-category="b3BlbiUyMHNjaWVuY2U=">open science <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UGhE">PhD <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UEtN">PKM <span class="quarto-category-count">(4)</span></div><div class="category" data-category="cHJvamVjdCUyMG1hbmFnZW1lbnQ=">project management <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cXVhcnRv">quarto <span class="quarto-category-count">(2)</span></div><div class="category" data-category="cXVhcnRvc2U=">quartose <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cmVhZGluZw==">reading <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c2tldGNobm90aW5n">sketchnoting <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VGlkeVR1ZXNkYXk=">TidyTuesday <span class="quarto-category-count">(1)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#games" id="toc-games" class="nav-link active" data-scroll-target="#games">Games</a></li>
+  <li><a href="#tools-and-apps" id="toc-tools-and-apps" class="nav-link" data-scroll-target="#tools-and-apps">Tools and Apps</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Blog</h1>
-</div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
-<div class="quarto-title-meta">
 
+<section id="games" class="level2">
+<h2 class="anchored" data-anchor-id="games">Games</h2>
+<div class="game-container">
+  <div class="game-card">
+    <img src="../img/sortee.png" alt="Open Science Bingo" class="card-thumbnail">
     
-  
-    
+    <div class="card-content">
+      <h3 class="anchored">Open Science Bingo</h3>
+      <p>My first game ever, an Open Science Bingo Game! I created it for the SORTEE Code Club session in December 2025</p>
+      
+      <div class="card-actions">
+        <a href="https://github.com/cecibaldoni/open-science-bingo" class="btn">GitHub Repo</a>
+        <a href="https://cecibaldoni.github.io/open-science-bingo/" class="btn">Play!</a>
+      </div>
+    </div>
   </div>
   
-
-
-</header>
-
-
-<div class="page-icon">
-<p><img src="../img/icons/van.svg" alt="" aria-hidden="true"></p>
-</div>
-
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="listing-actions-group">
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
+  <div class="game-card">
+    <img src="../img/der-die-das.png" alt="Der - Die - Das" class="card-thumbnail">
+    
+    <div class="card-content">
+      <h3 class="anchored">German Article Trainer</h3>
+      <p>Instead of relying on my notebook, I made a game so I can practice articles on the go!</p>
+      
+      <div class="card-actions">
+        <a href="https://github.com/cecibaldoni/der-die-das" class="btn">GitHub Repo</a>
+        <a href="https://cecibaldoni.github.io/der-die-das/" class="btn">Play!</a>
+      </div>
     </div>
-</div>
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="bm90ZS10YWtpbmclMkNQS00lMkNwcm9qZWN0JTIwbWFuYWdlbWVudA==" data-listing-date-sort="1774310400000" data-listing-file-modified-sort="1777792121034" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1569">
-<div class="thumbnail"><a href="../blog/project-management.html" class="no-external">
-
-<img loading="lazy" src="../blog/img/moria.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/project-management.html" class="no-external">How to keep up when you’re gorging yourself with tasks</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bm90ZS10YWtpbmc='); return false;">note-taking</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UEtN'); return false;">PKM</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvamVjdCUyMG1hbmFnZW1lbnQ='); return false;">project management</div>
+  </div>
+  
+    <div class="game-card">
+    <img src="../img/perfekt.png" alt="Perfekt class=" card-thumbnail"="">
+    
+    <div class="card-content">
+      <h3 class="anchored">German Perfekt Verben</h3>
+      <p>Practice the impossible world of Perfekt verbs!</p>
+      
+      <div class="card-actions">
+        <a href="https://github.com/cecibaldoni/perfekt-verben" class="btn">GitHub Repo</a>
+        <a href="https://cecibaldoni.github.io/perfekt-verben/" class="btn">Play!</a>
+      </div>
+    </div>
+  </div>
 
 </div>
-<div class="delink listing-description"><a href="../blog/project-management.html" class="no-external">
-<p>This post is about project management. No, it does not offer solutions because solutions don’t exist.</p>
-</a></div>
+</section>
+<section id="tools-and-apps" class="level2">
+<h2 class="anchored" data-anchor-id="tools-and-apps">Tools and Apps</h2>
+<div class="game-container">
+  <div class="other-card">
+    <img src="../img/lyn_blanket.jpeg" alt="Granny Square Generator" class="card-thumbnail">
+    
+    <div class="card-content">
+      <h3 class="anchored">Granny Square Generator</h3>
+      <p>Fun and simple tool to calculate and visualise the best pattern for a granny square blanket.</p>
+      
+      <div class="card-actions">
+        <a href="https://github.com/cecibaldoni/granny-square-blanket/tree/main" class="btn">GitHub Repo</a>
+        
+      </div>
+    </div>
+  </div>
 </div>
-<div class="metadata">
-<a href="../blog/project-management.html" class="no-external">
-<div class="listing-date">
-2026-03-24
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="cmVhZGluZw==" data-listing-date-sort="1767139200000" data-listing-file-modified-sort="1777792120920" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2037">
-<div class="thumbnail"><a href="../blog/half-a-year-of-reading.html" class="no-external">
 
-<p class="card-img-top"><img loading='lazy' src="img/book-covers/waxler1.jpeg"  class="thumbnail-image card-img"/></p>
 
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/half-a-year-of-reading.html" class="no-external">Half a year of reading</a>
-</h3>
-<div class="listing-categories">
+</section>
 
-<div class="listing-category" onclick="window.quartoListingCategory('cmVhZGluZw=='); return false;">reading</div>
-
-</div>
-<div class="delink listing-description"><a href="../blog/half-a-year-of-reading.html" class="no-external">
-<p>My “end-of-the-year” reading summary. But mostly is about how I climbed up from a bookless pit.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../blog/half-a-year-of-reading.html" class="no-external">
-<div class="listing-date">
-2025-12-31
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="bWljcm9ibG9nZ2luZyUyQ25vdGUtdGFraW5n" data-listing-date-sort="1765756800000" data-listing-file-modified-sort="1777792120920" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="328">
-<div class="thumbnail"><a href="../blog/consequences-notetaking.html" class="no-external">
-
-<img loading="lazy" src="../blog/img/sherlockholmes.gif" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/consequences-notetaking.html" class="no-external">The unintended consequence of note-taking</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bWljcm9ibG9nZ2luZw=='); return false;">microblogging</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bm90ZS10YWtpbmc='); return false;">note-taking</div>
-
-</div>
-<div class="delink listing-description"><a href="../blog/consequences-notetaking.html" class="no-external">
-<p>Spoiler alert: it’s about self-soothing</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../blog/consequences-notetaking.html" class="no-external">
-<div class="listing-date">
-2025-12-15
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="bm90ZS10YWtpbmclMkNQaEQlMkNkaXNzZXJ0YXRpb24=" data-listing-date-sort="1762214400000" data-listing-file-modified-sort="1777792120920" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="25" data-listing-word-count-sort="4940">
-<div class="thumbnail"><a href="../blog/dissertation-journal.html" class="no-external">
-
-<img loading="lazy" src="../blog/img/generaldisc.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/dissertation-journal.html" class="no-external">The Dissertation Journal that saved my sanity</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bm90ZS10YWtpbmc='); return false;">note-taking</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UGhE'); return false;">PhD</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZGlzc2VydGF0aW9u'); return false;">dissertation</div>
-
-</div>
-<div class="delink listing-description"><a href="../blog/dissertation-journal.html" class="no-external">
-<p>Doing a PhD means trying 100 systems and stick to 3. If you have to try something this year, let it be a dissertation journal</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../blog/dissertation-journal.html" class="no-external">
-<div class="listing-date">
-2025-11-04
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="bWljcm9ibG9nZ2luZw==" data-listing-date-sort="1759449600000" data-listing-file-modified-sort="1777792121034" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="417">
-<div class="thumbnail"><a href="../blog/microblogging.html" class="no-external">
-
-<img loading="lazy" src="../blog/img/otto-blanket.jpeg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/microblogging.html" class="no-external">An experiment in microblogging</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bWljcm9ibG9nZ2luZw=='); return false;">microblogging</div>
-
-</div>
-<div class="delink listing-description"><a href="../blog/microblogging.html" class="no-external">
-<p>Being home sick has its pros: more writing time for experiments</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../blog/microblogging.html" class="no-external">
-<div class="listing-date">
-2025-10-03
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="bm90ZS10YWtpbmclMkNza2V0Y2hub3Rpbmc=" data-listing-date-sort="1758153600000" data-listing-file-modified-sort="1777792121035" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2489">
-<div class="thumbnail"><a href="../blog/sketchnoting-beginners.html" class="no-external">
-
-<img loading="lazy" src="../blog/img/sketchnotes.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/sketchnoting-beginners.html" class="no-external">So, you want to start Sketchnoting (but don’t know how)</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bm90ZS10YWtpbmc='); return false;">note-taking</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('c2tldGNobm90aW5n'); return false;">sketchnoting</div>
-
-</div>
-<div class="delink listing-description"><a href="../blog/sketchnoting-beginners.html" class="no-external">
-<p>This post is for you if you’ve ever looked at a sketchnote and thought: “That’s cool, but I could never do that.”</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../blog/sketchnoting-beginners.html" class="no-external">
-<div class="listing-date">
-2025-09-18
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-categories="UEtNJTJDbm90ZS10YWtpbmc=" data-listing-date-sort="1755561600000" data-listing-file-modified-sort="1777792121034" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="20" data-listing-word-count-sort="3980">
-<div class="thumbnail"><a href="../blog/notetaking-part2.html" class="no-external">
-
-<img loading="lazy" src="../blog/img/grampasimpson.gif" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/notetaking-part2.html" class="no-external">Is Note-Taking as powerful as I think? (2/2)</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('UEtN'); return false;">PKM</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bm90ZS10YWtpbmc='); return false;">note-taking</div>
-
-</div>
-<div class="delink listing-description"><a href="../blog/notetaking-part2.html" class="no-external">
-<p>Part 2 of 2 - This post shows how I dived into my digital journal to extract information about my writing style, my weekly mood, and yes, make more plots.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../blog/notetaking-part2.html" class="no-external">
-<div class="listing-date">
-2025-08-19
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="7" data-categories="UEtNJTJDbm90ZS10YWtpbmc=" data-listing-date-sort="1754179200000" data-listing-file-modified-sort="1777792121034" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="19" data-listing-word-count-sort="3695">
-<div class="thumbnail"><a href="../blog/notetaking-part1.html" class="no-external">
-
-<p class="card-img-top"><img loading='lazy' src="img/homer-simpson-brain.gif"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/notetaking-part1.html" class="no-external">Note-Taking is more powerful than you think (1/2)</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('UEtN'); return false;">PKM</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bm90ZS10YWtpbmc='); return false;">note-taking</div>
-
-</div>
-<div class="delink listing-description"><a href="../blog/notetaking-part1.html" class="no-external">
-<p>Part 1 of 2 - This post shows how I transformed simple daily work logs in Logseq into a powerful data visualization in R to better understand my own strengths and interests.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../blog/notetaking-part1.html" class="no-external">
-<div class="listing-date">
-2025-08-03
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="8" data-categories="VGlkeVR1ZXNkYXklMkNxdWFydG8lMkNxdWFydG9zZQ==" data-listing-date-sort="1752105600000" data-listing-file-modified-sort="1777792121034" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1827">
-<div class="thumbnail"><a href="../blog/quartose.html" class="no-external">
-
-<img loading="lazy" src="https://i0.wp.com/imgs.xkcd.com/blag/doghouse_color_wheel_altered.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/quartose.html" class="no-external">TidyTuesday and Quartose</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('VGlkeVR1ZXNkYXk='); return false;">TidyTuesday</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cXVhcnRv'); return false;">quarto</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cXVhcnRvc2U='); return false;">quartose</div>
-
-</div>
-<div class="delink listing-description"><a href="../blog/quartose.html" class="no-external">
-<p>An experiment in structuring a TidyTuesday exploration using interactive elements from <code>quartose</code></p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../blog/quartose.html" class="no-external">
-<div class="listing-date">
-2025-07-10
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="9" data-categories="UEtNJTJDbm90ZS10YWtpbmclMkNvcGVuJTIwcmVzb3VyY2Vz" data-listing-date-sort="1750464000000" data-listing-file-modified-sort="1777792120920" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="809">
-<div class="thumbnail"><a href="../blog/awesome-pkm.html" class="no-external">
-
-<img loading="lazy" src="../blog/img/PKM-thumbnail.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/awesome-pkm.html" class="no-external">From “Not Sure How It Works” to “Maybe This Will Help Someone”</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('UEtN'); return false;">PKM</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bm90ZS10YWtpbmc='); return false;">note-taking</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('b3BlbiUyMHJlc291cmNlcw=='); return false;">open resources</div>
-
-</div>
-<div class="delink listing-description"><a href="../blog/awesome-pkm.html" class="no-external">
-<p>This is the story on how I went from Confused Logseq User to Accidental Curator of an awesome academic PKM repository</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../blog/awesome-pkm.html" class="no-external">
-<div class="listing-date">
-2025-06-21
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="10" data-categories="cXVhcnRvJTJDY2xvc2VyZWFkJTJDaW5mb2dyYXBoaWMlMkNvcGVuJTIwcmVzb3VyY2Vz" data-listing-date-sort="1748649600000" data-listing-file-modified-sort="1777792120920" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="405">
-<div class="thumbnail"><a href="../blog/closeread-cheatsheet.html" class="no-external">
-
-<img loading="lazy" src="../blog/img/cheatsheet-closeread-thumbnail.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/closeread-cheatsheet.html" class="no-external">A Cheatsheet for Closeread (or the one where I gave a talk and brought more than slides)</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('cXVhcnRv'); return false;">quarto</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Y2xvc2VyZWFk'); return false;">closeread</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('aW5mb2dyYXBoaWM='); return false;">infographic</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('b3BlbiUyMHJlc291cmNlcw=='); return false;">open resources</div>
-
-</div>
-<div class="delink listing-description"><a href="../blog/closeread-cheatsheet.html" class="no-external">
-<p>This post started with a talk invitation about Closeread and scrollytelling. It ended with a full demo and a printable cheatsheet, all thanks to aesthetic joy and the refusal to keep checking the same three lines of syntax.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../blog/closeread-cheatsheet.html" class="no-external">
-<div class="listing-date">
-2025-05-31
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="11" data-categories="b3BlbiUyMHNjaWVuY2UlMkNpbmZvZ3JhcGhpYw==" data-listing-date-sort="1746662400000" data-listing-file-modified-sort="1777792120919" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1276">
-<div class="thumbnail"><a href="../blog/4rs.html" class="no-external">
-
-<img loading="lazy" src="../blog/img/4rs-thumbnail.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/4rs.html" class="no-external">The 4 Rs, and why they’re so confusing</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('b3BlbiUyMHNjaWVuY2U='); return false;">open science</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('aW5mb2dyYXBoaWM='); return false;">infographic</div>
-
-</div>
-<div class="delink listing-description"><a href="../blog/4rs.html" class="no-external">
-<p>This post started with a diagram I made for a talk, and ended with a discussion that showed me just how slippery scientific terms can be.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../blog/4rs.html" class="no-external">
-<div class="listing-date">
-2025-05-08
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

@@ -16,8 +16,16 @@ My public speaking and teaching work is split between technical training for res
 
 ##### *Upcoming*
 
+- **How to make your own website with Quarto** - SORTEE Code Club <br>
+  *May 18, 2026* <br>
+  *Event link coming soon*
+  
+- **Behavioural flexibility, not efficiency, as the cognitive trait under selection** <br>
+  *ISBE -- July 21-25, 2026* <br>
+  Torino, Italy <br>
 
 ##### *Recent*  
+
 - **Software Carpentry Workshop** - Philipps University Marburg <br>
   *March 3-4, 2026* <br>
   [Event link](https://jengelmann.github.io/2026-03-03-Phillips-University-Marburg-Online/)
@@ -87,6 +95,7 @@ My public speaking and teaching work is split between technical training for res
 - "Scientists found that this tiny mammal ‘regrows’ its brain in winter. And it could help cure Alzheimer’s" - [Discover Wildlife](https://www.discoverwildlife.com/animal-facts/mammals/common-shrew-shrink)
 
 - "Why this mammal eats its own brain" - [Washington Post](https://www.washingtonpost.com/climate-environment/2022/11/30/shrews-shrink-regrow-own-brains/)
+
 ---
 
 ### Scientific Conferences and Seminars
@@ -165,4 +174,4 @@ My public speaking and teaching work is split between technical training for res
 - **Baldoni C.**, Giglio G., Scaravelli D.  <br>
   *II European Meeting of Young Ornithologists* <br>
   Torino, Italy <br>
-  **Effects of fire on birds in Mediterranean woods**
+  ***Effects of fire on birds in Mediterranean woods***

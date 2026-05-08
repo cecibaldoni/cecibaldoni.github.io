@@ -28,8 +28,6 @@ format:
 ```
 <br>
 
-> Scientific discovery is a social process: it depends as much on data as it does on the infrastructure used to share it.
-
 My work exists at the intersection of research, technical infrastructure, and community leadership.
 
 [My current work](shrews.qmd) centers on the cognitive compromises of the common shrew, a model species for studying brain size plasticity and behavior.
@@ -38,13 +36,14 @@ I lead community initiatives that transform Open Science from a policy requireme
 
 Practicing [Open Science](open-science.qmd) is both a technical choice and a cultural one. I am committed to advancing transparency and reproducibility, ensuring data is not just "available" but actually usable.
 
-Here are a few highlights of my community impact so far:
+Communities I'm part of:
 
-- Elected **representative** during my PhD and postdoc, giving voice to peers across departments
-- Leading the **SORTEE code club** and helping run the **R-Ladies blog**, nurturing inclusive spaces for data science
-- Part of The Turing Way’s community management working group, shaping best practices for open collaboration
-- **Translator** for the Raspberry Pi Foundation and **code editor** for PCI Ecology; helping global audiences access science and coding content
-- Workshop leader for **R programming** and **personal knowledge management**, demystifying tools to help others level up
+- [SORTEE](https://sortee.org/) — Code Club and Community Management
+- [R-Ladies Global](https://rladies.org/) — contributing to the blog
+- [The Turing Way](https://book.the-turing-way.org/) — community management working group
+- [PCI Ecology](https://ecology.peercommunityin.org/) — code editor
+- [The Carpentries](https://carpentries.org/) - Instructor and member of the Code of Conduct Committee
+
 
 I’m always curious about new ways to connect people and ideas.
 

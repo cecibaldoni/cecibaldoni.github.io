@@ -1,0 +1,80 @@
+---
+title: "A Year of Writing"
+description: "A year ago I published my first blogpost. That was the beginning of the end."
+date: 2026-05-08
+image: img/writing.png
+categories: [note-taking, writing]
+---
+
+Exactly a year ago I posted [my first blogpost](https://cecibaldoni.github.io/blog/4rs.html).
+For a long time I was convinced I couldn't start a blog because I wasn't expert enough to write about anything. A year in, I'm not sure that was ever really the point.
+
+I thought long and hard about *writing* for the past week. I doubt I had any good breakthrough, but I do love a good reminiscence moment.
+
+## How it all started 
+
+To be honest, I've been thinking about blogging way earlier than my official start date (I've been told that's what usually happens). The hiccup for me was trying to decide what I wanted to blog about. It felt like getting stuck always on the same cliff, and that cliff was the fear that whatever I said wouldn't be _credible_ enough to be worth saying. I guess it was called "expertise".
+I kept circling around possible topics and talking myself out of each one. 
+Too niche. Too obvious. Not enough papers read. Nobody cares about *that*.
+
+But then it happened. I was part of a conversation within a discipline I knew well enough, around a topic I found genuinely fascinating -- and somewhere in the middle of it I thought: I could write about this. That was the Eureka moment, more or less.
+My confidence level was orbiting (and so was my imposter syndrome).
+Somehow I managed to shush my internal critic and have enough courage to just post what I wanted to post. That's how my first three blogposts came to be. If you are not curious enough to go have a look at them, let me summarise them for you: they are all specific resources I made because *I liked the process of making them*. I found them extremely useful for myself, so why not share it with others?
+
+Once I started thinking about it, the blog wasn't even where writing started, really.
+I've been in the academic environment for the past 8-10 years. I've been writing for most of that time. And what about Journaling? The wonderful life jacket called ["Dissertation Journal"](https://cecibaldoni.github.io/blog/dissertation-journal.html) that kept me sane and alive for almost a year while PhDing needs an honourable mention in the writing Pantheon. Isn't that writing too? Or Is writing only writing when it's shared? 
+
+And the practice of writing does not only encompass the topic, but the writing itself. When I write about science, or write about my day in my journal, I can't grow and get better if I don't re-read, analyse or just grumpy my way around my own paragraphs. [Do I use too many filler words? Am I stuck with the same verbs? Do I ask too many rhetorical question?](https://cecibaldoni.github.io/blog/notetaking-part2.html) 
+
+The more I think about it, the more I realise that writing is quite widespread in my life at the moment. Here is my completely unscientific survey of the forms writing has taken in my life, for anyone like me that feel they can write only in one style. Or not at all.
+
+## The shapes of my writing
+
+#### Academic writing (scientific articles)
+  
+Scientific articles were the first serious writing I ever did, and also the most specific, constrained, _boring_ form you can think of. When I started with my academic path, I loathed the writing moment. I was so bad at it that I could not force myself to sit down and just do it. But, like most things in life, I got better with it over time. That only means that now I better understand what I need to do and how to get there.
+I have reached the stage of my academic career where my writing process is 40% automatism, and 60% spite towards the necessary evil called peer-review.
+
+#### Journaling
+
+Yes, I choose to count journaling as a form of writing. Sue me. 
+And in this case, to be honest, it can be traced back way earlier. As a teen, I was one of those kids with a "dear diary" diary, that I kept hidden and secret and that my older brother always knew how to find and read it against my will. 
+Journaling took a strange turn during my PhD, with a more intentional and clinical aspect to it. Or in other words: less hippy feeling, more desperate energy. 
+Despite the fact that I shared snippets of my Dissertation Journal around (and the fact that my secret diary was probably the topic of my family book club for years), journaling is inherently for the writer and not for an audience. 
+It is the only form on this list where nobody else's eyes are assumed. And yet here I am, writing about it in a public blog post. Make of that what you will.
+
+#### Blogging
+
+Blogging sits somewhere between structured scientific writing and pointless personal rambling. A long-form sort of *mine*. It does help that I like to tell stories that feel self-conclusive, complete in themselves, the kind that don't require you to have read the previous episode. What I didn't expect was that blogging would also become a way to learn things about myself: how I like to spend my time (→ link), what I actually care about, that I apparently have strong opinions about personal knowledge management. I did not know this about myself before I started writing about it. My friends probably wish they still didn't know it either.
+
+#### Science communication newsletter
+
+This is brand new(-ish). Just a couple of months old. I wanted an outlet to write about biology that was necessarily separate from my blog. The reason doesn't seem so reasonable now, but at the time it felt right: the blog had taken a certain direction, and the biology topics I wanted to explore felt like they belonged somewhere else. A different container for a different kind of overflow.
+The most important part of the decision of starting with [Substack](https://chickpeasprouts.substack.com/) came from thinking about the audience mechanic: someone who ends up on my personal blog has usually found my website first -- which mean they found me before they found a delirious monograph about how cool Logseq is. On Substack it works the other way around: you subscribe because you're interested in shrews, or in science communication, or in whatever the subject is, and the writer is almost incidental. Whether my voice actually sounds the same in both is something I genuinely cannot judge from the inside — I would need someone to read both and tell me, which is an experiment I haven't run yet.
+
+## What it turned into
+
+The funny thing about all this reminiscence is that it forced me to think about my own writing trajectory. 
+All of this happened quite organically. I never planned to become someone who writes across different styles and platforms. It just kept accumulating, like when you get houseplants (or opinions about note-taking apps): one seemed reasonable. And then suddenly there were fifteen.
+
+I wrote scientific papers because that was my job. I journaled because I had to keep track of my thoughts. I started a blog because I liked it. I analysed my writing because I want to get better. I started a newsletter because I wanted to write just a bit more.
+The reasons to write got progressively more voluntary, which I guess is a good sign.
+
+Writing might mean different things to different people. For most people that populate my life, writing is a chore, either a positive or negative one. For the longest time that was true for me too.
+I guess the thing that surprised me the most out of this unplanned writing experiment, is how much I would get to enjoy writing. 
+thinking about it now might feel like a contradiction. would I have started at all if I didn't like writing? Probably not. Except I did start, and that's because I started with the idea of offering others something (like the infographic and my *expertise* on a certain topic). 
+The more surprising thing, or maybe not a separate thing at all, is that at some point along the way I stopped writing for others and started writing for myself. I'm not entirely sure when that happened, or if it has finished happening yet. 
+
+Thinking about it now might feel like a contradiction. Would I have started at all if I didn't like writing? Probably not. Except I did start, and that's because I the original idea was offering others something (like the infographic and my _expertise_ on a certain topic).
+
+Gradually, without even noticing, I stopped writing for others and started writing for myself — to think, mostly. Journaling, blogging, scientific newsletter were all my attempt to take something complicated (my thoughts, for example!), break it into pieces, and see what it actually is. 
+Writing is, for me, a very scientific process applied to very unscientific material. You put something down. You read it back. You find out what you think about it (sometimes for the first time). Then you rebuild it into something that makes sense. Or maybe not, so you try again.
+
+## What's next
+
+All of my writing projects started as experiments. Although they are all still running, there is no guarantee that it will last forever. It's exactly like the houseplants. You keep buying them in bulk, but the likelihood they will all survive is pretty low.
+
+While I experiment with one writing style over others, I can't stop thinking about what could be next. What other topics, or formats, would I be willing to try in the future? Will I swap one platform for another?
+But I do have some ideas about new writing formats. Science journalism, for example, or children's books about shrews (don't ask). Some of these will probably become experiments. Some experiments will thrive. Some will be quietly retired, like houseplants that didn't make it despite my best intentions.
+
+I have no idea which ones will make it to next year, and I've learned to be okay with that. Although I will say: the shrews have, as always, a pretty good chance.

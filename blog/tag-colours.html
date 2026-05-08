@@ -1,0 +1,14 @@
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const palette = [
+  "#f2dfa0", "#ebbe8a", "#e8a882", "#ccdfa0",
+  "#b8d48e", "#8ab87a", "#f0d49a", "#e8a070",
+  "#c4e094", "#9aca90", "#e8b89a", "#f0cc88",
+  "#a8c882", "#d4a878", "#b0c87a", "#e8a878"
+];
+    document.querySelectorAll(".category").forEach(tag => {
+      const color = palette[Math.floor(Math.random() * palette.length)];
+      tag.style.backgroundColor = color;
+    });
+  });
+</script>

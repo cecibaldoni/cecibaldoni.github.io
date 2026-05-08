@@ -182,21 +182,37 @@ blockquote {
 }
 
 pre.sourceCode {
-  background-color: $dark !important;
+  background-color: lighten($sprout, 15%) !important;
   padding: 8px;
-  border: 2px solid $dark;
+  border: 2px solid $forest;
   border-radius: 12px;
   margin: 1em 0;
 }
 
 pre.sourceCode > code {
-  background-color: rgba($sprout, 0.15) !important;
-  color: $dark !important;
+  background-color: rgba($sprout, 0.08) !important;
+  color: $linen !important;
   display: block;
   padding: 10px;
-  border: 1px solid $pop;
+  border: 1px solid $forest;
   border-radius: 8px;
   white-space: pre-wrap;
+}
+
+.category {
+  color: $evergreen;
+  padding: 3px 10px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: inline-block;
+  margin: 2px 3px;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.75;
+    text-decoration: none;
+  }
 }
 
 .about-me-img {

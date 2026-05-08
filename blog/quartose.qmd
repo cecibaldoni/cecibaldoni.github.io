@@ -3,7 +3,7 @@ title: "TidyTuesday and Quartose"
 description: "An experiment in structuring a TidyTuesday exploration using interactive elements from `quartose`"
 date: 2025-07-10
 image: https://i0.wp.com/imgs.xkcd.com/blag/doghouse_color_wheel_altered.png
-categories: [TidyTuesday, quarto, quartose]
+categories: [quarto]
 ---
 
 ## Why I tried Quartose

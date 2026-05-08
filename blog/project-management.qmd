@@ -59,13 +59,13 @@ So here is a breakdown on what I use, and how.
 
 **Google Calendar** is the only place with real deadlines attached. Not fake deadlines, not inspirational time blocks, but actual commitments. If it's not on the calendar, it doesn't exist, and by extension it doesn't have a deadline. This is harsh, but also... the calendar never lies to me. Unlike my brain.
 
-**Analog notebook** - yes, it still exists. I like to think that it holds a purpose, and maybe it does. It's mostly rambling if I'm honest. And mostly from when I am away from my computer and I can't drop that rambling anywhere else. It does help me think tho, and sediment things I need to think about (see also "witheboard"). It is also where I doodle, because digital sucks for that!
+**Analog notebook** - yes, it still exists. I like to think that it holds a purpose, and maybe it does. It's mostly rambling if I'm honest. And mostly from when I am away from my computer and I can't drop that rambling anywhere else. It does help me think tho, and sediment things I need to think about (see also "whiteboard"). It is also where I doodle, because digital sucks for that!
 
 **GitHub** is where I work with other people, and where the work is mainly, but not exclusively, codable. And by that I do not mean only scripts and code, but also encodable. Like messages, or responsibility that can be converted into a specific format. For example, GitHub could be a place where a community of people working in the same project identifies who holds the duty for a specific task, and can assign a reviewer that holds you accountable for that duty. Quite handy.
 
-**Obsidian** is for long-form thinking. When something needs coherence,and real writing (like this blogpost) it moves here. I use Obsidian to track my extremely long term  This is where projects get documented properly, where the thinking sediments into something that will still make sense in three weeks.
+**Obsidian** is for long-form thinking. When something needs coherence, and real writing, it moves here. I use Obsidian to *write*, mostly. If it's a blogpost, a newlsetter article, a very long and complex thought, that's where it leaves. This is where projects get documented properly, where the thinking sediments into something that will still make sense in three weeks.
 
-**The whiteboard** — and I'm aware of the absurdity here. I am a professional promoter of note-taking apps and digitalization. I have strong opinions about knowledge management. And yet. Two whiteboards: one at home, one at work. Four colored markers. Zero shame.
+**The whiteboard** — and I'm aware of the absurdity here. I am a professional promoter of note-taking apps and digitalization. I have *strong opinions* about knowledge management. And yet. Two whiteboards: one at home, one at work. Four colored markers. Zero shame. <br>
 What the whiteboard does that none of the apps do is *make me think*. There's something about the physicality of it that clarifies in a way that typing never does. And the thinking sediments differently. You stand in front of a whiteboard and let the problem sink in.
 Why haven't I replaced it? I've tried. Nothing compares. 
 
@@ -86,9 +86,9 @@ A project finishes, or should finish, but you never formally close it. It linger
 
 There are probably fixes for all of these. If I'd found them yet, I'd be using them (I'm not).
 
-## The System Doesn't Need to Make Sense to Anyone Else
+## The hill I'm going to die on: "The System Doesn't Need to Make Sense to Anyone Else"
 
-Here's what I've learned: a system does not need to be elegant or universal or explicable to another human being. It needs to work.
+Here's what I've learned: a system does not need to be elegant or universal or explicable or *pretty* to another human being. It needs to work.
 
 My system is inefficient by some measures. It's analog and digital in a way that makes no sense if you read the productivity books. But it keeps me on top of the pile. It means that when I'm drowning, I can still see the surface.
 

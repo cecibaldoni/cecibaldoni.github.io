@@ -9,6 +9,7 @@ listing:
   date-format: "YYYY-MM-DD"
   categories: true
   filter-ui: true
+include-after-body: tag-colours.html
 ---
 
 ::: {.page-icon}

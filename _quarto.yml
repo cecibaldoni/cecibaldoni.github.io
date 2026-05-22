@@ -3,6 +3,7 @@ project:
   #output-dir: docs
   resources:
     - sitemap.xml
+    - google5d7ae5fc43970223.html
 
 execute:
   freeze: auto

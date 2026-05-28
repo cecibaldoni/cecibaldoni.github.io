@@ -67,6 +67,16 @@ This website won the [Best Personal Academic Website contest](https://theacademi
       <span class="city-label">Talks and Workshops</span>
     </a>
     
+    <a href="content/publications.qmd" class="city-icon icon-bookshop">
+      <img src="img/icons/bookshop.svg" alt="Publications">
+      <span class="city-label">Publications</span>
+    </a>
+    
+    <a href="content/media.qmd" class="city-icon icon-radio">
+      <img src="img/icons/radio.svg" alt="Media">
+      <span class="city-label">Media</span>
+    </a>
+    
     <a href="blog/index.qmd" class="city-icon icon-blog">
       <img src="img/icons/van.svg" alt="Blog">
       <span class="city-label">Blog</span>

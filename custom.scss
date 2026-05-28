@@ -242,8 +242,8 @@ pre.sourceCode > code {
   width: 100vw;
   max-width: 100vw;
   height: auto;
-  aspect-ratio: 5754 / 3235;
-  margin-left: calc(-45vw + 50%);
+  aspect-ratio: 5989 / 3720;
+  margin-left: calc(-48vw + 50%);
 }
 
 .city-layer {
@@ -287,14 +287,17 @@ pre.sourceCode > code {
   transition: transform 0.2s ease, filter 0.3s ease;
 }
 
-.icon-contact          { top: 13.39%; left: 37.64%; width: 16.43%; }
-.icon-home             { top: 5.50%;  left: 57.86%; width: 20.71%; }
-.icon-illustration     { top: 35.21%; left: 65.00%; width: 16.32%; }
-.icon-open-science     { top: 38.50%; left: 21.86%; width: 7.67%; }
-.icon-research         { top: 15.91%; left: 26.07%; width: 20.75%; }
-.icon-talks-workshops  { top: 14.19%; left: 49.29%; width: 15.72%; }
-.icon-blog             { top: 38.0%;  left: 86.80%; width: 5.48%; }
-.icon-coffee           { top: 56.72%; left: 52.14%; width: 5.78%; }
+.icon-contact { top: 18.27%; left: 37.64%; width: 16.43%;}
+.icon-home { top: 0.11%; left: 44.98%; width: 21.10%;}
+.icon-talks-workshops { top: 6.41%; left: 62.85%; width: 15.72%;}
+.icon-research { top: 19.70%; left: 26.07%; width: 20.71%;}
+.icon-bookshop { top: 18.58%; left: 49.29%; width: 15.00%;}
+.icon-open-science { top: 40.45%; left: 21.86%; width: 7.67%;}
+.icon-illustration { top: 37.91%; left: 65.00%; width: 16.32%;}
+.icon-radio { top: 31.64%; left: 92.95%; width: 5.00%;}
+.icon-blog { top: 37.14%; left: 77.29%; width: 5.48%;}
+.icon-coffee { top: 57.26%; left: 51.79%; width: 7.14%;}
+
 
 .city-label {
   position: absolute;

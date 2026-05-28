@@ -1,21 +1,25 @@
 # Calculations for icon positioning ----
 
-# canvas size from Inkscape
+# canvas size from Inkscape - find it in "Document Properties"
 canvas_width <- 5989.414
-canvas_height <- 3508.340
+canvas_height <- 3718.340
 
 # icons positions and sizes
 #X and Y are in the move tav in "Transform"
 #Width is in the scale tab, but resize to 100% before checking the width in px
 icons <- list(
-  contact = list(x = 2254.159, y = 469.710, w = 983.975),
-  home = list(x = 3465.356, y = 139.875, w = 1240.665),
-  illustration = list(x = 3892.912, y = 1200.190, w = 977.5),
-  open_science = list(x = 1309.351, y = 1294.465, w = 459.129),
-  research = list(x = 1561.580, y = 522.934, w = 1242.664),
-  talks_workshops = list(x = 2951.977, y = 497.873, w = 941.813),
-  blog = list(x=5198.774, y=1283.996, w=328.140),
-  coffee = list(x=3123.045, y=1919.772, w =346.426)
+  contact = list(x = 2254.204, y = 679.325, w = 983.975),
+  home = list(x = 2694.280, y = 4.143, w = 1264.055),
+  talks_workshops = list(x = 3764.095, y = 238.191, w = 941.813),
+  research = list(x = 1561.630, y = 732.550, w = 1240.664),
+  
+  bookshop = list(x = 2951.918, y = 691.028, w = 898.412),
+  open_science = list(x = 1309.395, y = 1504.081, w = 459.129),
+  
+  illustration = list(x = 3892.956, y = 1409.806, w = 977.500),
+  radio = list(x = 5567.295, y = 1176.360, w = 299.470),
+  blog = list(x = 4629.427, y = 1380.903, w = 328.140),
+  coffee = list(x = 3101.705, y = 2129,387, w = 427.815)
 )
 
 # calculate top, left, and width in percentages
@@ -32,7 +36,7 @@ css_rules <- lapply(icons, function(pos) {
 })
 
 for (name in names(css_rules)) {
-  cat(sprintf(".icon-%s {\n  top: %.2f%%;\n  left: %.2f%%;\n  width: %.2f%%;\n}\n\n",
+  cat(sprintf(".icon-%s { top: %.2f%%; left: %.2f%%; width: %.2f%%;}\n",
               gsub("_", "-", name),
               css_rules[[name]]$top,
               css_rules[[name]]$left,

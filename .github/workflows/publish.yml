@@ -23,7 +23,7 @@ jobs:
           
       - name: Install dependencies
         run: |
-          Rscript -e 'install.packages(c("rmarkdown", "knitr", "tidyverse", "quartose", "kableExtra"))'
+          Rscript -e 'install.packages(c("rmarkdown", "knitr", "tidyverse", "quartose", "kableExtra", "patchwork"))'
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2

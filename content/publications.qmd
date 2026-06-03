@@ -3,6 +3,10 @@ title: ""
 toc: false
 ---
 
+::: {.page-icon}
+<img src="../img/icons/bookshop.svg" alt="" aria-hidden="true">
+:::
+
 ## Selected Publications
 
 ```{=html}

@@ -62,6 +62,8 @@ I was wrong about everything.
 
 ## What Actually Happened
 
+![Illustration for storytelling purposes only. My handwriting have never been so neat.](img/notetaking.png)
+
 ```{r}
 #| echo: false
 #| message: false
@@ -73,10 +75,8 @@ I was wrong about everything.
 #   - doodles_per_page: number of doodles / sketches per page
 #   - words_per_entry: estimated word count per entry
 #   - margin_usage_pct: % of page escaping the main writing area
-#
-# Period: 7 days before the challenge, 7 days during.
+
 # Data: Statistically dubious.
-# -------------------------------------------------------
 
 library(ggplot2)
 library(dplyr)
@@ -89,50 +89,15 @@ col_during <- "#c46e3a"
 
 palette    <- c("Before" = col_before, "During" = col_during)
 
-base_theme <- theme_minimal(base_size = 15) +
-  theme(plot.title = element_text(face = "bold", size = 16, margin = margin(b = 4)),
-        axis.title.x = element_blank(),
-        axis.title.y = element_text(size = 12, color = "grey40"),
-        axis.text = element_text(size = 12, color = "grey30"),
+base_theme <- theme_void(base_size = 15) +
+  theme(plot.title = element_text(face = "bold", size = 16, margin = margin(b = 10)),
+        axis.text.x = element_text(size = 10, color = "grey30", margin = margin(t = 8)),
+        axis.text.y = element_text(size = 10, color = "grey30", margin = margin(r = 8)),
+        axis.title.y = element_text(size = 12, color = "grey40", angle = 90, margin = margin(r = 10)),
         legend.position = "none",
-        panel.grid.minor = element_blank(),
         panel.grid.major = element_line(color = "grey92"),
         plot.background = element_rect(fill = "#fdfbf7", color = NA),
         panel.background = element_rect(fill = "#fdfbf7", color = NA))
-
-p1 <- ggplot(notebook_data, aes(x = period, y = doodles, fill = period)) +
-  geom_boxplot(width = 0.45, alpha = 0.85, outlier.shape = 21,
-               outlier.fill = "white", outlier.size = 2) +
-  geom_jitter(aes(color = period), width = 0.08, size = 2.2, alpha = 0.6) +
-  scale_fill_manual(values  = palette) +
-  scale_color_manual(values = palette) +
-  scale_y_continuous(breaks = 0:8) +
-  labs(title = "Doodles per page",
-       y = "Count") +
-  base_theme +
-  plot_annotation(caption  = "Correlation between doodles and having no other outlet: unconfirmed but suspicious")
-
-p2 <- ggplot(notebook_data, aes(x = period, y = words, fill = period)) +
-  geom_boxplot(width = 0.45, alpha = 0.85, outlier.shape = 21,
-               outlier.fill = "white", outlier.size = 2) +
-  geom_jitter(aes(color = period), width = 0.08, size = 2.2, alpha = 0.6) +
-  scale_fill_manual(values  = palette) +
-  scale_color_manual(values = palette) +
-  labs(title = "Words per entry", y = "Word count (estimated)") +
-  base_theme +
-  plot_annotation(caption  = "Word count was estimated and dramatised for storytelling purposes.")
-
-p3 <- ggplot(notebook_data, aes(x = period, y = margin_pct, fill = period)) +
-  geom_boxplot(width = 0.45, alpha = 0.85, outlier.shape = 21,
-               outlier.fill = "white", outlier.size = 2) +
-  geom_jitter(aes(color = period), width = 0.08, size = 2.2, alpha = 0.6) +
-  scale_fill_manual(values  = palette) +
-  scale_color_manual(values = palette) +
-  scale_y_continuous(labels = function(x) paste0(x, "%")) +
-  labs(title = "Margin usage",
-       y = "% of page") +
-  base_theme +
-  plot_annotation(caption  = "Not-Peer-Rewieable data collection and analysis.")
 
 ```
 
@@ -174,8 +139,26 @@ The lack of structure forced a resemblance of one to eventually emerge, but not 
 ```{r}
 #| echo: false
 #| message: false
+#| warning: false
 
-p2
+bridge <- data.frame(day = 7.5, period = factor("Before", levels = c("Before", "During")), value = NA,
+                     metric = "Words per day")
+notebook_long <- notebook_data %>%
+  pivot_longer(cols = c(doodles, words, bullets), names_to = "metric", values_to = "value") %>%
+  mutate(metric = factor(metric,
+                         levels = c("words", "doodles", "bullets"),
+                         labels = c("Words per day", "Doodles per day", "Bullet points per day")))
+
+ggplot(notebook_long |> filter(metric == "Words per day") |> bind_rows(bridge) |> arrange(day), aes(x = day, y = value, group = metric)) +
+  annotate("rect", xmin = 7.5, xmax = 14.5, ymin = -Inf, ymax = Inf, fill = "#f5ede4", alpha = 0.5) +
+  geom_line(color = "grey80", linewidth = 2) +
+  geom_line(aes(color = period), linewidth = 2) +
+  geom_point(aes(color = period), size = 4) +
+  scale_color_manual(values = palette) +
+  scale_x_continuous(breaks = 1:14, labels = c(paste0("D", 1:7), paste0("D", 1:7))) +
+  labs(title = "Words per day", x = "Day", y = "Word Count") +
+  base_theme +
+  plot_annotation(caption  = "Peer review status: pending indefinitely.")
 ```
 
 ### The notebook got its act together
@@ -190,12 +173,23 @@ Analog notes started having date entries, a title, headers and numbered sequence
 
 It was not as smooth as I make is sound, and somewhat the structure was a reaction rather than an active choice. 
 
-![Illustration for storytelling purposes only. My handwriting have never been so neat.](img/notetaking.png)
+
 ```{r}
 #| echo: false
 #| message: false
+#| warning: false
 
-p3
+ggplot(notebook_data, aes(x = period, y = margin_pct, fill = period)) +
+  geom_boxplot(width = 0.45, alpha = 0.85, outlier.shape = 21,
+               outlier.fill = "white", outlier.size = 2) +
+  geom_jitter(aes(color = period), width = 0.08, size = 2.2, alpha = 0.6) +
+  scale_fill_manual(values  = palette) +
+  scale_color_manual(values = palette) +
+  scale_y_continuous(labels = function(x) paste0(x, "%")) +
+  labs(title = "Margin usage",
+       y = "% of page") +
+  base_theme +
+  plot_annotation(caption  = "Not-Peer-Rewieable data collection and analysis.")
 ```
 
 ### "One more thing", the doodling
@@ -205,8 +199,36 @@ The eternal struggle of *digital vs analog* starts from a single item: **doodlin
 ```{r}
 #| echo: false
 #| message: false
+#| warning: false
 
-p1
+diverging_data <- notebook_long %>%
+  group_by(metric, period) %>%
+  summarise(mean_value = mean(value), .groups = "drop") %>%
+  mutate(mean_diverging = ifelse(period == "Before", -mean_value, mean_value))
+
+
+diverging_data_small <- notebook_long %>%
+  filter(metric %in% c("Doodles per day", "Bullet points per day")) %>%
+  group_by(metric, period) %>%
+  summarise(mean_value = mean(value), .groups = "drop") %>%
+  mutate(mean_diverging = ifelse(period == "Before", -mean_value, mean_value))
+
+ggplot(diverging_data_small, aes(x = metric, y = mean_diverging, fill = period)) +
+  geom_col(width = 0.5, alpha = 0.9) +
+  geom_hline(yintercept = 0, color = "grey30", linewidth = 0.6) +
+  geom_text(data = diverging_data_small %>% filter(period == "Before"),
+            aes(label = round(abs(mean_diverging), 1)),
+            vjust = 1.3, size = 3, color = "grey30") +
+
+  geom_text(data = diverging_data_small %>% filter(period == "During"),
+            aes(label = round(abs(mean_diverging), 1)),
+            vjust = -0.3, size = 3, color = "grey30") +
+
+  scale_fill_manual(values = palette) +
+  scale_y_continuous(labels = abs) +
+  labs(title = "Doodles and Bullet Points", x = NULL, y = "Mean") +
+  base_theme +
+  plot_annotation(caption = "Correlation between doodles and having no other outlet: unconfirmed but suspicious")
 ```
 
 ## What to take home

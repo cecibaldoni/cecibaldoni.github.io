@@ -3,7 +3,7 @@ title: "An experiment in microblogging"
 description: "Being home sick has its pros: more writing time for experiments"
 date: 2025-10-03
 image: img/otto-blanket.jpeg
-categories: [microblogging]
+categories: [microblogging, writing]
 ---
 
 ## Sick at home, everything slows

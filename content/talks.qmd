@@ -16,15 +16,15 @@ My public speaking and teaching work is split between technical training for res
 
 ##### *Upcoming*
 
-- **How to make your own website with Quarto** - SORTEE Code Club <br>
-  *May 18, 2026* <br>
-  *Event link coming soon*
-  
 - **Behavioural flexibility, not efficiency, as the cognitive trait under selection** <br>
   *ISBE -- July 21-25, 2026* <br>
   Torino, Italy <br>
 
 ##### *Recent*  
+
+- **How to make your own website with Quarto** - SORTEE Code Club <br>
+  *May 18, 2026* <br>
+  [Event Website](https://sortee.github.io/CodeClub/)
 
 - **Software Carpentry Workshop** - Philipps University Marburg <br>
   *March 3-4, 2026* <br>

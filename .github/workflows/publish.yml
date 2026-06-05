@@ -3,9 +3,13 @@ name: Scheduled website rendering
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 9 * * *' 
+    - cron: '0 9 * * 4' 
   push:
     branches: [ main ]
+    paths:
+      - 'blog/**'
+      - '_quarto.yml'
+      - 'content/**.qmd'
 
 jobs:
   build-deploy:
@@ -28,6 +32,58 @@ jobs:
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
+      - name: Publish or hide posts based on date
+        run: |
+          python3 - <<'EOF'
+          import os, re
+          from datetime import date
+
+          today = date.today()
+          posts_dir = "blog"
+
+          for root, dirs, files in os.walk(posts_dir):
+              for fname in files:
+                  if not fname.endswith(".qmd"):
+                      continue
+
+                  path = os.path.join(root, fname)
+                  with open(path, "r") as f:
+                      content = f.read()
+
+                  date_match = re.search(r'^date:\s*["\']?(\d{4}-\d{2}-\d{2})', content, re.MULTILINE)
+                  if not date_match:
+                      continue  # no date field — leave the post untouched
+
+                  post_date = date.fromisoformat(date_match.group(1))
+                  is_future = post_date > today
+
+                  # Check current draft status
+                  draft_match = re.search(r'^draft:\s*(true|false)', content, re.MULTILINE)
+                  current_draft = draft_match.group(1) == "true" if draft_match else None
+
+                  if is_future:
+                      # Ensure draft: true
+                      if current_draft is True:
+                          print(f"  [skip]    {path}  — already draft, publishes {post_date}")
+                          continue
+                      if draft_match:
+                          content = re.sub(r'^draft:\s*false', 'draft: true', content, flags=re.MULTILINE)
+                      else:
+                          content = re.sub(r'^(date:.*)', r'\1\ndraft: true', content, flags=re.MULTILINE)
+                      print(f"  [hide]    {path}  — future post ({post_date}), marked draft")
+
+                  else:
+                      # Ensure draft: false (publish it)
+                      if current_draft is False or current_draft is None:
+                          print(f"  [skip]    {path}  — already published ({post_date})")
+                          continue
+                      content = re.sub(r'^draft:\s*true', 'draft: false', content, flags=re.MULTILINE)
+                      print(f"  [publish] {path}  — date reached ({post_date}), removing draft flag")
+
+                  with open(path, "w") as f:
+                      f.write(content)
+          EOF
+          
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
         with:

@@ -20,7 +20,7 @@ My public speaking and teaching work is split between technical training for res
   *ISBE -- July 21-25, 2026* <br>
   Torino, Italy <br>
 
-##### *Recent*  
+##### *Events*  
 
 - **How to make your own website with Quarto** - SORTEE Code Club <br>
   *May 18, 2026* <br>

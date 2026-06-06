@@ -1,6 +1,6 @@
 ---
-title: "A week without digital notes. The after"
-description: "A micro-update nobody asked for."
+title: "What to do with analog notes"
+description: "..."
 date: 2026-06-25
 categories: [note-taking, PKM, microblogging]
 draft: true

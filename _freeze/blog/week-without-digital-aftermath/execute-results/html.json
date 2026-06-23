@@ -1,0 +1,17 @@
+{
+  "hash": "70c6f2838b5995736bd104c6f946231e",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"A week without digital notes. The after\"\ndescription: \"A micro-update nobody asked for.\"\ndate: 2026-06-18\ncategories: [note-taking, PKM, microblogging]\ndraft: true\n---\n\nA few months ago I spent a week without digital notes and measured my notebook like it owed me something. The post is [here](https://cecibaldoni.github.io/blog/week-without-digital.html), if you missed it.\n\nI said at the end that I changed almost nothing. That was true. But \"almost\" has been sitting in the back of my head.\n\nSo here's the data.\n\n## Bullet points, the vengeance\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](week-without-digital-aftermath_files/figure-html/unnamed-chunk-1-1.png){width=672}\n:::\n:::\n\n\nBullet point usage went way up. This was not a conscious decision, and I have no tidy explanation for this.\n\nThe only thing that I associate this with is the Logseq structure. Not only I started using way more bullet points to resamble the block logic in Logseq, but I even started making *nested* bullet points. \n\nBut then why I did not use any during my digital detox week, and more when Logseq was available? These kind questions keep me up at night.\n\n\n## But what about pages used?\n\nThis data didn't make it into the original post, but someone asked me about this so you're getting it now.\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](week-without-digital-aftermath_files/figure-html/unnamed-chunk-2-1.png){width=672}\n:::\n:::\n\n\nAnalog usage went up. Not to the heights of the challenge week (that was a forced experiment, with no other outlet), but meaningfully above where it started. \n\nThe notebook is getting more use than before. \n\nWhether that means the experiment worked or I just used the excuse to buy a new notebook, it will remain a mistery.\n\n\n## In the end\n\nI ended the [original post](https://cecibaldoni.github.io/blog/week-without-digital.html) saying that I changed almost nothing, because that is how I felt at the time. Immediately after the self-imposed return to technology, my life felt going back to its original axis.\n\nMore than 8 years in research should have taught me not to wave those statement without proof: the data says something changedso it must mean that something recalibrated. Which is either the best possible outcome of an experiment or a sign I should run more of them. ",
+    "supporting": [
+      "week-without-digital-aftermath_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

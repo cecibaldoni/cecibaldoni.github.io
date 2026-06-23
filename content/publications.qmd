@@ -7,9 +7,23 @@ toc: false
 <img src="../img/icons/bookshop.svg" alt="" aria-hidden="true">
 :::
 
-## Selected Publications
+## Selected peer-reviewed publications
 
 ```{=html}
+<div class="listing-item">
+  <div class="thumbnail">
+    <img src="../img/dehnel-shrew.jpg"
+         alt="Common shrew under Dehnel phenomenon"
+         class="thumbnail-image">
+  </div>
+  <div>
+    <p><strong><a href="https://onlinelibrary.wiley.com/doi/full/10.1111/mam.70032">
+      Dehnel's Phenomenon in Mammals (2026)
+    </a></strong></p>
+    <p>Dehnel's phenomenon is fascinating, but poorly understood. In this review we investigate the status and future directions of research! <br><br><i>Illustration by  <a href="https://www.lazaroillustration.com/">Javier Lázaro</a></i></p>
+  </div>
+</div>
+
 <div class="listing-item">
   <div class="thumbnail">
     <img src="../img/CB-graphabstract.svg"
@@ -20,35 +34,7 @@ toc: false
     <p><strong><a href="https://www.sciencedirect.com/science/article/pii/S0960982225010814">
       Programmed seasonal brain shrinkage in the common shrew via water loss without cell death (2025)
     </a></strong></p>
-    <p><i>In vivo</i> MRI has revealed that common shrews shrink their brains for winter survival not through cell death, but by safely and reversibly losing water from their brain cells!</p>
-  </div>
-</div>
-
-<div class="listing-item">
-  <div class="thumbnail">
-    <img src="../img/aselli.png"
-         alt="Pancreas gene expression in shrew"
-         class="thumbnail-image">
-  </div>
-  <div>
-    <p><strong><a href="https://link.springer.com/article/10.1186/s12915-025-02420-7">
-      Gene expression reveals the pancreas of Aselli as a critical organ for plasma cell differentiation in common shrew (2025)
-    </a></strong></p>
-    <p>First look at molecular pathways in the Aselli pancreas, suggesting a key role in immune cell differentiation during brain‑plasticity cycles.</p>
-  </div>
-</div>
-
-<div class="listing-item">
-  <div class="thumbnail">
-    <img src="../img/gene-expression.png"
-         alt="Gene expression"
-         class="thumbnail-image">
-  </div>
-  <div>
-    <p><strong><a href="https://elifesciences.org/articles/100788">
-      Seasonal and comparative evidence of adaptive gene expression in mammalian brain size plasticity (2025)
-    </a></strong></p>
-    <p>Shrews shrink their brains to survive winter... and their hypothalamus helps pull it off! This study reveals seasonal gene shifts tied to energy balance, brain remodeling, and even some genes linked to human neurological disorders.</p>
+    <p><i>In vivo</i> MRI has revealed that common shrews shrink their brains for winter survival by safely and reversibly losing water from their brain cells! </p>
   </div>
 </div>
 
@@ -62,21 +48,7 @@ toc: false
     <p><strong><a href="https://royalsocietypublishing.org/doi/full/10.1098/rsos.242138">
       Captivity alters behaviour but not seasonal brain size change in semi-naturally housed shrews (2025)
     </a></strong></p>
-    <p>Captive shrews still shrink their brains seasonally... but their behavior tells a different story! Despite semi-natural captive conditions, they showed signs of chronic stress, with higher activity and lower motivation to learn, compared to wild ones. It shows how captivity can quietly reshape research outcomes.</p>
-  </div>
-</div>
-
-<div class="listing-item">
-  <div class="thumbnail">
-    <img src="../img/gene-captivity.png"
-         alt="Gene expression wild vs captive"
-         class="thumbnail-image">
-  </div>
-  <div>
-    <p><strong><a href="https://royalsocietypublishing.org/doi/10.1098/rsbl.2024.0478">
-      Gene expression comparisons between captive and wild shrew brains reveal captivity effects (2025)
-    </a></strong></p>
-    <p>Captivity alters how shrew brains work at the molecular level: hundreds of genes changed expression after just two months! These shifts echo patterns seen in human disorders like depression and neurodegeneration, raising caution for interpreting data from captive animals.</p>
+    <p>Captive shrews still shrink their brains seasonally... but their behavior tells a different story! </p>
   </div>
 </div>
 
@@ -104,7 +76,7 @@ toc: false
     <p><strong><a href="https://www.frontiersin.org/journals/neuroanatomy/articles/10.3389/fnana.2023.1168523/full">
       Histological and MRI brain atlas of the common shrew, <em>Sorex araneus</em>, with brain region-specific gene expression profiles (2023)
     </a></strong></p>
-    <p>The common shrew is one of the few mammals that shrinks and regrows its brain... and now it has its own detailed brain atlas! This openly available resource combines histology, MRI, and gene expression to unlock the shrew brain.</p>
+    <p>The common shrew is one of the few mammals that shrinks and regrows its brain... and now it has its own detailed brain atlas!</p>
   </div>
 </div>
 
@@ -118,7 +90,54 @@ toc: false
     <p><strong><a href="https://link.springer.com/article/10.1007/s10071-021-01565-6">
       Intra‑ and interspecific variation in self‑control capacities of parrots in a delay of gratification task (2022)
     </a></strong></p>
-    <p>This study compared self‑control across four parrot species using a delayed‑gratification task. Findings highlight how feeding ecology and social structure may shape impulse control.</p>
+    <p>This study compared self‑control across four parrot species using a delay of gratification task.</p>
   </div>
 </div>
 ```
+
+## Science Communication
+
+```{=html}
+<div class="listing-item">
+  <div class="thumbnail">
+    <img src="../img/chickpea/thumbnail-clumsy.png"
+         alt="Chickpea falling"
+         class="thumbnail-image">
+  </div>
+  <div>
+    <p><strong><a href="https://chickpeasprouts.substack.com/p/the-science-behind-clumsiness">
+      The Science behind Clumsiness
+    </a></strong></p>
+    <p>How a snowy trip to the ER made me wonder about brains.</p>
+  </div>
+</div>
+
+<div class="listing-item">
+  <div class="thumbnail">
+    <img src="../img/chickpea/beaver.png"
+         alt="Chickpea and beaver building"
+         class="thumbnail-image">
+  </div>
+  <div>
+    <p><strong><a href="https://chickpeasprouts.substack.com/p/a-beaver-post">
+      A Beaver Post
+    </a></strong></p>
+    <p>The mandatory beaver post that my brain was asking about</p>
+  </div>
+</div>
+
+<div class="listing-item">
+  <div class="thumbnail">
+    <img src="../img/chickpea/Moon_Chickpea.png"
+         alt="Chickpea on the moon"
+         class="thumbnail-image">
+  </div>
+  <div>
+    <p><strong><a href="https://chickpeasprouts.substack.com/p/it-was-always-going-to-be-the-chickpea">
+      It was always going to be the chickpea
+    </a></strong></p>
+    <p>It's about moon chickpeas.</p>
+  </div>
+</div>
+```
+

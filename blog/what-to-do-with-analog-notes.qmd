@@ -1,7 +1,7 @@
 ---
 title: "What to do with analog notes"
 description: "Most of them stay in the notebook. I went looking for the ones that didn't."
-date: YYYY-MM-DD
+date: 2026-07-02
 categories: [note-taking, PKM]
 draft: true
 ---
@@ -26,7 +26,7 @@ This expectation did not come from nowhere, but was carved into my head at a tim
 
 That of course never happened to my notebooks, so I decided to find out what does.
 
-## Do people even go back?
+## Do people even read their analog notes?
 
 Before I could ask what to do with analog notes, I had to ask a more embarrassing question.
 Do I ever read them again *at all*?
@@ -66,7 +66,7 @@ So here is the honest accounting of where my written notes end up.
 There are two fates, and only one of them involves anything crossing over to digital.
 
 The first and most common is that **the note did its job** and then just stays in the notebook.
-A meeting where I needed to hold five things in my head at once rely to a note that spend itself soon after the meeting. Eventually, they all fated to the most unnerving and the most reassuring destiny: the notebook fills up, and **it goes on a shelf**.
+A note that held five things in my head through a meeting has spent itself by the time the meeting is over. Eventually, all notes fate to the most unnerving and the most reassuring endpoint: the notebook fills up, and **it goes on a shelf**.
 
 I have a row of finished notebooks living like this, and I have decided to think of that as a valid archive (sue me). I will almost never open them again, and that is apparently fine, because the thinking those notebooks hold was anyway done in my brain.
 
@@ -81,29 +81,28 @@ But there is a category that behaves a bit differently, and that is why it needs
 
 **The drawings**
 
+::: {layout-ncol="2"}
+![The notebook version](img/notebook_GA.jpeg){height="300px"}
+
+![The finished piece](/img/CB-graphabstract.svg){height="300px"}
+:::
+
 And by this I mean anything from sketches and illustration ideas, to the rough plotting diagrams where I work out what a figure should even look like before I make R yell at me about it.
 
 I would like to say that somehow they behave like the first and second category at once. I am not sure if that is true or not. 
 They are ideas that are going to be digitised (eventually), but their original purpose is kind of spent in the notebook as well. They are developed in the notebook, like notes that belong there, and than taken and made into a digital version. 
-And I know that, because most of the sketches I found in my notebooks look eerily identical to the digitised version, which makes me think that was not really a half baked thought that needed it's own digital space.
+And I know that, because most of the sketches I found in my notebooks look eerily identical to the digitised version, which makes me think that it was never a half-baked thought waiting to be worked out in the digital space.
 
 Part of this is that a drawing carries its own context.
 A text note out of context is often unreadable, even to me, even a week later.
-A sketch is just the thing it is a sketch of, and it keeps for as long as I keep the notebook. When one of them does cross over to digital, the reason is specific and obvious: I am making the actual *final* thing.
+A sketch is just the thing it is a sketch of, and it keeps for as long as I keep the notebook. When one of them does cross over to digital, the reason is specific and obvious: I am making the actual *final* version.
 
 Exibit A:
 
-::: {layout-ncol="2"}
-![The notebook version](img/sketch-finished-1.png)
+![The sketch for a paper figure](img/notebook_commonspecies.jpeg)
 
-![The finished piece](img/sketch-finished-1-final.png)
-:::
+![The final version](../img/illustrations/common-species-paper.png)
 
-::: {layout-ncol="2"}
-![Years earlier, same habit](img/sketch-finished-2.png)
-
-![Same path, different drawing](img/sketch-finished-2-final.png)
-:::
 
 ## So, what to do with analog notes
 
@@ -114,3 +113,12 @@ Maybe the reality is that I spent some undefined time assuming the analog notes 
 
 But a notebook with no search function and no backup held a decade of useful thinking anyway, which either means the digital system is doing less than I think it is, or my brain is doing more.
 I have not yet decided which is which.
+
+
+Bonus shrew carousel:
+
+![Panels of an Instagram carousel I made in Canva](img/notebook_carousel.jpeg)
+
+![The finished carousel](img/ShrewCarousel.png)
+
+Here is the [Instagram post!](https://www.instagram.com/p/DIqN7viN1de/?utm_source=ig_web_button_share_sheet&igsh=MzRlODBiNWFlZA==)

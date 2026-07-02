@@ -3,7 +3,6 @@ title: "What to do with analog notes"
 description: "Most of them stay in the notebook. I went looking for the ones that didn't."
 date: 2026-07-02
 categories: [note-taking, PKM]
-draft: true
 ---
 
 At the end of the week I spent without digital notes, I had a notebook with actual content and no reasonable plan for any of it.

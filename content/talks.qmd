@@ -14,6 +14,10 @@ My public speaking and teaching work is split between technical training for res
 
 <br>
 
+Certified [Carpentries](https://carpentries.org/) Instructor, currently training as an Instructor-Trainer.
+
+<br>
+
 ##### *Upcoming*
 
 - **Behavioural flexibility, not efficiency, as the cognitive trait under selection** <br>
@@ -21,6 +25,10 @@ My public speaking and teaching work is split between technical training for res
   Torino, Italy <br>
 
 ##### *Events*  
+
+- **SARA Book Club** - SARA Institute of Science <br>
+  *July 10th, 2026* <br>
+  Moderator · [Event link](https://sara-edu.netlify.app/book-club/2026-07-10-ambedkar/)
 
 - **How to make your own website with Quarto** - SORTEE Code Club <br>
   *May 18, 2026* <br>

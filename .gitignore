@@ -4,6 +4,9 @@
 .Ruserdata
 .Renviron
 
+CLAUDE.md
+.claude/
+
 /.quarto/
 
 blog/drafts/

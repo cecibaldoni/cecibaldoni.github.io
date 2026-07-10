@@ -18,7 +18,7 @@ include-after-body:
 
 I am a researcher at the [Max Planck Institute of Animal Behaviour](https://www.ab.mpg.de/) where I explore how brain and environment shape how animals think.<br><br>
 
-Beyond the lab, I lead community operations and open science initiatives. My work focuses on building the technical systems and professional networks that allow researchers to share knowledge and automate their workflows at scale.
+Beyond the lab, I teach, mentor, and lead community operations and open science initiatives. My work focuses on building the technical systems and professional networks that allow researchers to share knowledge and automate their workflows at scale.
 
 **Dive into the interactive city below to explore my projects, workshops, open science efforts, and community activities**.<br><br>
 

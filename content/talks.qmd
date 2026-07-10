@@ -22,6 +22,10 @@ My public speaking and teaching work is split between technical training for res
 
 ##### *Events*  
 
+- **SARA Book Club** - SARA Institute of Science <br>
+  *July 10th, 2026* <br>
+  Moderator · [Event link](https://sara-edu.netlify.app/book-club/2026-07-10-ambedkar/)
+
 - **How to make your own website with Quarto** - SORTEE Code Club <br>
   *May 18, 2026* <br>
   [Event Website](https://sortee.github.io/CodeClub/)

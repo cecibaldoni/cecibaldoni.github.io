@@ -42,7 +42,7 @@ Communities I'm part of:
 - [R-Ladies Global](https://rladies.org/) — contributing to the blog
 - [The Turing Way](https://book.the-turing-way.org/) — community management working group
 - [PCI Ecology](https://ecology.peercommunityin.org/) — code editor
-- [The Carpentries](https://carpentries.org/) - Instructor and member of the Code of Conduct Committee
+- [The Carpentries](https://carpentries.org/) - Certified Instructor, Instructor-Trainer in training, and member of the Code of Conduct Committee
 
 
 I’m always curious about new ways to connect people and ideas.

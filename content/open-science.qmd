@@ -3,7 +3,7 @@ title: ""
 ---
 
 ::: {.page-icon}
-<img src="img/icons/open-science.svg" alt="" aria-hidden="true">
+<img src="../img/icons/open-science.svg" alt="" aria-hidden="true">
 :::
 
 ## Open Science {#open-science}

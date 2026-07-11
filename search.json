@@ -343,18 +343,11 @@
     "text": "In this page you can find a selection of illustrations, sketches, and visual experiments I’ve created for different projects.  I love combining science and design, and helping others visually communicate their work.  You can support my work or request a custom commission (graphical abstracts, favicons, logos, or visuals for websites and talks) through Ko-fi:\n\n  \n\n\n\n\n\n  \n  \n  \n  \n  \n  \n\n\n\n\n\n  \n  \n  \n  \n  \n  \n\n\n\n\n\n  \n  \n  \n  \n  \n  \n\n\n\n\n\n  \n  \n  \n  \n\n\n\n  \n  \n  \n  \n  \n\n\n\n  \n  \n  \n  \n  \n  \n\n\n\n  \n  \n  \n\n\nThese are elements from the illustrated isometric city I designed for my homepage. Each building represents a different section of my site — and yes, I drew all of them!\n\n  \n  \n\n © cecibaldoni, 2025. All works in this page are licensed under a Creative Commons Attribution-NonDerivative-NonCommercial 4.0 International License.  This means you’re welcome to share anything from this page for non-commercial purposes as long as you credit me as the creator!\n\n\nWant a high-res version or a custom illustration? Contact me here️!\n\n×"
   },
   {
-    "objectID": "content/media.html",
-    "href": "content/media.html",
-    "title": "Cecilia Baldoni",
-    "section": "",
-    "text": "Creating Her Interactive Academic Website — The Social Academic · April 14, 2026\nHosted by Jennifer van Alstyne. We talked about building this website, the tools behind it (Quarto, GitHub, Closeread), and advice for researchers creating their own online presence.\nFull episode · Listen on Spotify · Watch on YouTube\n\nECR Asks: Dr Cecilia Baldoni — SORTEE Blog · April 6, 2026\nInterviewed by Oakleigh Wilson as part of SORTEE’s ECR Asks series. We discussed community engagement, communication challenges in academic societies, and building open infrastructure that lasts.\nRead the interview"
-  },
-  {
     "objectID": "content/media.html#interviews-podcasts",
     "href": "content/media.html#interviews-podcasts",
     "title": "Cecilia Baldoni",
-    "section": "",
-    "text": "Creating Her Interactive Academic Website — The Social Academic · April 14, 2026\nHosted by Jennifer van Alstyne. We talked about building this website, the tools behind it (Quarto, GitHub, Closeread), and advice for researchers creating their own online presence.\nFull episode · Listen on Spotify · Watch on YouTube\n\nECR Asks: Dr Cecilia Baldoni — SORTEE Blog · April 6, 2026\nInterviewed by Oakleigh Wilson as part of SORTEE’s ECR Asks series. We discussed community engagement, communication challenges in academic societies, and building open infrastructure that lasts.\nRead the interview"
+    "section": "Interviews & Podcasts",
+    "text": "Interviews & Podcasts\nCreating Her Interactive Academic Website — The Social Academic · April 14, 2026\nHosted by Jennifer van Alstyne. We talked about building this website, the tools behind it (Quarto, GitHub, Closeread), and advice for researchers creating their own online presence.\nFull episode · Listen on Spotify · Watch on YouTube\n\nECR Asks: Dr Cecilia Baldoni — SORTEE Blog · April 6, 2026\nInterviewed by Oakleigh Wilson as part of SORTEE’s ECR Asks series. We discussed community engagement, communication challenges in academic societies, and building open infrastructure that lasts.\nRead the interview"
   },
   {
     "objectID": "content/media.html#press-coverage",
@@ -378,27 +371,6 @@
     "text": "Get in Touch\nI would love to connect!\nIf you have questions, ideas for collaboration, or want to chat, here’s how to find me. I typically respond within 2 business days.\n\nEmail\n\n📧 Email me at work\n\n🙋 Email me personally\n\n\n\nConnect with me on Social Media!\n\n     \n\n\n\nBook a time to chat!\n📅 Schedule time with me at your convenience using my Google Calendar.\nHere’s what to know:\n\nChoose a time that fits your schedule (no need to wait for back-and-forth emails)\nGreat for brainstorming sessions, or just a friendly catch-up\nIf you have any specific topic in mind, or you feel I should prepare something in advance, let me know through the Booking Form!\nIf you don’t see an open slot, just reach out by email and we’ll find another time!\n\nLooking forward to connecting!"
   },
   {
-    "objectID": "content/datasets.html",
-    "href": "content/datasets.html",
-    "title": "Cecilia Baldoni",
-    "section": "",
-    "text": "Coming soon!"
-  },
-  {
-    "objectID": "content/datasets.html#datasets",
-    "href": "content/datasets.html#datasets",
-    "title": "Cecilia Baldoni",
-    "section": "",
-    "text": "Coming soon!"
-  },
-  {
-    "objectID": "content/privacy.html",
-    "href": "content/privacy.html",
-    "title": "Privacy Policy",
-    "section": "",
-    "text": "This website uses Google Analytics to help understand how visitors interact with the content.\nNo personal data (like names or emails) is collected directly. Google Analytics may use cookies to collect anonymous usage data such as page views, duration, and device/browser information.\nBy using this site, you consent to this anonymous tracking.\nYou can disable cookies in your browser settings or use browser extensions to block analytics scripts.\nIf you have questions, feel free to contact me."
-  },
-  {
     "objectID": "content/shrews.html",
     "href": "content/shrews.html",
     "title": "Cecilia Baldoni",
@@ -418,6 +390,13 @@
     "title": "Cecilia Baldoni",
     "section": "Does captivity influence learning?",
     "text": "Does captivity influence learning?\n\n\n\n\nBrain size is of course only part of the story… environment shapes behavior too.\n\n\n\n\nIn captivity, animals face new challenges. Do shrews kept in captivity learn differently than those in the wild?\n\n\n\n\nI tested the ability of shrews to associate an odor cue with a reward in a Y-maze associative learning task.\n\n\n\n\nEach dot represents an individual shrew’s decision in a trial. The x-axis represents the trial number, from 1 to 10. The y-axis shows whether they made the correct choice (1) or the wrong one (0).\n\n\n\n\nSummer wild (orange) shrews had the highest and earliest success rates.\n\n\n\n\nWinter wild (dark blue) shrews showed a similar learning curve, but they learned at a slower rate and did not reach the Summer success rate.\n\n\n\n\nWinter captive (light blue) shrews showed no learning, never deviating from chance.\n\n\n\n\n📄 This work is published in Royal Society Open Science: Captivity alters behaviour but not seasonal brain size change in semi-naturally housed shrews\n\n\n\n\n\n\n\n\n\n\n\nIgnoring unknown labels:\n• fill : \"CI 95%\"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProject Collaborators\nI conduct this research with Dr. Dina Dechmann at the Max Planck Institute of Animal Behaviour\n Collaborators:  Prof. Dominik von Elverfeldt, University of Freiburg, Germany  Prof. Liliana Dávalos, Stony Brook University, New York  Prof. John Nieland, University of Aalborg, Denmark"
+  },
+  {
+    "objectID": "content/privacy.html",
+    "href": "content/privacy.html",
+    "title": "Privacy Policy",
+    "section": "",
+    "text": "This website uses Google Analytics to help understand how visitors interact with the content.\nNo personal data (like names or emails) is collected directly. Google Analytics may use cookies to collect anonymous usage data such as page views, duration, and device/browser information.\nBy using this site, you consent to this anonymous tracking.\nYou can disable cookies in your browser settings or use browser extensions to block analytics scripts.\nIf you have questions, feel free to contact me."
   },
   {
     "objectID": "content/games.html",

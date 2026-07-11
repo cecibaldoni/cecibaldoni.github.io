@@ -3,7 +3,7 @@ title: "The Dissertation Journal that saved my sanity"
 description: "Doing a PhD means trying 100 systems and stick to 3. If you have to try something this year, let it be a dissertation journal"
 date: 2025-11-04
 image: img/generaldisc.png 
-categories: [note-taking, PhD, dissertation]
+categories: [note-taking, PhD]
 editor: 
   markdown: 
     wrap: sentence

@@ -20,9 +20,9 @@ Certified [Carpentries](https://carpentries.org/) Instructor, currently training
 
 ##### *Upcoming*
 
-- **Behavioural flexibility, not efficiency, as the cognitive trait under selection** <br>
-  *ISBE -- July 21-25, 2026* <br>
-  Torino, Italy <br>
+- **SARA Book Club** - SARA Institute of Science <br>
+  *July 30th, 2026* <br>
+  Moderator · [Event link](https://sara-edu.netlify.app/book-club/2026-07-10-ambedkar/)
 
 ##### *Events*  
 
@@ -88,6 +88,10 @@ Certified [Carpentries](https://carpentries.org/) Instructor, currently training
 ### Scientific Conferences and Seminars
 
 #### 2026
+
+- **Behavioural flexibility, not efficiency, as the cognitive trait under selection** <br>
+  *ISBE -- July 21-25, 2026* <br>
+  Torino, Italy <br>
 
 - **Baldoni C.** <br>
   *Invited Seminar* — *University of Tübingen* <br>

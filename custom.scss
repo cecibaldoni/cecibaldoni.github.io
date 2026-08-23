@@ -294,10 +294,28 @@ pre.sourceCode > code {
 .icon-bookshop { top: 18.58%; left: 49.29%; width: 15.00%;}
 .icon-open-science { top: 40.45%; left: 21.86%; width: 7.67%;}
 .icon-illustration { top: 37.91%; left: 65.00%; width: 16.32%;}
+.icon-illustration-banner { top: 48.86%; left: 75.33%; width: 1.29%;
+    position: absolute;
+    transform-origin: 50% 0%;
+    animation: banner-swing 2s ease-in-out infinite;
+}
+
 .icon-radio { top: 31.64%; left: 92.95%; width: 5.00%;}
 .icon-blog { top: 37.14%; left: 77.29%; width: 5.48%;}
 .icon-coffee { top: 57.26%; left: 51.79%; width: 7.14%;}
 
+
+.icon-illustration-banner img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@keyframes banner-swing {
+  0% {transform: rotate(-8deg);}
+  50% {transform: rotate(8deg);}
+  100% {transform: rotate(-8deg);}
+}
 
 .city-label {
   position: absolute;

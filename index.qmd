@@ -56,6 +56,10 @@ Beyond the lab, I teach, mentor, and lead community operations and open science 
       <img src="img/icons/illustrations.svg" alt="Illustration">
       <span class="city-label">Illustrations</span>
     </a>
+    
+    <div class="icon-illustration-banner">
+      <img src="img/icons/banner.svg" alt="Commissions open">
+    </div>
 
     <a href="content/open-science.qmd" class="city-icon icon-open-science">
       <img src="img/icons/open-science.svg" alt="Open Science">

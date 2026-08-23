@@ -5,7 +5,7 @@ canvas_width <- 5989.414
 canvas_height <- 3718.340
 
 # icons positions and sizes
-#X and Y are in the move tav in "Transform"
+#X and Y are in "Object" -> "Transform" -> "Move" tab
 #Width is in the scale tab, but resize to 100% before checking the width in px
 icons <- list(
   contact = list(x = 2254.204, y = 679.325, w = 983.975),
@@ -17,9 +17,10 @@ icons <- list(
   open_science = list(x = 1309.395, y = 1504.081, w = 459.129),
   
   illustration = list(x = 3892.956, y = 1409.806, w = 977.500),
+  illustration_banner = list(x = 4511.896, y = 1816.747, w = 77.101),
   radio = list(x = 5567.295, y = 1176.360, w = 299.470),
   blog = list(x = 4629.427, y = 1380.903, w = 328.140),
-  coffee = list(x = 3101.705, y = 2129,387, w = 427.815)
+  coffee = list(x = 3101.705, y = 2129.387, w = 427.815)
 )
 
 # calculate top, left, and width in percentages

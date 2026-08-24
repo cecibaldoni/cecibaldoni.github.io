@@ -16,9 +16,9 @@ include-after-body:
 
 <img src="img/back.JPG" alt="" style="width: 40%; float: left; margin-right: 40px;"/>
 
-I am a researcher at the [Max Planck Institute of Animal Behaviour](https://www.ab.mpg.de/) where I explore how brain and environment shape how animals think.<br><br>
+Trained as a behavioural biologist, with a PhD and postdoc on how a shrinking, regrowing brain changes what a shrew can do. These days I work in scientific marketing, still working out which half the job titles actually mean.<br><br>
 
-Beyond the lab, I teach, mentor, and lead community operations and open science initiatives. My work focuses on building the technical systems and professional networks that allow researchers to share knowledge and automate their workflows at scale.
+Beyond that, I still teach, mentor, illustrate, and write about how people think and work.
 
 **Dive into the interactive city below to explore my projects, workshops, open science efforts, and community activities**.<br><br>
 

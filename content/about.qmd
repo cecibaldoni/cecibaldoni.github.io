@@ -18,6 +18,7 @@ format:
   <div class="about-me-text">
     <ul>
       <li><strong>Educator</strong> and <strong>mentor</strong></li>
+      <li><strong>Draw</strong> more than fits under "hobby"</li>
       <li>Enjoy designing and leading <strong>workshops</strong></li>
       <li>Love connecting research <strong>ideas</strong> with everyday challenges</li>
       <li>Obsessed with <strong>note-taking apps</strong></li>
@@ -27,13 +28,14 @@ format:
 ```
 <br>
 
-My work exists at the intersection of research, technical infrastructure, and community leadership.
+I trained as a researcher and now work in scientific marketing, in the medical device industry. I still teach, mentor, illustrate, and write about how people think and work.
 
-[My current work](shrews.qmd) centers on the cognitive compromises of the common shrew, a model species for studying brain size plasticity and behavior.
+
+My PhD and postdoc research looked at [the cognitive compromises of the common shrew](shrews.qmd), a model species for studying brain size plasticity and behavior.
 
 ### What I Do
 
-I lead community initiatives that transform Open Science from a policy requirement into a practical workflow. This involves building the technical systems and professional networks necessary for digital collaboration. I love **teaching**, **facilitating workshops**, and I focus on making **complex ideas accessible** and **connecting people** across fields. You can see examples of this in my [Talks & Workshops](talks.qmd) and [Projects](project.qmd) pages.
+I lead community initiatives that transform Open Science from a policy requirement into a practical workflow. I love **teaching**, **facilitating workshops**, and I focus on making **complex ideas accessible** and **connecting people** across fields. You can see examples of this in my [Talks & Workshops](talks.qmd) and [Projects](project.qmd) pages.
 
 Practicing [Open Science](open-science.qmd) is both a technical choice and a cultural one. I am committed to advancing transparency and reproducibility, ensuring data is not just "available" but actually usable.
 

@@ -6,9 +6,11 @@ categories: [writing, microblogging]
 draft: true
 ---
 
-Every so often, scrolling my phone for no reason at all, I register someone who apparently used the pandemic to do something marvelous. 
+Every so often, while doom-scrolling from my phone, I register someone who apparently used the pandemic to do something marvelous. 
 
-I know what you are thinking. Who? Where? Which project?
+I know what you are thinking. 
+Who? Where? Which project?
+
 Well, I could not name you a single one of these people if you asked. There's no specific project I'm thinking of, it's just a background *hum* that seems to follow the topic everywhere it goes. 
 Or I could be misled. It could be that the first thought that came to your head was an example of a pandemic project, because you (like me) have seen this phenomenon already.
 

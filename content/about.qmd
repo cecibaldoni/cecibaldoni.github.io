@@ -14,7 +14,7 @@ format:
 
 ```{=html}
 <div class="about-me" style="display:flex; align-items:center; gap:2rem;">
-  <img src="../img/BaldoniCecilia-long.jpg" alt="Cecilia Baldoni" class="about-me-img" style="border-radius:50%; max-width:200px;">
+  <img src="../img/ceci-2026.JPG" alt="Headshot of Cecilia Baldoni" class="about-me-img" style="border-radius:50%; max-width:200px;">
   <div class="about-me-text">
     <ul>
       <li><strong>Educator</strong> and <strong>mentor</strong></li>
@@ -31,7 +31,7 @@ format:
 I trained as a researcher and now work in scientific marketing, in the medical device industry. I still teach, mentor, illustrate, and write about how people think and work.
 
 
-My PhD and postdoc research looked at [the cognitive compromises of the common shrew](shrews.qmd), a model species for studying brain size plasticity and behavior.
+My main research topic was the [the cognitive compromises of the common shrew](shrews.qmd), a model species for studying brain size plasticity and behavior.
 
 ### What I Do
 

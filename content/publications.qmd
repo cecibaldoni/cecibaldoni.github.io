@@ -1,11 +1,58 @@
 ---
 title: ""
-toc: false
+toc: true
 ---
 
 ::: {.page-icon}
 <img src="../img/icons/bookshop.svg" alt="" aria-hidden="true">
 :::
+
+
+## Science Communication
+
+```{=html}
+<div class="listing-item">
+  <div class="thumbnail">
+    <img src="../img/chickpea/thumbnail-clumsy.png"
+         alt="Chickpea falling"
+         class="thumbnail-image">
+  </div>
+  <div>
+    <p><strong><a href="https://chickpeasprouts.substack.com/p/the-science-behind-clumsiness">
+      The Science behind Clumsiness
+    </a></strong></p>
+    <p>How a snowy trip to the ER made me wonder about brains.</p>
+  </div>
+</div>
+
+<div class="listing-item">
+  <div class="thumbnail">
+    <img src="../img/chickpea/beaver.png"
+         alt="Chickpea and beaver building"
+         class="thumbnail-image">
+  </div>
+  <div>
+    <p><strong><a href="https://chickpeasprouts.substack.com/p/a-beaver-post">
+      A Beaver Post
+    </a></strong></p>
+    <p>The mandatory beaver post that my brain was asking about</p>
+  </div>
+</div>
+
+<div class="listing-item">
+  <div class="thumbnail">
+    <img src="../img/chickpea/Moon_Chickpea.png"
+         alt="Chickpea on the moon"
+         class="thumbnail-image">
+  </div>
+  <div>
+    <p><strong><a href="https://chickpeasprouts.substack.com/p/it-was-always-going-to-be-the-chickpea">
+      It was always going to be the chickpea
+    </a></strong></p>
+    <p>It's about moon chickpeas.</p>
+  </div>
+</div>
+```
 
 ## Selected peer-reviewed publications
 
@@ -95,49 +142,4 @@ toc: false
 </div>
 ```
 
-## Science Communication
-
-```{=html}
-<div class="listing-item">
-  <div class="thumbnail">
-    <img src="../img/chickpea/thumbnail-clumsy.png"
-         alt="Chickpea falling"
-         class="thumbnail-image">
-  </div>
-  <div>
-    <p><strong><a href="https://chickpeasprouts.substack.com/p/the-science-behind-clumsiness">
-      The Science behind Clumsiness
-    </a></strong></p>
-    <p>How a snowy trip to the ER made me wonder about brains.</p>
-  </div>
-</div>
-
-<div class="listing-item">
-  <div class="thumbnail">
-    <img src="../img/chickpea/beaver.png"
-         alt="Chickpea and beaver building"
-         class="thumbnail-image">
-  </div>
-  <div>
-    <p><strong><a href="https://chickpeasprouts.substack.com/p/a-beaver-post">
-      A Beaver Post
-    </a></strong></p>
-    <p>The mandatory beaver post that my brain was asking about</p>
-  </div>
-</div>
-
-<div class="listing-item">
-  <div class="thumbnail">
-    <img src="../img/chickpea/Moon_Chickpea.png"
-         alt="Chickpea on the moon"
-         class="thumbnail-image">
-  </div>
-  <div>
-    <p><strong><a href="https://chickpeasprouts.substack.com/p/it-was-always-going-to-be-the-chickpea">
-      It was always going to be the chickpea
-    </a></strong></p>
-    <p>It's about moon chickpeas.</p>
-  </div>
-</div>
-```
 

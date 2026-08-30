@@ -1,27 +1,21 @@
-/* 1. Define Variables using CSS syntax */
+/* 1. Variables — hardcoded to the current palette */
 :root {
-  --linen: #fff7ef;
-  --chickpea: #ffcf85;
-  --coral: #eb7447;
-  --lightgreen: #E3F2FF;
-  --blue: #27a7d8;
-  --evergreen: #084024;
-
-  --primary: var(--coral);
-  --secondary: var(--blue);
+  --cream: #fbf3ea;
+  --chickpea: #ebbd4f;
+  --cinnamon: #a04a0d;
+  --dark: #112909;
+  --narrative-bg: #e9e2db;   /* light tint of Camel, replaces the old pale-blue box tint */
+  --primary: var(--cinnamon);
   --pop: var(--chickpea);
-  --light: var(--lightgreen);
-  --dark: var(--evergreen);
-
-  --body-bg: var(--linen);
-  --body-color: var(--evergreen);
+  --body-bg: var(--cream);
+  --body-color: var(--dark);
 }
 
-/* 2. Base Styles */
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..800&family=Space+Grotesk:wght@300..700&display=swap');
+/* 2. Base styles */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100..700&family=Roboto+Slab:wght@100..900&display=swap');
 
 body {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Roboto Slab", serif;
   font-weight: 400;
   font-size: 18px;
   text-align: justify;
@@ -30,21 +24,20 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "JetBrains Mono", monospace;
+  font-family: "Roboto Mono", monospace;
   color: var(--dark);
   text-align: left;
 }
 
-/* 3. Link Styles (Expanded from nested SCSS) */
+/* 3. Link styles */
 p a {
   text-decoration: none;
-  color: var(--secondary);
+  color: var(--primary);
   font-weight: 700;
   position: relative;
   z-index: 1;
   display: inline-block;
 }
-
 p a::before {
   content: '';
   position: absolute;
@@ -52,53 +45,47 @@ p a::before {
   bottom: 5px;
   width: 100%;
   height: 4px;
-  background-color: hsla(207, 100%, 90%, .75);
+  background-color: rgba(235, 189, 79, 0.6);
   z-index: -1;
   transition: all .3s ease-in-out;
 }
-
 p a:hover::before {
   bottom: 0;
   height: 100%;
 }
 
-/* 4. Navbar Styles */
+/* 4. Navbar */
 .navbar {
   background-color: var(--primary);
-  font-family: "JetBrains Mono", monospace;
+  font-family: "Roboto Mono", monospace;
   font-size: 1.3rem;
   font-weight: 700;
   border-bottom: 2px solid var(--pop);
 }
-
 .navbar a {
   color: var(--body-bg);
   transition: color 0.5s ease;
 }
-
 .navbar a:active {
   color: white;
 }
-
 .navbar a:hover {
   color: var(--pop);
 }
 
-/* 5. Closeread Sections */
+/* 5. Closeread sections */
 .cr-section {
-  background-color: var(--body-bg) !important; 
+  background-color: var(--body-bg) !important;
 }
-
 .narrative {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Roboto Slab", serif;
   font-size: 18px;
-  background-color: rgba(227, 242, 255, 0.8) !important; /* Based on lightgreen */
+  background-color: var(--narrative-bg) !important;
   color: var(--dark) !important;
   text-align: justify;
   border-radius: 15px !important;
   padding: 20px;
 }
-
 .cr-section .sticky-col .sticky-col-stack .cr-active {
   opacity: 1 !important;
   visibility: visible !important;

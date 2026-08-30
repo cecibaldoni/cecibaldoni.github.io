@@ -1,45 +1,43 @@
 /*-- scss:defaults --*/
 
-$linen:      #fdf6ee;
-$chickpea:   #e8c97e;
-$ochre:      #d4943f;
-$terracotta: #c4703a;
-$sprout:     #a3be6e;
-$sage:       #6a9e50;
-$forest:     #2e6b35;
-$evergreen:  #0f3318;
+$cream:      #f3dbc1;
+$chickpea:   #f8ca5d;
+$cinnamon: #a04a0d;
+$camel:     #a67c52;
+$forest:     #105b09;
+$evergreen:  #112909;
 
-$primary:     $terracotta;
+$primary:     $cinnamon;
 $secondary:   $forest;
 $pop:         $chickpea;
-$light:       $sprout;
 $dark:        $evergreen;
+$code-bg: #cedacd;
 
-$body-bg:     $linen;
+$body-bg:     lighten($cream, 10%);
 $body-color:  $evergreen;
 
 $theme-colors: (
   "primary":   $primary,
   "secondary": $secondary,
   "pop":       $pop,
-  "light":     $light,
+  "light":     $camel,
   "dark":      $dark
 );
 
-$headings-font-family: "JetBrains Mono", monospace;
-$text-font-family:     "Space Grotesk", sans-serif;
+$headings-font-family: "Roboto Mono", monospace;
+$text-font-family:     "Roboto Slab", serif;
 
 /*-- scss:uses --*/
 
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..800&family=Space+Grotesk:wght@300..700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100..700&family=Roboto+Slab:wght@100..900&display=swap');
 
 /*-- scss:rules --*/
 
 body {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: $text-font-family;
   font-weight: 400;
   font-size: 18px;
+  line-height: 1.75; 
   text-align: justify;
   color: $body-color;
   background-color: $body-bg;
@@ -83,8 +81,13 @@ p a {
   }
 }
 
+
+.quarto-title-meta-heading, .quarto-title-meta-contents {
+  color: darken($primary, 12%);
+}
+
 :not(pre) > code {
-  background-color: rgba($sprout, 0.25) !important;
+  background-color: lighten($camel, 35%) !important;
   color: $dark !important;
   font-family: $headings-font-family;
   font-size: 0.9em;
@@ -100,15 +103,15 @@ p a {
 }
 
 .navbar {
-  background-color: darken($linen, 20%);
-  border-bottom: 3px solid $chickpea;
+  background-color: darken($cream, 20%);
+//  border-bottom: 3px solid $chickpea;
   box-shadow: 0 2px 8px rgba($evergreen, 0.40);
   font-family: $headings-font-family;
   font-size: 1.15rem;
   font-weight: 500;
 
   a {
-    color: $ochre;
+    color: $primary;
     transition: color 0.5s ease;
 
     &:active {
@@ -125,7 +128,7 @@ blockquote {
   margin: 2.5rem 0;
   padding: 1rem 1.5rem 1rem 2rem;
   border-left: 6px solid $pop;
-  background-color: rgba($sprout, 0.1);
+  background-color: lighten($camel, 35%);
   border-radius: 0 8px 8px 0;
   position: relative;
 
@@ -182,7 +185,7 @@ blockquote {
 }
 
 pre.sourceCode {
-  background-color: lighten($sprout, 15%) !important;
+  background-color: lighten($camel, 35%) !important;
   padding: 8px;
   border: 2px solid $forest;
   border-radius: 12px;
@@ -190,8 +193,8 @@ pre.sourceCode {
 }
 
 pre.sourceCode > code {
-  background-color: rgba($sprout, 0.08) !important;
-  color: $linen !important;
+  background-color: lighten($camel, 35%) !important;
+  color: $cream !important;
   display: block;
   padding: 10px;
   border: 1px solid $forest;
@@ -322,7 +325,7 @@ pre.sourceCode > code {
   bottom: 100%;
   left: 50%;
   transform: translateX(-50%) translateY(-10px);
-  background-color: $linen;
+  background-color: $cream;
   color: $dark;
   font-size: 1rem;
   font-weight: bold;
@@ -425,7 +428,7 @@ pre.sourceCode > code {
   button {
     margin-left: 1.5em;
     background-color: $dark;
-    color: $linen;
+    color: $cream;
     border: none;
     padding: 0.5em 1.2em;
     font-weight: bold;
@@ -433,7 +436,7 @@ pre.sourceCode > code {
     cursor: pointer;
     font-family: $text-font-family;
     transition: all 0.3s ease;
-    &:hover { background-color: $primary; color: $linen; }
+    &:hover { background-color: $primary; color: $cream; }
   }
   .cookie-link {
     margin-left: 1em;
@@ -479,7 +482,7 @@ pre.sourceCode > code {
 }
 
 .game-card {
-  background-color: rgba($sprout, 0.15);
+  background-color: rgba($camel, 0.15);
   border-radius: 12px;
   border: 1px solid $forest;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
@@ -532,9 +535,9 @@ pre.sourceCode > code {
         font-size: 0.85em;
         font-weight: bold;
         display: inline-block;
-        background-color: $terracotta;
+        background-color: $cinnamon;
         border: 1px solid $dark;
-        color: $linen;
+        color: $cream;
         transition: all 0.3s ease;
 
         &:hover {

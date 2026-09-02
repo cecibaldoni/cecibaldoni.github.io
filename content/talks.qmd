@@ -20,14 +20,12 @@ Certified [Carpentries](https://carpentries.org/) Instructor, currently training
 
 ##### *Upcoming*
 
-- **SARA Book Club** - SARA Institute of Science <br>
-  *July 30th, 2026* <br>
-  Moderator · [Event link](https://sara-edu.netlify.app/book-club/2026-07-10-ambedkar/)
+
 
 ##### *Events*  
 
 - **SARA Book Club** - SARA Institute of Science <br>
-  *July 10th, 2026* <br>
+  *July 10th, 2026* and *July 30th, 2026* <br>
   Moderator · [Event link](https://sara-edu.netlify.app/book-club/2026-07-10-ambedkar/)
 
 - **How to make your own website with Quarto** - SORTEE Code Club <br>

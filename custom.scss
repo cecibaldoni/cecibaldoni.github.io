@@ -112,7 +112,7 @@ p a {
 
   a {
     color: $primary;
-    transition: color 0.5s ease;
+    transition: color 0.3s ease;
 
     &:active {
       color: white;
@@ -287,7 +287,7 @@ pre.sourceCode > code {
   height: auto;
   display: block;
   vertical-align: bottom;
-  transition: transform 0.2s ease, filter 0.3s ease;
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .icon-contact { top: 18.27%; left: 37.64%; width: 16.43%;}
@@ -334,7 +334,7 @@ pre.sourceCode > code {
   white-space: nowrap;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.25s ease, transform 0.25s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 
   &::after {
@@ -374,7 +374,7 @@ pre.sourceCode > code {
   object-fit: contain;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease;
+  transition: transform 0.3s ease;
 
   &:hover { transform: scale(1.03); }
   &.micro { max-width: 120px; height: auto; padding: 4px; }
@@ -459,7 +459,7 @@ pre.sourceCode > code {
   border: 1px solid darken($pop, 15%);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
   overflow: hidden;
-  transition: transform 0.4s ease;
+  transition: transform 0.3s ease;
   text-align: center !important;
   width: 100%;
 
@@ -487,7 +487,7 @@ pre.sourceCode > code {
   border: 1px solid $forest;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
   overflow: hidden;
-  transition: transform 0.4s ease;
+  transition: transform 0.3s ease;
   width: 100%;
 
   display: flex;

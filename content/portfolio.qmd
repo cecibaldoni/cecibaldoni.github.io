@@ -527,6 +527,6 @@ Science doesn't have to be complicated. <br><br> Most of my days are spent insid
   <h2 style="text-align: center;">Let's work together!</h2>
   
   <a class="pf-btn pf-btn-primary" href="https://cecibaldoni.github.io/content/contact.html">Get in touch</a>
-  <a class="pf-btn pf-btn-secondary" href="../resume-Baldoni.pdf" target="_blank">Download Resume</a>
+  <a class="pf-btn pf-btn-secondary" href="../data/resume-Baldoni.pdf" target="_blank">Download Resume</a>
 </div>
 ```

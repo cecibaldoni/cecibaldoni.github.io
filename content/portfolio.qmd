@@ -1,0 +1,532 @@
+---
+title: ""
+css: "../closeread.css"
+format:
+  closeread-html:
+    remove-header-space: true
+include-in-header:
+  text: |
+    <style>
+      /* standalone page: no site chrome */
+      #quarto-header, .nav-footer { display: none !important; }
+      body.nav-fixed { padding-top: 0 !important; }
+
+      body {
+        background-color: var(--cream);
+        background-image:
+          radial-gradient(circle at 12% 18%, rgba(235, 189, 79, 0.10) 0, transparent 45%),
+          radial-gradient(circle at 88% 12%, rgba(160, 74, 13, 0.07) 0, transparent 40%),
+          radial-gradient(circle at 78% 85%, rgba(16, 91, 9, 0.06) 0, transparent 45%),
+          repeating-linear-gradient(
+            0deg,
+            rgba(17, 41, 9, 0.02) 0,
+            rgba(17, 41, 9, 0.02) 1px,
+            transparent 1px,
+            transparent 32px
+          );
+        background-attachment: fixed;
+      }
+      .pf-hero {
+        text-align: center;
+        padding: 4.5rem 1rem 1.5rem;
+      }
+      .pf-name {
+        font-family: "Roboto Mono", monospace;
+        font-size: 3rem;
+        font-weight: 700;
+        color: var(--dark);
+        margin-bottom: 0.5rem;
+      }
+      .pf-tagline {
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: var(--primary);
+        max-width: 640px;
+        margin: 0 auto;
+      }
+
+      .pf-bio {
+        max-width: 720px;
+        margin: 2rem auto 3rem;
+        padding: 0 1.25rem;
+        font-size: 1.1rem;
+      }
+
+      .pf-superpower {
+        max-width: 720px;
+        margin: 2rem auto 3rem;
+        padding: 0 1.25rem;
+        font-size: 1.35rem;
+        font-style: italic;
+      }
+
+      .pf-services {
+        display: flex;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 950px;
+        margin: 0 auto 3rem;
+        padding: 0 1.25rem;
+      }
+      .pf-service {
+        flex: 1 1 320px;
+        background: var(--narrative-bg);
+        border-radius: 12px;
+        padding: 1.5rem 1.75rem;
+      }
+      .pf-service h3 {
+        margin-top: 0;
+        color: #79074d;
+      }
+      .pf-service p {
+        margin-bottom: 0;
+      //  color: ;
+      }
+
+      /* ---- notebook scrollytelling ---- */
+      .pf-notebook-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        padding: 1rem;
+      }
+      .pf-notebook {
+        position: relative;
+        display: flex;
+        width: min(1250px, 110vw);
+        aspect-ratio: 16 / 9.5;
+        background: #fffaf2;
+        border-radius: 8px;
+        box-shadow: 0 20px 45px rgba(17, 41, 9, 0.28), 0 2px 0 rgba(17, 41, 9, 0.1);
+        z-index: 3;
+      }
+      /* stacked pages peeking out behind the top spread */
+      .pf-notebook::before,
+      .pf-notebook::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 8px;
+        z-index: -1;
+      }
+      .pf-notebook::before {
+        background: #f4ead4;
+        transform: translate(8px, 10px) rotate(0.7deg);
+        box-shadow: 0 14px 30px rgba(17, 41, 9, 0.16);
+      }
+      .pf-notebook::after {
+        background: #efe1c1;
+        transform: translate(16px, 19px) rotate(-1deg);
+        box-shadow: 0 10px 22px rgba(17, 41, 9, 0.12);
+      }
+      .pf-page-left,
+      .pf-page-right {
+        z-index: 1;
+      }
+      .pf-page {
+        position: relative;
+        flex: 1 1 50%;
+        padding: 2.25rem 2rem;
+        overflow: hidden;
+        background-image: repeating-linear-gradient(
+          to bottom,
+          #fffaf2 0,
+          #fffaf2 29px,
+          rgba(17, 41, 9, 0.08) 30px
+        );
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.65rem;
+      }
+      .pf-page-left {
+        border-radius: 8px 0 0 8px;
+        padding-left: 2.75rem;
+      }
+      .pf-page-right {
+        border-radius: 0 8px 8px 0;
+      }
+      .pf-page-left.pf-mid-shadow {
+        box-shadow: inset -12px 0 22px -20px rgba(0, 0, 0, 0.5);
+      }
+      .pf-page-right.pf-mid-shadow {
+        box-shadow: inset 12px 0 22px -20px rgba(0, 0, 0, 0.5);
+      }
+      .pf-page-left::before {
+        content: "";
+        position: relative;
+        top: 0;
+        bottom: 0;
+        left: 52px;
+        width: 2px;
+        background: rgba(160, 74, 13, 0.28);
+      }
+
+      .pf-pen {
+        position: absolute;
+        bottom: -13px;
+        right: 7%;
+        width: 34%;
+        max-width: 420px;
+        height: 13px;
+        background: linear-gradient(
+          to right,
+          var(--dark) 0 8%,
+          var(--primary) 20% 98%,
+          var(--dark) 98% 100%
+        );
+        border-radius: 8px;
+        transform: rotate(-22deg);
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.25);
+        z-index: 4;
+      }
+      .pf-pen::after {
+        content: "";
+        position: absolute;
+        right: -12px;
+        top: 0.5px;
+        border-left: 15px solid var(--dark);
+        border-top: 6px solid transparent;
+        border-bottom: 6px solid transparent;
+      }
+      .pf-tape {
+        position: absolute;
+        width: 62px;
+        height: 24px;
+        background: rgba(235, 189, 79, 0.55);
+        border: 1px solid rgba(160, 74, 13, 0.15);
+        z-index: 2;
+      }
+      .pf-tape.tl {
+        top: -8px;
+        left: 20px;
+        transform: rotate(-9deg);
+      }
+      .pf-tape.tr {
+        top: -8px;
+        right: 20px;
+        transform: rotate(9deg);
+      }
+      .pf-doodle {
+        width: 52px;
+        height: 52px;
+      }
+      .pf-eyebrow {
+        font-family: "Roboto Mono", monospace;
+        font-size: 0.9rem;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: var(--primary);
+        font-weight: 700;
+      }
+      .pf-page h4 {
+        margin: 0.1rem 0 0;
+        font-size: 1.25rem;
+        line-height: 1.25;
+      }
+      .pf-page .pf-meta {
+        font-family: "Roboto Mono", monospace;
+        font-size: 1.25rem;
+        color: var(--dark);
+        opacity: 0.7;
+      }
+      .pf-excerpt {
+        font-style: italic;
+        font-size: 1.25rem;
+        line-height: 1.5;
+        text-align: left;
+        margin: 0;
+      }
+      .pf-caption {
+        font-size: 0.95rem;
+        line-height: 1.7;
+        text-align: left;
+        margin: 5;
+      }
+      .pf-page img.pf-inset {
+        width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        border-radius: 4px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        background: white;
+      }
+      .pf-page a.pf-link {
+        font-weight: 700;
+        font-size: 0.85rem;
+        align-self: flex-start;
+      }
+      .pf-icon-row {
+        display: flex;
+        gap: 0.6rem;
+        flex-wrap: wrap;
+      }
+      .pf-icon-row img {
+        width: 42px;
+        height: 42px;
+      }
+
+      /* bookmark tab (narrative trigger content) */
+      .pf-tab {
+        display: inline-block;
+        font-family: "Roboto Mono", monospace;
+        font-size: 0.95rem;
+        font-weight: 700;
+        padding: 0.55rem 1rem;
+      }
+
+      @media (max-width: 700px) {
+        .pf-name {
+          font-size: 2.2rem;
+        }
+        .pf-notebook {
+          flex-direction: column;
+          aspect-ratio: auto;
+          width: 88vw;
+        }
+        .pf-page-left,
+        .pf-page-right {
+          border-radius: 8px;
+          padding: 1.5rem 1.5rem;
+        }
+        .pf-page-left::before {
+          display: none;
+        }
+      }
+
+      .pf-proof {
+        max-width: 760px;
+        margin: 3rem auto 2rem;
+        padding: 0 1.25rem;
+      }
+      .pf-award {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2rem;
+      }
+      .pf-award-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: var(--dark);
+        font-family: "Roboto Mono", monospace;
+      }
+      .pf-award-badge span {
+        font-size: 14px;
+        color: var(--cream);
+      }
+      .pf-award-badge strong {
+        color: var(--pop);
+      }
+      .pf-award-badge a {
+        color: var(--pop) !important;
+        font-weight: 700;
+      }
+      .pf-proof-item {
+        margin-bottom: 1.25rem;
+        font-size: 1.05rem;
+      }
+
+      .pf-cta {
+        text-align: center;
+        padding: 2.5rem 1.25rem 5rem;
+      }
+      .pf-cta p {
+        max-width: 520px;
+        margin: 0 auto 1.5rem;
+        font-size: 1.1rem;
+      }
+      .pf-btn {
+        display: inline-block;
+        padding: 0.8rem 1.8rem;
+        border-radius: 8px;
+        font-weight: 700;
+        text-decoration: none;
+        margin: 0.5rem;
+        font-family: "Roboto Mono", monospace;
+      }
+      .pf-btn-primary {
+        background: var(--primary);
+        color: var(--cream) !important;
+      }
+      .pf-btn-secondary {
+        background: transparent;
+        border: 2px solid var(--dark);
+        color: var(--dark) !important;
+      }
+    </style>
+---
+
+```{=html}
+<div class="pf-hero">
+  <div class="pf-name">Cecilia Baldoni</div>
+  <p class="pf-tagline">I write about science, and I illustrate it.</p>
+</div>
+```
+
+```{=html}
+<div class="pf-bio">
+```
+
+I am a **writer** and **illustrator** with a PhD in Natural Science. I specialised on neuroscience, physics, animal ecology, and cognition, where I published and co-published 12+ peer-reviewed papers; recently, I've been expanding my writing to medicine, psychology, and research productivity.
+
+I'm a certified Carpentries instructor and a recurring conference and workshop speaker on open science and data skills. I love communicating science and data into multi-format content.
+
+Scroll down to look at a curation of signature pieces.
+
+```{=html}
+</div>
+```
+
+```{=html}
+<h2 style="text-align: center;">Services</h2>
+<div class="pf-services">
+  <div class="pf-service">
+    <h3>Writing</h3>
+    <ul>
+      <li>Science communication for general audiences</li>
+      <li>Technical or editorial writing for medical content</li>
+      <li>Digital content: newsletter, blog posts, essays</li>
+    </ul>
+  </div>
+  <div class="pf-service">
+    <h3>Illustration</h3>
+    <ul>
+      <li>Scientific figures and graphical abstracts</li>
+      <li>Icons, diagrams, and visual systems for talks, workshops, and websites</li>
+      <li>Thumbnails and illustrations</li>
+    </ul>
+  </div>
+</div>
+```
+
+## From the notebook
+
+:::{.cr-section layout="overlay-left"}
+
+<span class="pf-tab"> Medical writing</span> @cr-page-mts
+
+<span class="pf-tab"> Science storytelling</span> @cr-page-substack
+
+<span class="pf-tab"> Process writing</span> @cr-page-blog
+
+<span class="pf-tab"> Peer-reviewed + illustration</span> @cr-page-cb
+
+:::{#cr-page-mts}
+```{=html}
+<div class="pf-notebook-wrap">
+<div class="pf-notebook">
+  <div class="pf-page pf-page-left pf-mid-shadow">
+  <div class="pf-eyebrow">Medical writing</div>
+    <img class="pf-inset" src="../img/illustrations/path1.png" alt="Closeread cheatsheet illustration">
+    
+    <h4>Shockwave Therapy for Chronic Pelvic Pain</h4>
+    <div class="pf-meta">MTS Medical Blog · Sep 2026</div>
+  </div>
+  <div class="pf-page pf-page-right pf-mid-shadow">
+    <p class="pf-excerpt">“Chronic Pelvic Pain Syndrome (CPPS) is one of the most common presentations within the Female Sexual Dysfunction spectrum. It is defined as persistent pelvic discomfort or pain that lasts over six months, in the absence of identifiable infection or other obvious local pathology. Although this syndrome is shared by urology and gynecology, with parallel diagnostic criteria and many of the same mechanistic drivers, chronic pelvic pain is more common in women.
+Chronic pelvic pain often comes along with, or drives, sexual dysfunction, and persistent pelvic discomfort is strongly associated with secondary reductions in desire. The two conditions sustain each other in a well-characterised cycle: pain disrupts sexual function, which in turn compounds distress, which sensitises pain perception further.
+Current treatments are predominantly oriented towards symptom management. [...] When conservative treatment does not bring relief, surgery is considered a last resort. No single intervention reliably resolves the condition.
+”</p>
+    <a class="pf-link" href="" target="_blank">Continue reading ↗</a>
+  </div>
+  <div class="pf-pen"></div>
+</div>
+</div>
+```
+:::
+
+:::{#cr-page-substack}
+```{=html}
+<div class="pf-notebook-wrap">
+<div class="pf-notebook">
+  <div class="pf-page pf-page-left pf-mid-shadow">
+  <div class="pf-eyebrow">Science storytelling</div>
+    <img class="pf-inset" src="../img/chickpea/thumbnail-clumsy.png" alt="Chickpea falling illustration">
+    
+    <h4>The Science Behind Clumsiness</h4>
+    <div class="pf-meta">Chickpea Sprouts · Substack · Jan 2026</div>
+  </div>
+  <div class="pf-page pf-page-right pf-mid-shadow">
+    <p class="pf-excerpt">“Two Sunday ago, with my husband away for the evening, I was left to the high-stakes task of fetching dinner for myself. So I moved to the kitchen with the casual confidence of someone who has managed to survive into their thirties without major structural damage. I would love to say that what happened next was a rare occurrence. I would love to tell you that this type of silly incident involving a sharp utensil and one of my blameless fingers never happens to me. But the collection of faint scars across my hands and knees (and, who am I kidding, everywhere else) begs to differ. My body is a historical record of every time I underestimated the distance between myself and something else (often an hard surface, sometimes a pointy knife).”</p>
+    <a class="pf-link" href="https://chickpeasprouts.substack.com/p/the-science-behind-clumsiness" target="_blank">Continue reading ↗</a>
+  </div>
+  <div class="pf-pen"></div>
+</div>
+</div>
+```
+:::
+
+:::{#cr-page-blog}
+```{=html}
+<div class="pf-notebook-wrap">
+<div class="pf-notebook">
+  <div class="pf-page pf-page-left pf-mid-shadow">
+    <div class="pf-tape tl"></div>
+    <div class="pf-tape tr"></div>
+    <div class="pf-eyebrow">Process writing</div>
+    <img class="pf-inset" src="../img/illustrations/cheatsheet-closeread.png" alt="Closeread cheatsheet illustration">
+    
+    <h4>A Cheatsheet for Closeread</h4>
+    <div class="pf-meta">Personal Blog · Mar 2025</div>
+  </div>
+  <div class="pf-page pf-page-right pf-mid-shadow">
+    
+    <p class="pf-excerpt">“So, I got invited to give a talk for R-Ladies Amsterdam. About something I really, really like: scrollytelling with Quarto and Closeread.”</p>
+    <a class="pf-link" href="../blog/closeread-cheatsheet.qmd" target="_blank">Continue reading ↗</a>
+  </div>
+  <div class="pf-pen"></div>
+</div>
+</div>
+```
+:::
+
+:::{#cr-page-cb}
+```{=html}
+<div class="pf-notebook-wrap">
+<div class="pf-notebook">
+  <div class="pf-page pf-page-left pf-mid-shadow">
+    <div class="pf-tape tl"></div>
+    <div class="pf-tape tr"></div>
+    <div class="pf-eyebrow">Peer-reviewed + illustration</div>
+    <img class="pf-inset" src="../img/illustrations/current-biology.png" alt="Graphical abstract for the Current Biology paper on seasonal shrew brain shrinkage">
+    <h4>Programmed seasonal brain shrinkage in the common shrew via water loss without cell death</h4>
+    <div class="pf-meta">Current Biology · 2025</div>
+  </div>
+  <div class="pf-page pf-page-right pf-mid-shadow">
+    <p class="pf-excerpt">Brain plasticity, the brain’s inherent ability to adapt its structure and function, is crucial for responding to environmental challenges but is usually not linked to a significant change in size. A striking exception to this is Dehnel’s phenomenon, where seasonal reversible brain-size reduction occurs in some small mammals to decrease metabolic demands during resource-scarce winter months. Despite these volumetric changes being well documented, the specific microstructural alterations that facilitate this adaptation remain poorly understood. Our study employed diffusion microstructure imaging (DMI) to explore these changes in common shrews, revealing significant alterations in water diffusion properties such as increased mean diffusivity and decreased fractional anisotropy, leading to decreased water content inside brain cells during winter. These findings [...] may inform future research on regenerative mechanisms, particularly during the spring regrowth phase, offering potential strategies relevant to neurodegenerative disease.
+</p>
+    <a class="pf-link" href="https://www.cell.com/current-biology/fulltext/S0960-9822(25)01081-4" target="_blank">Read the paper ↗</a>
+  </div>
+  <div class="pf-pen"></div>
+</div>
+</div>
+```
+:::
+
+
+:::
+
+```{=html}
+<div class="pf-superpower">
+```
+
+Science doesn't have to be complicated. <br><br> Most of my days are spent inside journal articles thick with jargon, the kind that makes a genuinely curious reader bounce off by the second paragraph. <br><br> My superpower is going in after that language and handing the finding back over intact, in words that survive outside the lab.
+
+```{=html}
+</div>
+```
+
+```{=html}
+<div class="pf-cta">
+  <h2 style="text-align: center;">Let's work together!</h2>
+  
+  <a class="pf-btn pf-btn-primary" href="https://cecibaldoni.github.io/content/contact.html">Get in touch</a>
+  <a class="pf-btn pf-btn-secondary" href="../resume-Baldoni.pdf" target="_blank">Download Resume</a>
+</div>
+```

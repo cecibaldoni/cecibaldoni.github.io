@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>portfolio – Cecilia Baldoni</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../img/shrew.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-3f2496242c16263c0d5ed257b2b27fab.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/intersection-observer-polyfill-1.0.0/intersection-observer.js"></script>
+<script src="../site_libs/quarto-contrib/scrollama-3.2.0/scrollama.min.js"></script>
+<script src="../site_libs/quarto-contrib/closeread-0.1.0/closeread.js"></script>
+<script src="../site_libs/quarto-contrib/iconify-3.0.0/iconify-icon.min.js"></script>
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>
+  /* standalone page: no site chrome */
+  #quarto-header, .nav-footer { display: none !important; }
+  body.nav-fixed { padding-top: 0 !important; }
+
+  body {
+    background-color: var(--cream);
+    background-image:
+      radial-gradient(circle at 12% 18%, rgba(235, 189, 79, 0.10) 0, transparent 45%),
+      radial-gradient(circle at 88% 12%, rgba(160, 74, 13, 0.07) 0, transparent 40%),
+      radial-gradient(circle at 78% 85%, rgba(16, 91, 9, 0.06) 0, transparent 45%),
+      repeating-linear-gradient(
+        0deg,
+        rgba(17, 41, 9, 0.02) 0,
+        rgba(17, 41, 9, 0.02) 1px,
+        transparent 1px,
+        transparent 32px
+      );
+    background-attachment: fixed;
+  }
+  .pf-hero {
+    text-align: center;
+    padding: 4.5rem 1rem 1.5rem;
+  }
+  .pf-name {
+    font-family: "Roboto Mono", monospace;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 0.5rem;
+  }
+  .pf-tagline {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--primary);
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .pf-bio {
+    max-width: 720px;
+    margin: 2rem auto 3rem;
+    padding: 0 1.25rem;
+    font-size: 1.1rem;
+  }
+
+  .pf-superpower {
+    max-width: 720px;
+    margin: 2rem auto 3rem;
+    padding: 0 1.25rem;
+    font-size: 1.35rem;
+    font-style: italic;
+  }
+
+  .pf-services {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 950px;
+    margin: 0 auto 3rem;
+    padding: 0 1.25rem;
+  }
+  .pf-service {
+    flex: 1 1 320px;
+    background: var(--narrative-bg);
+    border-radius: 12px;
+    padding: 1.5rem 1.75rem;
+  }
+  .pf-service h3 {
+    margin-top: 0;
+    color: #79074d;
+  }
+  .pf-service p {
+    margin-bottom: 0;
+  //  color: ;
+  }
+
+  /* ---- notebook scrollytelling ---- */
+  .pf-notebook-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 1rem;
+  }
+  .pf-notebook {
+    position: relative;
+    display: flex;
+    width: min(1250px, 110vw);
+    aspect-ratio: 16 / 9.5;
+    background: #fffaf2;
+    border-radius: 8px;
+    box-shadow: 0 20px 45px rgba(17, 41, 9, 0.28), 0 2px 0 rgba(17, 41, 9, 0.1);
+    z-index: 3;
+  }
+  /* stacked pages peeking out behind the top spread */
+  .pf-notebook::before,
+  .pf-notebook::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 8px;
+    z-index: -1;
+  }
+  .pf-notebook::before {
+    background: #f4ead4;
+    transform: translate(8px, 10px) rotate(0.7deg);
+    box-shadow: 0 14px 30px rgba(17, 41, 9, 0.16);
+  }
+  .pf-notebook::after {
+    background: #efe1c1;
+    transform: translate(16px, 19px) rotate(-1deg);
+    box-shadow: 0 10px 22px rgba(17, 41, 9, 0.12);
+  }
+  .pf-page-left,
+  .pf-page-right {
+    z-index: 1;
+  }
+  .pf-page {
+    position: relative;
+    flex: 1 1 50%;
+    padding: 2.25rem 2rem;
+    overflow: hidden;
+    background-image: repeating-linear-gradient(
+      to bottom,
+      #fffaf2 0,
+      #fffaf2 29px,
+      rgba(17, 41, 9, 0.08) 30px
+    );
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.65rem;
+  }
+  .pf-page-left {
+    border-radius: 8px 0 0 8px;
+    padding-left: 2.75rem;
+  }
+  .pf-page-right {
+    border-radius: 0 8px 8px 0;
+  }
+  .pf-page-left.pf-mid-shadow {
+    box-shadow: inset -12px 0 22px -20px rgba(0, 0, 0, 0.5);
+  }
+  .pf-page-right.pf-mid-shadow {
+    box-shadow: inset 12px 0 22px -20px rgba(0, 0, 0, 0.5);
+  }
+  .pf-page-left::before {
+    content: "";
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 52px;
+    width: 2px;
+    background: rgba(160, 74, 13, 0.28);
+  }
+
+  .pf-pen {
+    position: absolute;
+    bottom: -13px;
+    right: 7%;
+    width: 34%;
+    max-width: 420px;
+    height: 13px;
+    background: linear-gradient(
+      to right,
+      var(--dark) 0 8%,
+      var(--primary) 20% 98%,
+      var(--dark) 98% 100%
+    );
+    border-radius: 8px;
+    transform: rotate(-22deg);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.25);
+    z-index: 4;
+  }
+  .pf-pen::after {
+    content: "";
+    position: absolute;
+    right: -12px;
+    top: 0.5px;
+    border-left: 15px solid var(--dark);
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+  }
+  .pf-tape {
+    position: absolute;
+    width: 62px;
+    height: 24px;
+    background: rgba(235, 189, 79, 0.55);
+    border: 1px solid rgba(160, 74, 13, 0.15);
+    z-index: 2;
+  }
+  .pf-tape.tl {
+    top: -8px;
+    left: 20px;
+    transform: rotate(-9deg);
+  }
+  .pf-tape.tr {
+    top: -8px;
+    right: 20px;
+    transform: rotate(9deg);
+  }
+  .pf-doodle {
+    width: 52px;
+    height: 52px;
+  }
+  .pf-eyebrow {
+    font-family: "Roboto Mono", monospace;
+    font-size: 0.9rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--primary);
+    font-weight: 700;
+  }
+  .pf-page h4 {
+    margin: 0.1rem 0 0;
+    font-size: 1.25rem;
+    line-height: 1.25;
+  }
+  .pf-page .pf-meta {
+    font-family: "Roboto Mono", monospace;
+    font-size: 1.25rem;
+    color: var(--dark);
+    opacity: 0.7;
+  }
+  .pf-excerpt {
+    font-style: italic;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    text-align: left;
+    margin: 0;
+  }
+  .pf-caption {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    text-align: left;
+    margin: 5;
+  }
+  .pf-page img.pf-inset {
+    width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background: white;
+  }
+  .pf-page a.pf-link {
+    font-weight: 700;
+    font-size: 0.85rem;
+    align-self: flex-start;
+  }
+  .pf-icon-row {
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+  }
+  .pf-icon-row img {
+    width: 42px;
+    height: 42px;
+  }
+
+  /* bookmark tab (narrative trigger content) */
+  .pf-tab {
+    display: inline-block;
+    font-family: "Roboto Mono", monospace;
+    font-size: 0.95rem;
+    font-weight: 700;
+    padding: 0.55rem 1rem;
+  }
+
+  @media (max-width: 700px) {
+    .pf-name {
+      font-size: 2.2rem;
+    }
+    .pf-notebook {
+      flex-direction: column;
+      aspect-ratio: auto;
+      width: 88vw;
+    }
+    .pf-page-left,
+    .pf-page-right {
+      border-radius: 8px;
+      padding: 1.5rem 1.5rem;
+    }
+    .pf-page-left::before {
+      display: none;
+    }
+  }
+
+  .pf-proof {
+    max-width: 760px;
+    margin: 3rem auto 2rem;
+    padding: 0 1.25rem;
+  }
+  .pf-award {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  .pf-award-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    background: var(--dark);
+    font-family: "Roboto Mono", monospace;
+  }
+  .pf-award-badge span {
+    font-size: 14px;
+    color: var(--cream);
+  }
+  .pf-award-badge strong {
+    color: var(--pop);
+  }
+  .pf-award-badge a {
+    color: var(--pop) !important;
+    font-weight: 700;
+  }
+  .pf-proof-item {
+    margin-bottom: 1.25rem;
+    font-size: 1.05rem;
+  }
+
+  .pf-cta {
+    text-align: center;
+    padding: 2.5rem 1.25rem 5rem;
+  }
+  .pf-cta p {
+    max-width: 520px;
+    margin: 0 auto 1.5rem;
+    font-size: 1.1rem;
+  }
+  .pf-btn {
+    display: inline-block;
+    padding: 0.8rem 1.8rem;
+    border-radius: 8px;
+    font-weight: 700;
+    text-decoration: none;
+    margin: 0.5rem;
+    font-family: "Roboto Mono", monospace;
+  }
+  .pf-btn-primary {
+    background: var(--primary);
+    color: var(--cream) !important;
+  }
+  .pf-btn-secondary {
+    background: transparent;
+    border: 2px solid var(--dark);
+    color: var(--dark) !important;
+  }
+</style>
+<meta cr-debug-mode="false">
+<meta cr-remove-header-space="true">
+
+
+<link rel="stylesheet" href="../site_libs/quarto-contrib/quarto-project/qmd-lab/closeread/closeread.css">
+<link rel="stylesheet" href="../closeread.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Cecilia Baldoni</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../content/about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../content/project.html"> 
+<span class="menu-text">Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../blog/index.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../content/contact.html"> 
+<span class="menu-text">Contact</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://scholar.google.com/citations?user=mxM_Py8AAAAJ&amp;hl=en&amp;oi=sra"> 
+<span class="menu-text"><iconify-icon role="img" inline="" icon="fa6-brands:google-scholar" aria-label="Icon google-scholar from fa6-brands Iconify.design set." title="Icon google-scholar from fa6-brands Iconify.design set."></iconify-icon></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://substack.com/@cecibaldoni"> 
+<span class="menu-text"><iconify-icon role="img" inline="" icon="garden:bookmark-fill-12" aria-label="Icon bookmark-fill-12 from garden Iconify.design set." title="Icon bookmark-fill-12 from garden Iconify.design set."></iconify-icon></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://bsky.app/profile/cecibaldoni.bsky.social"> 
+<span class="menu-text"><iconify-icon role="img" inline="" icon="meteor-icons:bluesky" aria-label="Icon bluesky from meteor-icons Iconify.design set." title="Icon bluesky from meteor-icons Iconify.design set."></iconify-icon></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.instagram.com/cecibaldoni/?hl=en"> <i class="bi bi-instagram" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/cecibaldoni/"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/cecilia-baldoni/"> <i class="bi bi-LinkedIn" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content column-page" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<div class="pf-hero">
+  <div class="pf-name">Cecilia Baldoni</div>
+  <p class="pf-tagline">I write about science, and I illustrate it.</p>
+</div>
+<div class="pf-bio">
+<p>I am a <strong>writer</strong> and <strong>illustrator</strong> with a PhD in Natural Science. I specialised on neuroscience, physics, animal ecology, and cognition, where I published and co-published 12+ peer-reviewed papers; recently, I’ve been expanding my writing to medicine, psychology, and research productivity.</p>
+<p>I’m a certified Carpentries instructor and a recurring conference and workshop speaker on open science and data skills. I love communicating science and data into multi-format content.</p>
+<p>Scroll down to look at a curation of signature pieces.</p>
+</div>
+<h2 style="text-align: center;" class="anchored">Services</h2>
+<div class="pf-services">
+  <div class="pf-service">
+    <h3 class="anchored">Writing</h3>
+    <ul>
+      <li>Science communication for general audiences</li>
+      <li>Technical or editorial writing for medical content</li>
+      <li>Digital content: newsletter, blog posts, essays</li>
+    </ul>
+  </div>
+  <div class="pf-service">
+    <h3 class="anchored">Illustration</h3>
+    <ul>
+      <li>Scientific figures and graphical abstracts</li>
+      <li>Icons, diagrams, and visual systems for talks, workshops, and websites</li>
+      <li>Thumbnails and illustrations</li>
+    </ul>
+  </div>
+</div>
+<section id="from-the-notebook" class="level2">
+<h2 class="anchored" data-anchor-id="from-the-notebook">From the notebook</h2>
+<div class="cr-section cr-column-screen overlay-left">
+<div class="narrative-col">
+<div class="trigger new-trigger" data-focus-on="cr-page-mts">
+<div class="narrative">
+<p><span class="pf-tab"> Medical writing</span></p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-page-substack">
+<div class="narrative">
+<p><span class="pf-tab"> Science storytelling</span></p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-page-blog">
+<div class="narrative">
+<p><span class="pf-tab"> Process writing</span></p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-page-cb">
+<div class="narrative">
+<p><span class="pf-tab"> Peer-reviewed + illustration</span></p>
+</div>
+</div>
+</div>
+<div class="sticky-col">
+<div class="sticky-col-stack">
+<div id="cr-page-mts" class="sticky">
+<div class="pf-notebook-wrap">
+<div class="pf-notebook">
+  <div class="pf-page pf-page-left pf-mid-shadow">
+  <div class="pf-eyebrow">Medical writing</div>
+    <img class="pf-inset" src="../img/illustrations/path1.png" alt="Closeread cheatsheet illustration">
+    
+    <h4 class="anchored">Shockwave Therapy for Chronic Pelvic Pain</h4>
+    <div class="pf-meta">MTS Medical Blog · Sep 2026</div>
+  </div>
+  <div class="pf-page pf-page-right pf-mid-shadow">
+    <p class="pf-excerpt">“Chronic Pelvic Pain Syndrome (CPPS) is one of the most common presentations within the Female Sexual Dysfunction spectrum. It is defined as persistent pelvic discomfort or pain that lasts over six months, in the absence of identifiable infection or other obvious local pathology. Although this syndrome is shared by urology and gynecology, with parallel diagnostic criteria and many of the same mechanistic drivers, chronic pelvic pain is more common in women.
+Chronic pelvic pain often comes along with, or drives, sexual dysfunction, and persistent pelvic discomfort is strongly associated with secondary reductions in desire. The two conditions sustain each other in a well-characterised cycle: pain disrupts sexual function, which in turn compounds distress, which sensitises pain perception further.
+Current treatments are predominantly oriented towards symptom management. [...] When conservative treatment does not bring relief, surgery is considered a last resort. No single intervention reliably resolves the condition.
+”</p>
+    <a class="pf-link" href="" target="_blank">Continue reading ↗</a>
+  </div>
+  <div class="pf-pen"></div>
+</div>
+</div>
+</div>
+<div id="cr-page-substack" class="sticky">
+<div class="pf-notebook-wrap">
+<div class="pf-notebook">
+  <div class="pf-page pf-page-left pf-mid-shadow">
+  <div class="pf-eyebrow">Science storytelling</div>
+    <img class="pf-inset" src="../img/chickpea/thumbnail-clumsy.png" alt="Chickpea falling illustration">
+    
+    <h4 class="anchored">The Science Behind Clumsiness</h4>
+    <div class="pf-meta">Chickpea Sprouts · Substack · Jan 2026</div>
+  </div>
+  <div class="pf-page pf-page-right pf-mid-shadow">
+    <p class="pf-excerpt">“Two Sunday ago, with my husband away for the evening, I was left to the high-stakes task of fetching dinner for myself. So I moved to the kitchen with the casual confidence of someone who has managed to survive into their thirties without major structural damage. I would love to say that what happened next was a rare occurrence. I would love to tell you that this type of silly incident involving a sharp utensil and one of my blameless fingers never happens to me. But the collection of faint scars across my hands and knees (and, who am I kidding, everywhere else) begs to differ. My body is a historical record of every time I underestimated the distance between myself and something else (often an hard surface, sometimes a pointy knife).”</p>
+    <a class="pf-link" href="https://chickpeasprouts.substack.com/p/the-science-behind-clumsiness" target="_blank">Continue reading ↗</a>
+  </div>
+  <div class="pf-pen"></div>
+</div>
+</div>
+</div>
+<div id="cr-page-blog" class="sticky">
+<div class="pf-notebook-wrap">
+<div class="pf-notebook">
+  <div class="pf-page pf-page-left pf-mid-shadow">
+    <div class="pf-tape tl"></div>
+    <div class="pf-tape tr"></div>
+    <div class="pf-eyebrow">Process writing</div>
+    <img class="pf-inset" src="../img/illustrations/cheatsheet-closeread.png" alt="Closeread cheatsheet illustration">
+    
+    <h4 class="anchored">A Cheatsheet for Closeread</h4>
+    <div class="pf-meta">Personal Blog · Mar 2025</div>
+  </div>
+  <div class="pf-page pf-page-right pf-mid-shadow">
+    
+    <p class="pf-excerpt">“So, I got invited to give a talk for R-Ladies Amsterdam. About something I really, really like: scrollytelling with Quarto and Closeread.”</p>
+    <a class="pf-link" href="../blog/closeread-cheatsheet.html" target="_blank">Continue reading ↗</a>
+  </div>
+  <div class="pf-pen"></div>
+</div>
+</div>
+</div>
+<div id="cr-page-cb" class="sticky">
+<div class="pf-notebook-wrap">
+<div class="pf-notebook">
+  <div class="pf-page pf-page-left pf-mid-shadow">
+    <div class="pf-tape tl"></div>
+    <div class="pf-tape tr"></div>
+    <div class="pf-eyebrow">Peer-reviewed + illustration</div>
+    <img class="pf-inset" src="../img/illustrations/current-biology.png" alt="Graphical abstract for the Current Biology paper on seasonal shrew brain shrinkage">
+    <h4 class="anchored">Programmed seasonal brain shrinkage in the common shrew via water loss without cell death</h4>
+    <div class="pf-meta">Current Biology · 2025</div>
+  </div>
+  <div class="pf-page pf-page-right pf-mid-shadow">
+    <p class="pf-excerpt">Brain plasticity, the brain’s inherent ability to adapt its structure and function, is crucial for responding to environmental challenges but is usually not linked to a significant change in size. A striking exception to this is Dehnel’s phenomenon, where seasonal reversible brain-size reduction occurs in some small mammals to decrease metabolic demands during resource-scarce winter months. Despite these volumetric changes being well documented, the specific microstructural alterations that facilitate this adaptation remain poorly understood. Our study employed diffusion microstructure imaging (DMI) to explore these changes in common shrews, revealing significant alterations in water diffusion properties such as increased mean diffusivity and decreased fractional anisotropy, leading to decreased water content inside brain cells during winter. These findings [...] may inform future research on regenerative mechanisms, particularly during the spring regrowth phase, offering potential strategies relevant to neurodegenerative disease.
+</p>
+    <a class="pf-link" href="https://www.cell.com/current-biology/fulltext/S0960-9822(25)01081-4" target="_blank">Read the paper ↗</a>
+  </div>
+  <div class="pf-pen"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="pf-superpower">
+<p>Science doesn’t have to be complicated. <br><br> Most of my days are spent inside journal articles thick with jargon, the kind that makes a genuinely curious reader bounce off by the second paragraph. <br><br> My superpower is going in after that language and handing the finding back over intact, in words that survive outside the lab.</p>
+</div>
+<div class="pf-cta">
+  <h2 style="text-align: center;" class="anchored">Let's work together!</h2>
+  
+  <a class="pf-btn pf-btn-primary" href="https://cecibaldoni.github.io/content/contact.html">Get in touch</a>
+  <a class="pf-btn pf-btn-secondary" href="../resume-Baldoni.pdf" target="_blank">Download Resume</a>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/cecibaldoni\.github\.io\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<div>
+© Copyright 2026, Cecilia Baldoni
+</div>
+<div id="cookie-banner-placeholder">
+
+</div>
+<script>
+  function loadGoogleAnalytics() {
+    const gascript = document.createElement("script");
+    gascript.async = true;
+    gascript.src = "https://www.googletagmanager.com/gtag/js?id=G-DV6K7C0XDV";
+    document.head.appendChild(gascript);
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DV6K7C0XDV');
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    if (localStorage.getItem("cookieAccepted") === "true") {
+      loadGoogleAnalytics();
+      return;
+    }
+    const bannerHTML = `
+      <div id="cookie-banner">
+        <p>
+          This website uses cookies for analytics. By clicking "OK", you agree to its use.
+          <button id="accept-cookies">OK</button>
+          <a href="privacy.html" class="cookie-link">(learn more)</a>
+        </p>
+      </div>`;
+    document.getElementById("cookie-banner-placeholder").innerHTML = bannerHTML;
+    
+    document.getElementById("accept-cookies").addEventListener("click", function () {
+      localStorage.setItem("cookieAccepted", "true");
+      document.getElementById("cookie-banner").remove();
+      loadGoogleAnalytics();
+    });
+  });
+</script>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Built with <a href="https://quarto.org/">Quarto</a></p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

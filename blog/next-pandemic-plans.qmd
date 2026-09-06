@@ -2,7 +2,7 @@
 title: "My plans for the Next Pandemic"
 description: "A list I will never be asked to deliver on, which is what makes it beautiful"
 date: 2026-09-14
-categories: [writing, microblogging]
+categories: [microblogging]
 draft: true
 ---
 
@@ -50,11 +50,10 @@ So here's my plan for the next pandemic.
 
 I will:
 - Learn to throw pottery, badly at first, then acceptably, until at least one bowl holds soup without a lean.
-- Restore an old piano I do not currently own, do not have space for, and have no plan to acquire before the hypothetical event itself.
 - Write a novel. A real one, with chapters, an outline, and a title I've already decided on and am not sharing here in case I never get further than the title (it's a lie of course, I don't even have the title yet).
 - Learn conversational Elvish, past the stage of ordering *lembas* and into the stage of understanding what's said back.
-- Build something out of wood that a professional carpenter would describe as *an attempt*, and that I would describe, generously, as "furniture."
-- Run a distance I currently associate exclusively with being 'zombie safe', wearing the kind of shoes that imply a plan.
+- Build something out of wood that a professional carpenter would describe as *an attempt*, and that I would describe, generously, as "furniture".
+- Run a tempo I currently associate exclusively with being 'zombie safe', wearing the kind of shoes that imply a plan.
 
 I know there is no next pandemic coming (or is it?). Let;s rephrase that: I am not lying awake worried about one. And even in the hypothetical case where one arrived tomorrow, I know myself well enough to know this list would end the same way the last one did: not even existing. 
 

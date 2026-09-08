@@ -73,7 +73,7 @@ toc: true
 
 <div class="listing-item">
   <div class="thumbnail">
-    <img src="../img/CB-graphabstract.svg"
+    <img src="../img/current-biology.png"
          alt="Brain diffusion properties shrews"
          class="thumbnail-image">
   </div>

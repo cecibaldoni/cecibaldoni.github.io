@@ -56,7 +56,7 @@ include-in-header:
         max-width: 720px;
         margin: 2rem auto 3rem;
         padding: 0 1.25rem;
-        font-size: 1.35rem;
+        font-size: 1.1rem;
         font-style: italic;
       }
 
@@ -96,7 +96,7 @@ include-in-header:
       .pf-notebook {
         position: relative;
         display: flex;
-        width: min(1250px, 110vw);
+        width: min(1250px, 92vw, 130vh);
         aspect-ratio: 16 / 9.5;
         background: #fffaf2;
         border-radius: 8px;
@@ -216,7 +216,7 @@ include-in-header:
       }
       .pf-eyebrow {
         font-family: "Roboto Mono", monospace;
-        font-size: 0.9rem;
+        font-size: clamp(0.7rem, 1.4vw, 0.9rem);
         letter-spacing: 1.5px;
         text-transform: uppercase;
         color: var(--primary);
@@ -224,24 +224,29 @@ include-in-header:
       }
       .pf-page h4 {
         margin: 0.1rem 0 0;
-        font-size: 1.25rem;
+        font-size: clamp(0.95rem, 2vw, 1.25rem);
         line-height: 1.25;
       }
       .pf-page .pf-meta {
         font-family: "Roboto Mono", monospace;
-        font-size: 1.25rem;
+        font-size: clamp(0.85rem, 1.7vw, 1.25rem);
         color: var(--dark);
         opacity: 0.7;
       }
       .pf-excerpt {
         font-style: italic;
-        font-size: 1.25rem;
+        font-size: clamp(0.85rem, 1.7vw, 1.25rem);
         line-height: 1.5;
         text-align: left;
         margin: 0;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 9;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
       .pf-caption {
-        font-size: 0.95rem;
+        font-size: clamp(0.8rem, 1.5vw, 0.95rem);
         line-height: 1.7;
         text-align: left;
         margin: 5;
@@ -269,13 +274,19 @@ include-in-header:
         height: 42px;
       }
 
-      /* bookmark tab (narrative trigger content) */
+      /* trigger content for closeread's scrollama detection only.
+         Left unstyled/invisible: as the notebook grows to fill most of
+         the viewport on laptop-sized screens, there's no longer a safe
+         gutter for a floating label to sit in without crossing on top
+         of the notebook art while it scrolls into place. Each notebook
+         page already carries the same chapter name via .pf-eyebrow, so
+         nothing is lost by not showing this one too. */
       .pf-tab {
         display: inline-block;
-        font-family: "Roboto Mono", monospace;
-        font-size: 0.95rem;
-        font-weight: 700;
-        padding: 0.55rem 1rem;
+        opacity: 0;
+      }
+      #from-the-notebook .narrative-col .trigger .narrative {
+        background: transparent !important;
       }
 
       @media (max-width: 700px) {
@@ -286,6 +297,12 @@ include-in-header:
           flex-direction: column;
           aspect-ratio: auto;
           width: 88vw;
+          max-height: 74dvh;
+          overflow: hidden;
+        }
+        .pf-page {
+          overflow-y: auto;
+          flex: 1 1 0;
         }
         .pf-page-left,
         .pf-page-right {
@@ -359,6 +376,20 @@ include-in-header:
         border: 2px solid var(--dark);
         color: var(--dark) !important;
       }
+      .pf-btn-tertiary {
+        background: #f8ca5d;
+        color: var(--dark) !important;
+      }
+      .pf-cta-row {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .pf-cta-row-secondary {
+        display: flex;
+        justify-content: center;
+        margin-top: 0.5rem;
+      }
     </style>
 ---
 
@@ -373,11 +404,12 @@ include-in-header:
 <div class="pf-bio">
 ```
 
-I am a **writer** and **illustrator** with a PhD in Natural Science. I specialised on neuroscience, physics, animal ecology, and cognition, where I published and co-published 12+ peer-reviewed papers; recently, I've been expanding my writing to medicine, psychology, and research productivity.
+I am a **writer** and **illustrator** with a PhD in Natural Science. 
+I specialised on neuroscience, physics, animal ecology, and cognition, and I published and co-published 10+ peer-reviewed papers. I publish a [science communication newsletter](https://chickpeasprouts.substack.com/) where I expanded my writing to medicine, psychology, and everything related to life science. For fun, I write [personal essays](https://cecibaldoni.github.io/blog/) about meta-research, note-taking and productivity, plus the resources I build along the way. 
 
 I'm a certified Carpentries instructor and a recurring conference and workshop speaker on open science and data skills. I love communicating science and data into multi-format content.
 
-Scroll down to look at a curation of signature pieces.
+Scroll down to look at a curation of signature pieces!
 
 ```{=html}
 </div>
@@ -413,6 +445,8 @@ Scroll down to look at a curation of signature pieces.
 
 <span class="pf-tab"> Science storytelling</span> @cr-page-substack
 
+<span class="pf-tab"> Personal Essay</span> @cr-page-essay
+
 <span class="pf-tab"> Process writing</span> @cr-page-blog
 
 <span class="pf-tab"> Peer-reviewed + illustration</span> @cr-page-cb
@@ -447,7 +481,7 @@ Current treatments are predominantly oriented towards symptom management. [...] 
 <div class="pf-notebook">
   <div class="pf-page pf-page-left pf-mid-shadow">
   <div class="pf-eyebrow">Science storytelling</div>
-    <img class="pf-inset" src="../img/chickpea/thumbnail-clumsy.png" alt="Chickpea falling illustration">
+    <img class="pf-inset" src="../img/chickpea/clumsiness-brain.jpg" alt="Chickpea falling illustration">
     
     <h4>The Science Behind Clumsiness</h4>
     <div class="pf-meta">Chickpea Sprouts · Substack · Jan 2026</div>
@@ -455,6 +489,29 @@ Current treatments are predominantly oriented towards symptom management. [...] 
   <div class="pf-page pf-page-right pf-mid-shadow">
     <p class="pf-excerpt">“Two Sunday ago, with my husband away for the evening, I was left to the high-stakes task of fetching dinner for myself. So I moved to the kitchen with the casual confidence of someone who has managed to survive into their thirties without major structural damage. I would love to say that what happened next was a rare occurrence. I would love to tell you that this type of silly incident involving a sharp utensil and one of my blameless fingers never happens to me. But the collection of faint scars across my hands and knees (and, who am I kidding, everywhere else) begs to differ. My body is a historical record of every time I underestimated the distance between myself and something else (often an hard surface, sometimes a pointy knife).”</p>
     <a class="pf-link" href="https://chickpeasprouts.substack.com/p/the-science-behind-clumsiness" target="_blank">Continue reading ↗</a>
+  </div>
+  <div class="pf-pen"></div>
+</div>
+</div>
+```
+:::
+
+:::{#cr-page-essay}
+```{=html}
+<div class="pf-notebook-wrap">
+<div class="pf-notebook">
+  <div class="pf-page pf-page-left pf-mid-shadow">
+  <div class="pf-eyebrow">Personal Essay</div>
+    <img class="pf-inset" src="../img/chickpea/icon.png" alt="Chickpea icon illustration">
+
+    <h4>My mom has vitiligo</h4>
+    <div class="pf-meta">Chickpea Sprouts · Substack</div>
+  </div>
+  <div class="pf-page pf-page-right pf-mid-shadow">
+    <p class="pf-excerpt">“In Italy in the eighties, you were supposed to tan. It was proof you’d done summer correctly, or that you lived outside. My mom’s skin had other plans, and it was slowly moving in the opposite direction. Both my parents have (had?) classic tanning Mediterranean complexion: high baseline melanin that comes with olive skin.
+Which sounds fancy until winter arrives and you turn the color of a zombie. Seriously. Grey-green undertones. It’s supposed to be scary but it’s actually sad. Tanning in summer for me (and for them) means looking alive in winter.
+Actually, that zombie effect only happens if you have enough melanin to fade in the first place. If you have none at all, the problem doesn’t exist. That’s exactly what happened to my mom.”</p>
+    <a class="pf-link" href="https://chickpeasprouts.substack.com/p/my-mom-has-vitiligo" target="_blank">Continue reading ↗</a>
   </div>
   <div class="pf-pen"></div>
 </div>
@@ -494,7 +551,7 @@ Current treatments are predominantly oriented towards symptom management. [...] 
     <div class="pf-tape tl"></div>
     <div class="pf-tape tr"></div>
     <div class="pf-eyebrow">Peer-reviewed + illustration</div>
-    <img class="pf-inset" src="../img/illustrations/current-biology.png" alt="Graphical abstract for the Current Biology paper on seasonal shrew brain shrinkage">
+    <img class="pf-inset" src="../img/illustrations/current-biology.png" alt="Graphical abstract for the Current Biology paper on seasonal shrew brain shrinkage" style="width: 80%; height: 80%; object-fit: contain; margin: 0 auto;">
     <h4>Programmed seasonal brain shrinkage in the common shrew via water loss without cell death</h4>
     <div class="pf-meta">Current Biology · 2025</div>
   </div>
@@ -526,7 +583,12 @@ Science doesn't have to be complicated. <br><br> Most of my days are spent insid
 <div class="pf-cta">
   <h2 style="text-align: center;">Let's work together!</h2>
   
-  <a class="pf-btn pf-btn-primary" href="https://cecibaldoni.github.io/content/contact.html">Get in touch</a>
-  <a class="pf-btn pf-btn-secondary" href="../data/resume-Baldoni.pdf" target="_blank">Download Resume</a>
+  <div class="pf-cta-row">
+    <a class="pf-btn pf-btn-primary" href="https://cecibaldoni.github.io/content/contact.html">Get in touch</a>
+    <a class="pf-btn pf-btn-secondary" href="../data/resume-Baldoni.pdf" target="_blank">Download Resume</a>
+  </div>
+  <div class="pf-cta-row-secondary">
+    <a class="pf-btn pf-btn-tertiary" href="https://cecibaldoni.github.io/">Back to main site</a>
+  </div>
 </div>
 ```

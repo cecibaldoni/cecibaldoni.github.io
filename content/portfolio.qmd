@@ -7,6 +7,7 @@ format:
 include-in-header:
   text: |
     <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
       /* standalone page: no site chrome */
       #quarto-header, .nav-footer { display: none !important; }
       body.nav-fixed { padding-top: 0 !important; }
@@ -96,7 +97,8 @@ include-in-header:
       .pf-notebook {
         position: relative;
         display: flex;
-        width: min(1250px, 92vw, 130vh);
+        width: min(1250px, 92vw);
+        max-height: 82vh;
         aspect-ratio: 16 / 9.5;
         background: #fffaf2;
         border-radius: 8px;
@@ -287,6 +289,22 @@ include-in-header:
       }
       #from-the-notebook .narrative-col .trigger .narrative {
         background: transparent !important;
+      }
+
+      @media (max-width: 1100px), (max-height: 760px) {
+        .pf-notebook {
+          width: min(900px, 94vw);
+          aspect-ratio: 16 / 11;
+        }
+        .pf-page {
+          padding: 1.5rem 1.5rem;
+        }
+        .pf-excerpt {
+          font-size: 1.05rem;
+        }
+        .pf-page .pf-meta {
+          font-size: 1.05rem;
+        }
       }
 
       @media (max-width: 700px) {

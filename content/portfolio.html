@@ -79,6 +79,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
   /* standalone page: no site chrome */
   #quarto-header, .nav-footer { display: none !important; }
   body.nav-fixed { padding-top: 0 !important; }
@@ -168,7 +169,8 @@ ul.task-list li input[type="checkbox"] {
   .pf-notebook {
     position: relative;
     display: flex;
-    width: min(1250px, 110vw);
+    width: min(1250px, 92vw);
+    max-height: 82vh;
     aspect-ratio: 16 / 9.5;
     background: #fffaf2;
     border-radius: 8px;
@@ -348,6 +350,22 @@ ul.task-list li input[type="checkbox"] {
     font-size: 0.95rem;
     font-weight: 700;
     padding: 0.55rem 1rem;
+  }
+
+  @media (max-width: 1100px), (max-height: 760px) {
+    .pf-notebook {
+      width: min(900px, 94vw);
+      aspect-ratio: 16 / 11;
+    }
+    .pf-page {
+      padding: 1.5rem 1.5rem;
+    }
+    .pf-excerpt {
+      font-size: 1.05rem;
+    }
+    .pf-page .pf-meta {
+      font-size: 1.05rem;
+    }
   }
 
   @media (max-width: 700px) {

@@ -12,15 +12,15 @@ My public speaking and teaching work is split between technical training for res
 
 ### Technical Training
 
-<br>
-
-Certified [Carpentries](https://carpentries.org/) Instructor, currently training as an Instructor-Trainer.
+*Certified [Carpentries](https://carpentries.org/) Instructor, currently training as an Instructor-Trainer.*
 
 <br>
 
 ##### *Upcoming*
 
-
+- **How to style your own website with Quarto: CSS and SCSS** - SORTEE Code Club <br>
+  *October, 2026* <br>
+  *Info Coming Soon*
 
 ##### *Events*  
 

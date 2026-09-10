@@ -485,7 +485,7 @@ Scroll down to look at a curation of signature pieces!
 Chronic pelvic pain often comes along with, or drives, sexual dysfunction, and persistent pelvic discomfort is strongly associated with secondary reductions in desire. The two conditions sustain each other in a well-characterised cycle: pain disrupts sexual function, which in turn compounds distress, which sensitises pain perception further.
 Current treatments are predominantly oriented towards symptom management. [...] When conservative treatment does not bring relief, surgery is considered a last resort. No single intervention reliably resolves the condition.
 ”</p>
-    <a class="pf-link" href="" target="_blank">Continue reading ↗</a>
+    <a class="pf-link" href="https://www.mts-medical.com/post/shockwave-therapy-chronic-pelvic-pain-women" target="_blank">Continue reading ↗</a>
   </div>
   <div class="pf-pen"></div>
 </div>

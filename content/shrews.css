@@ -1,0 +1,279 @@
+/* Styles for shrews.qmd (the shrew toolkit).
+   Loaded alongside ../closeread.css, which still handles the shared
+   navbar/link/.cr-section/.narrative styling used across closeread pages
+   (this file only adds the toolkit-specific components below). */
+
+:root {
+  --sw-forest: #105b09;
+  --sw-sand: #e6dccf;
+  /* Same palette used in the learning-curve plots, kept in sync so the
+     group-toggle widget reads as "the same three groups" as the figures. */
+  --sw-summer: #D16103;
+  --sw-wcaptive: #0AA9A9;
+  --sw-wwild: #0A33A9;
+}
+
+/* ---------- .term: inline hover/focus glossary tooltip ---------- */
+
+.term {
+  position: relative;
+  border-bottom: 2px dotted var(--cinnamon);
+  color: var(--dark);
+  font-weight: 700;
+  cursor: help;
+}
+
+.term .term-tip {
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  z-index: 5;
+  width: max-content;
+  max-width: 16rem;
+  margin-bottom: 10px;
+  padding: 0.55rem 0.8rem;
+  border-radius: 8px;
+  background: var(--dark);
+  color: var(--cream);
+  font-family: "Roboto Slab", serif;
+  font-size: 0.85rem;
+  font-weight: 400;
+  line-height: 1.35;
+  text-align: left;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%, -4px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
+}
+
+.term .term-tip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  border: 6px solid transparent;
+  border-top-color: var(--dark);
+  transform: translateX(-50%);
+}
+
+.term:hover .term-tip,
+.term:focus .term-tip,
+.term:focus-visible .term-tip {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+}
+
+/* ---------- .reveal: themed <details>/<summary> "guess first" block ---------- */
+
+.reveal {
+  margin: 1.25rem 0;
+  padding: 0 1.1rem;
+  border: 2px dashed var(--cinnamon);
+  border-radius: 10px;
+  background: #ffffff;
+}
+
+.reveal summary {
+  padding: 0.8rem 0;
+  list-style: none;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 700;
+  color: var(--cinnamon);
+  cursor: pointer;
+}
+
+.reveal summary::-webkit-details-marker {
+  display: none;
+}
+
+.reveal summary::before {
+  content: '+';
+  display: inline-block;
+  width: 1.1rem;
+  margin-right: 0.4rem;
+  font-weight: 700;
+}
+
+.reveal[open] summary {
+  margin-bottom: 0.2rem;
+  border-bottom: 1px solid var(--chickpea);
+}
+
+.reveal[open] summary::before {
+  content: '–';
+}
+
+.reveal .reveal-body {
+  padding-bottom: 0.9rem;
+}
+
+/* ---------- .size-scale: pure-CSS size comparison ---------- */
+
+.size-scale {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2.5rem;
+  margin: 1.5rem 0;
+  padding: 1.75rem 1.5rem 1.25rem;
+  border: 2px dashed var(--sw-forest);
+  border-radius: 10px;
+  background: #ffffff;
+}
+
+.size-scale .sz-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.size-scale .sz-shape {
+  border: 2px solid var(--dark);
+  border-radius: 40% 60% 60% 40%;
+  background: var(--sw-sand);
+}
+
+.size-scale .sz-coin .sz-shape {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 999px;
+  background: #d9cdb8;
+}
+
+.size-scale .sz-shrew .sz-shape {
+  width: 3rem;
+  height: 1.5rem;
+  background: var(--cinnamon);
+}
+
+.size-scale .sz-mouse .sz-shape {
+  width: 4.5rem;
+  height: 1.7rem;
+  background: #8a8a8a;
+}
+
+.size-scale .sz-pencil .sz-shape {
+  width: 9.5rem;
+  height: 0.7rem;
+  border-radius: 999px;
+  background: var(--chickpea);
+}
+
+.size-scale .sz-label {
+  font-family: "Roboto Mono", monospace;
+  font-size: 0.75rem;
+  text-align: center;
+  color: var(--dark);
+}
+
+.size-scale .sz-label small {
+  display: block;
+  margin-top: 0.15rem;
+  color: var(--sw-forest);
+  font-size: 0.7rem;
+}
+
+/* ---------- .group-toggle: radio-driven tab switcher, no JS ---------- */
+
+.group-toggle {
+  position: relative;
+  margin: 1.5rem 0;
+  padding: 1.1rem 1.25rem 1.25rem;
+  border: 2px solid var(--dark);
+  border-radius: 10px;
+  background: #ffffff;
+}
+
+.group-toggle input[type="radio"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.group-toggle input:focus-visible ~ .group-tabs {
+  outline: 3px solid var(--pop);
+  outline-offset: 3px;
+  border-radius: 999px;
+}
+
+.group-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.9rem;
+}
+
+.group-tabs .tab {
+  padding: 0.4rem 0.95rem;
+  border: 2px solid transparent;
+  border-radius: 999px;
+  color: #ffffff;
+  font-family: "Roboto Mono", monospace;
+  font-size: 0.8rem;
+  font-weight: 700;
+  opacity: 0.55;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.group-tabs .tab-summer { background: var(--sw-summer); }
+.group-tabs .tab-wcap   { background: var(--sw-wcaptive); }
+.group-tabs .tab-wwild  { background: var(--sw-wwild); }
+
+#grp-summer:checked ~ .group-tabs .tab-summer,
+#grp-wcap:checked ~ .group-tabs .tab-wcap,
+#grp-wwild:checked ~ .group-tabs .tab-wwild {
+  opacity: 1;
+  border-color: var(--dark);
+}
+
+.group-panel {
+  display: none;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+#grp-summer:checked ~ .panel-summer,
+#grp-wcap:checked ~ .panel-wcap,
+#grp-wwild:checked ~ .panel-wwild {
+  display: block;
+}
+
+/* ---------- Glossary cards ---------- */
+
+.glossary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 0.9rem;
+  margin: 1.25rem 0;
+}
+
+.glossary-card {
+  padding: 0.9rem 1.1rem;
+  border: 2px solid var(--dark);
+  border-radius: 10px;
+  background: #ffffff;
+}
+
+.glossary-card h4 {
+  margin: 0 0 0.35rem;
+  color: var(--cinnamon);
+  font-size: 0.95rem;
+}
+
+.glossary-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  text-align: left;
+}

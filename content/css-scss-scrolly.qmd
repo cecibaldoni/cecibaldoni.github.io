@@ -1,0 +1,1492 @@
+---
+title: "CSS and SCSS for beginners"
+subtitle: "A scroll-through guide: from your first selector to your first mixin"
+css: "css-scss-scrolly.css"
+format:
+  closeread-html:
+    anchor-sections: false
+    cr-style:
+      narrative-background-color-sidebar: "#f3dbc1"
+      narrative-text-color-sidebar: "#112909"
+      section-background-color: "#fbf3ea"
+---
+
+This guide explains CSS and SCSS from scratch. You don't need any experience. Each part builds on the one before, so it works best in order. Scroll slowly: the explanation is on the left, and the picture on the right changes as you go. Where a picture is interactive, the text will say so.
+
+1. [What CSS is](#p1)
+2. [Anatomy of a rule](#p2): selector, property, value
+3. [Selectors](#p3): type, class, id and friends
+4. [Values you will use all the time](#p4)
+5. [The box model](#p5)
+6. [Inheritance and the cascade](#p6)
+7. [Where a box goes, with `position`](#p7)
+8. [SCSS](#p8)
+9. [Glossary and where to learn more](#glossary)
+
+## Part 1: What CSS is {#p1}
+
+:::{.cr-section layout="sidebar-left"}
+
+Web pages are built from two languages. **HTML** describes *what is on the page*: a heading, a paragraph, a link. This card is HTML and nothing else. It still looks like something, because your browser has built-in default styles. That's why a link is blue and underlined, and a heading is bold. @cr-raw
+
+**CSS** (Cascading Style Sheets) is the second language. It describes *how those things should look*, as a list of rules. Here are two: one turns headings brown, the other turns links green. @cr-t1
+
+A third rule gives the whole card a background, some room inside it (`padding`) and rounded corners. The dot in `.sprout-card` matters. Part 3 explains it. @cr-t2
+
+One more rule and the link looks like a button. Notice that the HTML never changed. CSS only changes appearance. That is the whole idea: **HTML for content, CSS for looks.** The next parts unpack how those rules are written. @cr-t3
+
+:::{#cr-raw}
+:::{.part-tag}
+Part 1 · What CSS is
+:::
+:::{.frame}
+:::{.rv .sprout-card}
+```{=html}
+<h4>Chickpea Sprouts</h4>
+<p>A newsletter that explains science through stories.</p>
+<a href="#" onclick="return false;">Read the latest issue</a>
+```
+:::
+:::
+:::{.file-label}
+HTML only, browser defaults
+:::
+:::
+
+:::{#cr-t1}
+:::{.part-tag}
+Part 1 · What CSS is
+:::
+:::{.frame}
+:::{.rv .sprout-card .t-color}
+```{=html}
+<h4>Chickpea Sprouts</h4>
+<p>A newsletter that explains science through stories.</p>
+<a href="#" onclick="return false;">Read the latest issue</a>
+```
+:::
+:::
+```css
+h4 {
+  color: #a04a0d;
+}
+a {
+  color: #105b09;
+}
+```
+:::
+
+:::{#cr-t2}
+:::{.part-tag}
+Part 1 · What CSS is
+:::
+:::{.frame}
+:::{.rv .sprout-card .t-color .t-space}
+```{=html}
+<h4>Chickpea Sprouts</h4>
+<p>A newsletter that explains science through stories.</p>
+<a href="#" onclick="return false;">Read the latest issue</a>
+```
+:::
+:::
+```css
+.sprout-card {
+  background: #f3dbc1;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+```
+:::
+
+:::{#cr-t3}
+:::{.part-tag}
+Part 1 · What CSS is
+:::
+:::{.frame}
+:::{.rv .sprout-card .t-color .t-space .t-btn}
+```{=html}
+<h4>Chickpea Sprouts</h4>
+<p>A newsletter that explains science through stories.</p>
+<a href="#" onclick="return false;">Read the latest issue</a>
+```
+:::
+:::
+```css
+a {
+  background: #f8ca5d;
+  padding: 0.4rem 0.9rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700;
+}
+```
+:::
+
+:::
+
+## Part 2: Anatomy of a rule {#p2}
+
+:::{.cr-section layout="sidebar-left"}
+
+Everything in CSS is written as **rules**. A rule has two halves: a pointer that says *what to style*, and instructions that say *how it should look*. @cr-d-all
+
+The **selector** is the pointer. It says which elements the rule is for. `h4` means "every level-4 heading". @cr-d-sel
+
+The **declaration block** is everything between the curly braces `{ }`. It holds the instructions. @cr-d-block
+
+A **property** is *what* you want to change, such as `color`, `font-size` or `margin`. CSS has hundreds of them. @cr-d-prop
+
+A **value** says what to change it *to*. Which values are allowed depends on the property: `color` wants a colour, `font-size` wants a size. @cr-d-val
+
+A property and its value, joined by a colon and ended with a semicolon, make a **declaration**. Forgetting the semicolon is the classic beginner slip. @cr-d-decl
+
+A block can hold as many declarations as you like. Text between `/*` and `*/` is a **comment**: the browser skips it, it is a note for humans. [@cr-d-many]{highlight="3-5"}
+
+Same shape, different rule. `.sprout-card` points at anything with that class. `padding` is the space inside a box. `1.5rem` is a length. @cr-d-b
+
+And another. `a:hover` points at links, but only while the mouse is over them. `none` is a keyword: a word CSS already knows. @cr-d-c
+
+:::{#cr-d-all}
+:::{.part-tag}
+Part 2 · Anatomy of a rule
+:::
+:::{.rule .hl-all}
+```{=html}
+<div class="part sel">h4<small>selector<br>what to style</small></div>
+<div class="glue brace">{</div>
+<div class="part prop">color<small>property<br>what to change</small></div>
+<div class="glue decl">:</div>
+<div class="part val">#a04a0d<small>value<br>what to change it to</small></div>
+<div class="glue decl">;</div>
+<div class="glue brace">}</div>
+```
+:::
+:::
+
+:::{#cr-d-sel}
+:::{.part-tag}
+Part 2 · Anatomy of a rule
+:::
+:::{.rule .hl-sel}
+```{=html}
+<div class="part sel">h4<small>selector<br>what to style</small></div>
+<div class="glue brace">{</div>
+<div class="part prop">color<small>property<br>what to change</small></div>
+<div class="glue decl">:</div>
+<div class="part val">#a04a0d<small>value<br>what to change it to</small></div>
+<div class="glue decl">;</div>
+<div class="glue brace">}</div>
+```
+:::
+:::
+
+:::{#cr-d-block}
+:::{.part-tag}
+Part 2 · Anatomy of a rule
+:::
+:::{.rule .hl-block}
+```{=html}
+<div class="part sel">h4<small>selector<br>what to style</small></div>
+<div class="glue brace">{</div>
+<div class="part prop">color<small>property<br>what to change</small></div>
+<div class="glue decl">:</div>
+<div class="part val">#a04a0d<small>value<br>what to change it to</small></div>
+<div class="glue decl">;</div>
+<div class="glue brace">}</div>
+```
+:::
+:::
+
+:::{#cr-d-prop}
+:::{.part-tag}
+Part 2 · Anatomy of a rule
+:::
+:::{.rule .hl-prop}
+```{=html}
+<div class="part sel">h4<small>selector<br>what to style</small></div>
+<div class="glue brace">{</div>
+<div class="part prop">color<small>property<br>what to change</small></div>
+<div class="glue decl">:</div>
+<div class="part val">#a04a0d<small>value<br>what to change it to</small></div>
+<div class="glue decl">;</div>
+<div class="glue brace">}</div>
+```
+:::
+:::
+
+:::{#cr-d-val}
+:::{.part-tag}
+Part 2 · Anatomy of a rule
+:::
+:::{.rule .hl-val}
+```{=html}
+<div class="part sel">h4<small>selector<br>what to style</small></div>
+<div class="glue brace">{</div>
+<div class="part prop">color<small>property<br>what to change</small></div>
+<div class="glue decl">:</div>
+<div class="part val">#a04a0d<small>value<br>what to change it to</small></div>
+<div class="glue decl">;</div>
+<div class="glue brace">}</div>
+```
+:::
+:::
+
+:::{#cr-d-decl}
+:::{.part-tag}
+Part 2 · Anatomy of a rule
+:::
+:::{.rule .hl-decl}
+```{=html}
+<div class="part sel">h4<small>selector<br>what to style</small></div>
+<div class="glue brace">{</div>
+<div class="part prop">color<small>property<br>what to change</small></div>
+<div class="glue decl">:</div>
+<div class="part val">#a04a0d<small>value<br>what to change it to</small></div>
+<div class="glue decl">;</div>
+<div class="glue brace">}</div>
+```
+:::
+:::
+
+:::{#cr-d-many}
+:::{.part-tag}
+Part 2 · Anatomy of a rule
+:::
+```css
+/* Style every level-4 heading */
+h4 {
+  color: #a04a0d;
+  font-size: 1.4rem;
+  margin: 0;
+}
+```
+:::
+
+:::{#cr-d-b}
+:::{.part-tag}
+Part 2 · Anatomy of a rule
+:::
+:::{.rule .hl-all .compact}
+```{=html}
+<div class="part sel">.sprout-card<small>selector<br>anything with this class</small></div>
+<div class="glue brace">{</div>
+<div class="part prop">padding<small>property<br>space inside the box</small></div>
+<div class="glue decl">:</div>
+<div class="part val">1.5rem<small>value<br>a length</small></div>
+<div class="glue decl">;</div>
+<div class="glue brace">}</div>
+```
+:::
+:::
+
+:::{#cr-d-c}
+:::{.part-tag}
+Part 2 · Anatomy of a rule
+:::
+:::{.rule .hl-all .compact}
+```{=html}
+<div class="part sel">a:hover<small>selector<br>links under the mouse</small></div>
+<div class="glue brace">{</div>
+<div class="part prop">text-decoration<small>property<br>underline or not</small></div>
+<div class="glue decl">:</div>
+<div class="part val">none<small>value<br>a keyword</small></div>
+<div class="glue decl">;</div>
+<div class="glue brace">}</div>
+```
+:::
+:::
+
+:::
+
+## Part 3: Selectors {#p3}
+
+:::{.cr-section layout="sidebar-left"}
+
+Selectors are how CSS decides *which* elements a rule applies to. To practise, here is a small piece of HTML and how it looks with no CSS. It has a heading, two paragraphs and two links. Some carry extra labels, called `id` and `class`. We'll use them in a moment. @cr-pg0
+
+The simplest selector is the **type selector**, also called the element selector. It is just an HTML tag name. `p` means every paragraph. @cr-pg1
+
+A **class** is a label you make up and attach in the HTML, as in `class="note"`. In CSS you select it with a **dot**: `.note`. Classes are reusable. Here a paragraph and a link share one, while the plain paragraph doesn't have it. An element can also carry several classes, separated by spaces. @cr-pg2
+
+An **id** is a label that must be unique: only one element per page can have it. Select it with a **hash**: `#title`. For styling, classes are the everyday tool. Ids are better kept for one-off jobs such as link targets. @cr-pg3
+
+A **selector list** uses commas to give one rule to several selectors at once: `h4, a` means "headings and links". @cr-pg4
+
+A **space** between two selectors means "inside". `p a` reads as "any link inside a paragraph". The last link is not inside a paragraph, so it is left alone. @cr-pg5
+
+A **pseudo-class** starts with a colon and describes a *state*. `a:hover` means "a link while the mouse is over it". Try it: hover over the links on the right. @cr-pg6
+
+A cheat sheet for what you just met. @cr-sel-table
+
+:::{#cr-pg0}
+:::{.part-tag}
+Part 3 · Selectors
+:::
+:::{.frame}
+:::{.rv .pg}
+```{=html}
+<div class="card">
+  <h4 id="title">Chickpea Sprouts</h4>
+  <p class="note">New issue every month.</p>
+  <p>Science, told as <a href="#" onclick="return false;">stories</a>.</p>
+  <a href="#" class="note" onclick="return false;">Read the latest issue</a>
+</div>
+```
+:::
+:::
+```{=html}
+<p class="note-line">Nothing is lit up yet.</p>
+```
+:::{.side-by-side .wide-left}
+:::{.col}
+:::{.file-label}
+HTML
+:::
+```html
+<div class="card">
+  <h4 id="title">Chickpea Sprouts</h4>
+  <p class="note">New issue every month.</p>
+  <p>Science, told as <a href="#">stories</a>.</p>
+  <a href="#" class="note">Read the latest issue</a>
+</div>
+```
+:::
+:::{.col}
+:::{.file-label}
+CSS
+:::
+```css
+/* no CSS yet */
+```
+:::
+:::
+:::
+
+:::{#cr-pg1}
+:::{.part-tag}
+Part 3 · Selectors
+:::
+:::{.frame}
+:::{.rv .pg .p-type}
+```{=html}
+<div class="card">
+  <h4 id="title">Chickpea Sprouts</h4>
+  <p class="note">New issue every month.</p>
+  <p>Science, told as <a href="#" onclick="return false;">stories</a>.</p>
+  <a href="#" class="note" onclick="return false;">Read the latest issue</a>
+</div>
+```
+:::
+:::
+```{=html}
+<p class="note-line">Lit up: both paragraphs. Not the links, not the heading.</p>
+```
+:::{.side-by-side .wide-left}
+:::{.col}
+:::{.file-label}
+HTML
+:::
+```html
+<div class="card">
+  <h4 id="title">Chickpea Sprouts</h4>
+  <p class="note">New issue every month.</p>
+  <p>Science, told as <a href="#">stories</a>.</p>
+  <a href="#" class="note">Read the latest issue</a>
+</div>
+```
+:::
+:::{.col}
+:::{.file-label}
+CSS
+:::
+```css
+p {
+  background: #f8ca5d;
+}
+```
+:::
+:::
+:::
+
+:::{#cr-pg2}
+:::{.part-tag}
+Part 3 · Selectors
+:::
+:::{.frame}
+:::{.rv .pg .p-class}
+```{=html}
+<div class="card">
+  <h4 id="title">Chickpea Sprouts</h4>
+  <p class="note">New issue every month.</p>
+  <p>Science, told as <a href="#" onclick="return false;">stories</a>.</p>
+  <a href="#" class="note" onclick="return false;">Read the latest issue</a>
+</div>
+```
+:::
+:::
+```{=html}
+<p class="note-line">Lit up: the first paragraph and the last link, because both have class="note".</p>
+```
+:::{.side-by-side .wide-left}
+:::{.col}
+:::{.file-label}
+HTML
+:::
+```html
+<div class="card">
+  <h4 id="title">Chickpea Sprouts</h4>
+  <p class="note">New issue every month.</p>
+  <p>Science, told as <a href="#">stories</a>.</p>
+  <a href="#" class="note">Read the latest issue</a>
+</div>
+```
+:::
+:::{.col}
+:::{.file-label}
+CSS
+:::
+```css
+.note {
+  background: #f8ca5d;
+}
+```
+:::
+:::
+:::
+
+:::{#cr-pg3}
+:::{.part-tag}
+Part 3 · Selectors
+:::
+:::{.frame}
+:::{.rv .pg .p-id}
+```{=html}
+<div class="card">
+  <h4 id="title">Chickpea Sprouts</h4>
+  <p class="note">New issue every month.</p>
+  <p>Science, told as <a href="#" onclick="return false;">stories</a>.</p>
+  <a href="#" class="note" onclick="return false;">Read the latest issue</a>
+</div>
+```
+:::
+:::
+```{=html}
+<p class="note-line">Lit up: only the heading, the one element with id="title".</p>
+```
+:::{.side-by-side .wide-left}
+:::{.col}
+:::{.file-label}
+HTML
+:::
+```html
+<div class="card">
+  <h4 id="title">Chickpea Sprouts</h4>
+  <p class="note">New issue every month.</p>
+  <p>Science, told as <a href="#">stories</a>.</p>
+  <a href="#" class="note">Read the latest issue</a>
+</div>
+```
+:::
+:::{.col}
+:::{.file-label}
+CSS
+:::
+```css
+#title {
+  background: #f8ca5d;
+}
+```
+:::
+:::
+:::
+
+:::{#cr-pg4}
+:::{.part-tag}
+Part 3 · Selectors
+:::
+:::{.frame}
+:::{.rv .pg .p-group}
+```{=html}
+<div class="card">
+  <h4 id="title">Chickpea Sprouts</h4>
+  <p class="note">New issue every month.</p>
+  <p>Science, told as <a href="#" onclick="return false;">stories</a>.</p>
+  <a href="#" class="note" onclick="return false;">Read the latest issue</a>
+</div>
+```
+:::
+:::
+```{=html}
+<p class="note-line">Lit up: the heading and both links.</p>
+```
+:::{.side-by-side .wide-left}
+:::{.col}
+:::{.file-label}
+HTML
+:::
+```html
+<div class="card">
+  <h4 id="title">Chickpea Sprouts</h4>
+  <p class="note">New issue every month.</p>
+  <p>Science, told as <a href="#">stories</a>.</p>
+  <a href="#" class="note">Read the latest issue</a>
+</div>
+```
+:::
+:::{.col}
+:::{.file-label}
+CSS
+:::
+```css
+h4,
+a {
+  background: #f8ca5d;
+}
+```
+:::
+:::
+:::
+
+:::{#cr-pg5}
+:::{.part-tag}
+Part 3 · Selectors
+:::
+:::{.frame}
+:::{.rv .pg .p-desc}
+```{=html}
+<div class="card">
+  <h4 id="title">Chickpea Sprouts</h4>
+  <p class="note">New issue every month.</p>
+  <p>Science, told as <a href="#" onclick="return false;">stories</a>.</p>
+  <a href="#" class="note" onclick="return false;">Read the latest issue</a>
+</div>
+```
+:::
+:::
+```{=html}
+<p class="note-line">Lit up: only the link inside the second paragraph.</p>
+```
+:::{.side-by-side .wide-left}
+:::{.col}
+:::{.file-label}
+HTML
+:::
+```html
+<div class="card">
+  <h4 id="title">Chickpea Sprouts</h4>
+  <p class="note">New issue every month.</p>
+  <p>Science, told as <a href="#">stories</a>.</p>
+  <a href="#" class="note">Read the latest issue</a>
+</div>
+```
+:::
+:::{.col}
+:::{.file-label}
+CSS
+:::
+```css
+p a {
+  background: #f8ca5d;
+}
+```
+:::
+:::
+:::
+
+:::{#cr-pg6}
+:::{.part-tag}
+Part 3 · Selectors
+:::
+:::{.frame}
+:::{.rv .pg .p-hover}
+```{=html}
+<div class="card">
+  <h4 id="title">Chickpea Sprouts</h4>
+  <p class="note">New issue every month.</p>
+  <p>Science, told as <a href="#" onclick="return false;">stories</a>.</p>
+  <a href="#" class="note" onclick="return false;">Read the latest issue</a>
+</div>
+```
+:::
+:::
+```{=html}
+<p class="note-line">Lit up: whichever link the mouse is over.</p>
+```
+:::{.side-by-side .wide-left}
+:::{.col}
+:::{.file-label}
+HTML
+:::
+```html
+<div class="card">
+  <h4 id="title">Chickpea Sprouts</h4>
+  <p class="note">New issue every month.</p>
+  <p>Science, told as <a href="#">stories</a>.</p>
+  <a href="#" class="note">Read the latest issue</a>
+</div>
+```
+:::
+:::{.col}
+:::{.file-label}
+CSS
+:::
+```css
+a:hover {
+  background: #f8ca5d;
+}
+```
+:::
+:::
+:::
+
+:::{#cr-sel-table}
+:::{.part-tag}
+Part 3 · Selectors
+:::
+:::{.diff}
+
+| Kind | You write | It matches |
+|---|---|---|
+| Type | `p` | every `<p>` |
+| Class | `.note` | every element with `class="note"` |
+| Id | `#title` | the one element with `id="title"` |
+| List | `h4, a` | headings and links |
+| Descendant | `p a` | links inside paragraphs |
+| Pseudo-class | `a:hover` | links under the mouse |
+| Universal | `*` | everything |
+
+:::
+:::
+
+:::
+
+## Part 4: Values you will use all the time {#p4}
+
+:::{.cr-section layout="sidebar-left"}
+
+Selectors say *what*. Declarations say *how*, and the values in them come in a few kinds. First, **colours**. You can write them as a name (`red`), as a hex code (`#a04a0d`) or as `rgb()` numbers. All three are the same idea: a mix of red, green and blue. Hex codes are the most common, and any colour picker will give you one. @cr-v-colours
+
+**Lengths** are a number plus a unit. `px` is a fixed number of pixels. `rem` scales with the page's base font size, so it grows if a reader enlarges their text. `%` is a share of the parent's width. The dashed box below is the parent. @cr-v-lengths
+
+Some values are plain **keywords**: words CSS already knows, like `center`, `bold` or `none`. Here `text-align` moves text within its box. @cr-v-keywords
+
+A starter kit of properties, and the kind of value each one takes. @cr-v-table
+
+:::{#cr-v-colours}
+:::{.part-tag}
+Part 4 · Values
+:::
+```{=html}
+<div class="chips">
+  <div class="chip" style="background:red;">red<br>a name</div>
+  <div class="chip" style="background:#a04a0d;">#a04a0d<br>a hex code</div>
+  <div class="chip" style="background:rgb(16 91 9);">rgb(16 91 9)<br>rgb numbers</div>
+</div>
+```
+```css
+color: red;
+color: #a04a0d;
+color: rgb(16 91 9);
+```
+:::
+
+:::{#cr-v-lengths}
+:::{.part-tag}
+Part 4 · Values
+:::
+```{=html}
+<div class="bars">
+  <div class="bar" style="width:100px;">100px</div>
+  <div class="bar" style="width:6rem;">6rem</div>
+  <div class="bar" style="width:50%;">50%</div>
+</div>
+```
+```css
+width: 100px;
+width: 6rem;
+width: 50%;
+```
+:::
+
+:::{#cr-v-keywords}
+:::{.part-tag}
+Part 4 · Values
+:::
+```{=html}
+<div class="align-frame">
+  <p style="text-align:left;">left</p>
+  <p style="text-align:center;">center</p>
+  <p style="text-align:right;">right</p>
+</div>
+```
+```css
+text-align: left;
+text-align: center;
+text-align: right;
+```
+:::
+
+:::{#cr-v-table}
+:::{.part-tag}
+Part 4 · Values
+:::
+:::{.diff}
+
+| Property | What it changes | Example value |
+|---|---|---|
+| `color` | text colour | `#a04a0d` |
+| `background` | background colour | `#f8ca5d` |
+| `font-size` | text size | `1.2rem` |
+| `font-family` | typeface | `"Roboto Slab", serif` |
+| `text-align` | text position in its box | `center` |
+| `width` | width of a box | `50%` |
+| `padding` | space inside a box | `1.5rem` |
+| `margin` | space outside a box | `1rem` |
+| `border` | a line around a box | `2px solid #112909` |
+
+:::
+:::
+
+:::
+
+## Part 5: The box model {#p5}
+
+:::{.cr-section layout="sidebar-left"}
+
+Every element on a page is a rectangular **box**, and every box has four layers. Learning them is the key to spacing things out. Here is a box from the inside out. @cr-bm-all
+
+At the centre is the **content**: your text or image. By default, `width` and `height` set the size of this part only. @cr-bm-content
+
+**Padding** is space *inside* the box, between the content and the edge. Add padding to give text room to breathe. @cr-bm-padding
+
+The **border** is a line around the padding. You choose its thickness, style and colour in one go: `border: 8px solid #112909;`. @cr-bm-border
+
+**Margin** is space *outside* the border. It pushes neighbouring boxes away. An easy way to remember: padding is inside, margin is outside. @cr-bm-margin
+
+A common surprise: because `width` covers only the content, padding and border make the box *wider* than you asked for. This one line changes that, so `width` includes padding and border. Many stylesheets start with it. @cr-bm-sizing
+
+:::{#cr-bm-all}
+:::{.part-tag}
+Part 5 · The box model
+:::
+```{=html}
+<div class="bm">
+  <div class="layer bm-margin"><span class="lab">margin</span>
+    <div class="layer bm-border"><span class="lab">border</span>
+      <div class="layer bm-padding"><span class="lab">padding</span>
+        <div class="layer bm-content">content</div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+```css
+/* the numbers in the drawing are approximate */
+.box {
+  width: 8rem;
+  padding: 28px;
+  border: 8px solid #112909;
+  margin: 28px;
+}
+```
+:::
+
+:::{#cr-bm-content}
+:::{.part-tag}
+Part 5 · The box model
+:::
+```{=html}
+<div class="bm hl-content">
+  <div class="layer bm-margin"><span class="lab">margin</span>
+    <div class="layer bm-border"><span class="lab">border</span>
+      <div class="layer bm-padding"><span class="lab">padding</span>
+        <div class="layer bm-content">content</div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+```css
+/* the numbers in the drawing are approximate */
+.box {
+  width: 8rem;
+  padding: 28px;
+  border: 8px solid #112909;
+  margin: 28px;
+}
+```
+:::
+
+:::{#cr-bm-padding}
+:::{.part-tag}
+Part 5 · The box model
+:::
+```{=html}
+<div class="bm hl-padding">
+  <div class="layer bm-margin"><span class="lab">margin</span>
+    <div class="layer bm-border"><span class="lab">border</span>
+      <div class="layer bm-padding"><span class="lab">padding</span>
+        <div class="layer bm-content">content</div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+```css
+/* the numbers in the drawing are approximate */
+.box {
+  width: 8rem;
+  padding: 28px;
+  border: 8px solid #112909;
+  margin: 28px;
+}
+```
+:::
+
+:::{#cr-bm-border}
+:::{.part-tag}
+Part 5 · The box model
+:::
+```{=html}
+<div class="bm hl-border">
+  <div class="layer bm-margin"><span class="lab">margin</span>
+    <div class="layer bm-border"><span class="lab">border</span>
+      <div class="layer bm-padding"><span class="lab">padding</span>
+        <div class="layer bm-content">content</div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+```css
+/* the numbers in the drawing are approximate */
+.box {
+  width: 8rem;
+  padding: 28px;
+  border: 8px solid #112909;
+  margin: 28px;
+}
+```
+:::
+
+:::{#cr-bm-margin}
+:::{.part-tag}
+Part 5 · The box model
+:::
+```{=html}
+<div class="bm hl-margin">
+  <div class="layer bm-margin"><span class="lab">margin</span>
+    <div class="layer bm-border"><span class="lab">border</span>
+      <div class="layer bm-padding"><span class="lab">padding</span>
+        <div class="layer bm-content">content</div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+```css
+/* the numbers in the drawing are approximate */
+.box {
+  width: 8rem;
+  padding: 28px;
+  border: 8px solid #112909;
+  margin: 28px;
+}
+```
+:::
+
+:::{#cr-bm-sizing}
+:::{.part-tag}
+Part 5 · The box model
+:::
+```css
+* {
+  box-sizing: border-box;
+}
+```
+:::
+
+:::
+
+## Part 6: Inheritance and the cascade {#p6}
+
+:::{.cr-section layout="sidebar-left"}
+
+Some properties are **inherited**: set them on a parent and the children pick them up. Text properties such as `color` and `font-family` work like this. The paragraph never got a colour rule of its own. It took its parent's. @cr-inh1
+
+Others are **not** inherited. `border`, `margin` and `padding` apply only to the element you set them on. Otherwise every child would grow its own border too. @cr-inh2
+
+Now a bigger question. What if two rules point at the same element and disagree? The browser settles it in order. First, **specificity**: more specific selectors win. As a rough scoring guide, an id is worth 100 points, a class 10 and a type selector 1. @cr-spec-table
+
+If two rules are equally specific, the **later one wins**. That is the "cascading" in Cascading Style Sheets. Both rules below are a type selector, so the second one takes it. @cr-cs1
+
+Specificity beats order. `.note` comes *first* but is worth 10 points against `p`'s 1, so the class wins and the paragraph is green. @cr-cs2
+
+And an id beats a class. The paragraph has both `id="x"` and `class="note"`, so `#x` wins whatever the order. @cr-cs3
+
+When a rule seems to do nothing, ask two questions. Is my selector really matching the element? Is a more specific rule overriding it? Your browser's developer tools (right-click, then Inspect) show which rules apply to an element and cross out the ones that lost. @cr-cs3
+
+:::{#cr-inh1}
+:::{.part-tag}
+Part 6 · Inheritance and the cascade
+:::
+:::{.frame}
+:::{.rv}
+```{=html}
+<div class="inh inh-1"><strong>Parent</strong>
+  <p>Child: a paragraph inside the parent.</p>
+</div>
+```
+:::
+:::
+```css
+.parent {
+  color: #a04a0d;
+}
+```
+:::
+
+:::{#cr-inh2}
+:::{.part-tag}
+Part 6 · Inheritance and the cascade
+:::
+:::{.frame}
+:::{.rv}
+```{=html}
+<div class="inh inh-2"><strong>Parent</strong>
+  <p>Child: a paragraph inside the parent.</p>
+</div>
+```
+:::
+:::
+```css
+.parent {
+  color: #a04a0d;
+  border: 2px solid #112909;
+  padding: 0.75rem;
+}
+```
+:::
+
+:::{#cr-spec-table}
+:::{.part-tag}
+Part 6 · Inheritance and the cascade
+:::
+:::{.diff}
+
+| Selector | Kind | Roughly worth |
+|---|---|---|
+| `#x` | id | 100 |
+| `.note` | class | 10 |
+| `p` | type | 1 |
+
+:::
+:::
+
+:::{#cr-cs1}
+:::{.part-tag}
+Part 6 · Inheritance and the cascade
+:::
+:::{.frame .frame-lg}
+:::{.rv .cs1}
+```{=html}
+<p class="note" id="x">Which colour will I be?</p>
+```
+:::
+:::
+```css
+p {
+  color: #105b09;
+}
+p {
+  color: #a04a0d;
+}
+```
+```{=html}
+<p class="note-line">Winner: the later rule, brown.</p>
+```
+:::
+
+:::{#cr-cs2}
+:::{.part-tag}
+Part 6 · Inheritance and the cascade
+:::
+:::{.frame .frame-lg}
+:::{.rv .cs2}
+```{=html}
+<p class="note" id="x">Which colour will I be?</p>
+```
+:::
+:::
+```css
+.note {
+  color: #105b09;
+}
+p {
+  color: #a04a0d;
+}
+```
+```{=html}
+<p class="note-line">Winner: <code>.note</code>, green, even though it is earlier.</p>
+```
+:::
+
+:::{#cr-cs3}
+:::{.part-tag}
+Part 6 · Inheritance and the cascade
+:::
+:::{.frame .frame-lg}
+:::{.rv .cs3}
+```{=html}
+<p class="note" id="x">Which colour will I be?</p>
+```
+:::
+:::
+```css
+#x {
+  color: #a04a0d;
+}
+.note {
+  color: #105b09;
+}
+```
+```{=html}
+<p class="note-line">Winner: <code>#x</code>, brown.</p>
+```
+:::
+
+:::
+
+## Part 7: Where a box goes, with position {#p7}
+
+:::{.cr-section layout="sidebar-left"}
+
+Browsers lay boxes out in **normal flow**: one after another, top to bottom. The `position` property lets a box break that pattern. Here are three squares inside a parent box. With `position: static`, the default, they simply stack in order. @cr-pos-static
+
+`position: relative` keeps C in the flow but lets you nudge it away from its normal spot with `top`, `left`, `right` or `bottom`. Its old spot stays reserved (the dashed outline), so B does not move up. @cr-pos-relative
+
+`position: absolute` takes C **out of the flow** completely. B moves up into the gap, and C is placed against its nearest *positioned* ancestor, meaning a parent whose own `position` is not `static`. Here that is the dashed box, which has `position: relative`. With no positioned ancestor, C would use the whole page. @cr-pos-absolute
+
+`position: fixed` pins C to the browser window (the viewport). Scroll the page and C stays exactly where it is, like a chat button in the corner of a site. @cr-pos-fixed
+
+`position: sticky` is a mix. C scrolls with the page like normal until it reaches the offset you set (`top: 0`), then it sticks there. It is how a table header can stay visible while you scroll. @cr-pos-sticky
+
+:::{#cr-pos-static}
+:::{.part-tag}
+Part 7 · position
+:::
+```{=html}
+<div class="pos-parent pos-static">
+  <div class="slot"><div class="sq a">A</div></div>
+  <div class="slot slot-c"><div class="sq c">C</div></div>
+  <div class="slot"><div class="sq b">B</div></div>
+</div>
+<p class="note-line">Normal flow: A, C, B in order.</p>
+```
+```css
+.c {
+  position: static; /* the default */
+}
+```
+:::
+
+:::{#cr-pos-relative}
+:::{.part-tag}
+Part 7 · position
+:::
+```{=html}
+<div class="pos-parent pos-relative">
+  <div class="slot"><div class="sq a">A</div></div>
+  <div class="slot slot-c"><div class="sq c">C</div></div>
+  <div class="slot"><div class="sq b">B</div></div>
+</div>
+<p class="note-line">C moved, but its old spot is still reserved.</p>
+```
+```css
+.c {
+  position: relative;
+  top: 20px;
+  left: 30px;
+}
+```
+:::
+
+:::{#cr-pos-absolute}
+:::{.part-tag}
+Part 7 · position
+:::
+```{=html}
+<div class="pos-parent pos-absolute">
+  <div class="slot"><div class="sq a">A</div></div>
+  <div class="slot slot-c"><div class="sq c">C</div></div>
+  <div class="slot"><div class="sq b">B</div></div>
+</div>
+<p class="note-line">C left the flow, so B moved up.</p>
+```
+```css
+.parent {
+  position: relative;
+}
+.c {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+```
+:::
+
+:::{#cr-pos-fixed}
+:::{.part-tag}
+Part 7 · position
+:::
+```{=html}
+<div class="win-pair"><div class="win-wrap"><div class="win"><div class="page"><i style="width:80%"></i><i style="width:55%"></i><i style="width:90%"></i><i style="width:40%"></i><i style="width:70%"></i><i style="width:85%"></i><i style="width:50%"></i><i style="width:65%"></i><i style="width:90%"></i><i style="width:45%"></i><i style="width:75%"></i><i style="width:60%"></i><i style="width:80%"></i><i style="width:55%"></i></div><div class="sq c" style="top:10px;right:10px;">C</div></div><small>Before scrolling</small></div><div class="win-wrap"><div class="win"><div class="page scrolled"><i style="width:80%"></i><i style="width:55%"></i><i style="width:90%"></i><i style="width:40%"></i><i style="width:70%"></i><i style="width:85%"></i><i style="width:50%"></i><i style="width:65%"></i><i style="width:90%"></i><i style="width:45%"></i><i style="width:75%"></i><i style="width:60%"></i><i style="width:80%"></i><i style="width:55%"></i></div><div class="sq c" style="top:10px;right:10px;">C</div></div><small>After scrolling</small></div></div><p class="note-line">Illustration: the page moves, C does not.</p>
+```
+```css
+.c {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+```
+:::
+
+:::{#cr-pos-sticky}
+:::{.part-tag}
+Part 7 · position
+:::
+```{=html}
+<div class="win-pair"><div class="win-wrap"><div class="win"><div class="page"><i style="width:80%"></i><i style="width:55%"></i><i style="width:90%"></i><i style="width:40%"></i><i style="width:70%"></i><i style="width:85%"></i><i style="width:50%"></i><i style="width:65%"></i><i style="width:90%"></i><i style="width:45%"></i><i style="width:75%"></i><i style="width:60%"></i><i style="width:80%"></i><i style="width:55%"></i></div><div class="sq c" style="top:70px;left:8px;">C</div></div><small>Before scrolling</small></div><div class="win-wrap"><div class="win"><div class="page scrolled"><i style="width:80%"></i><i style="width:55%"></i><i style="width:90%"></i><i style="width:40%"></i><i style="width:70%"></i><i style="width:85%"></i><i style="width:50%"></i><i style="width:65%"></i><i style="width:90%"></i><i style="width:45%"></i><i style="width:75%"></i><i style="width:60%"></i><i style="width:80%"></i><i style="width:55%"></i></div><div class="sq c" style="top:0;left:8px;">C</div></div><small>After scrolling</small></div></div><p class="note-line">Illustration: C scrolls until it reaches the top, then stays.</p>
+```
+```css
+.c {
+  position: sticky;
+  top: 0;
+}
+```
+:::
+
+:::
+
+## Part 8: SCSS {#p8}
+
+:::{.cr-section layout="sidebar-left"}
+
+Real stylesheets repeat themselves. Here the same cinnamon brown is written in four places. To try a different colour, you have to hunt down every copy. @cr-s-repeat
+
+Plain CSS can now fix this itself, with **custom properties**, also called CSS variables. Name a value once with two dashes, then use it with `var()`. The browser reads them live. Good to know, and it is often all you need. @cr-s-vars
+
+**SCSS** goes further. It is an extension of CSS: every valid CSS file is already valid SCSS, and it adds extra features on top. Browsers can't read SCSS, though. A tool called **Sass** translates your `.scss` file into ordinary `.css` first, and the browser only ever sees the result. @cr-s-paths
+
+SCSS feature one: **variables**. They start with `$`. Name a value once and use it anywhere. The difference from `--cinnamon` is that Sass swaps `$cinnamon` for the real value *while compiling*, before the browser sees anything. Left is what you write, right is what comes out. @cr-s-vars2
+
+Feature two: **nesting**. Write the rules for things *inside* `.scss-card` inside the `.scss-card` block, instead of repeating the prefix each time. The `&` means "the thing I'm nested in". Hover over the link. Don't nest too deep, or your selectors get long-winded. @cr-s-nest
+
+Feature three: **mixins**. A mixin is a recipe you write once with `@mixin` and reuse with `@include`, with ingredients you can swap. Two different pills, one recipe. @cr-s-mixin
+
+Feature four: **splitting into files**. As a stylesheet grows you can keep colours in their own file and load it with `@use`. A file whose name starts with an underscore, like `_colours.scss`, is a *partial*: it is only there to be loaded by other files. @cr-s-use
+
+So, CSS or SCSS? Here is the difference in one table. Start with plain CSS. Reach for SCSS once your stylesheet grows and you keep repeating yourself. Since all CSS is valid SCSS, you can rename a `.css` file to `.scss` and adopt the extras a bit at a time. You can practise in the [Sass playground](https://sass-lang.com/playground/). @cr-s-diff
+
+:::{#cr-s-repeat}
+:::{.part-tag}
+Part 8 · SCSS
+:::
+```css
+h4 { color: #a04a0d; }
+a:hover { color: #a04a0d; }
+.sprout-card { border: 2px solid #a04a0d; }
+blockquote { border-left: 4px solid #a04a0d; }
+```
+:::
+
+:::{#cr-s-vars}
+:::{.part-tag}
+Part 8 · SCSS
+:::
+```css
+:root {
+  --cinnamon: #a04a0d;
+}
+h4 {
+  color: var(--cinnamon);
+}
+a:hover {
+  color: var(--cinnamon);
+}
+```
+:::
+
+:::{#cr-s-paths}
+:::{.part-tag}
+Part 8 · SCSS
+:::
+```{=html}
+<div class="paths">
+<div class="path">
+  <div class="lang">CSS</div>
+  <div class="node">styles.css</div>
+  <div class="arrow">&rarr;</div>
+  <div class="node browser">Browser</div>
+</div>
+<div class="path">
+  <div class="lang">SCSS</div>
+  <div class="node">styles.scss</div>
+  <div class="arrow">&rarr; Sass &rarr;</div>
+  <div class="node accent">styles.css</div>
+  <div class="arrow">&rarr;</div>
+  <div class="node browser">Browser</div>
+</div>
+</div>
+```
+:::
+
+:::{#cr-s-vars2}
+:::{.part-tag}
+Part 8 · SCSS
+:::
+:::{.side-by-side}
+:::{.col}
+:::{.file-label}
+SCSS you write
+:::
+```scss
+$cinnamon: #a04a0d;
+
+.scss-card {
+  border: 2px solid $cinnamon;
+}
+.scss-card h4 {
+  color: $cinnamon;
+}
+```
+:::
+:::{.col}
+:::{.file-label}
+CSS you get
+:::
+```css
+.scss-card {
+  border: 2px solid #a04a0d;
+}
+.scss-card h4 {
+  color: #a04a0d;
+}
+```
+:::
+:::
+:::{.file-label}
+Result
+:::
+:::{.frame}
+:::{.scss-card}
+```{=html}
+<h4>Chickpea Sprouts</h4>
+<p>A newsletter that explains science through stories.</p>
+```
+:::
+:::
+:::
+
+:::{#cr-s-nest}
+:::{.part-tag}
+Part 8 · SCSS
+:::
+:::{.side-by-side}
+:::{.col}
+:::{.file-label}
+SCSS you write
+:::
+```scss
+.scss-card {
+  border: 2px solid $cinnamon;
+  h4 { color: $cinnamon; }
+  a {
+    background: #f8ca5d;
+    &:hover {
+      background: $cinnamon;
+      color: white;
+    }
+  }
+}
+```
+:::
+:::{.col}
+:::{.file-label}
+CSS you get
+:::
+```css
+.scss-card {
+  border: 2px solid #a04a0d;
+}
+.scss-card h4 {
+  color: #a04a0d;
+}
+.scss-card a {
+  background: #f8ca5d;
+}
+.scss-card a:hover {
+  background: #a04a0d;
+  color: white;
+}
+```
+:::
+:::
+:::{.file-label}
+Result
+:::
+:::{.frame}
+:::{.scss-card}
+```{=html}
+<h4>Chickpea Sprouts</h4>
+<p>A newsletter that explains science through stories.</p>
+<a href="#" onclick="return false;">Read the latest issue</a>
+```
+:::
+:::
+:::
+
+:::{#cr-s-mixin}
+:::{.part-tag}
+Part 8 · SCSS
+:::
+:::{.side-by-side}
+:::{.col}
+:::{.file-label}
+SCSS you write
+:::
+```scss
+$chickpea: #f8ca5d;
+
+@mixin pill($bg) {
+  background: $bg;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+}
+.cta {
+  @include pill($chickpea);
+}
+.tag {
+  @include pill($cinnamon);
+  color: white;
+}
+```
+:::
+:::{.col}
+:::{.file-label}
+CSS you get
+:::
+```css
+.cta {
+  background: #f8ca5d;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+}
+.tag {
+  background: #a04a0d;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  color: white;
+}
+```
+:::
+:::
+:::{.file-label}
+Result
+:::
+:::{.frame}
+```{=html}
+<span class="cta">Read more</span> <span class="tag">science</span>
+```
+:::
+:::
+
+:::{#cr-s-use}
+:::{.part-tag}
+Part 8 · SCSS
+:::
+:::{.side-by-side}
+:::{.col}
+:::{.file-label}
+_colours.scss
+:::
+```scss
+$cinnamon: #a04a0d;
+```
+:::{.file-label}
+styles.scss
+:::
+```scss
+@use "colours";
+
+h4 {
+  color: colours.$cinnamon;
+}
+```
+:::
+:::{.col}
+:::{.file-label}
+CSS you get
+:::
+```css
+h4 {
+  color: #a04a0d;
+}
+```
+:::
+:::
+:::
+
+:::{#cr-s-diff}
+:::{.part-tag}
+Part 8 · SCSS
+:::
+:::{.diff}
+
+|  | CSS | SCSS |
+|---|---|---|
+| Browser reads it directly | Yes | No, compiled to CSS first |
+| Variables | `--name`, live in the browser | `$name`, replaced at compile time |
+| Nesting | Yes, in modern browsers | Yes |
+| Mixins | No | Yes |
+| Splitting into files | `@import` (loads at runtime) | `@use` (combined at compile time) |
+| Comments | `/* */` | `/* */` and `//` |
+| Good for | Small stylesheets | Big ones that repeat themselves |
+
+:::
+:::
+
+:::
+
+## Glossary and where to learn more {#glossary}
+
+| Term | In one line |
+|---|---|
+| **Rule** | A selector plus a block of declarations. |
+| **Selector** | Says which elements a rule applies to (`p`, `.note`, `#title`). |
+| **Declaration block** | The `{ }` part holding the instructions. |
+| **Declaration** | One `property: value;` pair. |
+| **Property** | What to change (`color`, `margin`). |
+| **Value** | What to change it to (`#a04a0d`, `1.5rem`, `center`). |
+| **Class** | A reusable label on HTML elements, selected with a dot. |
+| **Id** | A unique label on one element, selected with a hash. |
+| **Pseudo-class** | A state, selected with a colon (`:hover`). |
+| **Box model** | The layers of every box: content, padding, border, margin. |
+| **Inheritance** | Some properties (like `color`) pass from parent to child. |
+| **Specificity** | How the browser ranks conflicting rules: id, then class, then type. |
+| **Cascade** | If specificity ties, the later rule wins. |
+| **Normal flow** | The default top-to-bottom layout that `position` can break. |
+| **CSS variable** | `--name` and `var(--name)`: a live value in the browser. |
+| **SCSS / Sass** | CSS with extras (variables, nesting, mixins) that gets compiled to CSS. |
+
+Further reading, from the sources this guide draws on:
+
+- [MDN: What is CSS?](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/What_is_CSS)
+- [MDN: Basic CSS selectors](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
+- [MDN: The box model](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model)
+- [MDN: Handling conflicts (cascade, specificity, inheritance)](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
+- [MDN: the `position` property](https://developer.mozilla.org/en-US/docs/Web/CSS/position)
+- [MDN: CSS custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
+- [CSS-Tricks: How CSS selectors work](https://css-tricks.com/how-css-selectors-work/)
+- [Sass: the official guide](https://sass-lang.com/guide/) and [playground](https://sass-lang.com/playground/)
+- [Closeread, the extension behind this page](https://closeread.dev)

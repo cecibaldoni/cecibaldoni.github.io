@@ -1,0 +1,2305 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>CSS and SCSS for beginners – Cecilia Baldoni</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../img/shrew.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-d76b89148f2051d413c67903796ad183.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/intersection-observer-polyfill-1.0.0/intersection-observer.js"></script>
+<script src="../site_libs/quarto-contrib/scrollama-3.2.0/scrollama.min.js"></script>
+<script src="../site_libs/quarto-contrib/closeread-0.1.0/closeread.js"></script>
+<script src="../site_libs/quarto-contrib/iconify-3.0.0/iconify-icon.min.js"></script>
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<meta cr-debug-mode="false">
+<meta cr-remove-header-space="false">
+
+
+<link rel="stylesheet" href="../site_libs/quarto-contrib/quarto-project/qmd-lab/closeread/closeread.css">
+<link rel="stylesheet" href="css-scss-scrolly.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Cecilia Baldoni</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../content/about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../content/project.html"> 
+<span class="menu-text">Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../blog/index.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../content/contact.html"> 
+<span class="menu-text">Contact</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://scholar.google.com/citations?user=mxM_Py8AAAAJ&amp;hl=en&amp;oi=sra"> 
+<span class="menu-text"><iconify-icon role="img" inline="" icon="fa6-brands:google-scholar" aria-label="Icon google-scholar from fa6-brands Iconify.design set." title="Icon google-scholar from fa6-brands Iconify.design set."></iconify-icon></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://substack.com/@cecibaldoni"> 
+<span class="menu-text"><iconify-icon role="img" inline="" icon="garden:bookmark-fill-12" aria-label="Icon bookmark-fill-12 from garden Iconify.design set." title="Icon bookmark-fill-12 from garden Iconify.design set."></iconify-icon></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://bsky.app/profile/cecibaldoni.bsky.social"> 
+<span class="menu-text"><iconify-icon role="img" inline="" icon="meteor-icons:bluesky" aria-label="Icon bluesky from meteor-icons Iconify.design set." title="Icon bluesky from meteor-icons Iconify.design set."></iconify-icon></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.instagram.com/cecibaldoni/?hl=en"> <i class="bi bi-instagram" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/cecibaldoni/"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/cecilia-baldoni/"> <i class="bi bi-LinkedIn" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content column-page" id="quarto-document-content">
+      <!-- user-provided yaml closeread style options -->
+      <style>
+        :root {
+          --cr-section-background-color: #fbf3ea;
+--cr-narrative-text-color-sidebar: #112909;
+--cr-narrative-background-color-sidebar: #f3dbc1;
+        }
+      </style>
+    
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">CSS and SCSS for beginners</h1>
+<p class="subtitle lead">A scroll-through guide: from your first selector to your first mixin</p>
+</div>
+
+
+
+<div class="quarto-title-meta column-page">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>This guide explains CSS and SCSS from scratch. You don’t need any experience. Each part builds on the one before, so it works best in order. Scroll slowly: the explanation is on the left, and the picture on the right changes as you go. Where a picture is interactive, the text will say so.</p>
+<ol type="1">
+<li><a href="#p1">What CSS is</a></li>
+<li><a href="#p2">Anatomy of a rule</a>: selector, property, value</li>
+<li><a href="#p3">Selectors</a>: type, class, id and friends</li>
+<li><a href="#p4">Values you will use all the time</a></li>
+<li><a href="#p5">The box model</a></li>
+<li><a href="#p6">Inheritance and the cascade</a></li>
+<li><a href="#p7">Where a box goes, with <code>position</code></a></li>
+<li><a href="#p8">SCSS</a></li>
+<li><a href="#glossary">Glossary and where to learn more</a></li>
+</ol>
+<section id="p1" class="level2">
+<h2 data-anchor-id="p1">Part 1: What CSS is</h2>
+<div class="cr-section cr-column-screen sidebar-left">
+<div class="narrative-col">
+<div class="trigger new-trigger" data-focus-on="cr-raw">
+<div class="narrative">
+<p>Web pages are built from two languages. <strong>HTML</strong> describes <em>what is on the page</em>: a heading, a paragraph, a link. This card is HTML and nothing else. It still looks like something, because your browser has built-in default styles. That’s why a link is blue and underlined, and a heading is bold.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-t1">
+<div class="narrative">
+<p><strong>CSS</strong> (Cascading Style Sheets) is the second language. It describes <em>how those things should look</em>, as a list of rules. Here are two: one turns headings brown, the other turns links green.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-t2">
+<div class="narrative">
+<p>A third rule gives the whole card a background, some room inside it (<code>padding</code>) and rounded corners. The dot in <code>.sprout-card</code> matters. Part 3 explains it.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-t3">
+<div class="narrative">
+<p>One more rule and the link looks like a button. Notice that the HTML never changed. CSS only changes appearance. That is the whole idea: <strong>HTML for content, CSS for looks.</strong> The next parts unpack how those rules are written.</p>
+</div>
+</div>
+</div>
+<div class="sticky-col">
+<div class="sticky-col-stack">
+<div id="cr-raw" class="sticky">
+<div class="part-tag">
+<p>Part 1 · What CSS is</p>
+</div>
+<div class="frame">
+<div class="rv sprout-card">
+<h4>Chickpea Sprouts</h4>
+<p>A newsletter that explains science through stories.</p>
+<a href="#" onclick="return false;">Read the latest issue</a>
+</div>
+</div>
+<div class="file-label">
+<p>HTML only, browser defaults</p>
+</div>
+</div>
+<div id="cr-t1" class="sticky">
+<div class="part-tag">
+<p>Part 1 · What CSS is</p>
+</div>
+<div class="frame">
+<div class="rv sprout-card t-color">
+<h4>Chickpea Sprouts</h4>
+<p>A newsletter that explains science through stories.</p>
+<a href="#" onclick="return false;">Read the latest issue</a>
+</div>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>h4 {</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span><span class="ch">:</span> <span class="cn">#a04a0d</span><span class="op">;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>a {</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span><span class="ch">:</span> <span class="cn">#105b09</span><span class="op">;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="cr-t2" class="sticky">
+<div class="part-tag">
+<p>Part 1 · What CSS is</p>
+</div>
+<div class="frame">
+<div class="rv sprout-card t-color t-space">
+<h4>Chickpea Sprouts</h4>
+<p>A newsletter that explains science through stories.</p>
+<a href="#" onclick="return false;">Read the latest issue</a>
+</div>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.sprout-card</span> {</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background</span><span class="ch">:</span> <span class="cn">#f3dbc1</span><span class="op">;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">padding</span><span class="ch">:</span> <span class="dv">1.5</span><span class="dt">rem</span><span class="op">;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">border-radius</span><span class="ch">:</span> <span class="dv">12</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="cr-t3" class="sticky">
+<div class="part-tag">
+<p>Part 1 · What CSS is</p>
+</div>
+<div class="frame">
+<div class="rv sprout-card t-color t-space t-btn">
+<h4>Chickpea Sprouts</h4>
+<p>A newsletter that explains science through stories.</p>
+<a href="#" onclick="return false;">Read the latest issue</a>
+</div>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>a {</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background</span><span class="ch">:</span> <span class="cn">#f8ca5d</span><span class="op">;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">padding</span><span class="ch">:</span> <span class="dv">0.4</span><span class="dt">rem</span> <span class="dv">0.9</span><span class="dt">rem</span><span class="op">;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">border-radius</span><span class="ch">:</span> <span class="dv">6</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">text-decoration</span><span class="ch">:</span> <span class="dv">none</span><span class="op">;</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font-weight</span><span class="ch">:</span> <span class="dv">700</span><span class="op">;</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="p2" class="level2">
+<h2 data-anchor-id="p2">Part 2: Anatomy of a rule</h2>
+<div class="cr-section cr-column-screen sidebar-left">
+<div class="narrative-col">
+<div class="trigger new-trigger" data-focus-on="cr-d-all">
+<div class="narrative">
+<p>Everything in CSS is written as <strong>rules</strong>. A rule has two halves: a pointer that says <em>what to style</em>, and instructions that say <em>how it should look</em>.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-d-sel">
+<div class="narrative">
+<p>The <strong>selector</strong> is the pointer. It says which elements the rule is for. <code>h4</code> means “every level-4 heading”.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-d-block">
+<div class="narrative">
+<p>The <strong>declaration block</strong> is everything between the curly braces <code>{ }</code>. It holds the instructions.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-d-prop">
+<div class="narrative">
+<p>A <strong>property</strong> is <em>what</em> you want to change, such as <code>color</code>, <code>font-size</code> or <code>margin</code>. CSS has hundreds of them.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-d-val">
+<div class="narrative">
+<p>A <strong>value</strong> says what to change it <em>to</em>. Which values are allowed depends on the property: <code>color</code> wants a colour, <code>font-size</code> wants a size.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-d-decl">
+<div class="narrative">
+<p>A property and its value, joined by a colon and ended with a semicolon, make a <strong>declaration</strong>. Forgetting the semicolon is the classic beginner slip.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-highlight="3-5" data-focus-on="cr-d-many">
+<div class="narrative">
+<p>A block can hold as many declarations as you like. Text between <code>/*</code> and <code>*/</code> is a <strong>comment</strong>: the browser skips it, it is a note for humans.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-d-b">
+<div class="narrative">
+<p>Same shape, different rule. <code>.sprout-card</code> points at anything with that class. <code>padding</code> is the space inside a box. <code>1.5rem</code> is a length.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-d-c">
+<div class="narrative">
+<p>And another. <code>a:hover</code> points at links, but only while the mouse is over them. <code>none</code> is a keyword: a word CSS already knows.</p>
+</div>
+</div>
+</div>
+<div class="sticky-col">
+<div class="sticky-col-stack">
+<div id="cr-d-all" class="sticky">
+<div class="part-tag">
+<p>Part 2 · Anatomy of a rule</p>
+</div>
+<div class="rule hl-all">
+<div class="part sel">h4<small>selector<br>what to style</small></div>
+<div class="glue brace">{</div>
+<div class="part prop">color<small>property<br>what to change</small></div>
+<div class="glue decl">:</div>
+<div class="part val">#a04a0d<small>value<br>what to change it to</small></div>
+<div class="glue decl">;</div>
+<div class="glue brace">}</div>
+</div>
+</div>
+<div id="cr-d-sel" class="sticky">
+<div class="part-tag">
+<p>Part 2 · Anatomy of a rule</p>
+</div>
+<div class="rule hl-sel">
+<div class="part sel">h4<small>selector<br>what to style</small></div>
+<div class="glue brace">{</div>
+<div class="part prop">color<small>property<br>what to change</small></div>
+<div class="glue decl">:</div>
+<div class="part val">#a04a0d<small>value<br>what to change it to</small></div>
+<div class="glue decl">;</div>
+<div class="glue brace">}</div>
+</div>
+</div>
+<div id="cr-d-block" class="sticky">
+<div class="part-tag">
+<p>Part 2 · Anatomy of a rule</p>
+</div>
+<div class="rule hl-block">
+<div class="part sel">h4<small>selector<br>what to style</small></div>
+<div class="glue brace">{</div>
+<div class="part prop">color<small>property<br>what to change</small></div>
+<div class="glue decl">:</div>
+<div class="part val">#a04a0d<small>value<br>what to change it to</small></div>
+<div class="glue decl">;</div>
+<div class="glue brace">}</div>
+</div>
+</div>
+<div id="cr-d-prop" class="sticky">
+<div class="part-tag">
+<p>Part 2 · Anatomy of a rule</p>
+</div>
+<div class="rule hl-prop">
+<div class="part sel">h4<small>selector<br>what to style</small></div>
+<div class="glue brace">{</div>
+<div class="part prop">color<small>property<br>what to change</small></div>
+<div class="glue decl">:</div>
+<div class="part val">#a04a0d<small>value<br>what to change it to</small></div>
+<div class="glue decl">;</div>
+<div class="glue brace">}</div>
+</div>
+</div>
+<div id="cr-d-val" class="sticky">
+<div class="part-tag">
+<p>Part 2 · Anatomy of a rule</p>
+</div>
+<div class="rule hl-val">
+<div class="part sel">h4<small>selector<br>what to style</small></div>
+<div class="glue brace">{</div>
+<div class="part prop">color<small>property<br>what to change</small></div>
+<div class="glue decl">:</div>
+<div class="part val">#a04a0d<small>value<br>what to change it to</small></div>
+<div class="glue decl">;</div>
+<div class="glue brace">}</div>
+</div>
+</div>
+<div id="cr-d-decl" class="sticky">
+<div class="part-tag">
+<p>Part 2 · Anatomy of a rule</p>
+</div>
+<div class="rule hl-decl">
+<div class="part sel">h4<small>selector<br>what to style</small></div>
+<div class="glue brace">{</div>
+<div class="part prop">color<small>property<br>what to change</small></div>
+<div class="glue decl">:</div>
+<div class="part val">#a04a0d<small>value<br>what to change it to</small></div>
+<div class="glue decl">;</div>
+<div class="glue brace">}</div>
+</div>
+</div>
+<div id="cr-d-many" class="sticky">
+<div class="part-tag">
+<p>Part 2 · Anatomy of a rule</p>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* Style every level-4 heading */</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>h4 {</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span><span class="ch">:</span> <span class="cn">#a04a0d</span><span class="op">;</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font-size</span><span class="ch">:</span> <span class="dv">1.4</span><span class="dt">rem</span><span class="op">;</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin</span><span class="ch">:</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="cr-d-b" class="sticky">
+<div class="part-tag">
+<p>Part 2 · Anatomy of a rule</p>
+</div>
+<div class="rule hl-all compact">
+<div class="part sel">.sprout-card<small>selector<br>anything with this class</small></div>
+<div class="glue brace">{</div>
+<div class="part prop">padding<small>property<br>space inside the box</small></div>
+<div class="glue decl">:</div>
+<div class="part val">1.5rem<small>value<br>a length</small></div>
+<div class="glue decl">;</div>
+<div class="glue brace">}</div>
+</div>
+</div>
+<div id="cr-d-c" class="sticky">
+<div class="part-tag">
+<p>Part 2 · Anatomy of a rule</p>
+</div>
+<div class="rule hl-all compact">
+<div class="part sel">a:hover<small>selector<br>links under the mouse</small></div>
+<div class="glue brace">{</div>
+<div class="part prop">text-decoration<small>property<br>underline or not</small></div>
+<div class="glue decl">:</div>
+<div class="part val">none<small>value<br>a keyword</small></div>
+<div class="glue decl">;</div>
+<div class="glue brace">}</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="p3" class="level2">
+<h2 data-anchor-id="p3">Part 3: Selectors</h2>
+<div class="cr-section cr-column-screen sidebar-left">
+<div class="narrative-col">
+<div class="trigger new-trigger" data-focus-on="cr-pg0">
+<div class="narrative">
+<p>Selectors are how CSS decides <em>which</em> elements a rule applies to. To practise, here is a small piece of HTML and how it looks with no CSS. It has a heading, two paragraphs and two links. Some carry extra labels, called <code>id</code> and <code>class</code>. We’ll use them in a moment.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-pg1">
+<div class="narrative">
+<p>The simplest selector is the <strong>type selector</strong>, also called the element selector. It is just an HTML tag name. <code>p</code> means every paragraph.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-pg2">
+<div class="narrative">
+<p>A <strong>class</strong> is a label you make up and attach in the HTML, as in <code>class="note"</code>. In CSS you select it with a <strong>dot</strong>: <code>.note</code>. Classes are reusable. Here a paragraph and a link share one, while the plain paragraph doesn’t have it. An element can also carry several classes, separated by spaces.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-pg3">
+<div class="narrative">
+<p>An <strong>id</strong> is a label that must be unique: only one element per page can have it. Select it with a <strong>hash</strong>: <code>#title</code>. For styling, classes are the everyday tool. Ids are better kept for one-off jobs such as link targets.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-pg4">
+<div class="narrative">
+<p>A <strong>selector list</strong> uses commas to give one rule to several selectors at once: <code>h4, a</code> means “headings and links”.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-pg5">
+<div class="narrative">
+<p>A <strong>space</strong> between two selectors means “inside”. <code>p a</code> reads as “any link inside a paragraph”. The last link is not inside a paragraph, so it is left alone.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-pg6">
+<div class="narrative">
+<p>A <strong>pseudo-class</strong> starts with a colon and describes a <em>state</em>. <code>a:hover</code> means “a link while the mouse is over it”. Try it: hover over the links on the right.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-sel-table">
+<div class="narrative">
+<p>A cheat sheet for what you just met.</p>
+</div>
+</div>
+</div>
+<div class="sticky-col">
+<div class="sticky-col-stack">
+<div id="cr-pg0" class="sticky">
+<div class="part-tag">
+<p>Part 3 · Selectors</p>
+</div>
+<div class="frame">
+<div class="rv pg">
+<div class="card">
+  <h4 id="title">Chickpea Sprouts</h4>
+  <p class="note">New issue every month.</p>
+  <p>Science, told as <a href="#" onclick="return false;">stories</a>.</p>
+  <a href="#" class="note" onclick="return false;">Read the latest issue</a>
+</div>
+</div>
+</div>
+<p class="note-line">Nothing is lit up yet.</p>
+<div class="side-by-side wide-left">
+<div class="col">
+<div class="file-label">
+<p>HTML</p>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"card"</span><span class="dt">&gt;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">h4</span><span class="ot"> id</span><span class="op">=</span><span class="st">"title"</span><span class="dt">&gt;</span>Chickpea Sprouts<span class="dt">&lt;/</span><span class="kw">h4</span><span class="dt">&gt;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> class</span><span class="op">=</span><span class="st">"note"</span><span class="dt">&gt;</span>New issue every month.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Science, told as <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"#"</span><span class="dt">&gt;</span>stories<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span>.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"#"</span><span class="ot"> class</span><span class="op">=</span><span class="st">"note"</span><span class="dt">&gt;</span>Read the latest issue<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="col">
+<div class="file-label">
+<p>CSS</p>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* no CSS yet */</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+<div id="cr-pg1" class="sticky">
+<div class="part-tag">
+<p>Part 3 · Selectors</p>
+</div>
+<div class="frame">
+<div class="rv pg p-type">
+<div class="card">
+  <h4 id="title">Chickpea Sprouts</h4>
+  <p class="note">New issue every month.</p>
+  <p>Science, told as <a href="#" onclick="return false;">stories</a>.</p>
+  <a href="#" class="note" onclick="return false;">Read the latest issue</a>
+</div>
+</div>
+</div>
+<p class="note-line">Lit up: both paragraphs. Not the links, not the heading.</p>
+<div class="side-by-side wide-left">
+<div class="col">
+<div class="file-label">
+<p>HTML</p>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"card"</span><span class="dt">&gt;</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">h4</span><span class="ot"> id</span><span class="op">=</span><span class="st">"title"</span><span class="dt">&gt;</span>Chickpea Sprouts<span class="dt">&lt;/</span><span class="kw">h4</span><span class="dt">&gt;</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> class</span><span class="op">=</span><span class="st">"note"</span><span class="dt">&gt;</span>New issue every month.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Science, told as <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"#"</span><span class="dt">&gt;</span>stories<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span>.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"#"</span><span class="ot"> class</span><span class="op">=</span><span class="st">"note"</span><span class="dt">&gt;</span>Read the latest issue<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="col">
+<div class="file-label">
+<p>CSS</p>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>p {</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background</span><span class="ch">:</span> <span class="cn">#f8ca5d</span><span class="op">;</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+<div id="cr-pg2" class="sticky">
+<div class="part-tag">
+<p>Part 3 · Selectors</p>
+</div>
+<div class="frame">
+<div class="rv pg p-class">
+<div class="card">
+  <h4 id="title">Chickpea Sprouts</h4>
+  <p class="note">New issue every month.</p>
+  <p>Science, told as <a href="#" onclick="return false;">stories</a>.</p>
+  <a href="#" class="note" onclick="return false;">Read the latest issue</a>
+</div>
+</div>
+</div>
+<p class="note-line">Lit up: the first paragraph and the last link, because both have class="note".</p>
+<div class="side-by-side wide-left">
+<div class="col">
+<div class="file-label">
+<p>HTML</p>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"card"</span><span class="dt">&gt;</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">h4</span><span class="ot"> id</span><span class="op">=</span><span class="st">"title"</span><span class="dt">&gt;</span>Chickpea Sprouts<span class="dt">&lt;/</span><span class="kw">h4</span><span class="dt">&gt;</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> class</span><span class="op">=</span><span class="st">"note"</span><span class="dt">&gt;</span>New issue every month.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Science, told as <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"#"</span><span class="dt">&gt;</span>stories<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span>.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"#"</span><span class="ot"> class</span><span class="op">=</span><span class="st">"note"</span><span class="dt">&gt;</span>Read the latest issue<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="col">
+<div class="file-label">
+<p>CSS</p>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.note</span> {</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background</span><span class="ch">:</span> <span class="cn">#f8ca5d</span><span class="op">;</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+<div id="cr-pg3" class="sticky">
+<div class="part-tag">
+<p>Part 3 · Selectors</p>
+</div>
+<div class="frame">
+<div class="rv pg p-id">
+<div class="card">
+  <h4 id="title">Chickpea Sprouts</h4>
+  <p class="note">New issue every month.</p>
+  <p>Science, told as <a href="#" onclick="return false;">stories</a>.</p>
+  <a href="#" class="note" onclick="return false;">Read the latest issue</a>
+</div>
+</div>
+</div>
+<p class="note-line">Lit up: only the heading, the one element with id="title".</p>
+<div class="side-by-side wide-left">
+<div class="col">
+<div class="file-label">
+<p>HTML</p>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"card"</span><span class="dt">&gt;</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">h4</span><span class="ot"> id</span><span class="op">=</span><span class="st">"title"</span><span class="dt">&gt;</span>Chickpea Sprouts<span class="dt">&lt;/</span><span class="kw">h4</span><span class="dt">&gt;</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> class</span><span class="op">=</span><span class="st">"note"</span><span class="dt">&gt;</span>New issue every month.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Science, told as <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"#"</span><span class="dt">&gt;</span>stories<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span>.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"#"</span><span class="ot"> class</span><span class="op">=</span><span class="st">"note"</span><span class="dt">&gt;</span>Read the latest issue<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="col">
+<div class="file-label">
+<p>CSS</p>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#title</span> {</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background</span><span class="ch">:</span> <span class="cn">#f8ca5d</span><span class="op">;</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+<div id="cr-pg4" class="sticky">
+<div class="part-tag">
+<p>Part 3 · Selectors</p>
+</div>
+<div class="frame">
+<div class="rv pg p-group">
+<div class="card">
+  <h4 id="title">Chickpea Sprouts</h4>
+  <p class="note">New issue every month.</p>
+  <p>Science, told as <a href="#" onclick="return false;">stories</a>.</p>
+  <a href="#" class="note" onclick="return false;">Read the latest issue</a>
+</div>
+</div>
+</div>
+<p class="note-line">Lit up: the heading and both links.</p>
+<div class="side-by-side wide-left">
+<div class="col">
+<div class="file-label">
+<p>HTML</p>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"card"</span><span class="dt">&gt;</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">h4</span><span class="ot"> id</span><span class="op">=</span><span class="st">"title"</span><span class="dt">&gt;</span>Chickpea Sprouts<span class="dt">&lt;/</span><span class="kw">h4</span><span class="dt">&gt;</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> class</span><span class="op">=</span><span class="st">"note"</span><span class="dt">&gt;</span>New issue every month.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Science, told as <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"#"</span><span class="dt">&gt;</span>stories<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span>.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"#"</span><span class="ot"> class</span><span class="op">=</span><span class="st">"note"</span><span class="dt">&gt;</span>Read the latest issue<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="col">
+<div class="file-label">
+<p>CSS</p>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>h4<span class="op">,</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>a {</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background</span><span class="ch">:</span> <span class="cn">#f8ca5d</span><span class="op">;</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+<div id="cr-pg5" class="sticky">
+<div class="part-tag">
+<p>Part 3 · Selectors</p>
+</div>
+<div class="frame">
+<div class="rv pg p-desc">
+<div class="card">
+  <h4 id="title">Chickpea Sprouts</h4>
+  <p class="note">New issue every month.</p>
+  <p>Science, told as <a href="#" onclick="return false;">stories</a>.</p>
+  <a href="#" class="note" onclick="return false;">Read the latest issue</a>
+</div>
+</div>
+</div>
+<p class="note-line">Lit up: only the link inside the second paragraph.</p>
+<div class="side-by-side wide-left">
+<div class="col">
+<div class="file-label">
+<p>HTML</p>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"card"</span><span class="dt">&gt;</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">h4</span><span class="ot"> id</span><span class="op">=</span><span class="st">"title"</span><span class="dt">&gt;</span>Chickpea Sprouts<span class="dt">&lt;/</span><span class="kw">h4</span><span class="dt">&gt;</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> class</span><span class="op">=</span><span class="st">"note"</span><span class="dt">&gt;</span>New issue every month.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Science, told as <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"#"</span><span class="dt">&gt;</span>stories<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span>.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"#"</span><span class="ot"> class</span><span class="op">=</span><span class="st">"note"</span><span class="dt">&gt;</span>Read the latest issue<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="col">
+<div class="file-label">
+<p>CSS</p>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>p a {</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background</span><span class="ch">:</span> <span class="cn">#f8ca5d</span><span class="op">;</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+<div id="cr-pg6" class="sticky">
+<div class="part-tag">
+<p>Part 3 · Selectors</p>
+</div>
+<div class="frame">
+<div class="rv pg p-hover">
+<div class="card">
+  <h4 id="title">Chickpea Sprouts</h4>
+  <p class="note">New issue every month.</p>
+  <p>Science, told as <a href="#" onclick="return false;">stories</a>.</p>
+  <a href="#" class="note" onclick="return false;">Read the latest issue</a>
+</div>
+</div>
+</div>
+<p class="note-line">Lit up: whichever link the mouse is over.</p>
+<div class="side-by-side wide-left">
+<div class="col">
+<div class="file-label">
+<p>HTML</p>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"card"</span><span class="dt">&gt;</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">h4</span><span class="ot"> id</span><span class="op">=</span><span class="st">"title"</span><span class="dt">&gt;</span>Chickpea Sprouts<span class="dt">&lt;/</span><span class="kw">h4</span><span class="dt">&gt;</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> class</span><span class="op">=</span><span class="st">"note"</span><span class="dt">&gt;</span>New issue every month.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Science, told as <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"#"</span><span class="dt">&gt;</span>stories<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span>.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"#"</span><span class="ot"> class</span><span class="op">=</span><span class="st">"note"</span><span class="dt">&gt;</span>Read the latest issue<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="col">
+<div class="file-label">
+<p>CSS</p>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>a<span class="in">:hover</span> {</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background</span><span class="ch">:</span> <span class="cn">#f8ca5d</span><span class="op">;</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+<div id="cr-sel-table" class="sticky">
+<div class="part-tag">
+<p>Part 3 · Selectors</p>
+</div>
+<div class="diff">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Kind</th>
+<th>You write</th>
+<th>It matches</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Type</td>
+<td><code>p</code></td>
+<td>every <code>&lt;p&gt;</code></td>
+</tr>
+<tr class="even">
+<td>Class</td>
+<td><code>.note</code></td>
+<td>every element with <code>class="note"</code></td>
+</tr>
+<tr class="odd">
+<td>Id</td>
+<td><code>#title</code></td>
+<td>the one element with <code>id="title"</code></td>
+</tr>
+<tr class="even">
+<td>List</td>
+<td><code>h4, a</code></td>
+<td>headings and links</td>
+</tr>
+<tr class="odd">
+<td>Descendant</td>
+<td><code>p a</code></td>
+<td>links inside paragraphs</td>
+</tr>
+<tr class="even">
+<td>Pseudo-class</td>
+<td><code>a:hover</code></td>
+<td>links under the mouse</td>
+</tr>
+<tr class="odd">
+<td>Universal</td>
+<td><code>*</code></td>
+<td>everything</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="p4" class="level2">
+<h2 data-anchor-id="p4">Part 4: Values you will use all the time</h2>
+<div class="cr-section cr-column-screen sidebar-left">
+<div class="narrative-col">
+<div class="trigger new-trigger" data-focus-on="cr-v-colours">
+<div class="narrative">
+<p>Selectors say <em>what</em>. Declarations say <em>how</em>, and the values in them come in a few kinds. First, <strong>colours</strong>. You can write them as a name (<code>red</code>), as a hex code (<code>#a04a0d</code>) or as <code>rgb()</code> numbers. All three are the same idea: a mix of red, green and blue. Hex codes are the most common, and any colour picker will give you one.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-v-lengths">
+<div class="narrative">
+<p><strong>Lengths</strong> are a number plus a unit. <code>px</code> is a fixed number of pixels. <code>rem</code> scales with the page’s base font size, so it grows if a reader enlarges their text. <code>%</code> is a share of the parent’s width. The dashed box below is the parent.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-v-keywords">
+<div class="narrative">
+<p>Some values are plain <strong>keywords</strong>: words CSS already knows, like <code>center</code>, <code>bold</code> or <code>none</code>. Here <code>text-align</code> moves text within its box.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-v-table">
+<div class="narrative">
+<p>A starter kit of properties, and the kind of value each one takes.</p>
+</div>
+</div>
+</div>
+<div class="sticky-col">
+<div class="sticky-col-stack">
+<div id="cr-v-colours" class="sticky">
+<div class="part-tag">
+<p>Part 4 · Values</p>
+</div>
+<div class="chips">
+  <div class="chip" style="background:red;">red<br>a name</div>
+  <div class="chip" style="background:#a04a0d;">#a04a0d<br>a hex code</div>
+  <div class="chip" style="background:rgb(16 91 9);">rgb(16 91 9)<br>rgb numbers</div>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>color<span class="in">:</span> red;</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>color<span class="in">:</span> <span class="pp">#a04a0d</span>;</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>color<span class="in">:</span> rgb<span class="in">(</span>16 91 9<span class="in">)</span>;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="cr-v-lengths" class="sticky">
+<div class="part-tag">
+<p>Part 4 · Values</p>
+</div>
+<div class="bars">
+  <div class="bar" style="width:100px;">100px</div>
+  <div class="bar" style="width:6rem;">6rem</div>
+  <div class="bar" style="width:50%;">50%</div>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>width<span class="in">:</span> 100px;</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>width<span class="in">:</span> 6rem;</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>width<span class="in">:</span> 50%;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="cr-v-keywords" class="sticky">
+<div class="part-tag">
+<p>Part 4 · Values</p>
+</div>
+<div class="align-frame">
+  <p style="text-align:left;">left</p>
+  <p style="text-align:center;">center</p>
+  <p style="text-align:right;">right</p>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>text-align<span class="in">:</span> left;</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>text-align<span class="in">:</span> center;</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>text-align<span class="in">:</span> right;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="cr-v-table" class="sticky">
+<div class="part-tag">
+<p>Part 4 · Values</p>
+</div>
+<div class="diff">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Property</th>
+<th>What it changes</th>
+<th>Example value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>color</code></td>
+<td>text colour</td>
+<td><code>#a04a0d</code></td>
+</tr>
+<tr class="even">
+<td><code>background</code></td>
+<td>background colour</td>
+<td><code>#f8ca5d</code></td>
+</tr>
+<tr class="odd">
+<td><code>font-size</code></td>
+<td>text size</td>
+<td><code>1.2rem</code></td>
+</tr>
+<tr class="even">
+<td><code>font-family</code></td>
+<td>typeface</td>
+<td><code>"Roboto Slab", serif</code></td>
+</tr>
+<tr class="odd">
+<td><code>text-align</code></td>
+<td>text position in its box</td>
+<td><code>center</code></td>
+</tr>
+<tr class="even">
+<td><code>width</code></td>
+<td>width of a box</td>
+<td><code>50%</code></td>
+</tr>
+<tr class="odd">
+<td><code>padding</code></td>
+<td>space inside a box</td>
+<td><code>1.5rem</code></td>
+</tr>
+<tr class="even">
+<td><code>margin</code></td>
+<td>space outside a box</td>
+<td><code>1rem</code></td>
+</tr>
+<tr class="odd">
+<td><code>border</code></td>
+<td>a line around a box</td>
+<td><code>2px solid #112909</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="p5" class="level2">
+<h2 data-anchor-id="p5">Part 5: The box model</h2>
+<div class="cr-section cr-column-screen sidebar-left">
+<div class="narrative-col">
+<div class="trigger new-trigger" data-focus-on="cr-bm-all">
+<div class="narrative">
+<p>Every element on a page is a rectangular <strong>box</strong>, and every box has four layers. Learning them is the key to spacing things out. Here is a box from the inside out.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-bm-content">
+<div class="narrative">
+<p>At the centre is the <strong>content</strong>: your text or image. By default, <code>width</code> and <code>height</code> set the size of this part only.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-bm-padding">
+<div class="narrative">
+<p><strong>Padding</strong> is space <em>inside</em> the box, between the content and the edge. Add padding to give text room to breathe.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-bm-border">
+<div class="narrative">
+<p>The <strong>border</strong> is a line around the padding. You choose its thickness, style and colour in one go: <code>border: 8px solid #112909;</code>.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-bm-margin">
+<div class="narrative">
+<p><strong>Margin</strong> is space <em>outside</em> the border. It pushes neighbouring boxes away. An easy way to remember: padding is inside, margin is outside.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-bm-sizing">
+<div class="narrative">
+<p>A common surprise: because <code>width</code> covers only the content, padding and border make the box <em>wider</em> than you asked for. This one line changes that, so <code>width</code> includes padding and border. Many stylesheets start with it.</p>
+</div>
+</div>
+</div>
+<div class="sticky-col">
+<div class="sticky-col-stack">
+<div id="cr-bm-all" class="sticky">
+<div class="part-tag">
+<p>Part 5 · The box model</p>
+</div>
+<div class="bm">
+  <div class="layer bm-margin"><span class="lab">margin</span>
+    <div class="layer bm-border"><span class="lab">border</span>
+      <div class="layer bm-padding"><span class="lab">padding</span>
+        <div class="layer bm-content">content</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* the numbers in the drawing are approximate */</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="fu">.box</span> {</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">width</span><span class="ch">:</span> <span class="dv">8</span><span class="dt">rem</span><span class="op">;</span></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">padding</span><span class="ch">:</span> <span class="dv">28</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">border</span><span class="ch">:</span> <span class="dv">8</span><span class="dt">px</span> <span class="dv">solid</span> <span class="cn">#112909</span><span class="op">;</span></span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin</span><span class="ch">:</span> <span class="dv">28</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="cr-bm-content" class="sticky">
+<div class="part-tag">
+<p>Part 5 · The box model</p>
+</div>
+<div class="bm hl-content">
+  <div class="layer bm-margin"><span class="lab">margin</span>
+    <div class="layer bm-border"><span class="lab">border</span>
+      <div class="layer bm-padding"><span class="lab">padding</span>
+        <div class="layer bm-content">content</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* the numbers in the drawing are approximate */</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="fu">.box</span> {</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">width</span><span class="ch">:</span> <span class="dv">8</span><span class="dt">rem</span><span class="op">;</span></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">padding</span><span class="ch">:</span> <span class="dv">28</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">border</span><span class="ch">:</span> <span class="dv">8</span><span class="dt">px</span> <span class="dv">solid</span> <span class="cn">#112909</span><span class="op">;</span></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin</span><span class="ch">:</span> <span class="dv">28</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="cr-bm-padding" class="sticky">
+<div class="part-tag">
+<p>Part 5 · The box model</p>
+</div>
+<div class="bm hl-padding">
+  <div class="layer bm-margin"><span class="lab">margin</span>
+    <div class="layer bm-border"><span class="lab">border</span>
+      <div class="layer bm-padding"><span class="lab">padding</span>
+        <div class="layer bm-content">content</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* the numbers in the drawing are approximate */</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="fu">.box</span> {</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">width</span><span class="ch">:</span> <span class="dv">8</span><span class="dt">rem</span><span class="op">;</span></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">padding</span><span class="ch">:</span> <span class="dv">28</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">border</span><span class="ch">:</span> <span class="dv">8</span><span class="dt">px</span> <span class="dv">solid</span> <span class="cn">#112909</span><span class="op">;</span></span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin</span><span class="ch">:</span> <span class="dv">28</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="cr-bm-border" class="sticky">
+<div class="part-tag">
+<p>Part 5 · The box model</p>
+</div>
+<div class="bm hl-border">
+  <div class="layer bm-margin"><span class="lab">margin</span>
+    <div class="layer bm-border"><span class="lab">border</span>
+      <div class="layer bm-padding"><span class="lab">padding</span>
+        <div class="layer bm-content">content</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* the numbers in the drawing are approximate */</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="fu">.box</span> {</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">width</span><span class="ch">:</span> <span class="dv">8</span><span class="dt">rem</span><span class="op">;</span></span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">padding</span><span class="ch">:</span> <span class="dv">28</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">border</span><span class="ch">:</span> <span class="dv">8</span><span class="dt">px</span> <span class="dv">solid</span> <span class="cn">#112909</span><span class="op">;</span></span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin</span><span class="ch">:</span> <span class="dv">28</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="cr-bm-margin" class="sticky">
+<div class="part-tag">
+<p>Part 5 · The box model</p>
+</div>
+<div class="bm hl-margin">
+  <div class="layer bm-margin"><span class="lab">margin</span>
+    <div class="layer bm-border"><span class="lab">border</span>
+      <div class="layer bm-padding"><span class="lab">padding</span>
+        <div class="layer bm-content">content</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* the numbers in the drawing are approximate */</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="fu">.box</span> {</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">width</span><span class="ch">:</span> <span class="dv">8</span><span class="dt">rem</span><span class="op">;</span></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">padding</span><span class="ch">:</span> <span class="dv">28</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">border</span><span class="ch">:</span> <span class="dv">8</span><span class="dt">px</span> <span class="dv">solid</span> <span class="cn">#112909</span><span class="op">;</span></span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin</span><span class="ch">:</span> <span class="dv">28</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="cr-bm-sizing" class="sticky">
+<div class="part-tag">
+<p>Part 5 · The box model</p>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> {</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">box-sizing</span><span class="ch">:</span> <span class="dv">border-box</span><span class="op">;</span></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="p6" class="level2">
+<h2 data-anchor-id="p6">Part 6: Inheritance and the cascade</h2>
+<div class="cr-section cr-column-screen sidebar-left">
+<div class="narrative-col">
+<div class="trigger new-trigger" data-focus-on="cr-inh1">
+<div class="narrative">
+<p>Some properties are <strong>inherited</strong>: set them on a parent and the children pick them up. Text properties such as <code>color</code> and <code>font-family</code> work like this. The paragraph never got a colour rule of its own. It took its parent’s.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-inh2">
+<div class="narrative">
+<p>Others are <strong>not</strong> inherited. <code>border</code>, <code>margin</code> and <code>padding</code> apply only to the element you set them on. Otherwise every child would grow its own border too.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-spec-table">
+<div class="narrative">
+<p>Now a bigger question. What if two rules point at the same element and disagree? The browser settles it in order. First, <strong>specificity</strong>: more specific selectors win. As a rough scoring guide, an id is worth 100 points, a class 10 and a type selector 1.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-cs1">
+<div class="narrative">
+<p>If two rules are equally specific, the <strong>later one wins</strong>. That is the “cascading” in Cascading Style Sheets. Both rules below are a type selector, so the second one takes it.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-cs2">
+<div class="narrative">
+<p>Specificity beats order. <code>.note</code> comes <em>first</em> but is worth 10 points against <code>p</code>’s 1, so the class wins and the paragraph is green.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-cs3">
+<div class="narrative">
+<p>And an id beats a class. The paragraph has both <code>id="x"</code> and <code>class="note"</code>, so <code>#x</code> wins whatever the order.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-cs3">
+<div class="narrative">
+<p>When a rule seems to do nothing, ask two questions. Is my selector really matching the element? Is a more specific rule overriding it? Your browser’s developer tools (right-click, then Inspect) show which rules apply to an element and cross out the ones that lost.</p>
+</div>
+</div>
+</div>
+<div class="sticky-col">
+<div class="sticky-col-stack">
+<div id="cr-inh1" class="sticky">
+<div class="part-tag">
+<p>Part 6 · Inheritance and the cascade</p>
+</div>
+<div class="frame">
+<div class="rv">
+<div class="inh inh-1"><strong>Parent</strong>
+  <p>Child: a paragraph inside the parent.</p>
+</div>
+</div>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.parent</span> {</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span><span class="ch">:</span> <span class="cn">#a04a0d</span><span class="op">;</span></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="cr-inh2" class="sticky">
+<div class="part-tag">
+<p>Part 6 · Inheritance and the cascade</p>
+</div>
+<div class="frame">
+<div class="rv">
+<div class="inh inh-2"><strong>Parent</strong>
+  <p>Child: a paragraph inside the parent.</p>
+</div>
+</div>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.parent</span> {</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span><span class="ch">:</span> <span class="cn">#a04a0d</span><span class="op">;</span></span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">border</span><span class="ch">:</span> <span class="dv">2</span><span class="dt">px</span> <span class="dv">solid</span> <span class="cn">#112909</span><span class="op">;</span></span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">padding</span><span class="ch">:</span> <span class="dv">0.75</span><span class="dt">rem</span><span class="op">;</span></span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="cr-spec-table" class="sticky">
+<div class="part-tag">
+<p>Part 6 · Inheritance and the cascade</p>
+</div>
+<div class="diff">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Selector</th>
+<th>Kind</th>
+<th>Roughly worth</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>#x</code></td>
+<td>id</td>
+<td>100</td>
+</tr>
+<tr class="even">
+<td><code>.note</code></td>
+<td>class</td>
+<td>10</td>
+</tr>
+<tr class="odd">
+<td><code>p</code></td>
+<td>type</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="cr-cs1" class="sticky">
+<div class="part-tag">
+<p>Part 6 · Inheritance and the cascade</p>
+</div>
+<div class="frame frame-lg">
+<div class="rv cs1">
+<p class="note" id="x">Which colour will I be?</p>
+</div>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb30"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>p {</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span><span class="ch">:</span> <span class="cn">#105b09</span><span class="op">;</span></span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>p {</span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span><span class="ch">:</span> <span class="cn">#a04a0d</span><span class="op">;</span></span>
+<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p class="note-line">Winner: the later rule, brown.</p>
+</div>
+<div id="cr-cs2" class="sticky">
+<div class="part-tag">
+<p>Part 6 · Inheritance and the cascade</p>
+</div>
+<div class="frame frame-lg">
+<div class="rv cs2">
+<p class="note" id="x">Which colour will I be?</p>
+</div>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb31"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.note</span> {</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span><span class="ch">:</span> <span class="cn">#105b09</span><span class="op">;</span></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>p {</span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span><span class="ch">:</span> <span class="cn">#a04a0d</span><span class="op">;</span></span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p class="note-line">Winner: <code>.note</code>, green, even though it is earlier.</p>
+</div>
+<div id="cr-cs3" class="sticky">
+<div class="part-tag">
+<p>Part 6 · Inheritance and the cascade</p>
+</div>
+<div class="frame frame-lg">
+<div class="rv cs3">
+<p class="note" id="x">Which colour will I be?</p>
+</div>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb32"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#x</span> {</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span><span class="ch">:</span> <span class="cn">#a04a0d</span><span class="op">;</span></span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a><span class="fu">.note</span> {</span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span><span class="ch">:</span> <span class="cn">#105b09</span><span class="op">;</span></span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p class="note-line">Winner: <code>#x</code>, brown.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="p7" class="level2">
+<h2 data-anchor-id="p7">Part 7: Where a box goes, with position</h2>
+<div class="cr-section cr-column-screen sidebar-left">
+<div class="narrative-col">
+<div class="trigger new-trigger" data-focus-on="cr-pos-static">
+<div class="narrative">
+<p>Browsers lay boxes out in <strong>normal flow</strong>: one after another, top to bottom. The <code>position</code> property lets a box break that pattern. Here are three squares inside a parent box. With <code>position: static</code>, the default, they simply stack in order.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-pos-relative">
+<div class="narrative">
+<p><code>position: relative</code> keeps C in the flow but lets you nudge it away from its normal spot with <code>top</code>, <code>left</code>, <code>right</code> or <code>bottom</code>. Its old spot stays reserved (the dashed outline), so B does not move up.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-pos-absolute">
+<div class="narrative">
+<p><code>position: absolute</code> takes C <strong>out of the flow</strong> completely. B moves up into the gap, and C is placed against its nearest <em>positioned</em> ancestor, meaning a parent whose own <code>position</code> is not <code>static</code>. Here that is the dashed box, which has <code>position: relative</code>. With no positioned ancestor, C would use the whole page.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-pos-fixed">
+<div class="narrative">
+<p><code>position: fixed</code> pins C to the browser window (the viewport). Scroll the page and C stays exactly where it is, like a chat button in the corner of a site.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-pos-sticky">
+<div class="narrative">
+<p><code>position: sticky</code> is a mix. C scrolls with the page like normal until it reaches the offset you set (<code>top: 0</code>), then it sticks there. It is how a table header can stay visible while you scroll.</p>
+</div>
+</div>
+</div>
+<div class="sticky-col">
+<div class="sticky-col-stack">
+<div id="cr-pos-static" class="sticky">
+<div class="part-tag">
+<p>Part 7 · position</p>
+</div>
+<div class="pos-parent pos-static">
+  <div class="slot"><div class="sq a">A</div></div>
+  <div class="slot slot-c"><div class="sq c">C</div></div>
+  <div class="slot"><div class="sq b">B</div></div>
+</div>
+<p class="note-line">Normal flow: A, C, B in order.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb33"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.c</span> {</span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">position</span><span class="ch">:</span> <span class="dv">static</span><span class="op">;</span> <span class="co">/* the default */</span></span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="cr-pos-relative" class="sticky">
+<div class="part-tag">
+<p>Part 7 · position</p>
+</div>
+<div class="pos-parent pos-relative">
+  <div class="slot"><div class="sq a">A</div></div>
+  <div class="slot slot-c"><div class="sq c">C</div></div>
+  <div class="slot"><div class="sq b">B</div></div>
+</div>
+<p class="note-line">C moved, but its old spot is still reserved.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb34"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.c</span> {</span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">position</span><span class="ch">:</span> <span class="dv">relative</span><span class="op">;</span></span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">top</span><span class="ch">:</span> <span class="dv">20</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">left</span><span class="ch">:</span> <span class="dv">30</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="cr-pos-absolute" class="sticky">
+<div class="part-tag">
+<p>Part 7 · position</p>
+</div>
+<div class="pos-parent pos-absolute">
+  <div class="slot"><div class="sq a">A</div></div>
+  <div class="slot slot-c"><div class="sq c">C</div></div>
+  <div class="slot"><div class="sq b">B</div></div>
+</div>
+<p class="note-line">C left the flow, so B moved up.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb35"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.parent</span> {</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">position</span><span class="ch">:</span> <span class="dv">relative</span><span class="op">;</span></span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a><span class="fu">.c</span> {</span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">position</span><span class="ch">:</span> <span class="dv">absolute</span><span class="op">;</span></span>
+<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">top</span><span class="ch">:</span> <span class="dv">10</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">right</span><span class="ch">:</span> <span class="dv">10</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="cr-pos-fixed" class="sticky">
+<div class="part-tag">
+<p>Part 7 · position</p>
+</div>
+<div class="win-pair"><div class="win-wrap"><div class="win"><div class="page"><i style="width:80%"></i><i style="width:55%"></i><i style="width:90%"></i><i style="width:40%"></i><i style="width:70%"></i><i style="width:85%"></i><i style="width:50%"></i><i style="width:65%"></i><i style="width:90%"></i><i style="width:45%"></i><i style="width:75%"></i><i style="width:60%"></i><i style="width:80%"></i><i style="width:55%"></i></div><div class="sq c" style="top:10px;right:10px;">C</div></div><small>Before scrolling</small></div><div class="win-wrap"><div class="win"><div class="page scrolled"><i style="width:80%"></i><i style="width:55%"></i><i style="width:90%"></i><i style="width:40%"></i><i style="width:70%"></i><i style="width:85%"></i><i style="width:50%"></i><i style="width:65%"></i><i style="width:90%"></i><i style="width:45%"></i><i style="width:75%"></i><i style="width:60%"></i><i style="width:80%"></i><i style="width:55%"></i></div><div class="sq c" style="top:10px;right:10px;">C</div></div><small>After scrolling</small></div></div><p class="note-line">Illustration: the page moves, C does not.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb36"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.c</span> {</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">position</span><span class="ch">:</span> <span class="dv">fixed</span><span class="op">;</span></span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">top</span><span class="ch">:</span> <span class="dv">10</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">right</span><span class="ch">:</span> <span class="dv">10</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="cr-pos-sticky" class="sticky">
+<div class="part-tag">
+<p>Part 7 · position</p>
+</div>
+<div class="win-pair"><div class="win-wrap"><div class="win"><div class="page"><i style="width:80%"></i><i style="width:55%"></i><i style="width:90%"></i><i style="width:40%"></i><i style="width:70%"></i><i style="width:85%"></i><i style="width:50%"></i><i style="width:65%"></i><i style="width:90%"></i><i style="width:45%"></i><i style="width:75%"></i><i style="width:60%"></i><i style="width:80%"></i><i style="width:55%"></i></div><div class="sq c" style="top:70px;left:8px;">C</div></div><small>Before scrolling</small></div><div class="win-wrap"><div class="win"><div class="page scrolled"><i style="width:80%"></i><i style="width:55%"></i><i style="width:90%"></i><i style="width:40%"></i><i style="width:70%"></i><i style="width:85%"></i><i style="width:50%"></i><i style="width:65%"></i><i style="width:90%"></i><i style="width:45%"></i><i style="width:75%"></i><i style="width:60%"></i><i style="width:80%"></i><i style="width:55%"></i></div><div class="sq c" style="top:0;left:8px;">C</div></div><small>After scrolling</small></div></div><p class="note-line">Illustration: C scrolls until it reaches the top, then stays.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb37"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.c</span> {</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">position</span><span class="ch">:</span> <span class="dv">sticky</span><span class="op">;</span></span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">top</span><span class="ch">:</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="p8" class="level2">
+<h2 data-anchor-id="p8">Part 8: SCSS</h2>
+<div class="cr-section cr-column-screen sidebar-left">
+<div class="narrative-col">
+<div class="trigger new-trigger" data-focus-on="cr-s-repeat">
+<div class="narrative">
+<p>Real stylesheets repeat themselves. Here the same cinnamon brown is written in four places. To try a different colour, you have to hunt down every copy.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-s-vars">
+<div class="narrative">
+<p>Plain CSS can now fix this itself, with <strong>custom properties</strong>, also called CSS variables. Name a value once with two dashes, then use it with <code>var()</code>. The browser reads them live. Good to know, and it is often all you need.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-s-paths">
+<div class="narrative">
+<p><strong>SCSS</strong> goes further. It is an extension of CSS: every valid CSS file is already valid SCSS, and it adds extra features on top. Browsers can’t read SCSS, though. A tool called <strong>Sass</strong> translates your <code>.scss</code> file into ordinary <code>.css</code> first, and the browser only ever sees the result.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-s-vars2">
+<div class="narrative">
+<p>SCSS feature one: <strong>variables</strong>. They start with <code>$</code>. Name a value once and use it anywhere. The difference from <code>--cinnamon</code> is that Sass swaps <code>$cinnamon</code> for the real value <em>while compiling</em>, before the browser sees anything. Left is what you write, right is what comes out.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-s-nest">
+<div class="narrative">
+<p>Feature two: <strong>nesting</strong>. Write the rules for things <em>inside</em> <code>.scss-card</code> inside the <code>.scss-card</code> block, instead of repeating the prefix each time. The <code>&amp;</code> means “the thing I’m nested in”. Hover over the link. Don’t nest too deep, or your selectors get long-winded.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-s-mixin">
+<div class="narrative">
+<p>Feature three: <strong>mixins</strong>. A mixin is a recipe you write once with <code>@mixin</code> and reuse with <code>@include</code>, with ingredients you can swap. Two different pills, one recipe.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-s-use">
+<div class="narrative">
+<p>Feature four: <strong>splitting into files</strong>. As a stylesheet grows you can keep colours in their own file and load it with <code>@use</code>. A file whose name starts with an underscore, like <code>_colours.scss</code>, is a <em>partial</em>: it is only there to be loaded by other files.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-s-diff">
+<div class="narrative">
+<p>So, CSS or SCSS? Here is the difference in one table. Start with plain CSS. Reach for SCSS once your stylesheet grows and you keep repeating yourself. Since all CSS is valid SCSS, you can rename a <code>.css</code> file to <code>.scss</code> and adopt the extras a bit at a time. You can practise in the <a href="https://sass-lang.com/playground/">Sass playground</a>.</p>
+</div>
+</div>
+</div>
+<div class="sticky-col">
+<div class="sticky-col-stack">
+<div id="cr-s-repeat" class="sticky">
+<div class="part-tag">
+<p>Part 8 · SCSS</p>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb38"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>h4 { <span class="kw">color</span><span class="ch">:</span> <span class="cn">#a04a0d</span><span class="op">;</span> }</span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>a<span class="in">:hover</span> { <span class="kw">color</span><span class="ch">:</span> <span class="cn">#a04a0d</span><span class="op">;</span> }</span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a><span class="fu">.sprout-card</span> { <span class="kw">border</span><span class="ch">:</span> <span class="dv">2</span><span class="dt">px</span> <span class="dv">solid</span> <span class="cn">#a04a0d</span><span class="op">;</span> }</span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a>blockquote { <span class="kw">border-left</span><span class="ch">:</span> <span class="dv">4</span><span class="dt">px</span> <span class="dv">solid</span> <span class="cn">#a04a0d</span><span class="op">;</span> }</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="cr-s-vars" class="sticky">
+<div class="part-tag">
+<p>Part 8 · SCSS</p>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb39"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="in">:root</span> {</span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>  <span class="va">--cinnamon</span><span class="ch">:</span> <span class="cn">#a04a0d</span><span class="op">;</span></span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a>h4 {</span>
+<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span><span class="ch">:</span> <span class="fu">var(</span><span class="va">--cinnamon</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb39-7"><a href="#cb39-7" aria-hidden="true" tabindex="-1"></a>a<span class="in">:hover</span> {</span>
+<span id="cb39-8"><a href="#cb39-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span><span class="ch">:</span> <span class="fu">var(</span><span class="va">--cinnamon</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb39-9"><a href="#cb39-9" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="cr-s-paths" class="sticky">
+<div class="part-tag">
+<p>Part 8 · SCSS</p>
+</div>
+<div class="paths">
+<div class="path">
+  <div class="lang">CSS</div>
+  <div class="node">styles.css</div>
+  <div class="arrow">→</div>
+  <div class="node browser">Browser</div>
+</div>
+<div class="path">
+  <div class="lang">SCSS</div>
+  <div class="node">styles.scss</div>
+  <div class="arrow">→ Sass →</div>
+  <div class="node accent">styles.css</div>
+  <div class="arrow">→</div>
+  <div class="node browser">Browser</div>
+</div>
+</div>
+</div>
+<div id="cr-s-vars2" class="sticky">
+<div class="part-tag">
+<p>Part 8 · SCSS</p>
+</div>
+<div class="side-by-side">
+<div class="col">
+<div class="file-label">
+<p>SCSS you write</p>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb40"><pre class="sourceCode scss code-with-copy"><code class="sourceCode scss"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="va">$cinnamon</span>: <span class="cn">#a04a0d</span><span class="op">;</span></span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a><span class="fu">.scss-card</span> {</span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">border</span>: <span class="dv">2</span><span class="dt">px</span> <span class="dv">solid</span> <span class="va">$cinnamon</span><span class="op">;</span></span>
+<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb40-6"><a href="#cb40-6" aria-hidden="true" tabindex="-1"></a><span class="fu">.scss-card</span> h4 {</span>
+<span id="cb40-7"><a href="#cb40-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span>: <span class="va">$cinnamon</span><span class="op">;</span></span>
+<span id="cb40-8"><a href="#cb40-8" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="col">
+<div class="file-label">
+<p>CSS you get</p>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb41"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.scss-card</span> {</span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">border</span><span class="ch">:</span> <span class="dv">2</span><span class="dt">px</span> <span class="dv">solid</span> <span class="cn">#a04a0d</span><span class="op">;</span></span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a><span class="fu">.scss-card</span> h4 {</span>
+<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span><span class="ch">:</span> <span class="cn">#a04a0d</span><span class="op">;</span></span>
+<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+<div class="file-label">
+<p>Result</p>
+</div>
+<div class="frame">
+<div class="scss-card">
+<h4>Chickpea Sprouts</h4>
+<p>A newsletter that explains science through stories.</p>
+</div>
+</div>
+</div>
+<div id="cr-s-nest" class="sticky">
+<div class="part-tag">
+<p>Part 8 · SCSS</p>
+</div>
+<div class="side-by-side">
+<div class="col">
+<div class="file-label">
+<p>SCSS you write</p>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb42"><pre class="sourceCode scss code-with-copy"><code class="sourceCode scss"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.scss-card</span> {</span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">border</span>: <span class="dv">2</span><span class="dt">px</span> <span class="dv">solid</span> <span class="va">$cinnamon</span><span class="op">;</span></span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>  h4 { <span class="kw">color</span>: <span class="va">$cinnamon</span><span class="op">;</span> }</span>
+<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a>  a {</span>
+<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">background</span>: <span class="cn">#f8ca5d</span><span class="op">;</span></span>
+<span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">&amp;</span><span class="in">:hover</span> {</span>
+<span id="cb42-7"><a href="#cb42-7" aria-hidden="true" tabindex="-1"></a>      <span class="kw">background</span>: <span class="va">$cinnamon</span><span class="op">;</span></span>
+<span id="cb42-8"><a href="#cb42-8" aria-hidden="true" tabindex="-1"></a>      <span class="kw">color</span>: <span class="cn">white</span><span class="op">;</span></span>
+<span id="cb42-9"><a href="#cb42-9" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb42-10"><a href="#cb42-10" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb42-11"><a href="#cb42-11" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="col">
+<div class="file-label">
+<p>CSS you get</p>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb43"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.scss-card</span> {</span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">border</span><span class="ch">:</span> <span class="dv">2</span><span class="dt">px</span> <span class="dv">solid</span> <span class="cn">#a04a0d</span><span class="op">;</span></span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a><span class="fu">.scss-card</span> h4 {</span>
+<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span><span class="ch">:</span> <span class="cn">#a04a0d</span><span class="op">;</span></span>
+<span id="cb43-6"><a href="#cb43-6" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb43-7"><a href="#cb43-7" aria-hidden="true" tabindex="-1"></a><span class="fu">.scss-card</span> a {</span>
+<span id="cb43-8"><a href="#cb43-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background</span><span class="ch">:</span> <span class="cn">#f8ca5d</span><span class="op">;</span></span>
+<span id="cb43-9"><a href="#cb43-9" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb43-10"><a href="#cb43-10" aria-hidden="true" tabindex="-1"></a><span class="fu">.scss-card</span> a<span class="in">:hover</span> {</span>
+<span id="cb43-11"><a href="#cb43-11" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background</span><span class="ch">:</span> <span class="cn">#a04a0d</span><span class="op">;</span></span>
+<span id="cb43-12"><a href="#cb43-12" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span><span class="ch">:</span> <span class="cn">white</span><span class="op">;</span></span>
+<span id="cb43-13"><a href="#cb43-13" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+<div class="file-label">
+<p>Result</p>
+</div>
+<div class="frame">
+<div class="scss-card">
+<h4>Chickpea Sprouts</h4>
+<p>A newsletter that explains science through stories.</p>
+<a href="#" onclick="return false;">Read the latest issue</a>
+</div>
+</div>
+</div>
+<div id="cr-s-mixin" class="sticky">
+<div class="part-tag">
+<p>Part 8 · SCSS</p>
+</div>
+<div class="side-by-side">
+<div class="col">
+<div class="file-label">
+<p>SCSS you write</p>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb44"><pre class="sourceCode scss code-with-copy"><code class="sourceCode scss"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="va">$chickpea</span>: <span class="cn">#f8ca5d</span><span class="op">;</span></span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a><span class="im">@mixin</span> <span class="fu">pill</span>(<span class="va">$bg</span>) {</span>
+<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background</span>: <span class="va">$bg</span><span class="op">;</span></span>
+<span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">padding</span>: <span class="dv">0.4</span><span class="dt">rem</span> <span class="dv">0.9</span><span class="dt">rem</span><span class="op">;</span></span>
+<span id="cb44-6"><a href="#cb44-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">border-radius</span>: <span class="dv">999</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb44-7"><a href="#cb44-7" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb44-8"><a href="#cb44-8" aria-hidden="true" tabindex="-1"></a><span class="fu">.cta</span> {</span>
+<span id="cb44-9"><a href="#cb44-9" aria-hidden="true" tabindex="-1"></a>  <span class="im">@include</span> <span class="fu">pill(</span><span class="va">$chickpea</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb44-10"><a href="#cb44-10" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb44-11"><a href="#cb44-11" aria-hidden="true" tabindex="-1"></a><span class="fu">.tag</span> {</span>
+<span id="cb44-12"><a href="#cb44-12" aria-hidden="true" tabindex="-1"></a>  <span class="im">@include</span> <span class="fu">pill(</span><span class="va">$cinnamon</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb44-13"><a href="#cb44-13" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span>: <span class="cn">white</span><span class="op">;</span></span>
+<span id="cb44-14"><a href="#cb44-14" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="col">
+<div class="file-label">
+<p>CSS you get</p>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb45"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.cta</span> {</span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background</span><span class="ch">:</span> <span class="cn">#f8ca5d</span><span class="op">;</span></span>
+<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">padding</span><span class="ch">:</span> <span class="dv">0.4</span><span class="dt">rem</span> <span class="dv">0.9</span><span class="dt">rem</span><span class="op">;</span></span>
+<span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">border-radius</span><span class="ch">:</span> <span class="dv">999</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb45-5"><a href="#cb45-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb45-6"><a href="#cb45-6" aria-hidden="true" tabindex="-1"></a><span class="fu">.tag</span> {</span>
+<span id="cb45-7"><a href="#cb45-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background</span><span class="ch">:</span> <span class="cn">#a04a0d</span><span class="op">;</span></span>
+<span id="cb45-8"><a href="#cb45-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">padding</span><span class="ch">:</span> <span class="dv">0.4</span><span class="dt">rem</span> <span class="dv">0.9</span><span class="dt">rem</span><span class="op">;</span></span>
+<span id="cb45-9"><a href="#cb45-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">border-radius</span><span class="ch">:</span> <span class="dv">999</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb45-10"><a href="#cb45-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span><span class="ch">:</span> <span class="cn">white</span><span class="op">;</span></span>
+<span id="cb45-11"><a href="#cb45-11" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+<div class="file-label">
+<p>Result</p>
+</div>
+<div class="frame">
+<span class="cta">Read more</span> <span class="tag">science</span>
+</div>
+</div>
+<div id="cr-s-use" class="sticky">
+<div class="part-tag">
+<p>Part 8 · SCSS</p>
+</div>
+<div class="side-by-side">
+<div class="col">
+<div class="file-label">
+<p>_colours.scss</p>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb46"><pre class="sourceCode scss code-with-copy"><code class="sourceCode scss"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="va">$cinnamon</span>: <span class="cn">#a04a0d</span><span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="file-label">
+<p>styles.scss</p>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb47"><pre class="sourceCode scss code-with-copy"><code class="sourceCode scss"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="im">@use</span> <span class="st">"colours"</span><span class="op">;</span></span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a>h4 {</span>
+<span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span>: colours.<span class="va">$cinnamon</span><span class="op">;</span></span>
+<span id="cb47-5"><a href="#cb47-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="col">
+<div class="file-label">
+<p>CSS you get</p>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb48"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>h4 {</span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span><span class="ch">:</span> <span class="cn">#a04a0d</span><span class="op">;</span></span>
+<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+<div id="cr-s-diff" class="sticky">
+<div class="part-tag">
+<p>Part 8 · SCSS</p>
+</div>
+<div class="diff">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>CSS</th>
+<th>SCSS</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Browser reads it directly</td>
+<td>Yes</td>
+<td>No, compiled to CSS first</td>
+</tr>
+<tr class="even">
+<td>Variables</td>
+<td><code>--name</code>, live in the browser</td>
+<td><code>$name</code>, replaced at compile time</td>
+</tr>
+<tr class="odd">
+<td>Nesting</td>
+<td>Yes, in modern browsers</td>
+<td>Yes</td>
+</tr>
+<tr class="even">
+<td>Mixins</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr class="odd">
+<td>Splitting into files</td>
+<td><code>@import</code> (loads at runtime)</td>
+<td><code>@use</code> (combined at compile time)</td>
+</tr>
+<tr class="even">
+<td>Comments</td>
+<td><code>/* */</code></td>
+<td><code>/* */</code> and <code>//</code></td>
+</tr>
+<tr class="odd">
+<td>Good for</td>
+<td>Small stylesheets</td>
+<td>Big ones that repeat themselves</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="glossary" class="level2">
+<h2 data-anchor-id="glossary">Glossary and where to learn more</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Term</th>
+<th>In one line</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Rule</strong></td>
+<td>A selector plus a block of declarations.</td>
+</tr>
+<tr class="even">
+<td><strong>Selector</strong></td>
+<td>Says which elements a rule applies to (<code>p</code>, <code>.note</code>, <code>#title</code>).</td>
+</tr>
+<tr class="odd">
+<td><strong>Declaration block</strong></td>
+<td>The <code>{ }</code> part holding the instructions.</td>
+</tr>
+<tr class="even">
+<td><strong>Declaration</strong></td>
+<td>One <code>property: value;</code> pair.</td>
+</tr>
+<tr class="odd">
+<td><strong>Property</strong></td>
+<td>What to change (<code>color</code>, <code>margin</code>).</td>
+</tr>
+<tr class="even">
+<td><strong>Value</strong></td>
+<td>What to change it to (<code>#a04a0d</code>, <code>1.5rem</code>, <code>center</code>).</td>
+</tr>
+<tr class="odd">
+<td><strong>Class</strong></td>
+<td>A reusable label on HTML elements, selected with a dot.</td>
+</tr>
+<tr class="even">
+<td><strong>Id</strong></td>
+<td>A unique label on one element, selected with a hash.</td>
+</tr>
+<tr class="odd">
+<td><strong>Pseudo-class</strong></td>
+<td>A state, selected with a colon (<code>:hover</code>).</td>
+</tr>
+<tr class="even">
+<td><strong>Box model</strong></td>
+<td>The layers of every box: content, padding, border, margin.</td>
+</tr>
+<tr class="odd">
+<td><strong>Inheritance</strong></td>
+<td>Some properties (like <code>color</code>) pass from parent to child.</td>
+</tr>
+<tr class="even">
+<td><strong>Specificity</strong></td>
+<td>How the browser ranks conflicting rules: id, then class, then type.</td>
+</tr>
+<tr class="odd">
+<td><strong>Cascade</strong></td>
+<td>If specificity ties, the later rule wins.</td>
+</tr>
+<tr class="even">
+<td><strong>Normal flow</strong></td>
+<td>The default top-to-bottom layout that <code>position</code> can break.</td>
+</tr>
+<tr class="odd">
+<td><strong>CSS variable</strong></td>
+<td><code>--name</code> and <code>var(--name)</code>: a live value in the browser.</td>
+</tr>
+<tr class="even">
+<td><strong>SCSS / Sass</strong></td>
+<td>CSS with extras (variables, nesting, mixins) that gets compiled to CSS.</td>
+</tr>
+</tbody>
+</table>
+<p>Further reading, from the sources this guide draws on:</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/What_is_CSS">MDN: What is CSS?</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors">MDN: Basic CSS selectors</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model">MDN: The box model</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts">MDN: Handling conflicts (cascade, specificity, inheritance)</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position">MDN: the <code>position</code> property</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">MDN: CSS custom properties</a></li>
+<li><a href="https://css-tricks.com/how-css-selectors-work/">CSS-Tricks: How CSS selectors work</a></li>
+<li><a href="https://sass-lang.com/guide/">Sass: the official guide</a> and <a href="https://sass-lang.com/playground/">playground</a></li>
+<li><a href="https://closeread.dev">Closeread, the extension behind this page</a></li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/cecibaldoni\.github\.io\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<div>
+© Copyright 2026, Cecilia Baldoni
+</div>
+<div id="cookie-banner-placeholder">
+
+</div>
+<script>
+  function loadGoogleAnalytics() {
+    const gascript = document.createElement("script");
+    gascript.async = true;
+    gascript.src = "https://www.googletagmanager.com/gtag/js?id=G-DV6K7C0XDV";
+    document.head.appendChild(gascript);
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DV6K7C0XDV');
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    if (localStorage.getItem("cookieAccepted") === "true") {
+      loadGoogleAnalytics();
+      return;
+    }
+    const bannerHTML = `
+      <div id="cookie-banner">
+        <p>
+          This website uses cookies for analytics. By clicking "OK", you agree to its use.
+          <button id="accept-cookies">OK</button>
+          <a href="privacy.html" class="cookie-link">(learn more)</a>
+        </p>
+      </div>`;
+    document.getElementById("cookie-banner-placeholder").innerHTML = bannerHTML;
+    
+    document.getElementById("accept-cookies").addEventListener("click", function () {
+      localStorage.setItem("cookieAccepted", "true");
+      document.getElementById("cookie-banner").remove();
+      loadGoogleAnalytics();
+    });
+  });
+</script>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Built with <a href="https://quarto.org/">Quarto</a></p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

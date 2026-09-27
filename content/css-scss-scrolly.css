@@ -1,0 +1,545 @@
+/* Styles for css-scss-scrolly.qmd (a beginner's guide to CSS and SCSS).
+   Section order matches the guide: shared bits, then Parts 1 to 8. */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap');
+
+:root {
+  --cream: #fbf3ea;
+  --cream-dark: #f3dbc1;
+  --chickpea: #f8ca5d;
+  --cinnamon: #a04a0d;
+  --forest: #105b09;
+  --dark: #112909;
+  --sand: #e6dccf;
+}
+
+body {
+  font-family: "Roboto Slab", serif;
+  color: var(--dark);
+  background-color: var(--cream);
+}
+
+h1, h2, h3 {
+  font-family: "Roboto Mono", monospace;
+  color: var(--dark);
+}
+
+code {
+  font-family: "Roboto Mono", monospace;
+  color: var(--cinnamon);
+}
+
+/* ---------- Shared bits ---------- */
+
+.part-tag {
+  display: inline-block;
+  margin: 0 0 0.75rem;
+  padding: 0.2rem 0.75rem;
+  border-radius: 999px;
+  background: var(--dark);
+  color: var(--chickpea);
+  font-family: "Roboto Mono", monospace;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.file-label {
+  font-family: "Roboto Mono", monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--forest);
+  margin: 0.75rem 0 0.25rem;
+}
+
+.note-line {
+  margin: 0.25rem 0 0.5rem;
+  font-size: 0.9rem;
+  color: var(--forest);
+}
+
+.sticky-col pre {
+  max-height: 18rem;
+  overflow: auto;
+  margin-bottom: 0.5rem;
+}
+
+.sticky-col p {
+  margin-bottom: 0.5rem;
+}
+
+.frame {
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  border: 2px dashed var(--cinnamon);
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.frame-lg {
+  font-size: 1.25rem;
+}
+
+/* Undo the page's styling so a demo starts from plain browser defaults. */
+.rv,
+.rv * {
+  all: revert;
+}
+
+.side-by-side {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  align-items: start;
+}
+
+.side-by-side.wide-left {
+  grid-template-columns: 3fr 2fr;
+}
+
+.side-by-side pre {
+  font-size: 0.7rem;
+}
+
+.diff table {
+  width: 100%;
+  font-size: 0.9rem;
+}
+
+.diff th,
+.diff td {
+  padding: 0.4rem 0.75rem;
+  vertical-align: top;
+}
+
+/* ---------- Part 1: the card that gets styled ----------
+
+   The qmd shows plain selectors such as `h4` and `.sprout-card`. Here they
+   are scoped with step classes (.t-color, ...) so each sticky can show a
+   different stage without restyling the rest of the page. */
+
+.sprout-card.t-color h4 { color: #a04a0d; }
+.sprout-card.t-color a  { color: #105b09; }
+
+.sprout-card.t-space {
+  background: #f3dbc1;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.sprout-card.t-btn a {
+  background: #f8ca5d;
+  padding: 0.4rem 0.9rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* ---------- Part 2: annotated rule ---------- */
+
+.rule {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.25rem;
+  padding: 1.5rem 0.5rem;
+  font-family: "Roboto Mono", monospace;
+  font-size: 1.4rem;
+}
+
+.rule.compact {
+  font-size: 1.05rem;
+}
+
+.rule .part {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  transition: opacity 0.3s, background 0.3s;
+}
+
+.rule .part small {
+  margin-top: 0.5rem;
+  font-family: "Roboto Slab", serif;
+  font-size: 0.8rem;
+  line-height: 1.3;
+  text-align: center;
+  color: var(--forest);
+}
+
+.rule .glue {
+  padding: 0.5rem 0;
+  transition: opacity 0.3s;
+}
+
+/* :where() keeps the fade rule weaker than the highlight rules below. */
+.rule:where([class*="hl-"]:not(.hl-all)) .part,
+.rule:where([class*="hl-"]:not(.hl-all)) .glue {
+  opacity: 0.25;
+}
+
+.rule.hl-sel .sel,
+.rule.hl-prop .prop,
+.rule.hl-val .val,
+.rule.hl-decl .prop,
+.rule.hl-decl .val,
+.rule.hl-decl .glue.decl,
+.rule.hl-block .prop,
+.rule.hl-block .val,
+.rule.hl-block .glue {
+  opacity: 1;
+}
+
+.rule.hl-sel .sel,
+.rule.hl-prop .prop,
+.rule.hl-val .val,
+.rule.hl-decl .prop,
+.rule.hl-decl .val,
+.rule.hl-block .prop,
+.rule.hl-block .val {
+  background: var(--chickpea);
+  border-color: var(--dark);
+}
+
+.rule.hl-block .glue.brace {
+  padding: 0.5rem 0.3rem;
+  border: 2px solid var(--dark);
+  border-radius: 8px;
+  background: var(--chickpea);
+}
+
+.rule.hl-all .part {
+  background: var(--cream-dark);
+  border-color: var(--dark);
+}
+
+/* ---------- Part 3: selector practice card ---------- */
+
+.pg .card {
+  padding: 0.75rem 1rem;
+  border: 1px solid #999999;
+}
+
+.pg.p-type p { background: #f8ca5d; }
+.pg.p-class .note { background: #f8ca5d; }
+.pg.p-id #title { background: #f8ca5d; }
+.pg.p-group h4,
+.pg.p-group a { background: #f8ca5d; }
+.pg.p-desc p a { background: #f8ca5d; }
+.pg.p-hover a:hover { background: #f8ca5d; }
+
+/* ---------- Part 4: values ---------- */
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 1rem 0;
+}
+
+.chip {
+  width: 8.5rem;
+  padding: 1.25rem 0.5rem;
+  border-radius: 8px;
+  color: #ffffff;
+  text-align: center;
+  font-family: "Roboto Mono", monospace;
+  font-size: 0.8rem;
+}
+
+.bars,
+.align-frame {
+  width: 16rem;
+  padding: 0.5rem;
+  border: 2px dashed var(--forest);
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.bar {
+  box-sizing: border-box;
+  height: 1.8rem;
+  margin: 0.4rem 0;
+  padding-left: 0.4rem;
+  border: 2px solid var(--dark);
+  border-radius: 4px;
+  background: var(--chickpea);
+  font-family: "Roboto Mono", monospace;
+  font-size: 0.75rem;
+  line-height: 1.5rem;
+  white-space: nowrap;
+}
+
+.align-frame p {
+  margin: 0.25rem 0;
+  font-family: "Roboto Mono", monospace;
+  font-size: 0.8rem;
+}
+
+/* ---------- Part 5: the box model ---------- */
+
+.bm {
+  display: table;
+  margin: 0.5rem 0 1rem;
+}
+
+.bm .layer {
+  position: relative;
+}
+
+.bm .bm-margin {
+  padding: 28px;
+  border: 2px dashed var(--cinnamon);
+  background: var(--cream-dark);
+}
+
+.bm .bm-border {
+  border: 8px solid var(--dark);
+  background: #ffffff;
+}
+
+.bm .bm-padding {
+  padding: 28px;
+  background: #fbe7a8;
+}
+
+.bm .bm-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 8rem;
+  height: 3.5rem;
+  background: #cfe0cb;
+  font-family: "Roboto Mono", monospace;
+  font-size: 0.8rem;
+}
+
+.bm .lab {
+  z-index: 2;
+  position: absolute;
+  top: 4px;
+  left: 8px;
+  font-family: "Roboto Mono", monospace;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--dark);
+}
+
+.bm .bm-border > .lab {
+  top: -13px;
+  left: 12px;
+  padding: 0 6px;
+  border-radius: 4px;
+  background: var(--dark);
+  color: var(--chickpea);
+}
+
+.bm.hl-content .bm-content,
+.bm.hl-padding .bm-padding,
+.bm.hl-border .bm-border,
+.bm.hl-margin .bm-margin {
+  box-shadow: 0 0 0 4px var(--cinnamon);
+  z-index: 1;
+}
+
+/* ---------- Part 6: inheritance and the cascade ---------- */
+
+.inh {
+  margin: 0;
+}
+
+.inh-1 {
+  color: #a04a0d;
+}
+
+.inh-2 {
+  color: #a04a0d;
+  border: 2px solid #112909;
+  padding: 0.75rem;
+}
+
+.cs1 p { color: #105b09; }
+.cs1 p { color: #a04a0d; }
+
+.cs2 .note { color: #105b09; }
+.cs2 p { color: #a04a0d; }
+
+.cs3 #x { color: #a04a0d; }
+.cs3 .note { color: #105b09; }
+
+/* ---------- Part 7: position squares ----------
+
+   static, relative and absolute are the real thing: the squares are laid
+   out by the same `position` property the text explains. fixed and sticky
+   need a scrolling window, so those two are drawn as before/after
+   illustrations. */
+
+.pos-parent {
+  position: relative;
+  width: 15rem;
+  padding: 0.75rem;
+  border: 2px dashed var(--forest);
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.pos-parent .slot {
+  width: 50px;
+  margin-bottom: 24px;
+}
+
+.pos-parent .slot:last-child {
+  margin-bottom: 0;
+}
+
+.sq {
+  width: 50px;
+  height: 50px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--dark);
+  border-radius: 6px;
+  background: var(--sand);
+  font-family: "Roboto Mono", monospace;
+  font-weight: 700;
+}
+
+.sq.c {
+  background: var(--chickpea);
+}
+
+.pos-relative .slot-c {
+  outline: 2px dashed var(--cinnamon);
+}
+
+.pos-relative .sq.c {
+  position: relative;
+  top: 20px;
+  left: 30px;
+}
+
+.pos-absolute .sq.c {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.win-pair {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.win-wrap small {
+  display: block;
+  margin-top: 0.4rem;
+  text-align: center;
+  color: var(--forest);
+}
+
+.win {
+  position: relative;
+  width: 130px;
+  height: 160px;
+  overflow: hidden;
+  border: 2px solid var(--dark);
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.win .page {
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  top: 0;
+}
+
+.win .page.scrolled {
+  top: -80px;
+}
+
+.win .page i {
+  display: block;
+  height: 8px;
+  margin-bottom: 12px;
+  border-radius: 4px;
+  background: var(--sand);
+}
+
+.win .sq {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  font-size: 0.8rem;
+}
+
+/* ---------- Part 8: how SCSS reaches the browser ---------- */
+
+.paths {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1rem 0;
+}
+
+.path {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.path .lang {
+  width: 100%;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 700;
+  color: var(--cinnamon);
+}
+
+.path .node {
+  padding: 0.6rem 0.9rem;
+  border: 2px solid var(--dark);
+  border-radius: 10px;
+  background: #ffffff;
+  font-family: "Roboto Mono", monospace;
+  font-size: 0.9rem;
+}
+
+.path .node.accent { background: var(--chickpea); }
+.path .node.browser { background: var(--cream-dark); }
+
+.path .arrow {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 700;
+  color: var(--cinnamon);
+}
+
+/* The compiled CSS shown beside the SCSS examples, written out by hand. */
+
+.scss-card { border: 2px solid #a04a0d; padding: 0.75rem 1rem; }
+.scss-card h4 { color: #a04a0d; margin: 0 0 0.25rem; }
+.scss-card p { margin: 0 0 0.5rem; }
+.scss-card a { background: #f8ca5d; padding: 0.2rem 0.6rem; text-decoration: none; }
+.scss-card a:hover { background: #a04a0d; color: white; }
+
+.cta {
+  background: #f8ca5d;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+}
+
+.tag {
+  background: #a04a0d;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  color: white;
+}

@@ -11,7 +11,10 @@ class: page-projects
 
 # The Shrew Toolkit {#shrew}
 
-You don't need any background in biology to read this. It's a scroll-through introduction to the animal I study, one idea at a time: the story is on one side, and the picture changes as you scroll past it. Where you see a dotted underline, hover or tap it for a plain-language definition. Where you see a **+**, click it to open something extra.
+If you just landed here, and have no idea what a shrew is, despair no more!
+
+This is your personalised **scrollytelling toolkit** about the animal I studied, one idea at a time.
+Where you see a dotted underline, hover or tap it for a plain-language definition. Where you see a **+**, click it to open something extra.
 
 1. [What is a shrew, anyway?](#p1)
 2. [The problem with being tiny](#p2)

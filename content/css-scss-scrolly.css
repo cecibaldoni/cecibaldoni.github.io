@@ -29,6 +29,30 @@ code {
   color: var(--cinnamon);
 }
 
+/* closeread-html doesn't pick up the custom.scss theme, so the navbar is
+   copied from there. #e2a96c is darken($cream, 20%). */
+
+.navbar {
+  background-color: #e2a96c;
+  box-shadow: 0 2px 8px rgba(17, 41, 9, 0.4);
+  font-family: "Roboto Mono", monospace;
+  font-size: 1.15rem;
+  font-weight: 500;
+}
+
+.navbar a {
+  color: var(--cinnamon);
+  transition: color 0.3s ease;
+}
+
+.navbar a:active {
+  color: white;
+}
+
+.navbar a:hover {
+  color: var(--dark);
+}
+
 /* ---------- Shared bits ---------- */
 
 .part-tag {

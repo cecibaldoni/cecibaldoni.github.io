@@ -35,7 +35,7 @@ title: ""
   </div>
   
     <div class="game-card">
-    <img src="../img/perfekt.png" alt="Perfekt class="card-thumbnail">
+    <img src="../img/perfekt.png" alt="Perfekt" class="card-thumbnail">
     
     <div class="card-content">
       <h3>German Perfekt Verben</h3>
@@ -65,6 +65,24 @@ title: ""
       <div class="card-actions">
         <a href="https://github.com/cecibaldoni/granny-square-blanket/tree/main" class="btn">GitHub Repo</a>
         
+      </div>
+    </div>
+  </div>
+</div>
+```
+## Guides
+
+```{=html}
+<div class="game-container">
+  <div class="other-card">
+    <img src="../img/css-chaos.png" alt="CSS and SCSS for Beginners" class="card-thumbnail">
+    
+    <div class="card-content">
+      <h3>CSS and SCSS for Beginners</h3>
+      <p>A scroll-through guide to styling web pages, from your first selector to your first mixin. No experience needed.</p>
+      
+      <div class="card-actions">
+        <a href="css-scss-scrolly.html" class="btn">Read the guide</a>
       </div>
     </div>
   </div>

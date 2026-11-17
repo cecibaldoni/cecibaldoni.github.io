@@ -4,7 +4,6 @@ project:
   resources:
     - sitemap.xml
     - google5d7ae5fc43970223.html
-    - resume-Baldoni.pdf
 
 execute:
   freeze: auto
@@ -67,7 +66,7 @@ website:
               <p>
                 This website uses cookies for analytics. By clicking "OK", you agree to its use.
                 <button id="accept-cookies">OK</button>
-                <a href="privacy.html" class="cookie-link">(learn more)</a>
+                <a href="/content/privacy.html" class="cookie-link">(learn more)</a>
               </p>
             </div>`;
           document.getElementById("cookie-banner-placeholder").innerHTML = bannerHTML;
